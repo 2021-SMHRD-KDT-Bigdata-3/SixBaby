@@ -22,18 +22,27 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@RequestMapping(value = "/index.do")
+	public String home() {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+		return "index";
 	}
 	
+	@RequestMapping(value = "/events.do")
+	public String events() {
+		
+		return "events";
+	}
+	
+	@RequestMapping(value = "/families.do")
+	public String families() {
+		
+		return "families";
+	}
+	
+	@RequestMapping(value = "/seremons.do")
+	public String seremons() {
+		
+		return "seremons";
+	}
 }
