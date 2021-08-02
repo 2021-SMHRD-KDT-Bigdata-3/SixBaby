@@ -31,9 +31,9 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping(value = "/index.do")
+	@RequestMapping(value = "/main.do")
 	public String home() {
-		return "index";
+		return "main";
 	}
 
 	@Autowired
@@ -79,9 +79,17 @@ public class HomeController {
 		return "families";
 	}
 
-	@RequestMapping(value = "/seremons.do")
+	@RequestMapping(value = "/community.do")
 	public String seremons() {
-		return "seremons";
+		return "community";
 	}
+	
+	@RequestMapping(value = "/join.do")
+	public String join() {
+		return "join";
+	}
+	
+	
+
 
 }

@@ -211,7 +211,7 @@ html {
   font-size: 14px; }
 
 body {
-  color: #89837c;
+  color: #8f7655;
   font-family: arial, sans-serif;
   font-weight: 300;
   line-height: 1.5; }
@@ -1129,6 +1129,8 @@ form input[type="submit"], form button, form input[type="reset"] {
  * Header Styles
  */
 .site-header {
+  width:1603px;
+  margin-left: 300px;
   position: relative;
   z-index: 999;
   background: white;
@@ -1145,6 +1147,10 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 1em; }
 
 .main-navigation {
+  z-index: 1;
+  position:fixed;
+  width:300px;
+  height:100%;
   border-top: 1px solid #e5e5e5; }
   .main-navigation .menu-toggle {
     border: none;
@@ -1158,6 +1164,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       .main-navigation .menu-toggle {
         display: inline-block; } }
   .main-navigation .menu {
+	margin-top: 200px;
     list-style: none; }
     @media screen and (max-width: 990px) {
       .main-navigation .menu {
@@ -1211,6 +1218,7 @@ form input[type="submit"], form button, form input[type="reset"] {
 .hero {
   position: relative; }
   .hero .slides {
+    z-index: 2;
     list-style: none;
     *zoom: 1; }
     .hero .slides:after {
@@ -1220,8 +1228,9 @@ form input[type="submit"], form button, form input[type="reset"] {
       overflow: hidden;
       height: 0; }
     .hero .slides li {
+      margin-left:300px;
       background-size: cover;
-      width: 100%;
+      width: 1603px !important;
       margin-right: -100%;
       float: left;
       min-height: 545px;
@@ -1282,6 +1291,7 @@ form input[type="submit"], form button, form input[type="reset"] {
         background: url(images/pagination-current.png); }
 
 .page-head {
+  margin-left: 300px;
   background-size: cover;
   padding: 50px;
   text-align: center; }
@@ -1298,6 +1308,7 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-size: 3.4285714286em; } }
 
 .fullwidth-block {
+  margin-left: 300px;
   padding: 50px 0; }
   .fullwidth-block .section-title {
     font-size: 24px;
@@ -1473,6 +1484,8 @@ form input[type="submit"], form button, form input[type="reset"] {
  * Footer Styles
  */
 .site-footer {
+  width: 1603px;
+  margin-left: 300px;
   background: #363641;
   padding: 50px 0;
   color: #acacb1; }
@@ -1510,3 +1523,97 @@ ul.bullet {
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2); }
 .contact-form textarea {
   min-height: 150px; }
+
+/*========회원가입 모달창======*/
+
+#modal_join {
+          display: none;
+          position:relative;
+          width:100%;
+          height:100%;
+          z-index:1;
+        }
+        
+#modal_join h2 {
+          margin:0;
+        }
+#modal_join button {
+          display:inline-block;
+          width:100px;
+          margin-left:calc(100% - 100px - 10px);
+        }
+        
+#modal_join .modal_content {
+          width:450px;
+          margin:100px auto;
+          padding:20px 10px;
+          background:#fff;
+          border:2px solid #666;
+          position:relative;
+          left:0px;
+          bottom:350px;
+        }
+        
+#modal_join .modal_layer {
+          position:fixed;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          background:rgba(0, 0, 0, 0.5);
+          z-index:-1;
+        }   
+
+/*===========================*/
+
+/*=========로그인 모달창========*/
+
+#modal_login {
+          display: none;
+          position:relative;
+          width:100%;
+          height:100%;
+          z-index:1;
+        }
+        
+#modal_login h2{
+          margin:0;
+        }
+#modal_login button {
+          display:inline-block;
+          width:100px;
+          margin-left:calc(100% - 100px - 10px);
+        }
+        
+#modal_login .modal_content {
+          width:450px;
+          margin:100px auto;
+          padding:20px 10px;
+          background:#fff;
+          border:2px solid #666;
+          position:relative;
+          top:0px;
+          left:0px;
+        }
+        
+#modal_login .modal_layer {
+          position:fixed;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          background:rgba(0, 0, 0, 0.5);
+          z-index:-1;
+        }
+
+/*===========================*/
+
+#root {
+		  display:inline;
+}
+
+#modal_open_btn_login {
+	border: 0;
+	background-color:white;
+}
+

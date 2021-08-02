@@ -24,20 +24,19 @@
 		<![endif]-->
 </head>
 <body>
-<div class="site-content">
 			<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
-						<img src="images/logo.png" alt="" class="logo">
+						<img src="${cpath}/resources/images/logo.png" alt="" class="logo">
 						<h1 class="site-title">True Church</h1>
 					</a>
 
 					<div class="main-navigation">
 						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
 						<ul class="menu">
-							<li class="menu-item"><a href="index.html">Homepage <small>Lorem ipsum</small></a></li>
+							<li class="menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
 							<li class="menu-item"><a href="#">Pastors <small>Cupidatat non proident</small></a></li>
-							<li class="menu-item current-menu-item"><a href="seremons.html">Seremons <small>Laboris nisi aliquip</small></a></li>
+							<li class="menu-item current-menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
 							<li class="menu-item"><a href="events.html">Events <small>Sunt in culpa</small></a></li>
 							<li class="menu-item"><a href="families.html">Families <small>Aute irure</small></a></li>
 							<li class="menu-item"><a href="#">Contact <small>lorem ipsum</small></a></li>
@@ -48,13 +47,12 @@
 				</div>
 			</header> <!-- .site-header -->
 
-			<div class="page-head" data-bg-image="images/page-head-1.jpg">
+			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
 					<h2 class="page-title">Seremons</h2>
 				</div>
 			</div>
 
-			<main class="main-content">
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
@@ -62,7 +60,7 @@
 								<h2 class="section-title">Upcoming seremons</h2>
 								<ul class="seremon-list large">
 									<li>
-										<img src="images/thumb-1-120.png" alt="">
+										<img src="${cpath}/resources/images/thumb-1-120.png" alt="">
 										<div class="seremon-detail">
 											<h3 class="seremon-title"><a href="#">I believe in god with all my heart</a></h3>
 											<div class="seremon-meta">
@@ -73,7 +71,7 @@
 										</div>
 									</li>
 									<li>
-										<img src="images/thumb-2-120.jpg" alt="">
+										<img src="${cpath}/resources/images/thumb-2-120.jpg" alt="">
 										<div class="seremon-detail">
 											<h3 class="seremon-title"><a href="#">Trusting in jesus and god</a></h3>
 											<div class="seremon-meta">
@@ -84,7 +82,7 @@
 										</div>
 									</li>
 									<li>
-										<img src="images/thumb-3-120.jpg" alt="">
+										<img src="${cpath}/resources/images/thumb-3-120.jpg" alt="">
 										<div class="seremon-detail">
 											<h3 class="seremon-title"><a href="#">Love your kids</a></h3>
 											<div class="seremon-meta">
@@ -95,7 +93,7 @@
 										</div>
 									</li>
 									<li>
-										<img src="images/thumb-2-120.jpg" alt="">
+										<img src="${cpath}/resources/images/thumb-2-120.jpg" alt="">
 										<div class="seremon-detail">
 											<h3 class="seremon-title"><a href="#">Trusting in jesus and god</a></h3>
 											<div class="seremon-meta">
@@ -107,39 +105,6 @@
 									</li>
 								</ul>
 
-								<h2 class="section-title">Latest seremons</h2>
-								<ul class="seremon-list">
-									<li>
-										<img src="images/small-thumb-1.jpg" alt="">
-										<div class="seremon-detail">
-											<h3 class="seremon-title"><a href="#">I believe in god with all my heart</a></h3>
-											<div class="seremon-meta">
-												<div class="pastor"><i class="fa fa-user"></i> Alan Ray</div>
-												<div class="date"><i class="fa fa-calendar"></i> 18 mar 2014</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="images/small-thumb-2.jpg" alt="">
-										<div class="seremon-detail">
-											<h3 class="seremon-title"><a href="#">Trusting in jesus and god</a></h3>
-											<div class="seremon-meta">
-												<div class="pastor"><i class="fa fa-user"></i> David Clark</div>
-												<div class="date"><i class="fa fa-calendar"></i> 18 mar 2014</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="images/small-thumb-3.jpg" alt="">
-										<div class="seremon-detail">
-											<h3 class="seremon-title"><a href="#">Love your kids</a></h3>
-											<div class="seremon-meta">
-												<div class="pastor"><i class="fa fa-user"></i> anthony roberts</div>
-												<div class="date"><i class="fa fa-calendar"></i> 18 mar 2014</div>
-											</div>
-										</div>
-									</li>
-								</ul>
 							</div>
 							<div class="sidebar col-md-3 col-md-offset-1">
 								<div class="widget">
@@ -153,34 +118,11 @@
 									</ul>
 								</div>
 
-								<div class="widget">
-									<h3 class="widget-title">Donations</h3>
-									<p>Distinctio unde consequuntur delectus, repudiandae, impedit atque earum adipisci, explicabo perferendis.</p>
-									<a href="#" class="button">Make a donation</a>
-								</div>
-
-								<div class="widget">
-									<h3 class="widget-title">Gallery updates</h3>
-
-									<div class="galery-thumb">
-										<a href="#"><img src="images/gallery-thumb-1.jpg" alt=""></a>
-										<a href="#"><img src="images/gallery-thumb-2.jpg" alt=""></a>
-										<a href="#"><img src="images/gallery-thumb-3.jpg" alt=""></a>
-										<a href="#"><img src="images/gallery-thumb-4.jpg" alt=""></a>
-										<a href="#"><img src="images/gallery-thumb-5.jpg" alt=""></a>
-										<a href="#"><img src="images/gallery-thumb-6.jpg" alt=""></a>
-									</div>
-								</div>
-
-								<div class="widget">
-									<h3 class="widget-title">Text widget </h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquam obcaecati velit, atque necessitatibus molestias ullam tempore itaque quidem sequi ea sed consectetur, eligendi cupiditate saepe! Hic veniam maiores explicabo.</p>
-								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
-			</main> <!-- .main-content -->
 
 			<footer class="site-footer">
 				<div class="container">
@@ -230,7 +172,6 @@
 				</div><!-- .container -->
 			</footer> <!-- .site-footer -->
 
-		</div>
 		
 
 		<script src="${cpath}/resources/js/js/jquery-1.11.1.min.js"></script>
