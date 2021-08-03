@@ -2,6 +2,7 @@
     pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,34 +23,33 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		
+		
 </head>
 <body>
+
+<div class="main-navigation" align="center">
+<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
+							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
+							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
+							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
+						</ul>
+</div>
+
+<div class="site-content">
+				   
 			<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
 						<img src="${cpath}/resources/images/logo.png" alt="" class="logo">
 						<h1 class="site-title">True Church</h1>
-					</a>
-
-					<div class="main-navigation">
-						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-						<ul class="menu">
-							<li class="menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-							<li class="menu-item"><a href="#">Pastors <small>Cupidatat non proident</small></a></li>
-							<li class="menu-item current-menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
-							<li class="menu-item"><a href="events.html">Events <small>Sunt in culpa</small></a></li>
-							<li class="menu-item"><a href="families.html">Families <small>Aute irure</small></a></li>
-							<li class="menu-item"><a href="#">Contact <small>lorem ipsum</small></a></li>
-						</ul>
-					</div>
-
-					<div class="mobile-navigation"></div>
-				</div>
-			</header> <!-- .site-header -->
-
+            </header> <!-- .site-header -->
+            
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
-					<h2 class="page-title">Seremons</h2>
+					<h2 class="page-title">Community</h2>
 				</div>
 			</div>
 
@@ -110,11 +110,10 @@
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
 									<ul class="arrow">
-										<li><a href="#">Perspiciatis unde</a></li>
-										<li><a href="#">Omnis iste natus</a></li>
-										<li><a href="#">Voluptatem accusantium</a></li>
-										<li><a href="#">Doloremque eaque</a></li>
-										<li><a href="#">Totam rem aperiam</a></li>
+										<li><a href="#">자유 게시판</a></li>
+										<li><a href="#">용품 추천</a></li>
+										<li><a href="#">도움 요청</a></li>
+										<li><a href="#">육아 꿀팁</a></li>
 									</ul>
 								</div>
 
@@ -171,11 +170,13 @@
 					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
 				</div><!-- .container -->
 			</footer> <!-- .site-footer -->
+</div>
 
 		
-
 		<script src="${cpath}/resources/js/js/jquery-1.11.1.min.js"></script>
 		<script src="${cpath}/resources/js/js/plugins.js"></script>
 		<script src="${cpath}/resources/js/js/app.js"></script>
+		<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
+		<script src="${cpath}/resources/js/js/popup.js"></script>
 </body>
 </html>

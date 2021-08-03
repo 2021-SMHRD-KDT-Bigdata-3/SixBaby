@@ -1617,3 +1617,45 @@ ul.bullet {
 	background-color:white;
 }
 
+#site-content {
+	width:1603px !important;
+}
+
+
+
+#logo
+	{
+		position: relative;
+		margin: 1.75em 1.5em 1.5em 1.5em;
+		min-height: 48px;
+		cursor: default;
+		top:100px;
+	}
+	
+		#logo h1
+		{
+			position: relative;
+			color: #8f7655;
+			font-weight: 600;
+			font-size: 1em;
+			line-height: 1em;
+		}
+	
+		#logo p
+		{
+			position: relative;
+			display: block;
+			font-size: 0.6em;
+			color: #8f7655;
+			line-height: 1.25em;
+			margin: 0.5em 0 0 0;
+		}
+		
+		#logo .image
+		{
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+ 
+

@@ -89,7 +89,10 @@ public class HomeController {
 		return "join";
 	}
 	
-	
+	@RequestMapping(value = "/test.do")
+	public String test() {
+		return "test";
+	}
 
 
 }
