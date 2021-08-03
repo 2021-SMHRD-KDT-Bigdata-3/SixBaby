@@ -51,7 +51,7 @@ public class HomeController {
 	@RequestMapping("/memberInsert.do")
 	public String memberInsert(MemberVO vo) {
 		mapper.memberInsert(vo);
-		return "redirect:/위치.do";
+		return "redirect:/main.do";
 	}
 
 	@RequestMapping("/memberUpdate.do")
@@ -63,7 +63,7 @@ public class HomeController {
 	@RequestMapping("/memberDelete.do")
 	public String memberDelete(MemberVO vo) {
 		mapper.memberDelete(vo);
-		return "redirect:/위치.do";
+		return "redirect:/main.do";
 	}
 
 	// 2. 로그인
@@ -73,6 +73,7 @@ public class HomeController {
 		return "redirect:/위치.do";
 	}
 
+<<<<<<< HEAD
 	/**
 	 * // 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) @RequestMapping("/boardList.do") public String
 	 * boardList(HttpServletRequest request) { List<BoardsVO> list =
@@ -94,6 +95,40 @@ public class HomeController {
 	 * boardDelete(@RequestParam("board_no") int board_no) {
 	 * mapper.boardDelete(board_no); return "redirect:/위치.do"; }
 	 **/
+=======
+	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
+	@RequestMapping("/boardList.do")
+	public String boardList(HttpServletRequest request) {
+		List<BoardsVO> list = mapper.boardList();
+		request.setAttribute("list", list);
+		return "redirect:/위치.do";
+	}
+
+	@RequestMapping("/boardContent.do")
+	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
+		BoardsVO vo = mapper.boardContent(board_no);
+		model.addAttribute("vo", vo);
+		return "redirect:/위치.do";
+	}
+
+	@RequestMapping("/boardInsert.do")
+	public String boardInsert(BoardsVO vo) {
+		mapper.boardInsert(vo);
+		return "redirect:/위치.do";
+	}
+
+	@RequestMapping("/boardUpdate.do")
+	public String boardUpdate(BoardsVO vo) {
+		mapper.boardUpdate(vo);
+		return "redirect:/위치.do";
+	}
+
+	@RequestMapping("/boardDelete.do")
+	public String boardDelete(@RequestParam("board_no") int board_no) {
+		mapper.boardDelete(board_no);
+		return "redirect:/위치.do";
+	}
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/SixBaby.git
 
 	/*
 	 * @RequestMapping("/boardForm.do") public String boardForm() { return

@@ -12,11 +12,10 @@ public interface Mapper {
 	//2. 로그인
 	public void login(MemberVO vo);
 	
-/**	//3. 커뮤니티
+	//3. 커뮤니티
 	public List<BoardsVO> boardList();// select~ SQL
 	public void boardInsert(BoardsVO vo); // insert~ SQL	
 	public BoardsVO boardContent(int board_no); // select~where~ SQL
 	public void boardUpdate(BoardsVO vo); // update~ SQL
 	public void boardDelete(int board_no);
-**/	
 }
