@@ -94,7 +94,11 @@ public class HomeController {
 		return "test";
 	}
 
-	
-	
+	//°Ô½ÃÆÇ
+	@RequestMapping(value="/boardWrite.do")
+    public String boardWrite() {
+        return "boardWrite";
+    }
+
 
 }
