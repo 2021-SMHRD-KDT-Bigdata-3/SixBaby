@@ -43,5 +43,11 @@
      delete from boards where board_no=#{board_no}
    </delete>
    
+   <!-- 4. 아기정보(삽입, ) -->
+   <insert id="babyInsert" parameterType="com.smhrd.mapper.BabyVO">
+	    insert into boards(category, title, nickname, picture, contents)
+	    values(#{category},#{title},#{nickname},#{picture},#{contents})
+   </insert>
+   
    
 </mapper>
