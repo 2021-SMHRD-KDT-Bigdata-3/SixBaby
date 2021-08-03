@@ -29,6 +29,11 @@
 <body>
 
 <div class="main-navigation" align="center">
+<div id="logo">
+							<span class="image avatar48"><img src="${cpath}/resources/images/avatar.jpg" alt=""></span>
+							<h1 id="title">Jane Doe</h1>
+							<p>Hyperspace Engineer</p>
+						</div>
 <button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
 						<ul class="menu">
 							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
