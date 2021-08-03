@@ -5,7 +5,7 @@
 <mapper namespace="com.smhrd.mapper.Mapper">
 
 	<!-- 1. 회원가입,수정,탈퇴 -->
-	<!--<insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
+	<insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
 		insert into member
 		values(#{id},#{pw},#{nickname},#{name},#{gender},#{birth},#{tell})
 	</insert>
@@ -15,16 +15,16 @@
 	</update>
 	<delete id="memberDelete" parameterType="com.smhrd.mapper.MemberVO">
 		delete from member where id=#{id} and pw=#{pw}
-	</delete>-->
+	</delete>
 
 	<!-- 2. 로그인 -->
-	<!--<select id="login" parameterType="com.smhrd.mapper.MemberVO">
+	<select id="login" parameterType="com.smhrd.mapper.MemberVO">
 		select * from member
 		where id=#{id} and pw=#{pw}
-	</select>-->
+	</select>
 	
 	<!-- 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) -->
-	<!--<select id="boardList" resultType="com.smhrd.mapper.BoardsVO">
+	<select id="boardList" resultType="com.smhrd.mapper.BoardsVO">
     	select * from boards
    </select> 
    <select id="boardContent" parameterType="int" 
@@ -41,7 +41,7 @@
    </update>
    <delete id="boardDelete" parameterType="int">
      delete from boards where board_no=#{board_no}
-   </delete>-->
+   </delete>
    
    
 </mapper>

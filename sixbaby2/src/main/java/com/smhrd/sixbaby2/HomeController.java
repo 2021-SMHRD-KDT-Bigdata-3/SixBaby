@@ -47,7 +47,7 @@ public class HomeController {
 	@RequestMapping("/memberInsert.do")
 	public String memberInsert(MemberVO vo) {
 		mapper.memberInsert(vo);
-		return "redirect:/위치.do";
+		return "redirect:/main.do";
 	}
 
 	@RequestMapping("/memberUpdate.do")
@@ -59,7 +59,7 @@ public class HomeController {
 	@RequestMapping("/memberDelete.do")
 	public String memberDelete(MemberVO vo) {
 		mapper.memberDelete(vo);
-		return "redirect:/위치.do";
+		return "redirect:/main.do";
 	}
 
 	// 2. 로그인
@@ -69,7 +69,7 @@ public class HomeController {
 		return "redirect:/위치.do";
 	}
 
-/**	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
+	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
 	@RequestMapping("/boardList.do")
 	public String boardList(HttpServletRequest request) {
 		List<BoardsVO> list = mapper.boardList();
@@ -101,7 +101,6 @@ public class HomeController {
 		mapper.boardDelete(board_no);
 		return "redirect:/위치.do";
 	}
-**/	
 
 	/*
 	 * @RequestMapping("/boardForm.do") public String boardForm() { return
