@@ -110,11 +110,12 @@
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
 									<ul class="arrow">
-										<li><a href="#">Perspiciatis unde</a></li>
-										<li><a href="#">Omnis iste natus</a></li>
-										<li><a href="#">Voluptatem accusantium</a></li>
-										<li><a href="#">Doloremque eaque</a></li>
-										<li><a href="#">Totam rem aperiam</a></li>
+										<li><a href="#">자유게시판</a></li>
+										<li><a href="#">용품추천</a></li>
+										<li><a href="#">도움요청</a></li>
+										<li><a href="#">육아꿀팁</a></li>
+										<li><a href="#">육아일기</a></li>
+										<li><a href="#">음성인식서비스</a></li>
 									</ul>
 								</div>
 

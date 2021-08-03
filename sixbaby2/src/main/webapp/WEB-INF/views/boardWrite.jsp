@@ -39,7 +39,7 @@
 							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
 							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
 							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
-							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
+							<li class="menu-item"  style="border-bottom: solid #white"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
 						</ul>
 </div>
 
@@ -48,8 +48,8 @@
 			<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
-						<img src="${cpath}/resources/images/logo.png" alt="" class="logo">
-						<h1 class="site-title">True Church</h1>
+						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
+						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
             </header> <!-- .site-header -->
             
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
@@ -65,32 +65,45 @@
 							<div class="content col-md-8">
 								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
 								<div class="form-group">
-									<select name="커뮤니티">
+									<select name="커뮤니티" style="border:2px solid #E63F39; border-radius: 12px; font-size:15px; text-align:center;">
 										<option value="자유게시판">자유게시판</option>
 										<option value="용품 추천">용품 추천</option>
 										<option value="도움 요청">도움 요청</option>
 										<option value="육아 꿀팁">육아 꿀팁</option>
 									</select>
 								</div>
-									<div class="form-group">
-										<label class="control-label col-sm-2">작성자:</label>
+								<br>
+								<table>
+								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
+									<div class="form-group" >
+										<label class="control-label col-sm-2">작성자</label>
 											<input type="text" class="form-control" name="writer"
 												placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">제목:</label>
+										<label class="control-label col-sm-2">작성일</label>
+               								 <input type="date">
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">제목</label>
 											<input type="text" class="form-control" name="title"
 												placeholder="Enter title">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">내용:</label>
+										<label class="control-label col-sm-2">내용</label>
 											<textArea rows="5" class="form-control" name="contents"
 												placeholder="Enter contents"></textArea>
 									</div>
+									<div id="inputFile">
+										<label class="site-btn3" for="input-file" style="font-weight:bold; font-size:16; ">사진 첨부</label>
+											<input type="file" id="input-file" name="img">
+									</div>
+									</div>
+									</table>
 									<div class="form-group">
 										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" class="btn btn-primary btn-sm">등록</button>
-											<button type="reset" class="btn btn-warning btn-sm">취소</button>
+											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">등록</button>&nbsp;
+											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">취소</button>
 										</div>
 									</div>
 								</form>
@@ -99,11 +112,11 @@
 							<div class="sidebar col-md-3 col-md-offset-1">
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
-									<ul class="arrow">
-										<li><a href="#">자유 게시판</a></li>
-										<li><a href="#">용품 추천</a></li>
-										<li><a href="#">도움 요청</a></li>
-										<li><a href="#">육아 꿀팁</a></li>
+									<ul class="arrow" style="text-align:center">
+										<li><a href="#"> - 자유 게시판</a></li>
+										<li><a href="#"> - 용품 추천</a></li>
+										<li><a href="#"> - 도움 요청</a></li>
+										<li><a href="#"> - 육아 꿀팁</a></li>
 									</ul>
 								</div>
 

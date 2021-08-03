@@ -209,7 +209,8 @@ table {
  * Global Styles
  */
 html {
-  font-size: 14px; }
+  font-size: 16px; 
+  color: gray;}
 
 body {
   color: black;
@@ -235,7 +236,7 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: #8f7655; }
+  color: black; }
 
 address {
   font-style: normal; }
@@ -252,12 +253,12 @@ form input, form textarea, form select {
   border-radius: 5px;
   border: none; }
 form select {
-	margin-right: 70%;
+	margin-right: 100%;
   width:20%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none; }
+ }
 form textarea {
   resize: vertical; }
 form input[type="submit"], form button, form input[type="reset"] {
@@ -276,10 +277,10 @@ form input[type="submit"], form button, form input[type="reset"] {
   border-radius: 5px;
   padding: 10px 25px;
   border-radius: 5px;
-  color: #715b3e;
+  color: gray;
   text-transform: uppercase;
   font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
@@ -1189,7 +1190,7 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-weight: 400;
         font-size: 18px;
         font-size: 1.2857142857em;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid #FFDDD2;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
@@ -1199,7 +1200,7 @@ form input[type="submit"], form button, form input[type="reset"] {
           font-size: 10px;
           font-size: 0.7142857143rem; }
       .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
-        border-bottom-color: #8f7655;
+        border-bottom-color: #E63F39;
         border-width: 2px; }
 
 .mobile-navigation {
@@ -1480,7 +1481,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   list-style-position: inside; }
   .arrow li {
     padding: 10px 0;
-    border-bottom: 1px solid #e5e5e5; }
+    }
     .arrow li a {
       display: block;
       color: #89837c;
