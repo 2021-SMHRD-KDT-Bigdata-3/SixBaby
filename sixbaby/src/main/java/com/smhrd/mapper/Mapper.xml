@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.Mapper">
+
+	<!-- 1. 회원가입,수정,탈퇴 -->
+	<insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
+		insert into
+		?(?,?,?,...)
+		values(#{?},#{?},.....)
+	</insert>
+	<update id="memberUpdate" parameterType="com.smhrd.mapper.MemberVO">
+		update ? set
+		?=#{?}, ?=#{?} where ?=#{?}
+	</update>
+	<delete id="memberDelete" parameterType="com.smhrd.mapper.MemberVO">
+		delete from ? where 아이디=#{?} and 비번=#{?}
+	</delete>
+
+	<!-- 2. 로그인 -->
+	<select id="login" parameterType="com.smhrd.mapper.MemberVO">
+		
+	</select>
+</mapper>

@@ -12,16 +12,17 @@
 	content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
 <title>test</title>
+<script>
 
+</script>
 </head>
 <body>
 
+	<h1>iot_Test page</h1>
 	<%
 	String data = request.getParameter("data");
 	System.out.println(data);
 	%>
-	<h1>iot_Test page</h1>
-	<h3>wifi모듈에서 받아들인 값 : <%=data %> 뜨냐?</h3>
 
 </body>
 </html>
