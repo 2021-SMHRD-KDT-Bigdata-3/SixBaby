@@ -132,6 +132,16 @@ public class HomeController {
 		return "join";
 	}
 
+	
+	//게시판
+		@RequestMapping(value="/boardWrite.do")
+	    public String boardWrite() {
+	        return "boardWrite";
+	    }
+	
+
+
+
 	// iot 테스트용 페이지
 	@RequestMapping("/iot.do")
 	public String iot() {
