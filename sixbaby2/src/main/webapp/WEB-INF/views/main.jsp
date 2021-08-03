@@ -49,7 +49,7 @@
 					</a>
 					<div align="right">
 						<div id="root" class="branding">
-    						<button type="button" id="modal_open_btn_login"><span class="site-title">Join</span></button>
+    						<button type="button" id="modal_open_btn_login"><span class="site-title">Login</span></button>
 						</div>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="#" class="branding"><span class="site-title">LogOut</span></a>
@@ -60,7 +60,7 @@
 				    <div class="modal_content">
         <div class="form_txtInput">
           <h2 class="sub_tit_txt">로그인</h2>
-          <p class="exTxt">회원가입시 이메일 인증을 반드시 진행하셔야 합니다.</p>
+          <p class="exTxt">정보를 정확히 입력해주세요.</p>
           <div class="join_form">
             <table align="center">
               <colgroup>
@@ -77,14 +77,14 @@
                   <td><input type="password" placeholder="PW 를 입력하세요"></td>
                 </tr>
                 <tr>
-                	<td><button type="button" id="modal_open_btn_join">회원가입</button></td>
-                	<td><button type="button" id="">확인</button></td>
+                	<td><button type="button" id="modal_open_btn_join" style="position: relative; left: 50px; border: solid white; background:white;">회원가입</button></td>
+                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
                 </tr>
               </tbody>
             </table>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
-            <button type="button" id="modal_close_btn_login">모달 창 닫기</button>
+            <button type="button" id="modal_close_btn_login" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
@@ -95,8 +95,9 @@
    
 				    <div class="modal_content">
         <div class="form_txtInput">
+          <button type="button" id="modal_close_btn_join" style="background:white; border-radius: 12px;">창 닫기</button>
           <h2 class="sub_tit_txt">회원가입</h2>
-          <p class="exTxt">회원가입시 이메일 인증을 반드시 진행하셔야 합니다.</p>
+          <p class="exTxt" >정보를 정확히 입력해주세요.</p>
           <div class="join_form">
             <table align="center">
               <colgroup>
@@ -152,24 +153,20 @@
                   <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
                 </tr>
                 <tr>
-                	<th>완료오?</th>
-                	<td><button type="button" id="">완료</button></td>
+                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
               </tbody>
             </table>
-            <div class="exform_txt"><span>표시는 필수적으로 입력해주셔야 가입이 가능합니다.</span></div>
+            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
-            <a href="javascript:;">다음</a>
-            <button type="button" id="modal_close_btn_join">모달 창 닫기</button>
+            <a href="javascript:;"></a>
+            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
 				    	<div class="modal_layer"></div>
-					</div>
-					
-					
-					
+					</div> 
 					<div class="mobile-navigation"></div>
 				</div>
 				   

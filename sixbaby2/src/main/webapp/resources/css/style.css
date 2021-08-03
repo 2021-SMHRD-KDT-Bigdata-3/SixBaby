@@ -211,10 +211,11 @@ html {
   font-size: 14px; }
 
 body {
-  color: #8f7655;
+  color: black;
   font-family: arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.5; }
+  font-weight: 600;
+  line-height: 1.5;
+   }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
@@ -239,7 +240,9 @@ address {
   font-style: normal; }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+  color:darkgray;
+  font-weight:400; }
 
 form input, form textarea, form select {
   outline: none;
@@ -1143,6 +1146,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     margin-bottom: 10px; }
   .branding .site-title {
     color: #8f7655;
+    font-weight:600;
     font-size: 14px;
     font-size: 1em; }
 
@@ -1524,7 +1528,7 @@ ul.bullet {
 .contact-form textarea {
   min-height: 150px; }
 
-/*========È¸¿ø°¡ÀÔ ¸ð´ÞÃ¢======*/
+/*========È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¢======*/
 
 #modal_join {
           display: none;
@@ -1541,6 +1545,7 @@ ul.bullet {
           display:inline-block;
           width:100px;
           margin-left:calc(100% - 100px - 10px);
+          border:solid white;
         }
         
 #modal_join .modal_content {
@@ -1566,7 +1571,7 @@ ul.bullet {
 
 /*===========================*/
 
-/*=========·Î±×ÀÎ ¸ð´ÞÃ¢========*/
+/*=========ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¢========*/
 
 #modal_login {
           display: none;
@@ -1583,6 +1588,7 @@ ul.bullet {
           display:inline-block;
           width:100px;
           margin-left:calc(100% - 100px - 10px);
+          
         }
         
 #modal_login .modal_content {
