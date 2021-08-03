@@ -2,8 +2,10 @@ package com.smhrd.sixbaby2;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,9 +14,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.smhrd.mapper.BoardsVO;
 import com.smhrd.mapper.Mapper;
@@ -69,46 +73,32 @@ public class HomeController {
 		return "redirect:/위치.do";
 	}
 
-/**	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
-	@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
-		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/위치.do";
-	}
-
-	@RequestMapping("/boardContent.do")
-	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
-		BoardsVO vo = mapper.boardContent(board_no);
-		model.addAttribute("vo", vo);
-		return "redirect:/위치.do";
-	}
-
-	@RequestMapping("/boardInsert.do")
-	public String boardInsert(BoardsVO vo) {
-		mapper.boardInsert(vo);
-		return "redirect:/위치.do";
-	}
-
-	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
-		mapper.boardUpdate(vo);
-		return "redirect:/위치.do";
-	}
-
-	@RequestMapping("/boardDelete.do")
-	public String boardDelete(@RequestParam("board_no") int board_no) {
-		mapper.boardDelete(board_no);
-		return "redirect:/위치.do";
-	}
-**/	
+	/**
+	 * // 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) @RequestMapping("/boardList.do") public String
+	 * boardList(HttpServletRequest request) { List<BoardsVO> list =
+	 * mapper.boardList(); request.setAttribute("list", list); return
+	 * "redirect:/위치.do"; }
+	 * 
+	 * @RequestMapping("/boardContent.do") public String
+	 * boardContent(@RequestParam("board_no") int board_no, Model model) { BoardsVO
+	 * vo = mapper.boardContent(board_no); model.addAttribute("vo", vo); return
+	 * "redirect:/위치.do"; }
+	 * 
+	 * @RequestMapping("/boardInsert.do") public String boardInsert(BoardsVO vo) {
+	 * mapper.boardInsert(vo); return "redirect:/위치.do"; }
+	 * 
+	 * @RequestMapping("/boardUpdate.do") public String boardUpdate(BoardsVO vo) {
+	 * mapper.boardUpdate(vo); return "redirect:/위치.do"; }
+	 * 
+	 * @RequestMapping("/boardDelete.do") public String
+	 * boardDelete(@RequestParam("board_no") int board_no) {
+	 * mapper.boardDelete(board_no); return "redirect:/위치.do"; }
+	 **/
 
 	/*
 	 * @RequestMapping("/boardForm.do") public String boardForm() { return
 	 * "boardForm"; // boardForm.jsp }
 	 */
-
-
 
 	// 템플릿적용
 	@RequestMapping(value = "/events.do")
@@ -125,18 +115,24 @@ public class HomeController {
 	public String seremons() {
 		return "community";
 	}
-	
+
 	@RequestMapping(value = "/join.do")
 	public String join() {
 		return "join";
 	}
-	
-	
-
 
 	// iot 테스트용 페이지
 	@RequestMapping("/iot.do")
 	public String iot() {
 		return "iot";
 	}
+
+/**	@RequestMapping(value = "/iot.do", method = RequestMethod.POST, produces = { "application/json; charset=utf-8" })
+	public @ResponseBody Map<String, Object> iot(@RequestBody Map<String, Object> tmp) {
+		System.out.println("data : " + tmp.get("data"));
+		Map<String, Object> retVal = new HashMap<String, Object>();
+		return retVal;
+	}
+**/
+	
 }
