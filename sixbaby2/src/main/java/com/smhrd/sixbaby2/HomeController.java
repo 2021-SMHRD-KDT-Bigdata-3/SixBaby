@@ -130,6 +130,11 @@ public class HomeController {
 		return "join";
 	}
 	
+	//°Ô½ÃÆÇ
+		@RequestMapping(value="/boardWrite.do")
+	    public String boardWrite() {
+	        return "boardWrite";
+	    }
 	
 
 
