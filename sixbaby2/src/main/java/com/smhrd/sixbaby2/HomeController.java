@@ -108,27 +108,13 @@ public class HomeController {
 	 * "boardForm"; // boardForm.jsp }
 	 */
 
-	// 템플릿적용
-	@RequestMapping(value = "/events.do")
-	public String events() {
-		return "events";
-	}
-
-	@RequestMapping(value = "/families.do")
-	public String families() {
-		return "families";
-	}
 	
-	// 메인 로그인 하기 전 페이지
-		@RequestMapping(value = "/main_login.do")
-		public String main_login() {
-			return "main_login";
-		}
 	
-		// 메인 로그인 후 페이지
-		@RequestMapping(value = "/main_logout.do")
-		public String main_logout() {
-			return "main_logout";
+		
+		// 마이 페이지
+		@RequestMapping(value = "/mypage.do")
+		public String mypage() {
+			return "mypage";
 		}
 		
 	// 커뮤니티
@@ -155,6 +141,18 @@ public class HomeController {
 	        return "boardWrite";
 	    }
 	
+		// 정보 수정
+		@RequestMapping(value="/correction.do")
+		public String correction() {
+			return "correction";
+		}
+		
+		// 메인
+		@RequestMapping(value="/main.do")
+		public String main(Model model) {
+			model.addAttribute("login", null);
+			return "main";
+		}
 
 
 
@@ -169,7 +167,7 @@ public class HomeController {
 		System.out.println("data : " + tmp.get("data"));
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		return retVal;
-	}
+}
 **/
 	
 }
