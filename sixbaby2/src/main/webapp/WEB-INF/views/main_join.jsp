@@ -57,43 +57,7 @@
 						</div>
 					</div>
 					
-					<div id="modal_login">
-   
-				    <div class="modal_content">
-        <div class="form_txtInput">
-          <h2 class="sub_tit_txt">로그인</h2>
-          <p class="exTxt">정보를 정확히 입력해주세요.</p>
-          <div class="join_form">
-            <table align="center">
-              <colgroup>
-                <col width="30%"/>
-                <col width="auto"/>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th><span>아이디</span></th>
-                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
-                </tr>
-                <tr>
-                  <th><span>비밀번호</span></th>
-                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
-                </tr>
-                <tr>
-                	<td><button type="button" id="modal_open_btn_join" style="position: relative; left: 50px; border: solid white; background:white;">회원가입</button></td>
-                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div><!-- join_form E  -->
-          <div class="btn_wrap">
-            <button type="button" id="modal_close_btn_login" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
-          </div>
-        </div> <!-- form_txtInput E -->
-    </div> <!-- container E -->
-				    	<div class="modal_layer"></div>
-					</div>
-					
-					<!--  <div id="modal_join">
+					<div id="modal_join">
    
 				    <div class="modal_content">
         <div class="form_txtInput">
@@ -136,8 +100,6 @@
                   <th><span>생년월일</span></th>
                	  <td><input type="date"></td>
                 </tr>
-                  <!--<td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>  
-                </tr>
                 
                 <tr>
                   <th><span>휴대폰 번호</span></th>
@@ -152,10 +114,11 @@
                   <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   여♀<input type="radio" name="gender" value="woman"></td>
                 </tr>
-                <tr>
-                  <th><span>아이 생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
+               <tr>
+                  <th><span>아이생년월일</span></th>
+               	  <td><input type="date"></td>
                 </tr>
+                
                 <tr>
                 	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
@@ -165,6 +128,7 @@
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
+            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->

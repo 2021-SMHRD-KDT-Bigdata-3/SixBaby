@@ -60,6 +60,7 @@
 						<div class="row">
 							<div class="content col-md-8">
 								<h2 class="section-title">Boards</h2>
+									<button type="button" id="modal_open_btn_write"  style="position: relative; left:680px; background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">±Û¾²±â</span></button>
 								<ul class="seremon-list large">
 									<li>
 										<img src="${cpath}/resources/images/thumb-1-120.png" alt="">

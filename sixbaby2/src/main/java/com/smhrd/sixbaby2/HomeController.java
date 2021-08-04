@@ -129,7 +129,11 @@ public class HomeController {
 		public String main_login() {
 			return "main_login";
 		}
-	
+	// 회원가입창
+		@RequestMapping(value = "/main_join.do")
+		public String main_join() {
+			return "main_login";
+		}
 
 
 		// ���� �α��� �� ������

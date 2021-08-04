@@ -47,10 +47,11 @@
 			<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
-						<img src="${cpath}/resources/images/logo.png" alt="" class="logo">
-						<h1 class="site-title">True Church</h1>
+						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
+						<h1 class="site-title" style="color:#E63F39">Sixbaby</h1>
 					</a>
 					<div align="right">
+					<button type="button" id="modal_open_btn_mypage"><span class="site-title">Mypage</span></button>&nbsp; 
 					<a href="#" class="branding"><span class="site-title">LogOut</span></a>
 					</div>
 					
