@@ -2,10 +2,8 @@ package com.smhrd.sixbaby2;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,12 +12,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
 import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
@@ -51,8 +48,8 @@ public class HomeController {
 
 	// 1. ȸ������,����,Ż��
 	@RequestMapping("/memberInsert.do")
-	public String memberInsert(MemberVO vo) {
-		mapper.memberInsert(vo);
+	public String memberInsert(MemberVO vo1, BabyVO vo2) {
+		mapper.memberInsert(vo1, vo2);
 		return "redirect:/main.do";
 	}
 
@@ -107,6 +104,11 @@ public class HomeController {
 		mapper.boardDelete(board_no);
 		return "redirect:/��ġ.do";
 	}
+	
+	
+	
+	
+//-----------------------------------------------------------	
 
 	/*
 	 * @RequestMapping("/boardForm.do") public String boardForm() { return

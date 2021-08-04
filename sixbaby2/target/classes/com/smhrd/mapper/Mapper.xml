@@ -9,6 +9,10 @@
 		insert into member
 		values(#{id},#{pw},#{nickname},#{name},#{gender},#{birth},#{tell})
 	</insert>
+	<insert id="memberInsert" parameterType="com.smhrd.mapper.BabyVO">
+	    insert into baby(id, baby_name, baby_birth, baby_gender)
+	    values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
+   </insert>
 	<update id="memberUpdate" parameterType="com.smhrd.mapper.MemberVO">
 		update member set
 		pw=#{pw}, nickname=#{nickname}, tell=#{tell} where id=#{id}
@@ -45,8 +49,8 @@
    
    <!-- 4. 아기정보(삽입, ) -->
    <insert id="babyInsert" parameterType="com.smhrd.mapper.BabyVO">
-	    insert into boards(category, title, nickname, picture, contents)
-	    values(#{category},#{title},#{nickname},#{picture},#{contents})
+	    insert into baby(id, baby_name, baby_birth, baby_gender)
+	    values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
    </insert>
    
    
