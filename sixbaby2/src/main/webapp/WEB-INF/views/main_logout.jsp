@@ -51,10 +51,6 @@
 						<h1 class="site-title">True Church</h1>
 					</a>
 					<div align="right">
-						<div id="root" class="branding">
-    						<button type="button" id="modal_open_btn_login"><span class="site-title">Login</span></button>
-						</div>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="#" class="branding"><span class="site-title">LogOut</span></a>
 					</div>
 					

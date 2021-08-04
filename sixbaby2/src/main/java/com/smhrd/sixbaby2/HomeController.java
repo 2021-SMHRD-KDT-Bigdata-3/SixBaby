@@ -36,15 +36,17 @@ public class HomeController {
 		return "home";
 	}
 
+
 	@RequestMapping(value = "/main.do")
-	public String home() {
+	public String main() {
 		return "main";
 	}
+
 
 	@Autowired
 	private Mapper mapper;
 
-	// 1. È¸¿ø°¡ÀÔ,¼öÁ¤,Å»Åð
+	// 1. È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,Å»ï¿½ï¿½
 	@RequestMapping("/memberInsert.do")
 	public String memberInsert(MemberVO vo1, BabyVO vo2) {
 		mapper.memberInsert(vo1, vo2);
@@ -54,7 +56,7 @@ public class HomeController {
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
 		mapper.memberUpdate(vo);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
 	@RequestMapping("/memberDelete.do")
@@ -63,44 +65,44 @@ public class HomeController {
 		return "redirect:/main.do";
 	}
 
-	// 2. ·Î±×ÀÎ
+	// 2. ï¿½Î±ï¿½ï¿½ï¿½
 	@RequestMapping("/login.do")
 	public String login(MemberVO vo) {
 		mapper.login(vo);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
-	// 3. Ä¿¹Â´ÏÆ¼(ÀüÃ¼, ¿­¶÷, ÀÛ¼º, ¼öÁ¤, »èÁ¦)
+	// 3. Ä¿ï¿½Â´ï¿½Æ¼(ï¿½ï¿½Ã¼, ï¿½ï¿½ï¿½ï¿½, ï¿½Û¼ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½)
 	@RequestMapping("/boardList.do")
 	public String boardList(HttpServletRequest request) {
 		List<BoardsVO> list = mapper.boardList();
 		request.setAttribute("list", list);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
 	@RequestMapping("/boardContent.do")
 	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
 		BoardsVO vo = mapper.boardContent(board_no);
 		model.addAttribute("vo", vo);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(BoardsVO vo) {
 		mapper.boardInsert(vo);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
 	public String boardUpdate(BoardsVO vo) {
 		mapper.boardUpdate(vo);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 
 	@RequestMapping("/boardDelete.do")
 	public String boardDelete(@RequestParam("board_no") int board_no) {
 		mapper.boardDelete(board_no);
-		return "redirect:/À§Ä¡.do";
+		return "redirect:/ï¿½ï¿½Ä¡.do";
 	}
 	
 	
@@ -113,7 +115,7 @@ public class HomeController {
 	 * "boardForm"; // boardForm.jsp }
 	 */
 
-	// ÅÛÇÃ¸´Àû¿ë
+	// ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping(value = "/events.do")
 	public String events() {
 		return "events";
@@ -124,26 +126,40 @@ public class HomeController {
 		return "families";
 	}
 	
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		@RequestMapping(value = "/main_login.do")
+		public String main_login() {
+			return "main_login";
+		}
 	
-	// Ä¿¹Â´ÏÆ¼
+
+
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		@RequestMapping(value = "/main_logout.do")
+		public String main_logout() {
+			return "main_logout";
+		}
+		
+	// Ä¿ï¿½Â´ï¿½Æ¼
+
 	@RequestMapping(value = "/community.do")
 	public String community() {
 		return "community";
 	}
 	
-	// µµ¿ò ¿äÃ»
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»
 	@RequestMapping(value = "/help.do")
 	public String help() {
 		return "help";
 	}
 
-	// ¿ëÇ° ÃßÃµ
+	// ï¿½ï¿½Ç° ï¿½ï¿½Ãµ
 	@RequestMapping(value = "/recommendation.do")
 	public String recommendation() {
 		return "recommendation";
 	}
 	
-	//°Ô½ÃÆÇ ÀÛ¼º
+	//ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 		@RequestMapping(value="/boardWrite.do")
 	    public String boardWrite() {
 	        return "boardWrite";
@@ -152,7 +168,7 @@ public class HomeController {
 
 
 
-	// iot Å×½ºÆ®¿ë ÆäÀÌÁö
+	// iot ï¿½×½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping("/iot.do")
 	public String iot() {
 		return "iot";
