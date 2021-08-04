@@ -64,18 +64,10 @@
 								
 							<div class="content col-md-8">
 								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
-								<div class="form-group">
-									<select name="커뮤니티" style="border:2px solid #E63F39; border-radius: 12px; font-size:15px; text-align:center;">
-										<option value="자유게시판">자유게시판</option>
-										<option value="용품 추천">용품 추천</option>
-										<option value="도움 요청">도움 요청</option>
-										<option value="육아 꿀팁">육아 꿀팁</option>
-									</select>
-								</div>
-								<br>
 								<table>
 								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group" >
+									<button type="submit" class="btn btn-primary btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">취소</button>&nbsp;
 										<label class="control-label col-sm-2">작성자</label>
 											<input type="text" class="form-control" name="writer"
 												placeholder="Enter writer">
@@ -102,84 +94,16 @@
 									</table>
 									<div class="form-group">
 										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">등록</button>&nbsp;
-											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">취소</button>
+											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; right:60px; background:white; border:2px solid #E63F39;">수정</button>&nbsp;
 										</div>
 									</div>
-								</form>
-
-							</div>
-							<div class="sidebar col-md-3 col-md-offset-1">
-								<div class="widget">
-									<h3 class="widget-title">Categories</h3>
-									<ul class="arrow" style="text-align:center">
-										<li><a href="#"> - 자유 게시판</a></li>
-										<li><a href="#"> - 용품 추천</a></li>
-										<li><a href="#"> - 도움 요청</a></li>
-										<li><a href="#"> - 육아 꿀팁</a></li>
-									</ul>
-								</div>
-
-								
-							</div>
-						</div>
-					</div>
-				</div>
-
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Our address</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis magnam, ab ipsa laboriosam tempore tenetur, aliquid repellat, ex cum dicta reiciendis accusamus. Omnis repudiandae quasi mollitia, iusto odio dignissimos.</p>
-								<ul class="address">
-									<li><i class="fa fa-map-marker"></i> 329 Church St, Garland, TX 75042</li>
-									<li><i class="fa fa-phone"></i> (425) 853 442 552</li>
-									<li><i class="fa fa-envelope"></i> info@yourchurch.com</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Topics from last meeting</h3>
-								<ul class="bullet">
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Consectetur adipisicing elit quis nostrud</a></li>
-									<li><a href="#">Eiusmod tempor incididunt ut labore et dolore magna</a></li> 
-									<li><a href="#">Ut enim ad minim veniam cillum</a></li>
-									<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li> 
-									<li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Contact form</h3>
-								<form action="#" class="contact-form">
-									<div class="row">
-										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
-										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
+									</form>
+									</div>
+									</div>
+									</div>
+									</div>
 									</div>
 									
-									<textarea name="" placeholder="Your message..."></textarea>
-									<div class="text-right"><input type="submit" value="Send message"></div>
 									
-								</form>
-							</div>
-						</div>
-					</div> <!-- .row -->
-
-					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
-				</div><!-- .container -->
-			</footer> <!-- .site-footer -->
-</div>
-
-		
-		<script src="${cpath}/resources/js/js/jquery-1.11.1.min.js"></script>
-		<script src="${cpath}/resources/js/js/plugins.js"></script>
-		<script src="${cpath}/resources/js/js/app.js"></script>
-		<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
-		<script src="${cpath}/resources/js/js/popup.js"></script>
 </body>
 </html>
