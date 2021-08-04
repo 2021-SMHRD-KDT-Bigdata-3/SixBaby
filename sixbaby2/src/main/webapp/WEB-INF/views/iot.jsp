@@ -20,7 +20,9 @@
 
 	<h1>iot_Test page</h1>
 	<%
+	//여기에서 두번들어온 순간 체크하기!
 	String data = request.getParameter("data");
+	System.out.println("들어오냐?");
 	System.out.println(data);
 	%>
 
