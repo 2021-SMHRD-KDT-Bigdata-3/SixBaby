@@ -121,16 +121,34 @@ public class HomeController {
 	public String families() {
 		return "families";
 	}
-
+	
+	
+	// 커뮤니티
 	@RequestMapping(value = "/community.do")
-	public String seremons() {
+	public String community() {
 		return "community";
 	}
-
-	@RequestMapping(value = "/join.do")
-	public String join() {
-		return "join";
+	
+	// 도움 요청
+	@RequestMapping(value = "/help.do")
+	public String help() {
+		return "help";
 	}
+
+	// 용품 추천
+	@RequestMapping(value = "/recommendation.do")
+	public String recommendation() {
+		return "recommendation";
+	}
+	
+	//게시판 작성
+		@RequestMapping(value="/boardWrite.do")
+	    public String boardWrite() {
+	        return "boardWrite";
+	    }
+	
+
+
 
 	// iot 테스트용 페이지
 	@RequestMapping("/iot.do")

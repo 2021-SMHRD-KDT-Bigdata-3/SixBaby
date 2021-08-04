@@ -30,14 +30,17 @@
 
 
 <div class="main-navigation" align="center">
+<div id="logo">
+							<span class="image avatar48"><img src="${cpath}/resources/images/avatar.jpg" alt=""></span>
+							<h1 id="title">Jane Doe</h1>
+							<p>Hyperspace Engineer</p>
+						</div>
 <button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
 						<ul class="menu">
 							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
-							<li class="menu-item"><a href="#">Pastors <small>Cupidatat non proident</small></a></li><br>
 							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
-							<li class="menu-item"><a href="events.html">Events <small>Sunt in culpa</small></a></li><br>
-							<li class="menu-item"><a href="families.html">Families <small>Aute irure</small></a></li><br>
-							<li class="menu-item"><a href="#">Contact <small>lorem ipsum</small></a></li><br>
+							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
+							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
 						</ul>
 </div>
 <div class="site-content">
