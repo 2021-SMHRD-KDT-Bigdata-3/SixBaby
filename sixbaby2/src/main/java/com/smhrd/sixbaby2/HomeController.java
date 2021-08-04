@@ -47,11 +47,11 @@ public class HomeController {
 	private Mapper mapper;
 
 	// 1. 회원가입, 회원수정, 회원탈퇴
-	@RequestMapping("/memberInsert.do")
+	/*@RequestMapping("/memberInsert.do")
 	public String memberInsert(MemberVO vo1, BabyVO vo2) {
 		mapper.memberInsert(vo1, vo2);
 		return "redirect:/main.do";
-	}
+	}*/
 
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
@@ -134,7 +134,7 @@ public class HomeController {
 	// �쉶�썝媛��엯李�
 		@RequestMapping(value = "/main_join.do")
 		public String main_join() {
-			return "main_login";
+			return "main_join";
 		}
 
 

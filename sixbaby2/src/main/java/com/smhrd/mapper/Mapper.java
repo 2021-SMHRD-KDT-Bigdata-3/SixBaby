@@ -5,7 +5,7 @@ import java.util.List;
 public interface Mapper {
 	
 	//1. È¸¿ø°¡ÀÔ,¼öÁ¤,Å»Åð
-	public void memberInsert(MemberVO vo1, BabyVO vo2);
+	//public void memberInsert(MemberVO vo1, BabyVO vo2);
 	public void memberUpdate(MemberVO vo);
 	public void memberDelete(MemberVO vo);
 	

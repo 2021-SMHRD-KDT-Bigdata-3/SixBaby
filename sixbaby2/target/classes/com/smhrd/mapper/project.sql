@@ -22,7 +22,7 @@ indate datetime default now(),
 primary key(board_no));
 
 create table comments
-(comment_no int not null auto_increment, category varchar(50) not null,
+(comment_no int not null auto_increment, board_no int not null,
 nickname varchar(20) not null, contents varchar(500) not null,
 likes int default 0,
 primary key(comment_no));
@@ -42,3 +42,5 @@ values('꿀팁', 'test', '스마트', 'cat.jpg', '가나다라마바사아자차카타파하');
 select * from boards;
 
 select * from member;
+
+drop table comments;

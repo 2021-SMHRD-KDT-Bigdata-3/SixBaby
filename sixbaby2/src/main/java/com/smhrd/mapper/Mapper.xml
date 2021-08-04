@@ -5,14 +5,14 @@
 <mapper namespace="com.smhrd.mapper.Mapper">
 
 	<!-- 1. 회원가입,수정,탈퇴 -->
-	<insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
+	<!-- <insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
 		insert into member
 		values(#{id},#{pw},#{nickname},#{name},#{gender},#{birth},#{tell})
 	</insert>
 	<insert id="memberInsert" parameterType="com.smhrd.mapper.BabyVO">
 	    insert into baby(id, baby_name, baby_birth, baby_gender)
 	    values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
-   </insert>
+   </insert> -->
 	<update id="memberUpdate" parameterType="com.smhrd.mapper.MemberVO">
 		update member set
 		pw=#{pw}, nickname=#{nickname}, tell=#{tell} where id=#{id}
