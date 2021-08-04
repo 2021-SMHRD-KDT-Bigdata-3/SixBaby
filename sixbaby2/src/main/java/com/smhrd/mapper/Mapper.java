@@ -24,4 +24,9 @@ public interface Mapper {
 	public void commentInsert(CommentsVO vo);
 	public void commentUpdate(CommentsVO vo);
 	public void commentDelete(int comment_no);
+	
+	//5. ¿∞æ∆¿œ±‚
+	public DiaryVO diaryContent(int diary_no);
+	public void diaryInsert(DiaryVO vo);
+	public void diaryUpdate(DiaryVO vo);
 }
