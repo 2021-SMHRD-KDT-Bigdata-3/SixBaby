@@ -59,8 +59,8 @@
     	where board_no=#{board_no}
    </select>
    <insert id="commentInsert" parameterType="com.smhrd.mapper.CommentsVO">
-	    insert into comments(category, nickname, contents)
-	    values(#{category},#{nickname},#{contents})
+	    insert into comments(board_no, nickname, contents)
+	    values(#{board_no},#{nickname},#{contents})
    </insert>
    <update id="commentUpdate" parameterType="com.smhrd.mapper.CommentsVO">
      update comments set contents=#{contents}
@@ -71,9 +71,18 @@
    </delete>
    
    <!-- 6. 육아일기(열람, 작성, 수정) -->
-   <select id="List" resultType="com.smhrd.mapper.BoardsVO"> <!-- 다시 작성 -->
-    	select * from boards
+   <select id="diaryContent" parameterType="int" resultType="com.smhrd.mapper.DiaryVO"> <!-- 다시 작성 -->
+    	select * from diary
+    	where diary_no=#{diary_no}
    </select> 
+   <insert id="diaryInsert" parameterType="com.smhrd.mapper.DiaryVO">
+	    insert into comments(baby_no, title, contents, picture)
+	    values(#{baby_no},#{title},#{contents},#{picture})
+   </insert>
+   <update id="diaryUpdate" parameterType="com.smhrd.mapper.DiaryVO">
+     update diary set contents=#{contents}
+     where diary_no=#{diary_no}  
+   </update>
    
    
 </mapper>

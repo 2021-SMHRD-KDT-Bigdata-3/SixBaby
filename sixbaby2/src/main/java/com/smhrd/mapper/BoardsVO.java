@@ -10,5 +10,5 @@ public class BoardsVO {
 	private String nickname;
 	private String picture;
 	private String contents;
-	private String date;
+	private String indate;
 }

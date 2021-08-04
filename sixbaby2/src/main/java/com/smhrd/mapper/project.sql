@@ -33,6 +33,12 @@ hungry int, pup int, burping int, cold_hot int,
 condition_date datetime default now(), 
 primary key(condition_num));
 
+create table diary
+(diary_no int not null auto_increment, baby_no int not null,
+title varchar(50) not null, contents varchar(1000) not null,
+diary_data datetime default now(), picture varchar(50),
+primary key(diary_no));
+
 insert into member
 values('test', '1234', 'user', '스마트', '남자', '00-01-01', '010-1111-1111');
 
@@ -44,3 +50,5 @@ select * from boards;
 select * from member;
 
 drop table comments;
+
+select * from comments;
