@@ -56,7 +56,7 @@ public class HomeController {
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
 		mapper.memberUpdate(vo);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	@RequestMapping("/memberDelete.do")
@@ -69,7 +69,7 @@ public class HomeController {
 	@RequestMapping("/login.do")
 	public String login(MemberVO vo) {
 		mapper.login(vo);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
@@ -77,32 +77,32 @@ public class HomeController {
 	public String boardList(HttpServletRequest request) {
 		List<BoardsVO> list = mapper.boardList();
 		request.setAttribute("list", list);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	@RequestMapping("/boardContent.do")
 	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
 		BoardsVO vo = mapper.boardContent(board_no);
 		model.addAttribute("vo", vo);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(BoardsVO vo) {
 		mapper.boardInsert(vo);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
 	public String boardUpdate(BoardsVO vo) {
 		mapper.boardUpdate(vo);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	@RequestMapping("/boardDelete.do")
 	public String boardDelete(@RequestParam("board_no") int board_no) {
 		mapper.boardDelete(board_no);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}
 
 	// 댓글(보기,작성,수정,삭제)
@@ -110,7 +110,7 @@ public class HomeController {
 	public String boardList(HttpServletRequest request) {
 		List<BoardsVO> list = mapper.boardList();
 		request.setAttribute("list", list);
-		return "redirect:/占쏙옙치.do";
+		return "redirect:/tt.do";
 	}*/
 	
 	
@@ -122,7 +122,6 @@ public class HomeController {
 	 * "boardForm"; // boardForm.jsp }
 	 */
 
-	// 占쏙옙占시몌옙占쏙옙占쏙옙
 	@RequestMapping(value = "/events.do")
 	public String events() {
 		return "events";
@@ -133,45 +132,44 @@ public class HomeController {
 		return "families";
 	}
 	
-	// 占쏙옙占쏙옙 占싸깍옙占쏙옙 占싹깍옙 占쏙옙 占쏙옙占쏙옙占쏙옙
+	// 인코딩 왜이래
 		@RequestMapping(value = "/main_login.do")
 		public String main_login() {
 			return "main_login";
 		}
-	// �쉶�썝媛��엯李�
+	//	인코딩 왜이래
 		@RequestMapping(value = "/main_join.do")
 		public String main_join() {
 			return "main_join";
 		}
 
 
-		// 占쏙옙占쏙옙 占싸깍옙占쏙옙 占쏙옙 占쏙옙占쏙옙占쏙옙
+		// 인코딩 왜이래
 		@RequestMapping(value = "/main_logout.do")
 		public String main_logout() {
 			return "main_logout";
 		}
 		
-	// 커占승댐옙티
-
+	//인코딩 왜이래
 	@RequestMapping(value = "/community.do")
 	public String community() {
 		return "community";
 	}
 	
-	// 占쏙옙占쏙옙 占쏙옙청
+	// 인코딩 왜이래
 	@RequestMapping(value = "/help.do")
 	public String help() {
 		return "help";
 	}
 
-	// 占쏙옙품 占쏙옙천
+	// 인코딩 왜이래
 	@RequestMapping(value = "/recommendation.do")
 	public String recommendation() {
 		return "recommendation";
 	}
 	
-	//占쌉쏙옙占쏙옙 占쌜쇽옙
-		@RequestMapping(value="/boardWrite.do")
+	// 인코딩 왜이래
+	@RequestMapping(value="/boardWrite.do")
 	    public String boardWrite() {
 	        return "boardWrite";
 	    }
@@ -179,7 +177,7 @@ public class HomeController {
 
 
 
-	// iot 占쌓쏙옙트占쏙옙 占쏙옙占쏙옙占쏙옙
+	// iot 테스트 페이지
 	@RequestMapping("/iot.do")
 	public String iot() {
 		return "iot";
