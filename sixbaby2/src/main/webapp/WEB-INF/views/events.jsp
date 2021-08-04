@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>Sixbaby</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -28,8 +28,8 @@
 			<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
-						<img src="images/logo.png" alt="" class="logo">
-						<h1 class="site-title">True Church</h1>
+						<img src="images/logotest.png" alt="" class="logo" style="max-width: 150px;">
+						<h1 class="site-title" style="color:#E63F39">Sixbaby</h1>
 					</a>
 
 					<div class="main-navigation">

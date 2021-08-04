@@ -64,15 +64,6 @@
 								
 							<div class="content col-md-8">
 								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
-								<div class="form-group">
-									<select name="커뮤니티" style="border:2px solid #E63F39; border-radius: 12px; font-size:15px; text-align:center;">
-										<option value="자유게시판">자유게시판</option>
-										<option value="용품 추천">용품 추천</option>
-										<option value="도움 요청">도움 요청</option>
-										<option value="육아 꿀팁">육아 꿀팁</option>
-									</select>
-								</div>
-								<br>
 								<table>
 								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group" >
@@ -109,18 +100,6 @@
 								</form>
 
 							</div>
-							<div class="sidebar col-md-3 col-md-offset-1">
-								<div class="widget">
-									<h3 class="widget-title">Categories</h3>
-									<ul class="arrow" style="text-align:center">
-										<li><a href="#"> - 자유 게시판</a></li>
-										<li><a href="#"> - 용품 추천</a></li>
-										<li><a href="#"> - 도움 요청</a></li>
-										<li><a href="#"> - 육아 꿀팁</a></li>
-									</ul>
-								</div>
-
-								
 							</div>
 						</div>
 					</div>
