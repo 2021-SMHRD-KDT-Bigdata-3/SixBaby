@@ -39,10 +39,12 @@ public class HomeController {
 		return "home";
 	}
 
+
 	@RequestMapping(value = "/main.do")
 	public String main() {
 		return "main";
 	}
+
 
 	@Autowired
 	private Mapper mapper;
@@ -122,8 +124,22 @@ public class HomeController {
 		return "families";
 	}
 	
+	// ���� �α��� �ϱ� �� ������
+		@RequestMapping(value = "/main_login.do")
+		public String main_login() {
+			return "main_login";
+		}
 	
+
+
+		// ���� �α��� �� ������
+		@RequestMapping(value = "/main_logout.do")
+		public String main_logout() {
+			return "main_logout";
+		}
+		
 	// Ŀ�´�Ƽ
+
 	@RequestMapping(value = "/community.do")
 	public String community() {
 		return "community";
