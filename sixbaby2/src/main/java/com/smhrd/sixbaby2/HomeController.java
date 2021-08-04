@@ -104,7 +104,14 @@ public class HomeController {
 		mapper.boardDelete(board_no);
 		return "redirect:/占쏙옙치.do";
 	}
-	
+
+	// 댓글(보기,작성,수정,삭제)
+	/*@RequestMapping("/boardList.do")
+	public String boardList(HttpServletRequest request) {
+		List<BoardsVO> list = mapper.boardList();
+		request.setAttribute("list", list);
+		return "redirect:/占쏙옙치.do";
+	}*/
 	
 	
 	
