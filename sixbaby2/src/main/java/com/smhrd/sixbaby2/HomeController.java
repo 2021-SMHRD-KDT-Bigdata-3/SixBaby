@@ -174,7 +174,12 @@ public class HomeController {
 	public String iot() {
 		return "iot";
 	}
-
+	
+	@RequestMapping("/correction.do")
+	public String correction() {
+		return "correction";
+	}
+	
 /**	@RequestMapping(value = "/iot.do", method = RequestMethod.POST, produces = { "application/json; charset=utf-8" })
 	public @ResponseBody Map<String, Object> iot(@RequestBody Map<String, Object> tmp) {
 		System.out.println("data : " + tmp.get("data"));

@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>Sixbaby</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -48,11 +48,13 @@
 				<div class="container">
 					<a href="#" class="branding">
 						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
-						<h1 class="site-title" style="color:#E63F39">Sixbaby</h1>
+						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
 					</a>
 					<div align="right">
-					<button type="button" id="modal_open_btn_mypage"><span class="site-title">Mypage</span></button>&nbsp; 
-					<a href="#" class="branding"><span class="site-title">LogOut</span></a>
+						<div id="root" class="branding">
+    						<button type="button" id="modal_open_btn_login"><span class="site-title">My page</span></button>&nbsp; 
+    						<button type="button" id="modal_open_btn_login"><span class="site-title">Logout</span></button>
+						</div>
 					</div>
 					
 					<div id="modal_login">
@@ -91,7 +93,7 @@
 				    	<div class="modal_layer"></div>
 					</div>
 					
-					<div id="modal_join">
+					<!--  <div id="modal_join">
    
 				    <div class="modal_content">
         <div class="form_txtInput">
@@ -132,7 +134,9 @@
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>
+               	  <td><input type="date"></td>
+                </tr>
+                  <!--<td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>  
                 </tr>
                 
                 <tr>
@@ -161,7 +165,6 @@
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
@@ -174,11 +177,11 @@
 			
 
 			<div class="hero">
-				<div class="slides">
-					<li data-bg-image="${cpath}/resources/images/slide-1.jpg">
+				<div class="slides"><!--  style="border-bottom: 1px solid #E63F39" -->
+					<!--<li data-bg-image="${cpath}/resources/images/slide-1.jpg">-->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
 
 								<a href="#" class="button">See our families</a>
@@ -186,18 +189,19 @@
 						</div>
 					</li>
 
-					<li data-bg-image="images/slide-1.jpg">
+					<!--<li data-bg-image="images/slide-1.jpg">-->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
 
-								<a href="#" class="button">See our families</a>
+								<!--<a href="#" class="button">See our families</a>-->
 							</div>
 						</div>
 					</li>
 				</div>
 			</div>
+			<br><br>
 
 			<main class="main-content">
 				

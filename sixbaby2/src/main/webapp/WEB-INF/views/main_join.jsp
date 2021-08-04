@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>Sixbaby</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="${cpath}/resources/css/style.css">
 		
-		<!--[if lt IE 9]>
+		<!--[if lt IE 9]
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
@@ -142,29 +142,28 @@
 
 			<div class="hero">
 				<div class="slides">
-					<li data-bg-image="${cpath}/resources/images/slide-1.jpg">
+					<!--<li data-bg-image="${cpath}/resources/images/slide-1.jpg"> -->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
-
 								<a href="#" class="button">See our families</a>
 							</div>
 						</div>
 					</li>
 
-					<li data-bg-image="images/slide-1.jpg">
+					<!--  <li data-bg-image="images/slide-1.jpg"> -->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
-
-								<a href="#" class="button">See our families</a>
+								<!--  <a href="#" class="button">See our families</a> -->
 							</div>
 						</div>
 					</li>
 				</div>
 			</div>
+			<br><br>
 
 			<main class="main-content">
 				
