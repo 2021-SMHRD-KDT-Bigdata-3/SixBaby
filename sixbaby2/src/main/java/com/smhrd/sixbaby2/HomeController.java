@@ -168,9 +168,6 @@ public class HomeController {
 	    public String boardWrite() {
 	        return "boardWrite";
 	    }
-	
-
-
 
 	// iot 占쌓쏙옙트占쏙옙 占쏙옙占쏙옙占쏙옙
 	@RequestMapping("/iot.do")
