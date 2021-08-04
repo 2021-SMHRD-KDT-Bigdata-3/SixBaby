@@ -38,11 +38,8 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate);
 		return "home";
 	}
-
-	@RequestMapping(value = "/main.do")
-	public String home() {
-		return "main";
-	}
+	
+	
 
 	@Autowired
 	private Mapper mapper;
@@ -122,7 +119,18 @@ public class HomeController {
 		return "families";
 	}
 	
+	// 메인 로그인 하기 전 페이지
+		@RequestMapping(value = "/main_login.do")
+		public String main_login() {
+			return "main_login";
+		}
 	
+		// 메인 로그인 후 페이지
+		@RequestMapping(value = "/main_logout.do")
+		public String main_logout() {
+			return "main_logout";
+		}
+		
 	// 커뮤니티
 	@RequestMapping(value = "/community.do")
 	public String community() {
