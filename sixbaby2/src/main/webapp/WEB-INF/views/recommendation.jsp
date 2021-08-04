@@ -59,7 +59,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="content col-md-8">
-								<h2 class="section-title">Boards</h2>
+								<h2 class="section-title">Supply recommendations</h2>
 								<ul class="seremon-list large">
 									<li>
 										<img src="${cpath}/resources/images/thumb-1-120.png" alt="">
