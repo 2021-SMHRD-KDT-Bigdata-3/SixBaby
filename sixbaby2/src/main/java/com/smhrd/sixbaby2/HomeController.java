@@ -43,7 +43,7 @@ public class HomeController {
 
 	//1. 회원가입, 회원수정, 회원탈퇴
 	@RequestMapping("/memberInsert.do")
-	public String memberInsert(@ModelAttribute MemberVO vo) {
+	public String memberInsert(MemberVO vo) {
 		mapper.memberInsert(vo);
 		return "redirect:/main.do";
 	}
