@@ -103,6 +103,7 @@
 					<div id="modal_join">
    
 				    <div class="modal_content" style="background:white; border-radius: 12px; border:1px solid #E63F39;">
+		<form action="${cpath}/memberInsert.do" method="post">
         <div class="form_txtInput">
           <button type="button" id="modal_close_btn_join" style="background:white; border:solid white; ">창 닫기</button>
           <h2 class="sub_tit_txt"  style="position:relative; left:170px;" >회원가입</h2>
@@ -114,7 +115,6 @@
                 <col width="auto"/>
               </colgroup>
               <tbody>
-              <form action="${cpath}/memberInsert.do" method="post">
                 <tr>
                   <th><span>아이디</span></th>
                   <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
@@ -149,7 +149,6 @@
                   <th><span>휴대폰 번호</span></th>
                   <td><input type="text" name="tell" placeholder="전화번호를 입력하세요."></td>
                 </tr>
-              </form>
 
               </tbody>
             </table>
@@ -161,6 +160,7 @@
             <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
+        </form>
     </div> <!-- container E -->
 				    	<div class="modal_layer"></div>
 					</div> 
