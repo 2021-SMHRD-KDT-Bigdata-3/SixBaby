@@ -190,10 +190,16 @@ public class HomeController {
 			return "main";
 		}
 
-		// °Ô½ÃÆÇ »ó¼¼
+		// ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½
 		@RequestMapping(value="/boardDetail.do")
 		public String boardDetail() {
 			return "boardDetail";
+		}
+		
+		// ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½
+		@RequestMapping(value="/babyCorrection.do")
+		public String babyCorrection() {
+			return "babyCorrection";
 		}
 
 	// iot í…ŒìŠ¤íŠ¸ í˜ì´ì§€
