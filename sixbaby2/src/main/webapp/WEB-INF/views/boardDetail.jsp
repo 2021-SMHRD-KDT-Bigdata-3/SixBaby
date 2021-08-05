@@ -122,7 +122,9 @@
 								
 								<button class="btn btn-success btn-sm" onclick="getComment()">JSON데이터 가져오기</button>
 								<div id="List">댓글 출력</div>
-								<button>댓글 작성하기</button>
+								<form>
+								<input type="text">
+								</form>
 							</div>
 						</div>
 					</div>
