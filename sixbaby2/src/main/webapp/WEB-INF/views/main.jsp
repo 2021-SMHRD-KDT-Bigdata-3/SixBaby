@@ -36,8 +36,8 @@
 					<div class="main-navigation">
 						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
 							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
+								<li class="menu-item current-menu-item"><a href="main.do">Homepage <small>Lorem ipsum</small></a></li>
+								<li class="menu-item"><a href="community.do">Community <small>Laboris nisi aliquip</small></a></li>
 								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
 								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
 							</ul>
