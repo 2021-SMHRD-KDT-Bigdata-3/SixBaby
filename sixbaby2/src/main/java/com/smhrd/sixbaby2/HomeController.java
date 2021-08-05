@@ -40,12 +40,12 @@ public class HomeController {
 	@Autowired
 	private Mapper mapper;
 
-	// 1. 회원가입, 회원수정, 회원탈퇴
-	/*@RequestMapping("/memberInsert.do")
-	public String memberInsert(MemberVO vo1, BabyVO vo2) {
-		mapper.memberInsert(vo1, vo2);
+	//1. 회원가입, 회원수정, 회원탈퇴
+	@RequestMapping("/memberInsert.do")
+	public String memberInsert(MemberVO vo) {
+		mapper.memberInsert(vo);
 		return "redirect:/main.do";
-	}*/
+	}
 
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
