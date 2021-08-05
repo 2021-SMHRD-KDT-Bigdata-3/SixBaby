@@ -37,12 +37,6 @@ public class HomeController {
 	}
 
 
-	@RequestMapping(value = "/main.do")
-	public String main() {
-		return "main";
-	}
-
-
 	@Autowired
 	private Mapper mapper;
 
@@ -90,7 +84,7 @@ public class HomeController {
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(BoardsVO vo) {
 		mapper.boardInsert(vo);
-		return "redirect:/tt.do";
+		return "redirect:/community.do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
@@ -132,24 +126,6 @@ public class HomeController {
 	public String families() {
 		return "families";
 	}
-
-	// 인코딩 왜이래
-		@RequestMapping(value = "/main_login.do")
-		public String main_login() {
-			return "main_login";
-		}
-	//	인코딩 왜이래
-		@RequestMapping(value = "/main_join.do")
-		public String main_join() {
-			return "main_join";
-		}
-
-
-		// 인코딩 왜이래
-		@RequestMapping(value = "/main_logout.do")
-		public String main_logout() {
-			return "main_logout";
-		}
 	
 		
 		// ���� ������

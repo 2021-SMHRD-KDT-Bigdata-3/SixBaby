@@ -61,7 +61,7 @@
 						<div class="row">
 								
 							<div class="content col-md-8">
-								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
+								<form action="${cpath}/boardInsert.do" method="post" enctype="multipart/form-data">
 								<div class="form-group">
 									<select name="커뮤니티" style="border:2px solid #E63F39; border-radius: 12px; font-size:15px; text-align:center;">
 										<option value="자유게시판">자유게시판</option>
@@ -75,12 +75,12 @@
 								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group" >
 										<label class="control-label col-sm-2">작성자</label>
-											<input type="text" class="form-control" name="writer"
+											<input type="text" class="form-control" name="nickname"
 												placeholder="Enter writer">
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">작성일</label>
-               								 <input type="date">
+               								 <input type="date" name="indate">
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">제목</label>
@@ -94,7 +94,8 @@
 									</div>
 									<div id="inputFile">
 										<label class="site-btn3" for="input-file" style="font-weight:bold; font-size:16; ">사진 첨부</label>
-											<input type="file" id="input-file" name="img">
+											<input type="file" id="input-file">
+											<input class="picture" type="hidden" name ="picture">
 									</div>
 									</div>
 									</table>
@@ -111,9 +112,9 @@
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
 									<ul class="arrow" style="text-align:center">
-										<li><a href="#"> - 자유 게시판</a></li>
-										<li><a href="#"> - 용품 추천</a></li>
-										<li><a href="#"> - 도움 요청</a></li>
+										<li><a href="${cpath}/community.do"> - 자유 게시판</a></li>
+										<li><a href="${cpath}/recommendation.do"> - 용품 추천</a></li>
+										<li><a href="${cpath}/help.do"> - 도움 요청</a></li>
 										<li><a href="#"> - 육아 꿀팁</a></li>
 									</ul>
 								</div>
@@ -178,6 +179,6 @@
 		<script src="${cpath}/resources/js/js/plugins.js"></script>
 		<script src="${cpath}/resources/js/js/app.js"></script>
 		<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
-		<script src="${cpath}/resources/js/js/popup.js"></script>
+		<script src="${cpath}/resources/js/js/boardwrite.js"></script>
 </body>
 </html>

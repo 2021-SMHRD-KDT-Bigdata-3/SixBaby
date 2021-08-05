@@ -21,6 +21,19 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 파일 업로드를 위한 multipartResolver bean -->
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value = "21457280" />
+		<beans:property name="defaultEncoding" value="utf-8" />
+	</beans:bean>
+	
+	<!-- 파일 저장 경로 bean -->
+	<beans:bean id = "uploadPath" class="java.lang.String">
+		<beans:constructor-arg value="C:\Users\smhrd\git\SixBaby\sixbaby2\src\main\webapp\resources\uploadImg">
+		</beans:constructor-arg>
+	</beans:bean>
+	
 	<context:component-scan base-package="com.smhrd.sixbaby2" />
 	
 	
