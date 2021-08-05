@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Sixbaby</title>
+		<title>BOARD_WRITE</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -39,8 +39,8 @@
 					<div class="main-navigation">
 						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
 							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
+								<li class="menu-item current-menu-item"><a href="main.do">Homepage <small>Lorem ipsum</small></a></li>
+								<li class="menu-item"><a href="community.do">Community <small>Laboris nisi aliquip</small></a></li>
 								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
 								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
 							</ul>
@@ -101,7 +101,7 @@
 									<div class="form-group">
 										<div class="col-sm-offset-2 col-sm-10">
 											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">등록</button>&nbsp;
-											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">취소</button>
+											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;"><a href="community.do">취소</a></button>
 										</div>
 									</div>
 								</form>
@@ -111,10 +111,10 @@
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
 									<ul class="arrow" style="text-align:center">
-										<li><a href="#"> - 자유 게시판</a></li>
-										<li><a href="#"> - 용품 추천</a></li>
-										<li><a href="#"> - 도움 요청</a></li>
-										<li><a href="#"> - 육아 꿀팁</a></li>
+										<li><a href="community.do">자유게시판</a></li>
+										<li><a href="recommendation.do">용품추천</a></li>
+										<li><a href="help.do">도움요청</a></li>
+										<li><a href="#">육아꿀팁</a></li>
 									</ul>
 								</div>
 
