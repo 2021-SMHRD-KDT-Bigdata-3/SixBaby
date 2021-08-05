@@ -62,8 +62,9 @@
 								<div class="row">
 									<div class="family">
 								<h2 class="section-title">꼬꼬</h2>
-								<a href="#">정보 수정</a><br>
-								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 정보</span></button>
+								<a href="correction.do">회원 정보 수정</a><br>
+								<a href="babyCorrection.do">아이 정보 수정</a><br>
+								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>
 										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
 										<h3 class="family-name">Smith</h3>
 										<small>John, Anna, Patrick, Susan</small>
@@ -102,9 +103,6 @@
                 <tr>
                   <th><span>아이 생년월일</span></th>
                   <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
-                </tr>
-                <tr>
-                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
               </tbody>
             </table>

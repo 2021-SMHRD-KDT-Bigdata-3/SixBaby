@@ -195,6 +195,12 @@ public class HomeController {
 		public String boardDetail() {
 			return "boardDetail";
 		}
+		
+		// �Խ��� ��
+		@RequestMapping(value="/babyCorrection.do")
+		public String babyCorrection() {
+			return "babyCorrection";
+		}
 
 	// iot 테스트 페이지
 	@RequestMapping("/iot.do")
