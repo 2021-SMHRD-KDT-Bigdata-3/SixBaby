@@ -64,10 +64,8 @@ window.onload = function () {
 <div class="site-content">
 			<header class="site-header">
 				<div class="container">
-							<button type="button" id="modal_open_btn_login"><span class="site-title" style="background:white; position: relative; left:800px; bottom:100px; font-size:20px;">Login</span></button> &nbsp; &nbsp;
-    						<button type="button" id="modal_open_btn_join" style="background:white; border:white; position: relative; left:800px; bottom:100px; font-size:20px;"><span class="site-title">Join</span></button>
 					<a href="#" class="branding">
-							
+						
 						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
 						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
 					</a>
@@ -86,6 +84,16 @@ window.onload = function () {
 					<div class="mobile-navigation"></div>
 				</div>
 			</header> <!-- .site-header -->
+
+		<div align="right">
+						<div id="root" class="branding">
+    							<button type="button" id="modal_open_btn_login"><span class="site-title" style="background:white;">Login</span></button> &nbsp; &nbsp;
+    						<button type="button" id="modal_open_btn_join" style="background:white; border:white;"><span class="site-title">Join</span></button> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    						<br><br><br>
+						</div>
+						
+					</div>
+					
 					<div id="modal_login">
    
 				    <div class="modal_content" style="border-radius: 12px; border:1px solid #E63F39;">
@@ -101,13 +109,13 @@ window.onload = function () {
               <tbody>
               <form action="${cpath}/login.do" method="post">
                 <tr>
-                  <th><span>아이디</span></th>
-                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
+                  <th><span style="position: relative; left: 70px;">아이디</span></th>
+                  <td style="position: relative; left:70px;"><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
                 </tr>
+                <br>
                 <tr>
-                  <th><span>비밀번호</span></th>
-
-                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
+                  <th><span  style="position: relative; left: 70px;">비밀번호</span></th>
+                  <td style="position: relative; left: 70px;"><input type="password" placeholder="PW 를 입력하세요"></td>
                 </tr> 
                 <tr>
                 	<td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 140px; ">확인</button></td>
@@ -166,7 +174,7 @@ window.onload = function () {
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="date" name="birth"></td>
+                  <td><input type="date"></td>
                 </tr>
                 
                 <tr>
@@ -215,6 +223,7 @@ window.onload = function () {
 							<div class="widget">
 							 <small class="slide-subtitle" style="color: black; position:relative; left:140px; font-size:15px">Sixbaby</small>
 							 <br><br>
+							 
 								<h2 class="widget-title" style="color: #666666; position:relative; right:30px;">멘트멘트멘트멘트멘트멘트멘트멘트트멘트멘트멘트트멘트멘트멘트</h2>
 							</div>
 						</div>

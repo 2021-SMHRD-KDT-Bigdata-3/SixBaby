@@ -79,10 +79,6 @@
 												placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">累己老</label>
-               								 <input type="date">
-									</div>
-									<div class="form-group">
 										<label class="control-label col-sm-2">力格</label>
 											<input type="text" class="form-control" name="title"
 												placeholder="Enter title">
