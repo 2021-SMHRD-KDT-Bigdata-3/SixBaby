@@ -11,5 +11,4 @@ public class MemberVO {
 	private String gender;
 	private String birth;
 	private String tell;
-	private int babynum;
 }

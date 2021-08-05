@@ -40,12 +40,12 @@ public class HomeController {
 	@Autowired
 	private Mapper mapper;
 
-	// 1. 회원가입, 회원수정, 회원탈퇴
-	/*@RequestMapping("/memberInsert.do")
-	public String memberInsert(MemberVO vo1, BabyVO vo2) {
-		mapper.memberInsert(vo1, vo2);
+	//1. 회원가입, 회원수정, 회원탈퇴
+	@RequestMapping("/memberInsert.do")
+	public String memberInsert(MemberVO vo) {
+		mapper.memberInsert(vo);
 		return "redirect:/main.do";
-	}*/
+	}
 
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
@@ -63,7 +63,7 @@ public class HomeController {
 	@RequestMapping("/login.do")
 	public String login(MemberVO vo) {
 		mapper.login(vo);
-		return "redirect:/tt.do";
+		return "redirect:/main.do";
 	}
 
 	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
@@ -71,7 +71,7 @@ public class HomeController {
 	public String boardList(HttpServletRequest request) {
 		List<BoardsVO> list = mapper.boardList();
 		request.setAttribute("list", list);
-		return "redirect:/tt.do";
+		return "redirect:/community.do";
 	}
 
 	@RequestMapping("/boardContent.do")
@@ -125,14 +125,13 @@ public class HomeController {
 	@RequestMapping(value = "/families.do")
 	public String families() {
 		return "families";
-	}
-	
+	}	
 		
-		// ���� ������
-		@RequestMapping(value = "/mypage.do")
-		public String mypage() {
-			return "mypage";
-		}
+	// ���� ������
+	@RequestMapping(value = "/mypage.do")
+	public String mypage() {
+		return "mypage";
+	}
 		
 	//인코딩 왜이래
 	@RequestMapping(value = "/community.do")
@@ -172,6 +171,17 @@ public class HomeController {
 			return "main";
 		}
 
+		// �Խ��� ��
+		@RequestMapping(value="/boardDetail.do")
+		public String boardDetail() {
+			return "boardDetail";
+		}
+		
+		// �Խ��� ��
+		@RequestMapping(value="/babyCorrection.do")
+		public String babyCorrection() {
+			return "babyCorrection";
+		}
 
 	// iot 테스트 페이지
 	@RequestMapping("/iot.do")

@@ -39,6 +39,27 @@
 	  <filter-name>encoding</filter-name>
 	  <url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<servlet>
+    <description></description>
+    <display-name>SoundData</display-name>
+    <servlet-name>SoundData</servlet-name>
+    <servlet-class>com.smhrd.sixbaby2.SoundData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SoundData</servlet-name>
+    <url-pattern>/SoundData</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>soundData</display-name>
+    <servlet-name>soundData</servlet-name>
+    <servlet-class>com.smhrd.sixbaby2.soundData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>soundData</servlet-name>
+    <url-pattern>/soundData</url-pattern>
+  </servlet-mapping>
 		
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
