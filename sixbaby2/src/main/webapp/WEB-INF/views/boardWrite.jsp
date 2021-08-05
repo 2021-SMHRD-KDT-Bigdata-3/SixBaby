@@ -87,27 +87,16 @@
 							</div>
 							<br>
 							<table>
-								<div class="write_table"
-									style="border: 2px solid #E63F39; border-radius: 12px;">
+								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
 										<label class="control-label col-sm-2">累己磊</label> <input
 											type="text" class="form-control" name="nickname"
 											placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-
 										<label class="control-label col-sm-2">力格</label>
 											<input type="text" class="form-control" name="title"
 												placeholder="Enter title">
-
-										<label class="control-label col-sm-2">累己老</label> <input
-											type="date" name="indate">
-									</div>
-									<div class="form-group">
-										<label class="control-label col-sm-2">力格</label> <input
-											type="text" class="form-control" name="title"
-											placeholder="Enter title">
-
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">郴侩</label>
