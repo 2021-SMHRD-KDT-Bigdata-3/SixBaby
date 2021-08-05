@@ -24,6 +24,41 @@
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 		
+		<script>
+		function getComment(){
+	  		$.ajax({
+	  			url : "${cpath}/commentList.do",
+	  			type : "get",
+	  			dataType : "json",
+	  			success : resultHtml,
+	  			error : function(){ alert("error");}
+	  		});
+	  	}
+		function resultHtml(data){
+	  		var result = "<table class='table'>";
+	  		result+="<tr>";
+	  		result+="<td>번호</td>";
+	  		result+="<td>닉네임</td>";
+	  		result+="<td>내용</td>";
+	  		result+="<td>추천수</td>";
+	  		result+="<td>수정</td>";
+	  		result+="<td>삭제</td>";
+	  		result+="</tr>";
+	  		$.each(data, (index,obj)=>{
+	  			result+="<tr>";
+	  	  		result+="<td>"+obj.comment_no+"</td>";
+	  	  		result+="<td>"+obj.nickname+"</td>";
+	  	  		result+="<td>"+obj.contents+"</td>";
+	  	  		result+="<td>"+obj.likes+"</td>";
+	  	  		result+="<td><button>수정</button></td>";
+	  	  		result+="<td><button>삭제</button></td>";
+	  	  		result+="</tr>";
+	  		});
+	  		
+	  		result+="</table>";
+	  		$("#List").html(result);
+	  	}
+		</script>
 		
 </head>
 <body>
@@ -73,9 +108,7 @@
 								<table>
 								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group" >
-										<img src="${cpath}/resources/images/logotest.png">
-									</div>
-									<div class="form-group">
+										<img src="${cpath}/resources/images/logotest.png" style="max-width: 150px;">
 											<textArea rows="5" class="form-control" name="contents"
 												placeholder="Enter contents"></textArea>
 									</div>
@@ -83,12 +116,15 @@
 									</table>
 									<div class="form-group">
 										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">등록</button>&nbsp;
-											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">취소</button>
+											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">수정</button>&nbsp;
+											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">삭제</button>
 										</div>
 									</div>
 								</form>
-
+								
+								<button class="btn btn-success btn-sm" onclick="getComment()">JSON데이터 가져오기</button>
+								<div id="List">댓글 출력</div>
+								<button>댓글 작성하기</button>
 							</div>
 						</div>
 					</div>

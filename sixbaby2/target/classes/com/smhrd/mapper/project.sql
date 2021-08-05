@@ -52,3 +52,6 @@ select * from member;
 drop table comments;
 
 select * from comments;
+
+insert into comments(board_no,nickname,contents,)
+values('')
