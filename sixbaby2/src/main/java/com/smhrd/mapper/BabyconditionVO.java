@@ -5,8 +5,10 @@ import lombok.Data;
 @Data
 public class BabyconditionVO {
 	private int condition_num;
-	private String id;
-	private String baby_name;
-	private String baby_birth;
-	private String baby_gender;
+	private int baby_num;
+	private int hungry;
+	private int pup;
+	private int burping;
+	private int cold_hot;
+	private String condition_date;
 }

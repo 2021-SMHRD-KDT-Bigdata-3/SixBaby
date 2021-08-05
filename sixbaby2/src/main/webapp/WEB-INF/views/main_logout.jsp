@@ -2,6 +2,7 @@
     pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>Sixbaby</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -22,9 +23,26 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		
+		
 </head>
 <body>
 
+
+<div class="main-navigation" align="center">
+<div id="logo">
+							<span class="image avatar48"><img src="${cpath}/resources/images/avatar.jpg" alt=""></span>
+							<h1 id="title">Jane Doe</h1>
+							<p>Hyperspace Engineer</p>
+						</div>
+<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
+							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
+							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
+							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
+						</ul>
+</div>
 <div class="site-content">
 			<header class="site-header">
 				<div class="container">
@@ -32,24 +50,10 @@
 						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
 						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
 					</a>
-					
-					<div class="main-navigation">
-						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
-								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
-								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
-							</ul>
-					</div>
-
-					<div class="mobile-navigation"></div>
-				</div>
-			</header> <!-- .site-header -->
-
-		<div align="right">
+					<div align="right">
 						<div id="root" class="branding">
-    						<button type="button" id="modal_open_btn_login"><span class="site-title">Login</span></button>
+    						<button type="button" id="modal_open_btn_login"><span class="site-title">My page</span></button>&nbsp; 
+    						<button type="button" id="modal_open_btn_login"><span class="site-title">Logout</span></button>
 						</div>
 					</div>
 					
@@ -66,20 +70,18 @@
                 <col width="auto"/>
               </colgroup>
               <tbody>
-              <form action="${cpath}/login.do" method="post">
                 <tr>
                   <th><span>아이디</span></th>
-                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
+                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호</span></th>
-                  <td><input type="password" name="pw" placeholder="PW 를 입력하세요"></td>
+                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
                 </tr>
                 <tr>
                 	<td><button type="button" id="modal_open_btn_join" style="position: relative; left: 50px; border: solid white; background:white;">회원가입</button></td>
                 	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
                 </tr>
-              </form>
               </tbody>
             </table>
           </div><!-- join_form E  -->
@@ -90,7 +92,8 @@
     </div> <!-- container E -->
 				    	<div class="modal_layer"></div>
 					</div>
-					<div id="modal_join">
+					
+					<!--  <div id="modal_join">
    
 				    <div class="modal_content">
         <div class="form_txtInput">
@@ -104,14 +107,13 @@
                 <col width="auto"/>
               </colgroup>
               <tbody>
-              <form action="${cpath}/memberInsert.do" method="post">
                 <tr>
                   <th><span>아이디</span></th>
-                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
+                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호</span></th>
-                  <td><input type="password" name="pw" placeholder="비밀번호를 입력하세요."></td>
+                  <td><input type="password" placeholder="비밀번호를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호 확인</span></th>
@@ -119,7 +121,7 @@
                 </tr>
                 <tr>
                   <th><span>이름</span></th>
-                  <td><input type="text" name="name" placeholder="이름을 입력하세요."></td>
+                  <td><input type="text" placeholder="이름을 입력하세요."></td>
                 </tr>
                 <tr>
                 <th><span>성별</span></th>
@@ -128,54 +130,58 @@
                 </tr>
                 <tr>
                   <th><span>닉네임</span></th>
-                  <td><input type="text" name="nickname" placeholder="닉네임을 입력하세요."></td>
+                  <td><input type="text" placeholder="닉네임을 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="text" name="birth" placeholder="ex) 1996 2월 18일 : 960218"></td>
+               	  <td><input type="date"></td>
+                </tr>
+                  <!--<td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>  
                 </tr>
                 
                 <tr>
                   <th><span>휴대폰 번호</span></th>
-                  <td><input type="text" name="tell" placeholder="전화번호를 입력하세요."></td>
+                  <td><input type="text" placeholder="전화번호를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>아이 이름</span></th>
-                  <td><input type="text" name="baby_name" placeholder="태명 or 이름을 입력하세요."></td>
+                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>아이 성별</span></th>
-                  <td>남♂<input type="radio" name="baby_gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  여♀<input type="radio" name="baby_gender" value="woman"></td>
+                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  여♀<input type="radio" name="gender" value="woman"></td>
                 </tr>
                 <tr>
                   <th><span>아이 생년월일</span></th>
-                  <td><input type="text" name="baby_birth" placeholder="ex) 2020 5월 18일 : 200518"></td>
+                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
                 </tr>
                 <tr>
                 	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
-              </form>
               </tbody>
             </table>
             <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
 				    	<div class="modal_layer"></div>
 					</div> 
-					<!-- <div class="mobile-navigation"></div> -->
+					<div class="mobile-navigation"></div>
+				</div>
+				   
+			</header> <!-- .site-header -->
+			
 
 			<div class="hero">
-				<div class="slides">
-					<li data-bg-image="${cpath}/resources/images/slide-1.jpg">
+				<div class="slides"><!--  style="border-bottom: 1px solid #E63F39" -->
+					<!--<li data-bg-image="${cpath}/resources/images/slide-1.jpg">-->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
 
 								<a href="#" class="button">See our families</a>
@@ -183,20 +189,23 @@
 						</div>
 					</li>
 
-					<li data-bg-image="${cpath}/resources/images/slide-1.jpg">
+					<!--<li data-bg-image="images/slide-1.jpg">-->
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle">Sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
 
-								<a href="#" class="button">See our families</a>
+								<!--<a href="#" class="button">See our families</a>-->
 							</div>
 						</div>
 					</li>
 				</div>
 			</div>
+			<br><br>
 
 			<main class="main-content">
+				
+
 				
 			</main> <!-- .main-content -->
 
@@ -247,16 +256,13 @@
 					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
 				</div><!-- .container -->
 			</footer> <!-- .site-footer -->
+</div>
 
-		</div>
 		
-
 		<script src="${cpath}/resources/js/js/jquery-1.11.1.min.js"></script>
 		<script src="${cpath}/resources/js/js/plugins.js"></script>
 		<script src="${cpath}/resources/js/js/app.js"></script>
 		<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
-		<script src="${cpath}/resources/js/js/loginJS.js"></script>
-		<script src="${cpath}/resources/js/js/joinJS.js"></script>
-
+		<script src="${cpath}/resources/js/js/popup.js"></script>
 </body>
 </html>

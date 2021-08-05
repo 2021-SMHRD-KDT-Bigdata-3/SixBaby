@@ -24,6 +24,156 @@
 		<![endif]-->
 </head>
 <body>
+<<<<<<< HEAD
+
+					<div class="main-navigation" align="center">
+<div id="logo">
+							<span class="image avatar48"><img src="${cpath}/resources/images/avatar.jpg" alt=""></span>
+							<h1 id="title">Jane Doe</h1>
+							<p>Hyperspace Engineer</p>
+						</div>
+<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
+							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
+							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
+							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
+						</ul>
+</div>
+
+<div class="site-content">
+				   
+			<header class="site-header">
+				<div class="container">
+					<a href="#" class="branding">
+						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
+						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
+					</a>
+				</div>
+            </header> <!-- .site-header -->
+
+			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+				<div class="container">
+					<h2 class="page-title">정보 수정</h2>
+				</div>
+			</div>
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="content col-md-13">
+								<div class="row">
+									
+									<div class="correction_form">
+							            <table align="center">
+							              <colgroup>
+							                <col width="30%"/>
+							                <col width="auto"/>
+							              </colgroup>
+							              <tbody>
+							                <tr>
+							                  <th><span>아이디</span></th>
+							                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>비밀번호</span></th>
+							                  <td><input type="password" placeholder="비밀번호를 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>비밀번호 확인</span></th>
+							                  <td><input type="password" placeholder="비밀번호를 확인하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>이름</span></th>
+							                  <td><input type="text" placeholder="이름을 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                <th><span>성별</span></th>
+							                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							                  여♀<input type="radio" name="gender" value="woman"></td>
+							                </tr>
+							                <tr>
+							                  <th><span>닉네임</span></th>
+							                  <td><input type="text" placeholder="닉네임을 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>생년월일</span></th>
+							                  <td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>
+							                </tr>
+							                
+							                <tr>
+							                  <th><span>휴대폰 번호</span></th>
+							                  <td><input type="text" placeholder="전화번호를 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>아이 이름</span></th>
+							                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
+							                </tr>
+							                <tr>
+							                  <th><span>아이 성별</span></th>
+							                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							                  여♀<input type="radio" name="gender" value="woman"></td>
+							                </tr>
+							                <tr>
+							                  <th><span>아이 생년월일</span></th>
+							                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
+							                </tr>
+							                <tr>
+							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
+							                </tr>
+							                <tr>
+							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">완료</button></td>
+							                </tr>
+							                <tr>
+							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">탈퇴</span></button></td>
+							                </tr>
+							              </tbody>
+							            </table>
+							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
+							          </div><!-- correction_form E  -->
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+					<div id="modal_secession">
+					   
+									    <div class="modal_content">
+					        <div class="form_txtInput">
+					          <h2 class="sub_tit_txt">회원 탈퇴</h2>
+					          <p class="exTxt">신중해주세요.</p>
+					          <div class="join_form">
+					            <table align="center">
+					              <colgroup>
+					                <col width="30%"/>
+					                <col width="auto"/>
+					              </colgroup>
+					              <tbody>
+					                <tr>
+					                  <th><span>아이디</span></th>
+					                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
+					                </tr>
+					                <tr>
+					                  <th><span>비밀번호</span></th>
+					                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
+					                </tr>
+					                <tr>
+					                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
+					                </tr>
+					              </tbody>
+					            </table>
+					          </div><!-- join_form E  -->
+					          <div class="btn_wrap">
+					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
+					          </div>
+					        </div> <!-- form_txtInput E -->
+					    </div> <!-- container E -->
+									    	<div class="modal_layer"></div>
+					</div>
+=======
 <div class="site-content">
 
 					<header class="site-header">
@@ -174,6 +324,7 @@
 
 			</main> <!-- .main-content -->
 				   
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/SixBaby.git
 
 			<footer class="site-footer">
 				<div class="container">

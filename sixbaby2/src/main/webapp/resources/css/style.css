@@ -1149,7 +1149,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .branding .logo {
     margin-bottom: 10px; }
   .branding .site-title {
-    color: #8f7655;
+    color: darkgray;
     font-weight:600;
     font-size: 14px;
     font-size: 1em; }
@@ -1183,7 +1183,6 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-weight: 400;
         font-size: 18px;
         font-size: 1.2857142857em;
-        border-bottom: 1px solid #e5e5e5;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
