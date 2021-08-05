@@ -24,30 +24,28 @@
 		<![endif]-->
 </head>
 <body>
-
-					<div class="main-navigation" align="center">
-<div id="logo">
-							<span class="image avatar48"><img src="${cpath}/resources/images/avatar.jpg" alt=""></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
-						</div>
-<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li><br>
-							<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li><br>
-							<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li><br>
-							<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li><br>
-						</ul>
-</div>
-
 <div class="site-content">
-				   
-			<header class="site-header">
+
+					<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
 						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
 						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
-            </header> <!-- .site-header -->
+					</a>
+					
+					<div class="main-navigation">
+						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+							<ul class="menu">
+								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
+								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
+								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
+								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
+							</ul>
+					</div>
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
 
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
