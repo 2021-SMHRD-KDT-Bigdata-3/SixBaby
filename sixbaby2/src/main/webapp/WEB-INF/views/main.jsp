@@ -34,7 +34,7 @@
 					</a>
 					
 					<div class="main-navigation">
-						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+						<button class="menu-toggle"><i class="fa fa-bars" style="border-top: solid #E63F39"></i> Menu</button>
 							<ul class="menu">
 								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
 								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
@@ -50,16 +50,18 @@
 		<div align="right">
 						<div id="root" class="branding">
     						<button type="button" id="modal_open_btn_login"><span class="site-title">Login</span></button>
+    						<button type="button" id="modal_open_btn_join"><span class="site-title">Join</span></button> &nbsp; &nbsp; &nbsp; &nbsp;
 						</div>
+						<br><br><br>
 					</div>
 					
 					<div id="modal_login">
    
-				    <div class="modal_content">
-        <div class="form_txtInput">
+				    <div class="modal_content" style="border-radius: 12px; border: solid white;">
+        <div class="">
           <h2 class="sub_tit_txt">로그인</h2>
           <p class="exTxt">정보를 정확히 입력해주세요.</p>
-          <div class="join_form">
+          <div class="login_form">
             <table align="center">
               <colgroup>
                 <col width="30%"/>
@@ -73,11 +75,8 @@
                 <tr>
                   <th><span>비밀번호</span></th>
                   <td><input type="password" placeholder="PW 를 입력하세요"></td>
-                </tr>
-                <tr>
-                	<td><button type="button" id="modal_open_btn_join" style="position: relative; left: 50px; border: solid white; background:white;">회원가입</button></td>
-                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
-                </tr>
+                </tr> 
+                	<td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 140px; ">확인</button></td>
               </tbody>
             </table>
           </div><!-- join_form E  -->
@@ -90,9 +89,9 @@
 					</div>
 					<div id="modal_join">
    
-				    <div class="modal_content">
+				    <div class="modal_content" style="background:white; border-radius: 12px; border:solid white;">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_join" style="background:white; border-radius: 12px;">창 닫기</button>
+          <button type="button" id="modal_close_btn_join">창 닫기</button>
           <h2 class="sub_tit_txt">회원가입</h2>
           <p class="exTxt" >정보를 정확히 입력해주세요.</p>
           <div class="join_form">
@@ -129,28 +128,12 @@
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>
+                  <td><input type="date"></td>
                 </tr>
                 
                 <tr>
                   <th><span>휴대폰 번호</span></th>
                   <td><input type="text" placeholder="전화번호를 입력하세요."></td>
-                </tr>
-                <tr>
-                  <th><span>아이 이름</span></th>
-                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
-                </tr>
-                <tr>
-                  <th><span>아이 성별</span></th>
-                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  여♀<input type="radio" name="gender" value="woman"></td>
-                </tr>
-                <tr>
-                  <th><span>아이 생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
-                </tr>
-                <tr>
-                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
               </tbody>
             </table>
@@ -178,11 +161,11 @@
 							</div>
 						</div>
 					</li>
-
+					
 					<li data-bg-image="${cpath}/resources/images/slide-1.jpg">
 						<div class="container">
 							<div class="slide-content">
-								<small class="slide-subtitle">True Church</small>
+								<small class="slide-subtitle" style="color:#E63F39">sixbaby</small>
 								<h2 class="slide-title">Place with a real love</h2>
 
 								<a href="#" class="button">See our families</a>
@@ -196,7 +179,7 @@
 				
 			</main> <!-- .main-content -->
 
-			<footer class="site-footer">
+			<footer class="site-footer" style="background:white;">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4">
@@ -240,7 +223,7 @@
 						</div>
 					</div> <!-- .row -->
 
-					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
+					<p class="colophon"></p>
 				</div><!-- .container -->
 			</footer> <!-- .site-footer -->
 

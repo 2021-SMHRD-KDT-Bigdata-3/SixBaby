@@ -1183,10 +1183,10 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-weight: 400;
         font-size: 18px;
         font-size: 1.2857142857em;
-<<<<<<< HEAD
-=======
+
+
         border-bottom: 1px solid #e5e5e5;
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/SixBaby.git
+
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
