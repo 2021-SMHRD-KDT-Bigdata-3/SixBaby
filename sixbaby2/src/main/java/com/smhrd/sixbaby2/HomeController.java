@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,12 +41,12 @@ public class HomeController {
 	@Autowired
 	private Mapper mapper;
 
-	// 1. 회원가입, 회원수정, 회원탈퇴
-	/*@RequestMapping("/memberInsert.do")
-	public String memberInsert(MemberVO vo1, BabyVO vo2) {
-		mapper.memberInsert(vo1, vo2);
+	//1. 회원가입, 회원수정, 회원탈퇴
+	@RequestMapping("/memberInsert.do")
+	public String memberInsert(MemberVO vo) {
+		mapper.memberInsert(vo);
 		return "redirect:/main.do";
-	}*/
+	}
 
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
