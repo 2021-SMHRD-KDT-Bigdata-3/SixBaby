@@ -59,7 +59,7 @@
 							<div class="content col-md-8">
 								<h2 class="section-title">Boards</h2>
 								<div align="right">
-									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">글쓰기</span></button>
+									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title"><a href="boardWrite.do">글쓰기</a></span></button>
 								</div>
 								<ul class="seremon-list large">
 									<li>
