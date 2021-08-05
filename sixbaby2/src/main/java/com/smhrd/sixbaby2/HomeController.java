@@ -203,18 +203,5 @@ public class HomeController {
 			return "babyCorrection";
 		}
 
-	// iot 테스트 페이지
-	@RequestMapping("/iot.do")
-	public String iot() {
-		return "iot";
-	}
-	
-/**	@RequestMapping(value = "/iot.do", method = RequestMethod.POST, produces = { "application/json; charset=utf-8" })
-	public @ResponseBody Map<String, Object> iot(@RequestBody Map<String, Object> tmp) {
-		System.out.println("data : " + tmp.get("data"));
-		Map<String, Object> retVal = new HashMap<String, Object>();
-		return retVal;
-}
-**/
 	
 }
