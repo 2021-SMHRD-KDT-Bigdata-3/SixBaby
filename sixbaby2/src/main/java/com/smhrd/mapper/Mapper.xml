@@ -5,10 +5,14 @@
 <mapper namespace="com.smhrd.mapper.Mapper">
 
 	<!-- 1. 회원가입,수정,탈퇴 -->
-	<insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
+	<!-- <insert id="memberInsert" parameterType="com.smhrd.mapper.MemberVO">
 		insert into member
 		values(#{id},#{pw},#{nickname},#{name},#{gender},#{birth},#{tell})
 	</insert>
+	<insert id="memberInsert" parameterType="com.smhrd.mapper.BabyVO">
+	    insert into baby(id, baby_name, baby_birth, baby_gender)
+	    values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
+   </insert> -->
 	<update id="memberUpdate" parameterType="com.smhrd.mapper.MemberVO">
 		update member set
 		pw=#{pw}, nickname=#{nickname}, tell=#{tell} where id=#{id}
@@ -45,9 +49,40 @@
    
    <!-- 4. 아기정보(삽입, ) -->
    <insert id="babyInsert" parameterType="com.smhrd.mapper.BabyVO">
-	    insert into boards(category, title, nickname, picture, contents)
-	    values(#{category},#{title},#{nickname},#{picture},#{contents})
+	    insert into baby(id, baby_name, baby_birth, baby_gender)
+	    values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
    </insert>
+   
+   <!-- 5. 댓글(보기,작성,수정,삭제) -->
+   <select id="commentList" resultType="com.smhrd.mapper.CommentsVO">
+    	select * from comments
+    	where board_no=#{board_no}
+   </select>
+   <insert id="commentInsert" parameterType="com.smhrd.mapper.CommentsVO">
+	    insert into comments(board_no, nickname, contents)
+	    values(#{board_no},#{nickname},#{contents})
+   </insert>
+   <update id="commentUpdate" parameterType="com.smhrd.mapper.CommentsVO">
+     update comments set contents=#{contents}
+     where comment_no=#{comment_no}  
+   </update>
+   <delete id="commentDelete" parameterType="int">
+     delete from comments where comment_no=#{comment_no}
+   </delete>
+   
+   <!-- 6. 육아일기(열람, 작성, 수정) -->
+   <select id="diaryContent" parameterType="int" resultType="com.smhrd.mapper.DiaryVO"> <!-- 다시 작성 -->
+    	select * from diary
+    	where diary_no=#{diary_no}
+   </select> 
+   <insert id="diaryInsert" parameterType="com.smhrd.mapper.DiaryVO">
+	    insert into comments(baby_no, title, contents, picture)
+	    values(#{baby_no},#{title},#{contents},#{picture})
+   </insert>
+   <update id="diaryUpdate" parameterType="com.smhrd.mapper.DiaryVO">
+     update diary set contents=#{contents}
+     where diary_no=#{diary_no}  
+   </update>
    
    
 </mapper>
