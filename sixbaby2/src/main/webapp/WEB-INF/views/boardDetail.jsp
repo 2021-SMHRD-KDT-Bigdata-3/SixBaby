@@ -2,6 +2,7 @@
     pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,11 +23,13 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		
+		
 </head>
 <body>
 <div class="site-content">
 
-					<header class="site-header">
+<header class="site-header">
 				<div class="container">
 					<a href="#" class="branding">
 						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
@@ -46,79 +49,51 @@
 					<div class="mobile-navigation"></div>
 				</div>
 			</header> <!-- .site-header -->
-			
+            
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
-					<h2 class="page-title">MyPage</h2>
+					<h2 class="page-title">Community</h2>
 				</div>
 			</div>
-			
-			<main class="main-content">
-			
+
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
-							<div class="content col-md-13">
-								<div class="row">
-									<div class="family">
-								<h2 class="section-title">꼬꼬</h2>
-								<a href="#">정보 수정</a><br>
-								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 정보</span></button>
-										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
-										<h3 class="family-name">Smith</h3>
-										<small>John, Anna, Patrick, Susan</small>
-									</div>
-								</div>
 								
+							<div class="content col-md-8">
+								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
+								<div class="form-group">
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">닉네임</div>
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">작성일</div>
+								</div>
+								<div>
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:25px; text-align:center; width:100%; display:inline-block;">제목</div>
+								</div>
+								<br>
+								<table>
+								<div class="write_table" style="border:2px solid #E63F39; border-radius: 12px;">
+									<div class="form-group" >
+										<img src="${cpath}/resources/images/logotest.png">
+									</div>
+									<div class="form-group">
+											<textArea rows="5" class="form-control" name="contents"
+												placeholder="Enter contents"></textArea>
+									</div>
+									</div>
+									</table>
+									<div class="form-group">
+										<div class="col-sm-offset-2 col-sm-10">
+											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">등록</button>&nbsp;
+											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">취소</button>
+										</div>
+									</div>
+								</form>
+
 							</div>
 						</div>
 					</div>
 				</div>
-			</main> <!-- .main-content -->
-			
-			<div id="modal_baby">
-   
-				    <div class="modal_content">
-        <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">창 닫기</button>
-          <h2 class="sub_tit_txt">아이 추가</h2>
-          <p class="exTxt" >정보를 정확히 입력해주세요.</p>
-          <div class="join_form">
-            <table align="center">
-              <colgroup>
-                <col width="30%"/>
-                <col width="auto"/>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th><span>아이 이름</span></th>
-                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
-                </tr>
-                <tr>
-                  <th><span>아이 성별</span></th>
-                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  여♀<input type="radio" name="gender" value="woman"></td>
-                </tr>
-                <tr>
-                  <th><span>아이 생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
-                </tr>
-                <tr>
-                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
-          </div><!-- join_form E  -->
-          <div class="btn_wrap">
-            <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
-          </div>
-        </div> <!-- form_txtInput E -->
-    </div> <!-- container E -->
-				    	<div class="modal_layer"></div>
-					</div> 
-			
+
 			<footer class="site-footer">
 				<div class="container">
 					<div class="row">
@@ -167,11 +142,12 @@
 				</div><!-- .container -->
 			</footer> <!-- .site-footer -->
 </div>
-		
 
+		
 		<script src="${cpath}/resources/js/js/jquery-1.11.1.min.js"></script>
 		<script src="${cpath}/resources/js/js/plugins.js"></script>
 		<script src="${cpath}/resources/js/js/app.js"></script>
-		<script src="${cpath}/resources/js/js/babyJS.js"></script>
+		<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
+		<script src="${cpath}/resources/js/js/popup.js"></script>
 </body>
 </html>
