@@ -58,7 +58,9 @@
 						<div class="row">
 							<div class="content col-md-8">
 								<h2 class="section-title">Supply recommendations</h2>
-									<button type="button" id="modal_open_btn_write"  style="position: relative; left:680px; background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">글쓰기</span></button>
+									<div align="right">
+									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">글쓰기</span></button>
+									</div>
 								<ul class="seremon-list large">
 									<li>
 										<img src="${cpath}/resources/images/thumb-1-120.png" alt="">

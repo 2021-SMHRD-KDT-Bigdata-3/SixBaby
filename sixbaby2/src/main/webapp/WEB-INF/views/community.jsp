@@ -59,7 +59,7 @@
 							<div class="content col-md-8">
 								<h2 class="section-title">Boards</h2>
 								<div align="right">
-									<button type="button" id="modal_open_btn_write"  style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">글쓰기</span></button>
+									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title">글쓰기</span></button>
 								</div>
 								<ul class="seremon-list large">
 									<li>
