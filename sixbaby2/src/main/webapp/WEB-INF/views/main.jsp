@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -82,8 +82,6 @@ window.onload = function () {
 							</ul>
 					</div>
 
-               
-
 		
 			</header> <!-- .site-header -->
 
@@ -105,8 +103,8 @@ window.onload = function () {
                <div id="modal_login">
                 <div class="modal_content" style="border-radius: 12px; border:1px solid #E63F39;">
         <div class="">
-          <h2 class="sub_tit_txt" style="position:relative; left:170px;">�α���</h2>
-          <p class="exTxt" style="position:relative; left:120px;">������ ��Ȯ�� �Է����ּ���.</p>
+          <h2 class="sub_tit_txt" style="position:relative; left:170px;">로그인</h2>
+          <p class="exTxt" style="position:relative; left:120px;">정보를 정확히 입력해주세요.</p>
           <div class="login_form">
             <table align="center">
               <colgroup>
@@ -116,22 +114,22 @@ window.onload = function () {
               <tbody>
               <form action="${cpath}/login.do" method="post">
                 <tr>
-                  <th><span style="position: relative; left: 70px;">���̵�</span></th>
-                  <td style="position: relative; left:70px;"><input type="text" name="id" placeholder="ID �� �Է��ϼ���."></td>
+                  <th><span style="position: relative; left: 70px;">아이디</span></th>
+                  <td style="position: relative; left:70px;"><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <br>
                 <tr>
 
-                  <th><span  style="position: relative; left: 70px;">��й�ȣ</span></th>
-                  <td style="position: relative; left: 70px;"><input type="password" placeholder="PW �� �Է��ϼ���"></td>
+                  <th><span  style="position: relative; left: 70px;">비밀번호</span></th>
+                  <td style="position: relative; left: 70px;"><input type="password" placeholder="PW 를 입력하세요"></td>
 
-                  <th><span>��й�ȣ</span></th>
+                  <th><span>비밀번호</span></th>
 
-                  <td><input type="password" placeholder="PW �� �Է��ϼ���"></td>
+                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
 
                 </tr> 
                 <tr>
-                   <td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 200px;">Ȯ��</button></td>
+                   <td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 200px;">확인</button></td>
                 </tr>
               </form>
 
@@ -139,7 +137,7 @@ window.onload = function () {
             </table>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
-            <button type="button" id="modal_close_btn_login" style="background:white; border-radius: 12px; border:solid white;">â �ݱ�</button>
+            <button type="button" id="modal_close_btn_login" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
@@ -150,9 +148,9 @@ window.onload = function () {
                 <div class="modal_content" style="background:white; border-radius: 12px; border:1px solid #E63F39;">
       <form action="${cpath}/memberInsert.do" method="post">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_join" style="background:white; border-radius: 12px; border:1px solid #E63F39;">�ݱ�</button>
-          <h2 class="sub_tit_txt"  style="position:relative; left:170px;" >ȸ������</h2>
-          <p class="exTxt" style="position:relative; left:120px; color:#666666;">������ ��Ȯ�� �Է����ּ���.</p>
+          <button type="button" id="modal_close_btn_join" style="background:white; border-radius: 12px; border:1px solid #E63F39;">닫기</button>
+          <h2 class="sub_tit_txt"  style="position:relative; left:170px;" >회원가입</h2>
+          <p class="exTxt" style="position:relative; left:120px; color:#666666;">정보를 정확히 입력해주세요.</p>
           <br>
           <div class="join_form">
             <table align="center">
@@ -162,48 +160,48 @@ window.onload = function () {
               </colgroup>
               <tbody style="position:relative; left:100px;">
                 <tr>
-                  <th><span>���̵�</span></th>
-                  <td><input type="text" name="id" placeholder="ID �� �Է��ϼ���."></td>
+                  <th><span>아이디</span></th>
+                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <tr>
-                  <th><span>��й�ȣ</span></th>
-                  <td><input type="password" name="pw" placeholder="��й�ȣ�� �Է��ϼ���."></td>
+                  <th><span>비밀번호</span></th>
+                  <td><input type="password" name="pw" placeholder="비밀번호를 입력하세요."></td>
                 </tr>
                 <tr>
-                  <th><span>��й�ȣ Ȯ��</span></th>
-                  <td><input type="password" placeholder="��й�ȣ�� Ȯ���ϼ���."></td>
+                  <th><span>비밀번호 확인</span></th>
+                  <td><input type="password" placeholder="비밀번호를 확인하세요."></td>
                 </tr>
                 <tr>
-                  <th><span>�̸�</span></th>
-                  <td><input type="text" name="name" placeholder="�̸��� �Է��ϼ���."></td>
+                  <th><span>이름</span></th>
+                  <td><input type="text" name="name" placeholder="이름을 입력하세요."></td>
                 </tr>
                 <tr>
-                <th><span>����</span></th>
-                  <td>����<input type="radio" name="gender" value="man">&nbsp;
-                  ����<input type="radio" name="gender" value="woman"></td>
+                <th><span>성별</span></th>
+                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;
+                  여♀<input type="radio" name="gender" value="woman"></td>
                 </tr>
                 <tr>
-                  <th><span>�г���</span></th>
-                  <td><input type="text" name="nickname" placeholder="�г����� �Է��ϼ���."></td>
+                  <th><span>닉네임</span></th>
+                  <td><input type="text" name="nickname" placeholder="닉네임을 입력하세요."></td>
                 </tr>
                 <tr>
-                  <th><span>�������</span></th>
+                  <th><span>생년월일</span></th>
                   <td><input type="date" name="birth"></td>
                 </tr>
                 
                 <tr>
-                  <th><span>�޴��� ��ȣ</span></th>
-                  <td><input type="text" name="tell" placeholder="��ȭ��ȣ�� �Է��ϼ���."></td>
+                  <th><span>휴대폰 번호</span></th>
+                  <td><input type="text" name="tell" placeholder="전화번호를 입력하세요."></td>
                 </tr>
 
               </tbody>
             </table>
-            <div align="center" class="exform_txt" style="color:darkgray; font-weight:400; position:relative; left:150;" ><span>������ ��Ȯ�� �Է��ϼ����� �Ϸᴭ���ּ���.</span></div>
+            <div align="center" class="exform_txt" style="color:darkgray; font-weight:400; position:relative; left:150;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
             <br>
-            <button type="submit" style="position: relative; right: 150px; background:white; border-radius: 12px; border:1px solid #E63F39;">�Ϸ�</button>
+            <button type="submit" style="position: relative; right: 150px; background:white; border-radius: 12px; border:1px solid #E63F39;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
         </form>
@@ -212,7 +210,7 @@ window.onload = function () {
                </div> 
                <!-- <div class="mobile-navigation"></div> -->
 
-         <!-- ���̵� �����̵� ��� -->
+         <!-- 페이드 슬라이드 배너 -->
                <div class="slide" style=" height: 400px; width: 100%;">
                  <ul>
                    <li></li>
@@ -239,7 +237,7 @@ window.onload = function () {
 							 <small class="slide-subtitle" style="color: black; position:relative; left:140px; font-size:15px">Sixbaby</small>
 							 <br><br>
 							 
-								<h2 class="widget-title" style="color: #666666; position:relative; right:30px;">��Ʈ��Ʈ��Ʈ��Ʈ��Ʈ��Ʈ��Ʈ��ƮƮ��Ʈ��Ʈ��ƮƮ��Ʈ��Ʈ��Ʈ</h2>
+								<h2 class="widget-title" style="color: #666666; position:relative; right:30px;">멘트멘트멘트멘트멘트멘트멘트멘트트멘트멘트멘트트멘트멘트멘트</h2>
 							</div>
 						</div>
 					</div> <!-- .row -->

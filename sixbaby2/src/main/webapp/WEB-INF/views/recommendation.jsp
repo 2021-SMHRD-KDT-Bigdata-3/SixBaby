@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -59,7 +59,7 @@
 							<div class="content col-md-8">
 								<h2 class="section-title">Supply recommendations</h2>
 									<div align="right">
-									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title"><a href="boardWrite.do">±Û¾²±â</a></span></button>
+									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title"><a href="boardWrite.do">ê¸€ì“°ê¸°</a></span></button>
 									</div>
 								<ul class="seremon-list large">
 									<li>
@@ -113,10 +113,10 @@
 								<div class="widget">
 									<h3 class="widget-title">Categories</h3>
 									<ul class="arrow">
-										<li><a href="community.do">ÀÚÀ¯°Ô½ÃÆÇ</a></li>
-										<li><a href="recommendation.do">¿ëÇ°ÃßÃµ</a></li>
-										<li><a href="help.do">µµ¿ò¿äÃ»</a></li>
-										<li><a href="#">À°¾Æ²ÜÆÁ</a></li>
+										<li><a href="community.do">ìžìœ ê²Œì‹œíŒ</a></li>
+										<li><a href="recommendation.do">ìš©í’ˆì¶”ì²œ</a></li>
+										<li><a href="help.do">ë„ì›€ìš”ì²­</a></li>
+										<li><a href="#">ìœ¡ì•„ê¿€íŒ</a></li>
 									</ul>
 								</div>
 

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 
@@ -79,33 +79,33 @@
 							<div class="form-group">
 								<select name="category"
 									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 15px; text-align: center;">
-									<option value="free">ÀÚÀ¯°Ô½ÃÆÇ</option>
-									<option value="item">¿ëÇ° ÃßÃµ</option>
-									<option value="help">µµ¿ò ¿äÃ»</option>
-									<option value="tip">À°¾Æ ²ÜÆÁ</option>
+									<option value="free">ìžìœ ê²Œì‹œíŒ</option>
+									<option value="item">ìš©í’ˆ ì¶”ì²œ</option>
+									<option value="help">ë„ì›€ ìš”ì²­</option>
+									<option value="tip">ìœ¡ì•„ ê¿€íŒ</option>
 								</select>
 							</div>
 							<br>
 							<table>
 								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
-										<label class="control-label col-sm-2">ÀÛ¼ºÀÚ</label> <input
+										<label class="control-label col-sm-2">ìž‘ì„±ìž</label> <input
 											type="text" class="form-control" name="nickname"
 											placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">Á¦¸ñ</label>
+										<label class="control-label col-sm-2">ì œëª©</label>
 											<input type="text" class="form-control" name="title"
 												placeholder="Enter title">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">³»¿ë</label>
+										<label class="control-label col-sm-2">ë‚´ìš©</label>
 										<textArea rows="5" class="form-control" name="contents"
 											placeholder="Enter contents"></textArea>
 									</div>
 									<div id="inputFile">
 										<label class="site-btn3" for="input-file"
-											style="font-weight: bold; font-size: 16;">»çÁø Ã·ºÎ</label> <input
+											style="font-weight: bold; font-size: 16;">ì‚¬ì§„ ì²¨ë¶€</label> <input
 											type="file" id="input-file" name="picture">
 									</div>
 								</div>
@@ -113,11 +113,11 @@
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<input type="submit" class="btn btn-primary btn-sm"
-										style="position: relative; background: white; border: 2px solid #E63F39;" value="µî·Ï">
+										style="position: relative; background: white; border: 2px solid #E63F39;" value="ë“±ë¡">
 									&nbsp;
 									<button type="reset" class="btn btn-warning btn-sm"
 										style="position: relative; background: white; border: 2px solid #E63F39;">
-										<a href="community.do">Ãë¼Ò</a>
+										<a href="community.do">ì·¨ì†Œ</a>
 									</button>
 								</div>
 							</div>
@@ -128,10 +128,10 @@
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow" style="text-align: center">
-								<li><a href="community.do">ÀÚÀ¯°Ô½ÃÆÇ</a></li>
-								<li><a href="recommendation.do">¿ëÇ°ÃßÃµ</a></li>
-								<li><a href="help.do">µµ¿ò¿äÃ»</a></li>
-								<li><a href="#">À°¾Æ²ÜÆÁ</a></li>
+								<li><a href="community.do">ìžìœ ê²Œì‹œíŒ</a></li>
+								<li><a href="recommendation.do">ìš©í’ˆì¶”ì²œ</a></li>
+								<li><a href="help.do">ë„ì›€ìš”ì²­</a></li>
+								<li><a href="#">ìœ¡ì•„ê¿€íŒ</a></li>
 							</ul>
 						</div>
 

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 
@@ -63,11 +63,11 @@
 							<div class="content col-md-8">
 								<form class="form-horizontal" action="${cpath}/boardInsert.do" method="post">
 								<div class="form-group">
-										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">´Ð³×ÀÓ</div>
-										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">ÀÛ¼ºÀÏ</div>
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">ë‹‰ë„¤ìž„</div>
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:20px; text-align:center; width:25%; display:inline-block;">ìž‘ì„±ì¼</div>
 								</div>
 								<div>
-										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:25px; text-align:center; width:100%; display:inline-block;">Á¦¸ñ</div>
+										<div style="border:2px solid #E63F39; border-radius: 12px; font-size:25px; text-align:center; width:100%; display:inline-block;">ì œëª©</div>
 								</div>
 								<br>
 								<table>
@@ -83,8 +83,8 @@
 									</table>
 									<div class="form-group">
 										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">µî·Ï</button>&nbsp;
-											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">Ãë¼Ò</button>
+											<button type="submit" class="btn btn-primary btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">ë“±ë¡</button>&nbsp;
+											<button type="reset" class="btn btn-warning btn-sm" style="position: relative; background:white; border:2px solid #E63F39;">ì·¨ì†Œ</button>
 										</div>
 									</div>
 								</form>
