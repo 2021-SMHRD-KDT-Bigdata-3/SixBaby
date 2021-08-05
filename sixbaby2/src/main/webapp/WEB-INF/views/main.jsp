@@ -166,7 +166,7 @@ window.onload = function () {
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="date"></td>
+                  <td><input type="date" name="birth"></td>
                 </tr>
                 
                 <tr>
