@@ -122,6 +122,7 @@ public class HomeController {
 	 * "boardForm"; // boardForm.jsp }
 	 */
 
+
 	@RequestMapping(value = "/events.do")
 	public String events() {
 		return "events";
@@ -131,7 +132,7 @@ public class HomeController {
 	public String families() {
 		return "families";
 	}
-	
+
 	// 인코딩 왜이래
 		@RequestMapping(value = "/main_login.do")
 		public String main_login() {
@@ -148,6 +149,13 @@ public class HomeController {
 		@RequestMapping(value = "/main_logout.do")
 		public String main_logout() {
 			return "main_logout";
+		}
+	
+		
+		// ���� ������
+		@RequestMapping(value = "/mypage.do")
+		public String mypage() {
+			return "mypage";
 		}
 		
 	//인코딩 왜이래
@@ -174,6 +182,21 @@ public class HomeController {
 	        return "boardWrite";
 	    }
 
+	
+		// ���� ����
+		@RequestMapping(value="/correction.do")
+		public String correction() {
+			return "correction";
+		}
+		
+		// ����
+		@RequestMapping(value="/main.do")
+		public String main(Model model) {
+			model.addAttribute("login", null);
+			return "main";
+		}
+
+
 	// iot 테스트 페이지
 	@RequestMapping("/iot.do")
 	public String iot() {
@@ -190,7 +213,7 @@ public class HomeController {
 		System.out.println("data : " + tmp.get("data"));
 		Map<String, Object> retVal = new HashMap<String, Object>();
 		return retVal;
-	}
+}
 **/
 	
 }
