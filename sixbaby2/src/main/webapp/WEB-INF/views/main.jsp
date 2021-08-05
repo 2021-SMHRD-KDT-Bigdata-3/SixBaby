@@ -152,12 +152,12 @@
 
               </tbody>
             </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400; position:relative; left:150;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
+            <div align="center" class="exform_txt" style="color:darkgray; font-weight:400; position:relative; left:150;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
             <br>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
+            <button type="submit" style="position: relative; right: 150px; background:white;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
         </form>
