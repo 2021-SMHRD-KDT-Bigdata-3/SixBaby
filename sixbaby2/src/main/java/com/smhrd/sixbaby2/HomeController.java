@@ -154,6 +154,11 @@ public class HomeController {
 			return "main";
 		}
 
+		// 게시판 상세
+		@RequestMapping(value="/boardDetail.do")
+		public String boardDetail() {
+			return "boardDetail";
+		}
 
 
 	// iot 테스트용 페이지
