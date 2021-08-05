@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
+import com.smhrd.mapper.CommentsVO;
 import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
@@ -108,6 +110,13 @@ public class HomeController {
 		return "redirect:/tt.do";
 	}*/
 	
+	// 4. 댓글
+	@RequestMapping("/commentList.do")
+	public @ResponseBody List<CommentsVO> commentList() {
+		// 게시판 리스트를 JSON형식으로 JS클라이언트에게 내려보낸다
+		List<CommentsVO> list = mapper.commentList();
+		return list; // list -> JSON 형태로 바꿔서 보내야함
+	}
 	
 	
 //-----------------------------------------------------------	
@@ -203,18 +212,5 @@ public class HomeController {
 			return "babyCorrection";
 		}
 
-	// iot 테스트 페이지
-	@RequestMapping("/iot.do")
-	public String iot() {
-		return "iot";
-	}
-	
-/**	@RequestMapping(value = "/iot.do", method = RequestMethod.POST, produces = { "application/json; charset=utf-8" })
-	public @ResponseBody Map<String, Object> iot(@RequestBody Map<String, Object> tmp) {
-		System.out.println("data : " + tmp.get("data"));
-		Map<String, Object> retVal = new HashMap<String, Object>();
-		return retVal;
-}
-**/
 	
 }

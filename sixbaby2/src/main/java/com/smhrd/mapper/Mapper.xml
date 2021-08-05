@@ -51,8 +51,8 @@
    
    <!-- 5. 댓글(보기,작성,수정,삭제) -->
    <select id="commentList" resultType="com.smhrd.mapper.CommentsVO">
-    	select * from comments
-    	where board_no=#{board_no}
+    	select * from comments order by comment_no desc
+    	<!--  where board_no=#{board_no}-->
    </select>
    <insert id="commentInsert" parameterType="com.smhrd.mapper.CommentsVO">
 	    insert into comments(board_no, nickname, contents)

@@ -37,21 +37,19 @@
 		function resultHtml(data){
 	  		var result = "<table class='table'>";
 	  		result+="<tr>";
-	  		result+="<td>번호</td>";
+	  		result+="<td>댓글번호</td>";
+	  		result+="<td>게시글번호</td>";
 	  		result+="<td>닉네임</td>";
 	  		result+="<td>내용</td>";
 	  		result+="<td>추천수</td>";
-	  		result+="<td>수정</td>";
-	  		result+="<td>삭제</td>";
 	  		result+="</tr>";
 	  		$.each(data, (index,obj)=>{
 	  			result+="<tr>";
 	  	  		result+="<td>"+obj.comment_no+"</td>";
+	  	  		result+="<td>"+obj.board_no+"</td>";
 	  	  		result+="<td>"+obj.nickname+"</td>";
 	  	  		result+="<td>"+obj.contents+"</td>";
 	  	  		result+="<td>"+obj.likes+"</td>";
-	  	  		result+="<td><button>수정</button></td>";
-	  	  		result+="<td><button>삭제</button></td>";
 	  	  		result+="</tr>";
 	  		});
 	  		
