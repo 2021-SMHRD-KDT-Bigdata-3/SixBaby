@@ -89,7 +89,7 @@ window.onload = function () {
 
 		<div align="right">
 						<div id="root" class="branding">
-    							<button type="button" id="modal_open_btn_login"><span class="site-title" style="background:white;">Login</span></button> &nbsp; &nbsp;
+    						<button type="button" id="modal_open_btn_login"><span class="site-title" style="background:white;">Login</span></button> &nbsp; &nbsp;
     						<button type="button" id="modal_open_btn_join" style="background:white; border:white;"><span class="site-title">Join</span></button> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
     						<br><br><br>
 						</div>
@@ -98,14 +98,11 @@ window.onload = function () {
 					
 					<div id="modal_login">
 
-               </div>
-
+            
                <div class="mobile-navigation"></div>
             </div>
          </header> <!-- .site-header -->
                <div id="modal_login">
-
-   
                 <div class="modal_content" style="border-radius: 12px; border:1px solid #E63F39;">
         <div class="">
           <h2 class="sub_tit_txt" style="position:relative; left:170px;">로그인</h2>
@@ -153,16 +150,17 @@ window.onload = function () {
                 <div class="modal_content" style="background:white; border-radius: 12px; border:1px solid #E63F39;">
       <form action="${cpath}/memberInsert.do" method="post">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_join" style="background:white; border:solid white; ">창 닫기</button>
+          <button type="button" id="modal_close_btn_join" style="background:white; border-radius: 12px; border:1px solid #E63F39;">닫기</button>
           <h2 class="sub_tit_txt"  style="position:relative; left:170px;" >회원가입</h2>
-          <p class="exTxt" style="position:relative; left:120px;">정보를 정확히 입력해주세요.</p>
+          <p class="exTxt" style="position:relative; left:120px; color:#666666;">정보를 정확히 입력해주세요.</p>
+          <br>
           <div class="join_form">
             <table align="center">
               <colgroup>
                 <col width="30%"/>
                 <col width="auto"/>
               </colgroup>
-              <tbody>
+              <tbody style="position:relative; left:100px;">
                 <tr>
                   <th><span>아이디</span></th>
                   <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
@@ -181,7 +179,7 @@ window.onload = function () {
                 </tr>
                 <tr>
                 <th><span>성별</span></th>
-                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;
                   여♀<input type="radio" name="gender" value="woman"></td>
                 </tr>
                 <tr>
@@ -190,7 +188,7 @@ window.onload = function () {
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="date"></td>
+                  <td><input type="date" name="birth"></td>
                 </tr>
                 
                 <tr>
@@ -205,7 +203,7 @@ window.onload = function () {
           <div class="btn_wrap">
             <a href="javascript:;"></a>
             <br>
-            <button type="submit" style="position: relative; right: 150px; background:white;">완료</button>
+            <button type="submit" style="position: relative; right: 150px; background:white; border-radius: 12px; border:1px solid #E63F39;">완료</button>
           </div>
         </div> <!-- form_txtInput E -->
         </form>

@@ -270,18 +270,15 @@ form input[type="submit"], form button, form input[type="reset"] {
  */
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
-  background: #e2caae;
   background: -webkit-linear-gradient(#e2caae, #c39f70);
   background: linear-gradient(#e2caae, #c39f70);
   border-bottom: 1px solid #a68861;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px 25px;
-  border-radius: 5px;
-  color: gray;
+  padding:1px;
+  color: #666666;
   text-transform: uppercase;
+  font-size:10px;
   font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-  font-weight: 600;
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
