@@ -26,12 +26,7 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-<script type="text/javascript">
-	//function write() {
-		//location.href = "${cpath}/community.do";
-		//alert("게시판 등록 완료!");
-	}
-</script>
+
 </head>
 <body>
 	<div class="site-content">
