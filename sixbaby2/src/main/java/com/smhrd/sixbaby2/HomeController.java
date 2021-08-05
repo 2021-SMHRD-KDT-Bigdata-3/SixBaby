@@ -37,12 +37,6 @@ public class HomeController {
 	}
 
 
-	@RequestMapping(value = "/main.do")
-	public String main() {
-		return "main";
-	}
-
-
 	@Autowired
 	private Mapper mapper;
 
@@ -134,29 +128,29 @@ public class HomeController {
 	}
 
 	// 인코딩 왜이래
-		@RequestMapping(value = "/main_login.do")
-		public String main_login() {
-			return "main_login";
-		}
+	@RequestMapping(value = "/main_login.do")
+	public String main_login() {
+		return "main_login";
+	}
 	//	인코딩 왜이래
-		@RequestMapping(value = "/main_join.do")
-		public String main_join() {
-			return "main_join";
-		}
+	@RequestMapping(value = "/main_join.do")
+	public String main_join() {
+		return "main_join";
+	}
 
 
-		// 인코딩 왜이래
-		@RequestMapping(value = "/main_logout.do")
-		public String main_logout() {
-			return "main_logout";
-		}
+	// 인코딩 왜이래
+	@RequestMapping(value = "/main_logout.do")
+	public String main_logout() {
+		return "main_logout";
+	}
 	
 		
-		// ���� ������
-		@RequestMapping(value = "/mypage.do")
-		public String mypage() {
-			return "mypage";
-		}
+	// ���� ������
+	@RequestMapping(value = "/mypage.do")
+	public String mypage() {
+		return "mypage";
+	}
 		
 	//인코딩 왜이래
 	@RequestMapping(value = "/community.do")
