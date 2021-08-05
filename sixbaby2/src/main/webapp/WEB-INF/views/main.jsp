@@ -66,18 +66,20 @@
                 <col width="auto"/>
               </colgroup>
               <tbody>
+              <form action="${cpath}/login.do" method="post">
                 <tr>
                   <th><span>아이디</span></th>
-                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
+                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호</span></th>
-                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
+                  <td><input type="password" name="pw" placeholder="PW 를 입력하세요"></td>
                 </tr>
                 <tr>
                 	<td><button type="button" id="modal_open_btn_join" style="position: relative; left: 50px; border: solid white; background:white;">회원가입</button></td>
                 	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
                 </tr>
+              </form>
               </tbody>
             </table>
           </div><!-- join_form E  -->
@@ -102,13 +104,14 @@
                 <col width="auto"/>
               </colgroup>
               <tbody>
+              <form action="${cpath}/memberInsert.do" method="post">
                 <tr>
                   <th><span>아이디</span></th>
-                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
+                  <td><input type="text" name="id" placeholder="ID 를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호</span></th>
-                  <td><input type="password" placeholder="비밀번호를 입력하세요."></td>
+                  <td><input type="password" name="pw" placeholder="비밀번호를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>비밀번호 확인</span></th>
@@ -116,7 +119,7 @@
                 </tr>
                 <tr>
                   <th><span>이름</span></th>
-                  <td><input type="text" placeholder="이름을 입력하세요."></td>
+                  <td><input type="text" name="name" placeholder="이름을 입력하세요."></td>
                 </tr>
                 <tr>
                 <th><span>성별</span></th>
@@ -125,33 +128,34 @@
                 </tr>
                 <tr>
                   <th><span>닉네임</span></th>
-                  <td><input type="text" placeholder="닉네임을 입력하세요."></td>
+                  <td><input type="text" name="nickname" placeholder="닉네임을 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>
+                  <td><input type="text" name="birth" placeholder="ex) 1996 2월 18일 : 960218"></td>
                 </tr>
                 
                 <tr>
                   <th><span>휴대폰 번호</span></th>
-                  <td><input type="text" placeholder="전화번호를 입력하세요."></td>
+                  <td><input type="text" name="tell" placeholder="전화번호를 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>아이 이름</span></th>
-                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
+                  <td><input type="text" name="baby_name" placeholder="태명 or 이름을 입력하세요."></td>
                 </tr>
                 <tr>
                   <th><span>아이 성별</span></th>
-                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  여♀<input type="radio" name="gender" value="woman"></td>
+                  <td>남♂<input type="radio" name="baby_gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  여♀<input type="radio" name="baby_gender" value="woman"></td>
                 </tr>
                 <tr>
                   <th><span>아이 생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
+                  <td><input type="text" name="baby_birth" placeholder="ex) 2020 5월 18일 : 200518"></td>
                 </tr>
                 <tr>
                 	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">+아이추가</button></td>
                 </tr>
+              </form>
               </tbody>
             </table>
             <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
