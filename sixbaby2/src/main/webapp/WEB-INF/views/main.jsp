@@ -82,22 +82,9 @@ window.onload = function () {
 							</ul>
 					</div>
 
-         <header class="site-header">
-            <div class="container">
-                     <button type="button" id="modal_open_btn_login"><span class="site-title" style="background:white; position: relative; left:800px; bottom:100px; font-size:20px;">Login</span></button> &nbsp; &nbsp;
-                      <button type="button" id="modal_open_btn_join" style="background:white; border:white; position: relative; left:800px; bottom:100px; font-size:20px;"><span class="site-title">Join</span></button>
-               <a href="#" class="branding">
-                     
-                  <img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
-                  <h1 class="site-title" style="color:#E63F39">SixBaby</h1>
-               </a>
                
-                <div class="main-navigation">
-                  <button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-                     <ul class="menu">
 
-					<div class="mobile-navigation"></div>
-				</div>
+		
 			</header> <!-- .site-header -->
 
 		<div align="right">
@@ -111,11 +98,6 @@ window.onload = function () {
 					
 					<div id="modal_login">
 
-                        <li class="menu-item current-menu-item"><a href="main.do">Homepage</a></li>
-                        <li class="menu-item"><a href="community.do">Community</a></li>
-                        <li class="menu-item"><a href="#">Baby Diary</a></li>
-                        <li class="menu-item"><a href="#">Voice Recognition Service</a></li>
-                     </ul>
                </div>
 
                <div class="mobile-navigation"></div>
@@ -152,7 +134,7 @@ window.onload = function () {
 
                 </tr> 
                 <tr>
-                   <td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 140px; ">»Æ¿Œ</button></td>
+                   <td><button type="button" id="" style="border: solid white; background:white; position: relative; left : 200px;">»Æ¿Œ</button></td>
                 </tr>
               </form>
 
@@ -246,7 +228,7 @@ window.onload = function () {
             </div>
          </div>
 
-<<<<<<< HEAD
+
 			<footer class="site-footer" style="background:white;">
 				<div class="container">
 					<div class="row">
@@ -264,23 +246,7 @@ window.onload = function () {
 						</div>
 					</div> <!-- .row -->
 
-         <footer class="site-footer" style="background:white;">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="widget">
-      
-                  </div>
-                  <div class="col-md-4">
-                     <div class="widget">
-                      <small class="slide-subtitle" style="color: black; position:relative; left:140px; font-size:15px">Sixbaby</small>
-                      <br><br>
-                        <h2 class="widget-title" style="color: #666666; position:relative; right:30px;">∏‡∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ∆Æ∏‡∆Æ∏‡∆Æ∏‡∆Æ</h2>
-                     </div>
-                  </div>
-               </div> <!-- .row -->
-
-
+        
                <p class="colophon"></p>
             </div><!-- .container -->
          </footer> <!-- .site-footer -->
