@@ -30,7 +30,7 @@
 	
 	<!-- 파일 저장 경로 bean -->
 	<beans:bean id = "uploadPath" class="java.lang.String">
-		<beans:constructor-arg value="C:\Users\smhrd\git\SixBaby\sixbaby2\src\main\webapp\resources\uploadImg">
+		<beans:constructor-arg value="C:/Users/smhrd/git/SixBaby/sixbaby2/src/main/webapp/resources/uploadImg">
 		</beans:constructor-arg>
 	</beans:bean>
 	

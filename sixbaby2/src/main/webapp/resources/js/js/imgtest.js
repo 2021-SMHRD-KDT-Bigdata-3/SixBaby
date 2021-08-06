@@ -26,14 +26,15 @@ $(document).ready(() => {
 			processData : false,
 			contentType : false,
 			success : (data) => {
+				console.log(data)
 				let str = "";
 				if(checkImageType(data)){
-					str = "<div><a href='imgDisplay.do?fileName="+getImageLink(data) + "'>";
-					str += "<img src='imgDisplay.do?fileName="+data+"'></a>";
+					str = "<div><a href='imgDisplay.do?fileName="+getImageLink(data).replaceAll("\\", "/") + "'>";
+					str += "<img src='imgDisplay.do?fileName="+data.replaceAll("\\", "/")+"'></a>";
 				} else{
-					str = "<div><a href='imgDisplay.do?fileName="+data+"''>"+getOriginalName(data)+"</a>";
+					str = "<div><a href='imgDisplay.do?fileName="+data.replaceAll("\\", "/")+"''>"+getOriginalName(data)+"</a>";
 				}
-				str += "<span data-src="+data+">[delete]</span></div>";
+				str += "<span class = 'delThumbnail' data-src="+data.replaceAll("\\", "/")+">[delete]</span></div>";
 				$(".fileList").append(str);
 			},
 			error : (e, data) => {
@@ -45,19 +46,22 @@ $(document).ready(() => {
 	})
 })
 
-$(".fileList").on("click", "span", (e) => {
+$(".fileList").on("click", (e) => {
 	alert("이미지 삭제");
 	
-	let that = $(this);
+	console.log($("span").data("src"));
 	$.ajax({
 		url : "imgDelete.do",
 		type : "post",
-		data : {fileName:$(this).attr("data-src")},
+		data : {fileName: $(".delThumbnail").data("src")},
 		dataType : "text",
 		success : (res) => {
 			if(res == "deleted"){
-				that.parent("div").remove();
+				$(".delThumbnail").parent("div").remove();
 			}
+		},
+		error : (res) =>{
+			console.log(res);
 		}
 	})
 })
@@ -78,6 +82,7 @@ function getImageLink(fileName){
 	
 	let front = fileName.substr(0, 12);
 	let end = fileName.substr(14);
+	console.log(fileName);
 	console.log(front);
 	console.log(end);
 	return front+end;

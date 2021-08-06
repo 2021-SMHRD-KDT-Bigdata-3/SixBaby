@@ -70,14 +70,14 @@ public class UploadFileUtils {
 		String formatName = fileName.substring(fileName.lastIndexOf(".")+1);
 		ImageIO.write(destImg, formatName.toUpperCase(), newFile);
 		
-		return thumbnailName.substring(uploadPath.length()).replace(File.pathSeparatorChar, '\\');
+		return thumbnailName.substring(uploadPath.length()).replace(File.pathSeparatorChar, '/');
 		
 	}
 	
 	private static String makeIcon(String uploadPath, String path, String fileName) throws Exception{
 		String iconName = uploadPath + path + File.separator + fileName;
 		
-		return iconName.substring(uploadPath.length()).replace(File.separatorChar, '\\');
+		return iconName.substring(uploadPath.length()).replace(File.separatorChar, '/');
 	}
 
 }
