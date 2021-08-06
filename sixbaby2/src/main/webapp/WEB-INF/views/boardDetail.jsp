@@ -121,9 +121,9 @@
 								</form>
 								
 								<button class="btn btn-success btn-sm" onclick="getComment()">JSON데이터 가져오기</button>
-								<div id="List">댓글 출력</div>
-								<form>
-								<input type="text">
+								<div id="List">댓글들을 보여줘!</div>
+								<form class="comment_form" action="${cpath}/commentInsert.do" method="post">
+								<input class="comment_input" type="textarea"> <input class="comment_btn" type="submit" value="등록">
 								</form>
 							</div>
 						</div>

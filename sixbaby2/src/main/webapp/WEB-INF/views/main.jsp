@@ -86,6 +86,7 @@ window.onload = function () {
 
 		
 			</header> <!-- .site-header -->
+               <div class="mobile-navigation"></div>
 
 		<div align="right">
 						<div id="root" class="branding">
@@ -99,9 +100,6 @@ window.onload = function () {
 					<div id="modal_login">
 
             
-               <div class="mobile-navigation"></div>
-            </div>
-         </header> <!-- .site-header -->
                <div id="modal_login">
                 <div class="modal_content" style="border-radius: 12px; border:1px solid #E63F39;">
         <div class="">

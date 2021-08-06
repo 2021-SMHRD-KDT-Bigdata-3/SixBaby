@@ -1709,3 +1709,15 @@ ul.bullet {
 	background-color:white;
 }
 
+.comment_input {
+	width: 80%;
+}
+
+.comment_btn {
+	width: 10%;
+}
+
+.comment_form {
+	border: 2px solid #E63F39;
+	border-radius: 12px;
+}
