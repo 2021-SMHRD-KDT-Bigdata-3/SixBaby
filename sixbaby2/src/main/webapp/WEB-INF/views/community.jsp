@@ -80,7 +80,7 @@
 										<tr>
 											<td>${cnt}</td>
 											<td><a
-												href="${cpath}/boardDetail.do?board_no=${vo.board_no}">${vo.title}</a></td>
+												href="${cpath}/boardContent.do?board_no=${vo.board_no}">${vo.title}</a></td>
 											<td>${vo.nickname}</td>
 											<td>${vo.indate}</td>
 										</tr>
@@ -95,10 +95,10 @@
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow">
-								<li><a href="boardList.do">자유게시판</a></li>
-								<li><a href="itemList.do">용품추천</a></li>
-								<li><a href="helpList.do">도움요청</a></li>
-								<li><a href="tipList.do">육아꿀팁</a></li>
+								<li><a href="boardList.do?category=free">자유게시판</a></li>
+								<li><a href="itemList.do?category=item">용품추천</a></li>
+								<li><a href="helpList.do?category=help">도움요청</a></li>
+								<li><a href="tipList.do?category=tip">육아꿀팁</a></li>
 							</ul>
 						</div>
 

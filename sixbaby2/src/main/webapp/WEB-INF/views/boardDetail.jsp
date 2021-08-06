@@ -22,11 +22,6 @@
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
-<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
-
 <script>
 		var cnt = 0;
 		function getComment(){
@@ -81,44 +76,52 @@
 		<div class="fullwidth-block">
 			<div class="container">
 				<div class="row">
-
 					<div class="content col-md-8">
-						<form class="form-horizontal" action="${cpath}/boardInsert.do"
-							method="post">
-							<div class="form-group">
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">닉네임</div>
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">작성일</div>
-							</div>
-							<div>
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">제목</div>
-							</div>
+						<!-- <form class="form-horizontal" action="${cpath}/boardInsert.do"
+							method="post"> -->
+							<form action="${cpath}/boardUpdate.do" method="post">
+							<c:set var="vo" value="${vo}" />
+							<input type="hidden" name="board_no" value="${vo.board_no}"> 
+								<div class="form-group">
+									<div
+										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+										<input type="text" name="nickname" value="${vo.nickname}" readonly="readonly">
+									</div>
+									<div
+										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+										<input type="text" name="indate" value="${vo.indate}" readonly="readonly">
+									</div>
+									<div
+										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+										<input type="text" name="title" value="${vo.title}">
+									</div>
+								</div>
 							<br>
 							<table>
-								<div class="write_table"
-									style="border: 2px solid #E63F39; border-radius: 12px;">
+								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
 										<img src="${cpath}/resources/images/logotest.png"
 											style="max-width: 150px;">
 										<textArea rows="5" class="form-control" name="contents"
-											placeholder="Enter contents"></textArea>
+											placeholder="Enter contents">${vo.contents}</textArea>
 									</div>
 								</div>
 							</table>
+							<br>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" class="btn btn-primary btn-sm"
-										style="position: relative; background: white; border: 2px solid #E63F39;">등록</button>
+										style="position: relative; background: white; border: 2px solid #E63F39;">수정</button>
 									&nbsp;
 									<button type="reset" class="btn btn-warning btn-sm"
 										style="position: relative; background: white; border: 2px solid #E63F39;">취소</button>
 								</div>
 							</div>
-						</form>
+							</form>
+						<!-- </form> -->
 
-						<button class="btn btn-success btn-sm" onclick="getComment()">댓글 보기</button>
+						<button class="btn btn-success btn-sm" onclick="getComment()">댓글
+							보기</button>
 						<div id="comment">--위에 버튼 누르면 여기에 댓글 리스트 뜰거임--</div>
 						<form class="comment_form" action="${cpath}/commentInsert.do"
 							method="post">
