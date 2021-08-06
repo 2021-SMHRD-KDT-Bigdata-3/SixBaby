@@ -19,7 +19,7 @@
                <ul class="menu">
                   <li class="menu-item current-menu-item"><a href="main.do">Homepage
                   </a></li>
-                  <li class="menu-item"><a href="community.do">Community</a></li>
+                  <li class="menu-item"><a href="boardList.do">Community</a></li>
                   <li class="menu-item"><a href="#">Baby Diary </a></li>
                   <li class="menu-item"><a href="#">Voice Recognition
                         Service

@@ -43,7 +43,7 @@ insert into member
 values('test', '1234', 'user', '스마트', '남자', '00-01-01', '010-1111-1111');
 
 insert into boards(category, title, nickname, picture, contents)
-values('꿀팁', 'test', '스마트', 'cat.jpg', '가나다라마바사아자차카타파하');
+values('tip', 'test', '스마트', 'cat.jpg', '가나다라마바사아자차카타파하');
 
 select * from boards;
 
@@ -59,3 +59,4 @@ insert into comments
 values('3','3','흐어어어얽','하기싫당','1');
 
 select * from boards order by board_no desc;
+select * from boards where category="tip" order by board_no desc;

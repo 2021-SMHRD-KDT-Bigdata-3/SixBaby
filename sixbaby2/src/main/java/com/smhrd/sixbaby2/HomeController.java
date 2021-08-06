@@ -71,11 +71,30 @@ public class HomeController {
 
 	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
 	@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
+	public String boardList(Model model) {
 		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/community.do";
+		model.addAttribute("list", list);
+		return "community";
 	}
+	@RequestMapping("/itemList.do")
+	public String itemList(Model model) {
+		List<BoardsVO> list = mapper.itemList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	@RequestMapping("/helpList.do")
+	public String helpList(Model model) {
+		List<BoardsVO> list = mapper.helpList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	@RequestMapping("/tipList.do")
+	public String tipList(Model model) {
+		List<BoardsVO> list = mapper.tipList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	
 
 	@RequestMapping("/boardContent.do")
 	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
@@ -108,16 +127,19 @@ public class HomeController {
 		List<CommentsVO> list = mapper.commentList();
 		return list;
 	}
+
 	@RequestMapping("/commentInsert.do")
 	public String commentInsert(CommentsVO vo) {
 		mapper.commentInsert(vo);
 		return "redirect:/boardDetail.do";
 	}
+
 	@RequestMapping("/commentUpdate.do")
 	public String commentUpdate(CommentsVO vo) {
 		mapper.commentUpdate(vo);
 		return "redirect:/boardDetail.do";
 	}
+
 	@RequestMapping("/commentDelete.do")
 	public String commentDelete(@RequestParam("comment_no") int comment_no) {
 		mapper.commentDelete(comment_no);
@@ -131,17 +153,19 @@ public class HomeController {
 		model.addAttribute("vo", vo);
 		return "redirect:/babydiary.do";
 	}
+
 	@RequestMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
 		mapper.diaryInsert(vo);
 		return "redirect:/babydiary.do";
 	}
+
 	@RequestMapping("/diaryUpdate.do")
 	public String diaryUpdate(DiaryVO vo) {
 		mapper.diaryUpdate(vo);
 		return "redirect:/babydiary.do";
 	}
-	
+
 //------------------------------------------------------------------------------------	
 
 	// 페이지이동
@@ -150,41 +174,30 @@ public class HomeController {
 		model.addAttribute("login", null);
 		return "main";
 	}
+
 	@RequestMapping(value = "/mypage.do")
 	public String mypage() {
 		return "mypage";
 	}
-	@RequestMapping(value = "/help.do")
-	public String help() {
-		return "help";
-	}
-	@RequestMapping(value = "/recommendation.do")
-	public String recommendation() {
-		return "recommendation";
-	}
-	@RequestMapping(value = "/community.do")
-	public String community() {
-		return "community";
-	}
+
 	@RequestMapping(value = "/boardWrite.do")
 	public String boardWrite() {
 		return "boardWrite";
 	}
+
 	@RequestMapping(value = "/boardDetail.do")
 	public String boardDetail() {
 		return "boardDetail";
 	}
+
 	@RequestMapping(value = "/correction.do")
 	public String correction() {
 		return "correction";
 	}
+
 	@RequestMapping(value = "/babyCorrection.do")
 	public String babyCorrection() {
 		return "babyCorrection";
 	}
-
-
-
-
 
 }

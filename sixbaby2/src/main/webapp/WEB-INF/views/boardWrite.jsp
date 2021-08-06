@@ -98,10 +98,10 @@
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow" style="text-align: center">
-								<li><a href="community.do">자유게시판</a></li>
-								<li><a href="recommendation.do">용품추천</a></li>
-								<li><a href="help.do">도움요청</a></li>
-								<li><a href="#">육아꿀팁</a></li>
+								<li><a href="boardList.do">자유게시판</a></li>
+								<li><a href="itemList.do">용품추천</a></li>
+								<li><a href="helpList.do">도움요청</a></li>
+								<li><a href="tipList.do">육아꿀팁</a></li>
 							</ul>
 						</div>
 

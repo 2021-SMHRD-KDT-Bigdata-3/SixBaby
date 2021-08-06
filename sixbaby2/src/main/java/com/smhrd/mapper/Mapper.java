@@ -14,6 +14,9 @@ public interface Mapper {
 	
 	//3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
 	public List<BoardsVO> boardList();// select~ SQL
+	public List<BoardsVO> itemList();// select~ SQL
+	public List<BoardsVO> helpList();// select~ SQL
+	public List<BoardsVO> tipList();// select~ SQL
 	public BoardsVO boardContent(int board_no); // select~where~ SQL
 	public void boardInsert(BoardsVO vo); // insert~ SQL	
 	public void boardUpdate(BoardsVO vo); // update~ SQL
