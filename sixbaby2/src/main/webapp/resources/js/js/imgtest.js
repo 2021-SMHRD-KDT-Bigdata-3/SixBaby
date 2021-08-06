@@ -28,12 +28,12 @@ $(document).ready(() => {
 			success : (data) => {
 				let str = "";
 				if(checkImageType(data)){
-					str = "<div><a href='${cpath}/imgDisplay.do?fileName="+getImageLink(data) + "'>";
-					str += "<img src='${cpath}/imgDisplay.do?fileName="+data+"'></a>";
+					str = "<div><a href='imgDisplay.do?fileName="+getImageLink(data) + "'>";
+					str += "<img src='imgDisplay.do?fileName="+data+"'></a>";
 				} else{
-					str = "<div><a href='${cpath}/imgDisplay.do?fileName="+data+"''>"+getOriginalName(data)+"</a>";
+					str = "<div><a href='imgDisplay.do?fileName="+data+"''>"+getOriginalName(data)+"</a>";
 				}
-				str += "<span data-src="+data+">[삭제]</span></div>";
+				str += "<span data-src="+data+">[delete]</span></div>";
 				$(".fileList").append(str);
 			},
 			error : (e, data) => {
