@@ -112,6 +112,16 @@ window.onload = function () {
 
       </div>
 
+ <!-- 페이드 슬라이드 배너 -->
+      <div class="slide" style="height: 400px; width: 100%;">
+         <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+      </div>
+
       <div id="modal_login">
          <div class="modal_content"
             style="border-radius: 12px; border: 1px solid #E63F39;">
@@ -248,14 +258,14 @@ window.onload = function () {
       <!-- <div class="mobile-navigation"></div> -->
 
       <!-- 페이드 슬라이드 배너 -->
-      <div class="slide" style="height: 400px; width: 100%;">
+    <!--   <div class="slide" style="height: 400px; width: 100%;">
          <ul>
             <li></li>
             <li></li>
             <li></li>
             <li></li>
          </ul>
-      </div>
+      </div> -->
 
 
 

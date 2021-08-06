@@ -254,8 +254,6 @@ form input, form textarea, form select {
   border-radius: 5px;
   border: none; }
 form select {
-	margin-right: 100%;
-  width:20%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -333,7 +331,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     overflow: hidden;
     height: 0; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-sm-13 {
    position: relative;
     min-height: 1px;
     padding-top: 8px;
@@ -497,7 +495,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 .col-sm-13{
     float: left; }
 
   .col-sm-1 {
@@ -535,6 +533,10 @@ form input[type="submit"], form button, form input[type="reset"] {
 
   .col-sm-12 {
     width: 100%; }
+    
+  .col-sm-13 {
+  text-align:center;
+  }
 
   .col-sm-pull-0 {
     right: auto; }
@@ -652,6 +654,9 @@ form input[type="submit"], form button, form input[type="reset"] {
 
   .col-sm-offset-12 {
     margin-left: 100%; } }
+    
+  .col-sm-offset-13 {
+    }
 @media (min-width: 992px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
@@ -1463,16 +1468,19 @@ form input[type="submit"], form button, form input[type="reset"] {
 .sidebar .widget {
   margin-bottom: 40px; }
   .sidebar .widget .widget-title {
+    text-align: center;
     color: #666666;
     font-size: 18px;
     font-size: 1.2857142857em;
     font-weight: 600; }
 
 .arrow {
+	text-align:center;
+	list-style:none;
   list-style-image: url(images/arrow.png);
   list-style-position: inside; }
   .arrow li {
-    padding: 10px 0;
+    padding: 20px 0;
     }
     .arrow li a {
       display: block;
@@ -1490,6 +1498,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   
   color: #acacb1; }
   .site-footer .widget {
+  text-align: center;
     margin-bottom: 30px; }
     .site-footer .widget .widget-title {
       color: #666666;
@@ -1551,7 +1560,7 @@ ul.bullet {
           background:#fff;
           border:2px solid #666;
           position:relative;
-          left:0px;
+          bottom:500px;
         }
         
 #modal_join .modal_layer {
@@ -1593,8 +1602,7 @@ ul.bullet {
           background:#fff;
           border:2px solid #666;
           position:relative;
-          top:0px;
-          left:0px;
+          bottom:500px;
         }
         
 #modal_login .modal_layer {
@@ -1720,4 +1728,19 @@ ul.bullet {
 .comment_form {
 	border: 2px solid #E63F39;
 	border-radius: 12px;
+}
+
+.btn_write {
+	position:relative;
+	background:white;
+	border:2px solid;
+	color:#E63F39;
+}
+
+.title_write {
+	text-align:center;
+}
+
+.detail_title {
+	padding:15px;
 }

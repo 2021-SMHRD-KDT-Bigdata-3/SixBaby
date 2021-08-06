@@ -47,9 +47,9 @@
 					<div class="content col-md-8">
 						<form class="form-horizontal" action="${cpath}/boardInsert.do"
 							method="post">
-							<div class="form-group">
+							<div class="title_write">
 								<select name="category"
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 15px; text-align: center;">
+									style="border: 2px solid #E63F39; width: 25%; border-radius: 12px; font-size: 15px; text-align-last: center;">
 									<option value="free">자유게시판</option>
 									<option value="item">용품 추천</option>
 									<option value="help">도움 요청</option>
@@ -75,21 +75,20 @@
 											placeholder="Enter contents"></textArea>
 									</div>
 									<div id="inputFile">
-										<label class="site-btn3" for="input-file"
+										<label class="control-label col-sm-2" for="input-file"
 											style="font-weight: bold; font-size: 16;">사진 첨부</label> <input
 											type="file" id="input-file" name="picture">
 									</div>
 								</div>
 							</table>
 							<div class="form-group">
-								<div class="col-sm-offset-2 col-sm-10">
-									<input type="submit" class="btn btn-primary btn-sm"
-										style="position: relative; background: white; border: 2px solid #E63F39;" value="등록">
+								<div class="col-sm-offset-13 col-sm-13">
+									<input type="submit" class="btn_Write"
+										style="position: relative; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;" value="등록">
 									&nbsp;
-									<button type="reset" class="btn btn-warning btn-sm"
-										style="position: relative; background: white; border: 2px solid #E63F39;">
-										<a href="community.do">취소</a>
-									</button>
+									<input type="reset" class="btn_Write" value="취소"
+										style="position: relative; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;">
+									</input>
 								</div>
 							</div>
 						</form>
@@ -98,7 +97,7 @@
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
-							<ul class="arrow" style="text-align: center">
+							<ul class="arrow">
 								<li><a href="community.do">자유게시판</a></li>
 								<li><a href="recommendation.do">용품추천</a></li>
 								<li><a href="help.do">도움요청</a></li>

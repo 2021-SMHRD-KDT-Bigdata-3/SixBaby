@@ -21,196 +21,170 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
 import com.smhrd.mapper.CommentsVO;
+import com.smhrd.mapper.DiaryVO;
 import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
 @Controller
 public class HomeController {
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+   private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
-		model.addAttribute("serverTime", formattedDate);
-		return "home";
-	}
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String home(Locale locale, Model model) {
+      logger.info("Welcome home! The client locale is {}.", locale);
+      Date date = new Date();
+      DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+      String formattedDate = dateFormat.format(date);
+      model.addAttribute("serverTime", formattedDate);
+      return "home";
+   }
+
+   @Autowired
+   private Mapper mapper;
+
+   // 1. 회원가입, 회원수정, 회원탈퇴
+   @RequestMapping("/memberInsert.do")
+   public String memberInsert(MemberVO vo) {
+      mapper.memberInsert(vo);
+      return "redirect:/main.do";
+   }
+
+   @RequestMapping("/memberUpdate.do")
+   public String memberUpdate(MemberVO vo) {
+      mapper.memberUpdate(vo);
+      return "redirect:/main.do";
+   }
+
+   @RequestMapping("/memberDelete.do")
+   public String memberDelete(MemberVO vo) {
+      mapper.memberDelete(vo);
+      return "redirect:/main.do";
+   }
+
+   // 2. 로그인
+   @RequestMapping("/login.do")
+   public String login(MemberVO vo) {
+      mapper.login(vo);
+      return "redirect:/main.do";
+   }
+
+   // 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
+   @RequestMapping("/boardList.do")
+   public String boardList(HttpServletRequest request) {
+      List<BoardsVO> list = mapper.boardList();
+      request.setAttribute("list", list);
+      return "community";
+   }
+
+   @RequestMapping("/boardContent.do")
+   public String boardContent(@RequestParam("board_no") int board_no, Model model) {
+      BoardsVO vo = mapper.boardContent(board_no);
+      model.addAttribute("vo", vo);
+      return "redirect:/boardDetail.do";
+   }
+
+   @RequestMapping("/boardInsert.do")
+   public String boardInsert(@ModelAttribute BoardsVO vo) {
+      mapper.boardInsert(vo);
+      return "redirect:/community.do";
+   }
+
+   @RequestMapping("/boardUpdate.do")
+   public String boardUpdate(BoardsVO vo) {
+      mapper.boardUpdate(vo);
+      return "redirect:/community.do";
+   }
+
+   @RequestMapping("/boardDelete.do")
+   public String boardDelete(@RequestParam("board_no") int board_no) {
+      mapper.boardDelete(board_no);
+      return "redirect:/community.do";
+   }
+
+   // 4. 댓글(열람, 작성, 수정, 삭제)
+   @RequestMapping("/commentList.do")
+   public @ResponseBody List<CommentsVO> commentList() {
+      List<CommentsVO> list = mapper.commentList();
+      return list;
+   }
+   @RequestMapping("/commentInsert.do")
+   public String commentInsert(CommentsVO vo) {
+      mapper.commentInsert(vo);
+      return "redirect:/boardDetail.do";
+   }
+   @RequestMapping("/commentUpdate.do")
+   public String commentUpdate(CommentsVO vo) {
+      mapper.commentUpdate(vo);
+      return "redirect:/boardDetail.do";
+   }
+   @RequestMapping("/commentDelete.do")
+   public String commentDelete(@RequestParam("comment_no") int comment_no) {
+      mapper.commentDelete(comment_no);
+      return "redirect:/boardDetail.do";
+   }
+
+   // 5. 육아일기(열람, 작성, 수정)
+   @RequestMapping("/diaryContent.do")
+   public String diaryContent(@RequestParam("diary_no") int diary_no, Model model) {
+      DiaryVO vo = mapper.diaryContent(diary_no);
+      model.addAttribute("vo", vo);
+      return "redirect:/babydiary.do";
+   }
+   @RequestMapping("/diaryInsert.do")
+   public String diaryInsert(DiaryVO vo) {
+      mapper.diaryInsert(vo);
+      return "redirect:/babydiary.do";
+   }
+   @RequestMapping("/diaryUpdate.do")
+   public String diaryUpdate(DiaryVO vo) {
+      mapper.diaryUpdate(vo);
+      return "redirect:/babydiary.do";
+   }
+   
+//------------------------------------------------------------------------------------   
+
+   // 페이지이동
+   @RequestMapping(value = "/main.do")
+   public String main(Model model) {
+      model.addAttribute("login", null);
+      return "main";
+   }
+   @RequestMapping(value = "/mypage.do")
+   public String mypage() {
+      return "mypage";
+   }
+   @RequestMapping(value = "/help.do")
+   public String help() {
+      return "help";
+   }
+   @RequestMapping(value = "/recommendation.do")
+   public String recommendation() {
+      return "recommendation";
+   }
+   @RequestMapping(value = "/community.do")
+   public String community() {
+      return "community";
+   }
+   @RequestMapping(value = "/boardWrite.do")
+   public String boardWrite() {
+      return "boardWrite";
+   }
+   @RequestMapping(value = "/boardDetail.do")
+   public String boardDetail() {
+      return "boardDetail";
+   }
+   @RequestMapping(value = "/correction.do")
+   public String correction() {
+      return "correction";
+   }
+   @RequestMapping(value = "/babyCorrection.do")
+   public String babyCorrection() {
+      return "babyCorrection";
+   }
 
 
-	@Autowired
-	private Mapper mapper;
-
-	//1. 회원가입, 회원수정, 회원탈퇴
-	@RequestMapping("/memberInsert.do")
-	public String memberInsert(MemberVO vo) {
-		mapper.memberInsert(vo);
-		return "redirect:/main.do";
-	}
-
-	@RequestMapping("/memberUpdate.do")
-	public String memberUpdate(MemberVO vo) {
-		mapper.memberUpdate(vo);
-		return "redirect:/tt.do";
-	}
-
-	@RequestMapping("/memberDelete.do")
-	public String memberDelete(MemberVO vo) {
-		mapper.memberDelete(vo);
-		return "redirect:/main.do";
-	}
-
-	// 2. 로그인
-	@RequestMapping("/login.do")
-	public String login(MemberVO vo) {
-		mapper.login(vo);
-		return "redirect:/main.do";
-	}
-
-	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
-	@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
-		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/community.do";
-	}
-
-	@RequestMapping("/boardContent.do")
-	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
-		BoardsVO vo = mapper.boardContent(board_no);
-		model.addAttribute("vo", vo);
-		return "redirect:/tt.do";
-	}
-
-	@RequestMapping("/boardInsert.do")
-	public String boardInsert(BoardsVO vo) {
-		mapper.boardInsert(vo);
-		return "redirect:/community.do";
-	}
-
-	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
-		mapper.boardUpdate(vo);
-		return "redirect:/tt.do";
-	}
-
-	@RequestMapping("/boardDelete.do")
-	public String boardDelete(@RequestParam("board_no") int board_no) {
-		mapper.boardDelete(board_no);
-		return "redirect:/tt.do";
-	}
-
-	// 댓글(보기,작성,수정,삭제)
-	/*@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
-		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/tt.do";
-	}*/
-	
-	// 4. 댓글
-	@RequestMapping("/commentList.do")
-	public @ResponseBody List<CommentsVO> commentList() {
-		// 게시판 리스트를 JSON형식으로 JS클라이언트에게 내려보낸다
-		List<CommentsVO> list = mapper.commentList();
-		return list; // list -> JSON 형태로 바꿔서 보내야함
-	}
-	
-	
-//-----------------------------------------------------------	
-
-	/*
-	 * @RequestMapping("/boardForm.do") public String boardForm() { return
-	 * "boardForm"; // boardForm.jsp }
-	 */
 
 
-	@RequestMapping(value = "/events.do")
-	public String events() {
-		return "events";
-	}
 
-	@RequestMapping(value = "/families.do")
-	public String families() {
-		return "families";
-	}
-
-	// 인코딩 왜이래
-	@RequestMapping(value = "/main_login.do")
-	public String main_login() {
-		return "main_login";
-	}
-	//	인코딩 왜이래
-	@RequestMapping(value = "/main_join.do")
-	public String main_join() {
-		return "main_join";
-	}
-
-
-	// 인코딩 왜이래
-	@RequestMapping(value = "/main_logout.do")
-	public String main_logout() {
-		return "main_logout";
-	}
-	
-		
-	// ���� ������
-	@RequestMapping(value = "/mypage.do")
-	public String mypage() {
-		return "mypage";
-	}
-		
-	//인코딩 왜이래
-	@RequestMapping(value = "/community.do")
-	public String community() {
-		return "community";
-	}
-	
-	// 인코딩 왜이래
-	@RequestMapping(value = "/help.do")
-	public String help() {
-		return "help";
-	}
-
-	// 인코딩 왜이래
-	@RequestMapping(value = "/recommendation.do")
-	public String recommendation() {
-		return "recommendation";
-	}
-	
-	// 인코딩 왜이래
-	@RequestMapping(value="/boardWrite.do")
-	    public String boardWrite() {
-	        return "boardWrite";
-	    }
-
-	
-		// ���� ����
-		@RequestMapping(value="/correction.do")
-		public String correction() {
-			return "correction";
-		}
-		
-		// ����
-		@RequestMapping(value="/main.do")
-		public String main(Model model) {
-			model.addAttribute("login", null);
-			return "main";
-		}
-
-		// �Խ��� ��
-		@RequestMapping(value="/boardDetail.do")
-		public String boardDetail() {
-			return "boardDetail";
-		}
-		
-		// �Խ��� ��
-		@RequestMapping(value="/babyCorrection.do")
-		public String babyCorrection() {
-			return "babyCorrection";
-		}
-
-	
 }

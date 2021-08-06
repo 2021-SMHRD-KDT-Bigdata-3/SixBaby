@@ -22,6 +22,13 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		
+		<script type="text/javascript">
+  	function goWrite(){
+  		location.href="${cpath}/boardWrite.do";
+  	}
+  </script>
+		
 </head>
 <body>
 <div class="site-content">
@@ -38,7 +45,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="content col-md-8">
-								<h2 class="section-title">Boards</h2>
+								<%-- <h2 class="section-title">Boards</h2>
 								<div align="right">
 									<button type="button" style="background:white; border:2px solid white; font-size:20px; color:black;"><span class="site-title"><a href="boardWrite.do">글쓰기</a></span></button>
 								</div>
@@ -87,7 +94,34 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dignissimos corporis quidem at nobis impedit perspiciatis, accusantium qui natus amet sapiente voluptate doloribus laboriosam officia deserunt possimus cumque inventore. Ipsum.</p>
 										</div>
 									</li>
-								</ul>
+								</ul> --%>
+
+									<div  class="seremon-list large">
+									  <table class="seremon-detail">
+									    <thead>
+									      <tr>
+									        <th>번호</th>
+									        <th>제목</th>
+									        <th>닉네임</th>
+									        <th>작성일</th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									    <!-- 변수설정 : var -->
+									    <c:forEach var="vo" items="${list}">
+									      <tr>
+									        <td>${vo.board_no}</td>
+									        <td class="seremon-title"><a href="${cpath}/boardDetail.do?board_no=${vo.board_no}">${vo.title}</a></td>
+									        <td class="pastor">${vo.nickname}</td>
+									        <td>${vo.indate}</td>
+									      </tr>
+									      </c:forEach>
+									      <tr>
+									      	<td colspan="5"><button class="btn btn-info btn-sm" onclick="goWrite()">글쓰기</button></td>
+									      </tr>
+									    </tbody>
+									  </table>
+									  </div>
 
 							</div>
 							<div class="sidebar col-md-3 col-md-offset-1">
