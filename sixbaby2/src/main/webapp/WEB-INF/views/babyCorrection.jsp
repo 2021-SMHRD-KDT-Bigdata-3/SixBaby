@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>ì•„ê¸° ì •ë³´ ìˆ˜ì •</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -26,30 +26,11 @@
 <body>
 <div class="site-content">
 
-					<header class="site-header">
-				<div class="container">
-					<a href="#" class="branding">
-						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
-						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
-					</a>
-					
-					<div class="main-navigation">
-						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
-								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
-								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
-							</ul>
-					</div>
-
-					<div class="mobile-navigation"></div>
-				</div>
-			</header> <!-- .site-header -->
+				<%@ include file="header.jsp"%>
 
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
-					<h2 class="page-title">¾ÆÀÌ Á¤º¸ ¼öÁ¤</h2>
+					<h2 class="page-title">ì•„ì´ ì •ë³´ ìˆ˜ì •</h2>
 				</div>
 			</div>
 
@@ -68,34 +49,34 @@
 							              <tbody>
 							              	<tr>
 							              	<td>
-							              		<select name="¾ÆÀÌ¸¦ °ñ¶ó°ñ¶ó~">
-							              			<option value="Ã¹Â°">ÇÏ³ª</option>
-							              			<option value="µÑÂ°">µÎ½ÄÀÌ</option>
+							              		<select name="ì•„ì´ë¥¼ ê³¨ë¼ê³¨ë¼~">
+							              			<option value="ì²«ì§¸">í•˜ë‚˜</option>
+							              			<option value="ë‘˜ì§¸">ë‘ì‹ì´</option>
 							              		</select>
 							              		<td>
 							              	</tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ ÀÌ¸§</span></th>
-							                  <td><input type="text" placeholder="ÅÂ¸í or ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä."></td>
+							                  <th><span>ì•„ì´ ì´ë¦„</span></th>
+							                  <td><input type="text" placeholder="íƒœëª… or ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ ¼ºº°</span></th>
-							                  <td>³²¡Î<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							                  ¿©¡Ï<input type="radio" name="gender" value="woman"></td>
+							                  <th><span>ì•„ì´ ì„±ë³„</span></th>
+							                  <td>ë‚¨â™‚<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							                  ì—¬â™€<input type="radio" name="gender" value="woman"></td>
 							                </tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ »ı³â¿ùÀÏ</span></th>
-							                  <td><input type="text" placeholder="ex) 2020 5¿ù 18ÀÏ : 200518"></td>
+							                  <th><span>ì•„ì´ ìƒë…„ì›”ì¼</span></th>
+							                  <td><input type="text" placeholder="ex) 2020 5ì›” 18ì¼ : 200518"></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">¿Ï·á</button></td>
+							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">ì™„ë£Œ</button></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">Å»Åğ</span></button></td>
+							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">íƒˆí‡´</span></button></td>
 							                </tr>
 							                <tr>
 							                <td colspan=2>
-							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇÏ¼ÌÀ¸¸é ¿Ï·á´­·¯ÁÖ¼¼¿ä.</span></div>
+							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>ì •ë³´ë¥¼ ì •í™•íˆ ì…ë ¥í•˜ì…¨ìœ¼ë©´ ì™„ë£ŒëˆŒëŸ¬ì£¼ì„¸ìš”.</span></div>
 							            </td>
 							            <td>
 							            </td>
@@ -115,8 +96,8 @@
 					   
 									    <div class="modal_content">
 					        <div class="form_txtInput">
-					          <h2 class="sub_tit_txt">È¸¿ø Å»Åğ</h2>
-					          <p class="exTxt">½ÅÁßÇØÁÖ¼¼¿ä.</p>
+					          <h2 class="sub_tit_txt">íšŒì› íƒˆí‡´</h2>
+					          <p class="exTxt">ì‹ ì¤‘í•´ì£¼ì„¸ìš”.</p>
 					          <div class="join_form">
 					            <table align="center">
 					              <colgroup>
@@ -125,21 +106,21 @@
 					              </colgroup>
 					              <tbody>
 					                <tr>
-					                  <th><span>¾ÆÀÌµğ</span></th>
-					                  <td><input type="text" placeholder="ID ¸¦ ÀÔ·ÂÇÏ¼¼¿ä."></td>
+					                  <th><span>ì•„ì´ë””</span></th>
+					                  <td><input type="text" placeholder="ID ë¥¼ ì…ë ¥í•˜ì„¸ìš”."></td>
 					                </tr>
 					                <tr>
-					                  <th><span>ºñ¹Ğ¹øÈ£</span></th>
-					                  <td><input type="password" placeholder="PW ¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></td>
+					                  <th><span>ë¹„ë°€ë²ˆí˜¸</span></th>
+					                  <td><input type="password" placeholder="PW ë¥¼ ì…ë ¥í•˜ì„¸ìš”"></td>
 					                </tr>
 					                <tr>
-					                	<td><button type="button" id="" style="border: solid white; background:white;">È®ÀÎ</button></td>
+					                	<td><button type="button" id="" style="border: solid white; background:white;">í™•ì¸</button></td>
 					                </tr>
 					              </tbody>
 					            </table>
 					          </div><!-- join_form E  -->
 					          <div class="btn_wrap">
-					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">Ã¢ ´İ±â</button>
+					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">ì°½ ë‹«ê¸°</button>
 					          </div>
 					        </div> <!-- form_txtInput E -->
 					    </div> <!-- container E -->
@@ -147,53 +128,7 @@
 					</div>
 
 
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Our address</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis magnam, ab ipsa laboriosam tempore tenetur, aliquid repellat, ex cum dicta reiciendis accusamus. Omnis repudiandae quasi mollitia, iusto odio dignissimos.</p>
-								<ul class="address">
-									<li><i class="fa fa-map-marker"></i> 329 Church St, Garland, TX 75042</li>
-									<li><i class="fa fa-phone"></i> (425) 853 442 552</li>
-									<li><i class="fa fa-envelope"></i> info@yourchurch.com</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Topics from last meeting</h3>
-								<ul class="bullet">
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Consectetur adipisicing elit quis nostrud</a></li>
-									<li><a href="#">Eiusmod tempor incididunt ut labore et dolore magna</a></li> 
-									<li><a href="#">Ut enim ad minim veniam cillum</a></li>
-									<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li> 
-									<li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Contact form</h3>
-								<form action="#" class="contact-form">
-									<div class="row">
-										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
-										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
-									</div>
-									
-									<textarea name="" placeholder="Your message..."></textarea>
-									<div class="text-right"><input type="submit" value="Send message"></div>
-									
-								</form>
-							</div>
-						</div>
-					</div> <!-- .row -->
-
-					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
-				</div><!-- .container -->
-			</footer> <!-- .site-footer -->
+			<%@ include file="footer.jsp"%>
 </div>
 		
 

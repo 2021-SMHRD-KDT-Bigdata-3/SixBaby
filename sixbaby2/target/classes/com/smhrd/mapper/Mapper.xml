@@ -25,8 +25,19 @@
 	
 	<!-- 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) -->
 	<select id="boardList" resultType="com.smhrd.mapper.BoardsVO">
-    	select * from boards
+    	select * from boards where category="free" order by board_no desc
    </select> 
+   <select id="itemList" resultType="com.smhrd.mapper.BoardsVO">
+    	select * from boards where category="item" order by board_no desc
+   </select> 
+   <select id="helpList" resultType="com.smhrd.mapper.BoardsVO">
+    	select * from boards where category="help" order by board_no desc
+   </select> 
+   <select id="tipList" resultType="com.smhrd.mapper.BoardsVO">
+    	select * from boards where category="tip" order by board_no desc
+   </select> 
+   
+   
    <select id="boardContent" parameterType="int" 
                              resultType="com.smhrd.mapper.BoardsVO">
      select * from boards where board_no=#{board_no}   
@@ -51,8 +62,8 @@
    
    <!-- 5. 댓글(보기,작성,수정,삭제) -->
    <select id="commentList" resultType="com.smhrd.mapper.CommentsVO">
-    	select * from comments
-    	where board_no=#{board_no}
+    	select * from comments order by comment_no desc
+    	<!--  where board_no=#{board_no}-->
    </select>
    <insert id="commentInsert" parameterType="com.smhrd.mapper.CommentsVO">
 	    insert into comments(board_no, nickname, contents)

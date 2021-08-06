@@ -11,7 +11,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-<title>BOARD_WRITE</title>
+<title>게시글 작성</title>
 
 <!-- Loading third party fonts -->
 <link href="${cpath}/resources/fonts/novecento-font/novecento-font.css"
@@ -31,36 +31,7 @@
 <body>
 	<div class="site-content">
 
-		<header class="site-header">
-			<div class="container">
-				<a href="#" class="branding"> <img
-					src="${cpath}/resources/images/logotest.png" alt="" class="logo"
-					style="max-width: 150px;">
-					<h1 class="site-title" style="color: #E63F39">SixBaby</h1>
-				</a>
-
-				<div class="main-navigation">
-					<button class="menu-toggle">
-						<i class="fa fa-bars"></i> Menu
-					</button>
-					<ul class="menu">
-						<li class="menu-item current-menu-item"><a href="main.do">Homepage
-								<small>Lorem ipsum</small>
-						</a></li>
-						<li class="menu-item"><a href="community.do">Community <small>Laboris
-									nisi aliquip</small></a></li>
-						<li class="menu-item"><a href="#">Baby Diary <small>Sunt
-									in culpa</small></a></li>
-						<li class="menu-item"><a href="#">Voice Recognition
-								Service <small>lorem ipsum</small>
-						</a></li>
-					</ul>
-				</div>
-
-				<div class="mobile-navigation"></div>
-			</div>
-		</header>
-		<!-- .site-header -->
+		 <%@ include file="header.jsp"%>
 
 		<div class="page-head"
 			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
@@ -82,7 +53,6 @@
 									<option value="free">자유게시판</option>
 									<option value="item">용품 추천</option>
 									<option value="help">도움 요청</option>
-									<option value="tip">육아 꿀팁</option>
 								</select>
 							</div>
 							<br>
@@ -128,10 +98,10 @@
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow" style="text-align: center">
-								<li><a href="community.do">자유게시판</a></li>
-								<li><a href="recommendation.do">용품추천</a></li>
-								<li><a href="help.do">도움요청</a></li>
-								<li><a href="#">육아꿀팁</a></li>
+								<li><a href="boardList.do">자유게시판</a></li>
+								<li><a href="itemList.do">용품추천</a></li>
+								<li><a href="helpList.do">도움요청</a></li>
+								<li><a href="tipList.do">육아꿀팁</a></li>
 							</ul>
 						</div>
 
@@ -141,71 +111,7 @@
 			</div>
 		</div>
 
-		<footer class="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="widget">
-							<h3 class="widget-title">Our address</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Modi perspiciatis magnam, ab ipsa laboriosam tempore tenetur,
-								aliquid repellat, ex cum dicta reiciendis accusamus. Omnis
-								repudiandae quasi mollitia, iusto odio dignissimos.</p>
-							<ul class="address">
-								<li><i class="fa fa-map-marker"></i> 329 Church St,
-									Garland, TX 75042</li>
-								<li><i class="fa fa-phone"></i> (425) 853 442 552</li>
-								<li><i class="fa fa-envelope"></i> info@yourchurch.com</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="widget">
-							<h3 class="widget-title">Topics from last meeting</h3>
-							<ul class="bullet">
-								<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								<li><a href="#">Consectetur adipisicing elit quis
-										nostrud</a></li>
-								<li><a href="#">Eiusmod tempor incididunt ut labore et
-										dolore magna</a></li>
-								<li><a href="#">Ut enim ad minim veniam cillum</a></li>
-								<li><a href="#">Exercitation ullamco laboris nisi ut
-										aliquip</a></li>
-								<li><a href="#">Duis aute irure dolor in reprehenderit
-										in voluptate</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="widget">
-							<h3 class="widget-title">Contact form</h3>
-							<form action="#" class="contact-form">
-								<div class="row">
-									<div class="col-md-6">
-										<input type="text" placeholder="Your name...">
-									</div>
-									<div class="col-md-6">
-										<input type="text" placeholder="Email...">
-									</div>
-								</div>
-
-								<textarea name="" placeholder="Your message..."></textarea>
-								<div class="text-right">
-									<input type="submit" value="Send message">
-								</div>
-
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- .row -->
-
-				<p class="colophon">Copyright 2014 True Church. All right
-					reserved</p>
-			</div>
-			<!-- .container -->
-		</footer>
-		<!-- .site-footer -->
+		<%@ include file="footer.jsp"%>
 	</div>
 
 

@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
+import com.smhrd.mapper.CommentsVO;
+import com.smhrd.mapper.DiaryVO;
 import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
@@ -37,11 +40,10 @@ public class HomeController {
 		return "home";
 	}
 
-
 	@Autowired
 	private Mapper mapper;
 
-	//1. 회원가입, 회원수정, 회원탈퇴
+	// 1. 회원가입, 회원수정, 회원탈퇴
 	@RequestMapping("/memberInsert.do")
 	public String memberInsert(@ModelAttribute MemberVO vo) {
 		mapper.memberInsert(vo);
@@ -51,7 +53,7 @@ public class HomeController {
 	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(MemberVO vo) {
 		mapper.memberUpdate(vo);
-		return "redirect:/tt.do";
+		return "redirect:/main.do";
 	}
 
 	@RequestMapping("/memberDelete.do")
@@ -69,21 +71,40 @@ public class HomeController {
 
 	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
 	@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
+	public String boardList(Model model) {
 		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/community.do";
+		model.addAttribute("list", list);
+		return "community";
 	}
+	@RequestMapping("/itemList.do")
+	public String itemList(Model model) {
+		List<BoardsVO> list = mapper.itemList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	@RequestMapping("/helpList.do")
+	public String helpList(Model model) {
+		List<BoardsVO> list = mapper.helpList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	@RequestMapping("/tipList.do")
+	public String tipList(Model model) {
+		List<BoardsVO> list = mapper.tipList();
+		model.addAttribute("list", list);
+		return "community";
+	}
+	
 
 	@RequestMapping("/boardContent.do")
 	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
 		BoardsVO vo = mapper.boardContent(board_no);
 		model.addAttribute("vo", vo);
-		return "redirect:/tt.do";
+		return "redirect:/boardDetail.do";
 	}
 
 	@RequestMapping("/boardInsert.do")
-	public String boardInsert(BoardsVO vo) {
+	public String boardInsert(@ModelAttribute BoardsVO vo) {
 		mapper.boardInsert(vo);
 		return "redirect:/community.do";
 	}
@@ -91,111 +112,86 @@ public class HomeController {
 	@RequestMapping("/boardUpdate.do")
 	public String boardUpdate(BoardsVO vo) {
 		mapper.boardUpdate(vo);
-		return "redirect:/tt.do";
+		return "redirect:/community.do";
 	}
 
 	@RequestMapping("/boardDelete.do")
 	public String boardDelete(@RequestParam("board_no") int board_no) {
 		mapper.boardDelete(board_no);
-		return "redirect:/tt.do";
+		return "redirect:/community.do";
 	}
 
-	// 댓글(보기,작성,수정,삭제)
-	/*@RequestMapping("/boardList.do")
-	public String boardList(HttpServletRequest request) {
-		List<BoardsVO> list = mapper.boardList();
-		request.setAttribute("list", list);
-		return "redirect:/tt.do";
-	}*/
-	
-	
-	
-//-----------------------------------------------------------	
-
-	/*
-	 * @RequestMapping("/boardForm.do") public String boardForm() { return
-	 * "boardForm"; // boardForm.jsp }
-	 */
-
-
-	@RequestMapping(value = "/events.do")
-	public String events() {
-		return "events";
+	// 4. 댓글(열람, 작성, 수정, 삭제)
+	@RequestMapping("/commentList.do")
+	public @ResponseBody List<CommentsVO> commentList() {
+		List<CommentsVO> list = mapper.commentList();
+		return list;
 	}
 
-	@RequestMapping(value = "/families.do")
-	public String families() {
-		return "families";
-	}	
-		
-	// ���� ������
+	@RequestMapping("/commentInsert.do")
+	public String commentInsert(CommentsVO vo) {
+		mapper.commentInsert(vo);
+		return "redirect:/boardDetail.do";
+	}
+
+	@RequestMapping("/commentUpdate.do")
+	public String commentUpdate(CommentsVO vo) {
+		mapper.commentUpdate(vo);
+		return "redirect:/boardDetail.do";
+	}
+
+	@RequestMapping("/commentDelete.do")
+	public String commentDelete(@RequestParam("comment_no") int comment_no) {
+		mapper.commentDelete(comment_no);
+		return "redirect:/boardDetail.do";
+	}
+
+	// 5. 육아일기(열람, 작성, 수정)
+	@RequestMapping("/diaryContent.do")
+	public String diaryContent(@RequestParam("diary_no") int diary_no, Model model) {
+		DiaryVO vo = mapper.diaryContent(diary_no);
+		model.addAttribute("vo", vo);
+		return "redirect:/babydiary.do";
+	}
+
+	@RequestMapping("/diaryInsert.do")
+	public String diaryInsert(DiaryVO vo) {
+		mapper.diaryInsert(vo);
+		return "redirect:/babydiary.do";
+	}
+
+	@RequestMapping("/diaryUpdate.do")
+	public String diaryUpdate(DiaryVO vo) {
+		mapper.diaryUpdate(vo);
+		return "redirect:/babydiary.do";
+	}
+
+//------------------------------------------------------------------------------------	
+
+	// 페이지이동
 	@RequestMapping(value = "/mypage.do")
 	public String mypage() {
 		return "mypage";
 	}
-		
-	//인코딩 왜이래
-	@RequestMapping(value = "/community.do")
-	public String community() {
-		return "community";
-	}
-	
-	// 인코딩 왜이래
-	@RequestMapping(value = "/help.do")
-	public String help() {
-		return "help";
+
+	@RequestMapping(value = "/boardWrite.do")
+	public String boardWrite() {
+		return "boardWrite";
 	}
 
-	// 인코딩 왜이래
-	@RequestMapping(value = "/recommendation.do")
-	public String recommendation() {
-		return "recommendation";
+	@RequestMapping(value = "/boardDetail.do")
+	public String boardDetail() {
+		return "boardDetail";
 	}
-	
-	// 인코딩 왜이래
-	@RequestMapping(value="/boardWrite.do")
-	    public String boardWrite() {
-	        return "boardWrite";
-	    }
 
-	
-		// ���� ����
-		@RequestMapping(value="/correction.do")
-		public String correction() {
-			return "correction";
-		}
-		
-		// ����
-		@RequestMapping(value="/main.do")
-		public String main(Model model) {
-			model.addAttribute("login", null);
-			return "main";
-		}
-
-		// �Խ��� ��
-		@RequestMapping(value="/boardDetail.do")
-		public String boardDetail() {
-			return "boardDetail";
-		}
-		
-		// �Խ��� ��
-		@RequestMapping(value="/babyCorrection.do")
-		public String babyCorrection() {
-			return "babyCorrection";
-		}
-
-	// iot 테스트 페이지
-	@RequestMapping("/iot.do")
-	public String iot() {
-		return "iot";
+	@RequestMapping(value = "/correction.do")
+	public String correction() {
+		return "correction";
 	}
-	
-/**	@RequestMapping(value = "/iot.do", method = RequestMethod.POST, produces = { "application/json; charset=utf-8" })
-	public @ResponseBody Map<String, Object> iot(@RequestBody Map<String, Object> tmp) {
-		System.out.println("data : " + tmp.get("data"));
-		Map<String, Object> retVal = new HashMap<String, Object>();
-		return retVal;
-}
-**/
-	
+
+	@RequestMapping(value = "/babyCorrection.do")
+	public String babyCorrection() {
+		return "babyCorrection";
+	}
+
 }
