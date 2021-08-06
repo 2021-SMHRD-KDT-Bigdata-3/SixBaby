@@ -11,7 +11,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-<title>BOARD_WRITE</title>
+<title>게시글 작성</title>
 
 <!-- Loading third party fonts -->
 <link href="${cpath}/resources/fonts/novecento-font/novecento-font.css"
@@ -53,7 +53,6 @@
 									<option value="free">자유게시판</option>
 									<option value="item">용품 추천</option>
 									<option value="help">도움 요청</option>
-									<option value="tip">육아 꿀팁</option>
 								</select>
 							</div>
 							<br>

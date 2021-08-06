@@ -64,7 +64,8 @@ public class HomeController {
 
 	// 2. 로그인
 	@RequestMapping("/login.do")
-	public String login(MemberVO vo) {
+	public String login(@ModelAttribute MemberVO vo) {
+		System.out.println(vo.getId());
 		mapper.login(vo);
 		return "redirect:/main.do";
 	}
@@ -85,7 +86,7 @@ public class HomeController {
 	}
 
 	@RequestMapping("/boardInsert.do")
-	public String boardInsert(BoardsVO vo) {
+	public String boardInsert(@ModelAttribute BoardsVO vo) {
 		mapper.boardInsert(vo);
 		return "redirect:/community.do";
 	}

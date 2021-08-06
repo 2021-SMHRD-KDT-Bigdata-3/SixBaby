@@ -18,14 +18,11 @@
                </button>
                <ul class="menu">
                   <li class="menu-item current-menu-item"><a href="main.do">Homepage
-                        <small>Lorem ipsum</small>
                   </a></li>
-                  <li class="menu-item"><a href="community.do">Community <small>Laboris
-                           nisi aliquip</small></a></li>
-                  <li class="menu-item"><a href="#">Baby Diary <small>Sunt
-                           in culpa</small></a></li>
+                  <li class="menu-item"><a href="community.do">Community</a></li>
+                  <li class="menu-item"><a href="#">Baby Diary </a></li>
                   <li class="menu-item"><a href="#">Voice Recognition
-                        Service <small>lorem ipsum</small>
+                        Service
                   </a></li>
                </ul>
             </div>
