@@ -216,6 +216,7 @@ body {
   color: black;
   font-family: arial, sans-serif;
   font-weight: 600;
+  font-size:15px;
   line-height: 1.5;
    }
 
@@ -269,18 +270,15 @@ form input[type="submit"], form button, form input[type="reset"] {
  */
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
-  background: #e2caae;
   background: -webkit-linear-gradient(#e2caae, #c39f70);
   background: linear-gradient(#e2caae, #c39f70);
   border-bottom: 1px solid #a68861;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px 25px;
-  border-radius: 5px;
-  color: gray;
+  padding:1px;
+  color: #666666;
   text-transform: uppercase;
+  font-size:10px;
   font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-  font-weight: 600;
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
@@ -668,7 +666,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 25%; }
 
   .col-md-4 {
-    width: 33.3333333333%; }
+    position: relative; left:200px;}
 
   .col-md-5 {
     width: 41.6666666667%; }
@@ -1149,7 +1147,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .branding .logo {
     margin-bottom: 10px; }
   .branding .site-title {
-    color: darkgray;
+    color: #666666;
     font-weight:300;
     font-size: 20px;
     }
@@ -1460,7 +1458,7 @@ form input[type="submit"], form button, form input[type="reset"] {
 .sidebar .widget {
   margin-bottom: 40px; }
   .sidebar .widget .widget-title {
-    color: #544531;
+    color: #666666;
     font-size: 18px;
     font-size: 1.2857142857em;
     font-weight: 600; }
@@ -1484,14 +1482,14 @@ form input[type="submit"], form button, form input[type="reset"] {
  */
 .site-footer {
   background: #363641;
-  padding: 50px 0;
+  
   color: #acacb1; }
   .site-footer .widget {
     margin-bottom: 30px; }
     .site-footer .widget .widget-title {
-      color: darkgray;
-      font-size: 18px;
-      font-size: 1.2857142857em; }
+      color: #666666;
+      font-size: 15px;
+     }
 
 ul.address {
   list-style: none; }

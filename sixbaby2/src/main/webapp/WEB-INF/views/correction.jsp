@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
 
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
-					<h2 class="page-title">ȸ�� ���� ����</h2>
+					<h2 class="page-title">회원 정보 수정</h2>
 				</div>
 			</div>
 
@@ -67,48 +67,48 @@
 							              </colgroup>
 							              <tbody>
 							                <tr>
-							                  <th><span>���̵�</span></th>
-							                  <td><input type="text" placeholder="ID �� �Է��ϼ���."></td>
+							                  <th><span>아이디</span></th>
+							                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>��й�ȣ</span></th>
-							                  <td><input type="password" placeholder="��й�ȣ�� �Է��ϼ���."></td>
+							                  <th><span>비밀번호</span></th>
+							                  <td><input type="password" placeholder="비밀번호를 입력하세요."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>��й�ȣ Ȯ��</span></th>
-							                  <td><input type="password" placeholder="��й�ȣ�� Ȯ���ϼ���."></td>
+							                  <th><span>비밀번호 확인</span></th>
+							                  <td><input type="password" placeholder="비밀번호를 확인하세요."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>�̸�</span></th>
-							                  <td><input type="text" placeholder="�̸��� �Է��ϼ���."></td>
+							                  <th><span>이름</span></th>
+							                  <td><input type="text" placeholder="이름을 입력하세요."></td>
 							                </tr>
 							                <tr>
-							                <th><span>����</span></th>
-							                  <td>����<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							                  ����<input type="radio" name="gender" value="woman"></td>
+							                <th><span>성별</span></th>
+							                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							                  여♀<input type="radio" name="gender" value="woman"></td>
 							                </tr>
 							                <tr>
-							                  <th><span>�г���</span></th>
-							                  <td><input type="text" placeholder="�г����� �Է��ϼ���."></td>
+							                  <th><span>닉네임</span></th>
+							                  <td><input type="text" placeholder="닉네임을 입력하세요."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>�������</span></th>
-							                  <td><input type="text" placeholder="ex) 1996 2�� 18�� : 960218"></td>
+							                  <th><span>생년월일</span></th>
+							                  <td><input type="text" placeholder="ex) 1996 2월 18일 : 960218"></td>
 							                </tr>
 							                
 							                <tr>
-							                  <th><span>�޴��� ��ȣ</span></th>
-							                  <td><input type="text" placeholder="��ȭ��ȣ�� �Է��ϼ���."></td>
+							                  <th><span>휴대폰 번호</span></th>
+							                  <td><input type="text" placeholder="전화번호를 입력하세요."></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">�Ϸ�</button></td>
+							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">완료</button></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">Ż��</span></button></td>
+							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">탈퇴</span></button></td>
 							                </tr>
 							              </tbody>
 							            </table>
-							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>������ ��Ȯ�� �Է��ϼ����� �Ϸᴭ���ּ���.</span></div>
+							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
 							          </div><!-- correction_form E  -->
 								</div>
 								
@@ -122,8 +122,8 @@
 					   
 									    <div class="modal_content">
 					        <div class="form_txtInput">
-					          <h2 class="sub_tit_txt">ȸ�� Ż��</h2>
-					          <p class="exTxt">�������ּ���.</p>
+					          <h2 class="sub_tit_txt">회원 탈퇴</h2>
+					          <p class="exTxt">신중해주세요.</p>
 					          <div class="join_form">
 					            <table align="center">
 					              <colgroup>
@@ -132,21 +132,21 @@
 					              </colgroup>
 					              <tbody>
 					                <tr>
-					                  <th><span>���̵�</span></th>
-					                  <td><input type="text" placeholder="ID �� �Է��ϼ���."></td>
+					                  <th><span>아이디</span></th>
+					                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
 					                </tr>
 					                <tr>
-					                  <th><span>��й�ȣ</span></th>
-					                  <td><input type="password" placeholder="PW �� �Է��ϼ���"></td>
+					                  <th><span>비밀번호</span></th>
+					                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
 					                </tr>
 					                <tr>
-					                	<td><button type="button" id="" style="border: solid white; background:white;">Ȯ��</button></td>
+					                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
 					                </tr>
 					              </tbody>
 					            </table>
 					          </div><!-- join_form E  -->
 					          <div class="btn_wrap">
-					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">â �ݱ�</button>
+					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
 					          </div>
 					        </div> <!-- form_txtInput E -->
 					    </div> <!-- container E -->

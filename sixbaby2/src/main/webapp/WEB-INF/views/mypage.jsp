@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -61,10 +61,10 @@
 							<div class="content col-md-13">
 								<div class="row">
 									<div class="family">
-								<h2 class="section-title">²¿²¿</h2>
-								<a href="correction.do">È¸¿ø Á¤º¸ ¼öÁ¤</a><br>
-								<a href="babyCorrection.do">¾ÆÀÌ Á¤º¸ ¼öÁ¤</a><br>
-								<button type="button" id="modal_open_btn_baby"><span class="site-title">¾ÆÀÌ Ãß°¡</span></button>
+								<h2 class="section-title">ê¼¬ê¼¬</h2>
+								<a href="correction.do">íšŒì› ì •ë³´ ìˆ˜ì •</a><br>
+								<a href="babyCorrection.do">ì•„ì´ ì •ë³´ ìˆ˜ì •</a><br>
+								<button type="button" id="modal_open_btn_baby"><span class="site-title">ì•„ì´ ì¶”ê°€</span></button>
 										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
 										<h3 class="family-name">Smith</h3>
 										<small>John, Anna, Patrick, Susan</small>
@@ -81,9 +81,9 @@
    
 				    <div class="modal_content">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">Ã¢ ´Ý±â</button>
-          <h2 class="sub_tit_txt">¾ÆÀÌ Ãß°¡</h2>
-          <p class="exTxt" >Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.</p>
+          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">ì°½ ë‹«ê¸°</button>
+          <h2 class="sub_tit_txt">ì•„ì´ ì¶”ê°€</h2>
+          <p class="exTxt" >ì •ë³´ë¥¼ ì •í™•ížˆ ìž…ë ¥í•´ì£¼ì„¸ìš”.</p>
           <div class="join_form">
             <table align="center">
               <colgroup>
@@ -92,25 +92,25 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th><span>¾ÆÀÌ ÀÌ¸§</span></th>
-                  <td><input type="text" placeholder="ÅÂ¸í or ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä."></td>
+                  <th><span>ì•„ì´ ì´ë¦„</span></th>
+                  <td><input type="text" placeholder="íƒœëª… or ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”."></td>
                 </tr>
                 <tr>
-                  <th><span>¾ÆÀÌ ¼ºº°</span></th>
-                  <td>³²¡Î<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  ¿©¡Ï<input type="radio" name="gender" value="woman"></td>
+                  <th><span>ì•„ì´ ì„±ë³„</span></th>
+                  <td>ë‚¨â™‚<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  ì—¬â™€<input type="radio" name="gender" value="woman"></td>
                 </tr>
                 <tr>
-                  <th><span>¾ÆÀÌ »ý³â¿ùÀÏ</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5¿ù 18ÀÏ : 200518"></td>
+                  <th><span>ì•„ì´ ìƒë…„ì›”ì¼</span></th>
+                  <td><input type="text" placeholder="ex) 2020 5ì›” 18ì¼ : 200518"></td>
                 </tr>
               </tbody>
             </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇÏ¼ÌÀ¸¸é ¿Ï·á´­·¯ÁÖ¼¼¿ä.</span></div>
+            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>ì •ë³´ë¥¼ ì •í™•ížˆ ìž…ë ¥í•˜ì…¨ìœ¼ë©´ ì™„ë£ŒëˆŒëŸ¬ì£¼ì„¸ìš”.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">¿Ï·á</button>
+            <button type="button" id="" style="position: relative; right: 150px; background:white;">ì™„ë£Œ</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
