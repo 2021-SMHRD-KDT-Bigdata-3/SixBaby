@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -26,26 +26,7 @@
 <body>
 <div class="site-content">
 
-					<header class="site-header">
-				<div class="container">
-					<a href="#" class="branding">
-						<img src="${cpath}/resources/images/logotest.png" alt="" class="logo" style="max-width: 150px;">
-						<h1 class="site-title" style="color:#E63F39">SixBaby</h1>
-					</a>
-					
-					<div class="main-navigation">
-						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="main.jsp">Homepage <small>Lorem ipsum</small></a></li>
-								<li class="menu-item"><a href="community.jsp">Community <small>Laboris nisi aliquip</small></a></li>
-								<li class="menu-item"><a href="#">Baby Diary <small>Sunt in culpa</small></a></li>
-								<li class="menu-item"><a href="#">Voice Recognition Service <small>lorem ipsum</small></a></li>
-							</ul>
-					</div>
-
-					<div class="mobile-navigation"></div>
-				</div>
-			</header> <!-- .site-header -->
+				 <%@ include file="header.jsp"%>
 			
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
@@ -61,10 +42,10 @@
 							<div class="content col-md-13">
 								<div class="row">
 									<div class="family">
-								<h2 class="section-title">²¿²¿</h2>
-								<a href="correction.do">È¸¿ø Á¤º¸ ¼öÁ¤</a><br>
-								<a href="babyCorrection.do">¾ÆÀÌ Á¤º¸ ¼öÁ¤</a><br>
-								<button type="button" id="modal_open_btn_baby"><span class="site-title">¾ÆÀÌ Ãß°¡</span></button>
+								<h2 class="section-title">ê¼¬ê¼¬</h2>
+								<a href="correction.do">íšŒì› ì •ë³´ ìˆ˜ì •</a><br>
+								<a href="babyCorrection.do">ì•„ì´ ì •ë³´ ìˆ˜ì •</a><br>
+								<button type="button" id="modal_open_btn_baby"><span class="site-title">ì•„ì´ ì¶”ê°€</span></button>
 										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
 										<h3 class="family-name">Smith</h3>
 										<small>John, Anna, Patrick, Susan</small>
@@ -81,9 +62,9 @@
    
 				    <div class="modal_content">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">Ã¢ ´İ±â</button>
-          <h2 class="sub_tit_txt">¾ÆÀÌ Ãß°¡</h2>
-          <p class="exTxt" >Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.</p>
+          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">ì°½ ë‹«ê¸°</button>
+          <h2 class="sub_tit_txt">ì•„ì´ ì¶”ê°€</h2>
+          <p class="exTxt" >ì •ë³´ë¥¼ ì •í™•íˆ ì…ë ¥í•´ì£¼ì„¸ìš”.</p>
           <div class="join_form">
             <table align="center">
               <colgroup>
@@ -92,78 +73,32 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th><span>¾ÆÀÌ ÀÌ¸§</span></th>
-                  <td><input type="text" placeholder="ÅÂ¸í or ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä."></td>
+                  <th><span>ì•„ì´ ì´ë¦„</span></th>
+                  <td><input type="text" placeholder="íƒœëª… or ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”."></td>
                 </tr>
                 <tr>
-                  <th><span>¾ÆÀÌ ¼ºº°</span></th>
-                  <td>³²¡Î<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  ¿©¡Ï<input type="radio" name="gender" value="woman"></td>
+                  <th><span>ì•„ì´ ì„±ë³„</span></th>
+                  <td>ë‚¨â™‚<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  ì—¬â™€<input type="radio" name="gender" value="woman"></td>
                 </tr>
                 <tr>
-                  <th><span>¾ÆÀÌ »ı³â¿ùÀÏ</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5¿ù 18ÀÏ : 200518"></td>
+                  <th><span>ì•„ì´ ìƒë…„ì›”ì¼</span></th>
+                  <td><input type="text" placeholder="ex) 2020 5ì›” 18ì¼ : 200518"></td>
                 </tr>
               </tbody>
             </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇÏ¼ÌÀ¸¸é ¿Ï·á´­·¯ÁÖ¼¼¿ä.</span></div>
+            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>ì •ë³´ë¥¼ ì •í™•íˆ ì…ë ¥í•˜ì…¨ìœ¼ë©´ ì™„ë£ŒëˆŒëŸ¬ì£¼ì„¸ìš”.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
             <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">¿Ï·á</button>
+            <button type="button" id="" style="position: relative; right: 150px; background:white;">ì™„ë£Œ</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->
 				    	<div class="modal_layer"></div>
 					</div> 
 			
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Our address</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis magnam, ab ipsa laboriosam tempore tenetur, aliquid repellat, ex cum dicta reiciendis accusamus. Omnis repudiandae quasi mollitia, iusto odio dignissimos.</p>
-								<ul class="address">
-									<li><i class="fa fa-map-marker"></i> 329 Church St, Garland, TX 75042</li>
-									<li><i class="fa fa-phone"></i> (425) 853 442 552</li>
-									<li><i class="fa fa-envelope"></i> info@yourchurch.com</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Topics from last meeting</h3>
-								<ul class="bullet">
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Consectetur adipisicing elit quis nostrud</a></li>
-									<li><a href="#">Eiusmod tempor incididunt ut labore et dolore magna</a></li> 
-									<li><a href="#">Ut enim ad minim veniam cillum</a></li>
-									<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li> 
-									<li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="widget">
-								<h3 class="widget-title">Contact form</h3>
-								<form action="#" class="contact-form">
-									<div class="row">
-										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
-										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
-									</div>
-									
-									<textarea name="" placeholder="Your message..."></textarea>
-									<div class="text-right"><input type="submit" value="Send message"></div>
-									
-								</form>
-							</div>
-						</div>
-					</div> <!-- .row -->
-
-					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
-				</div><!-- .container -->
-			</footer> <!-- .site-footer -->
+		 <%@ include file="footer.jsp"%>
 </div>
 		
 
