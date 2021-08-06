@@ -49,8 +49,6 @@ select * from boards;
 
 select * from member;
 
-drop table comments;
-
 select * from comments;
 
 insert into comments
@@ -59,3 +57,5 @@ insert into comments
 values('2','2','部部坷坷坷坷','览局览局局局局局局局局','2');
 insert into comments
 values('3','3','儒绢绢绢爵','窍扁饺寸','1');
+
+select * from boards order by board_no desc;

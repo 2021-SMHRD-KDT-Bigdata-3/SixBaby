@@ -25,7 +25,7 @@
 	
 	<!-- 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) -->
 	<select id="boardList" resultType="com.smhrd.mapper.BoardsVO">
-    	select * from boards
+    	select * from boards order by board_no desc
    </select> 
    <select id="boardContent" parameterType="int" 
                              resultType="com.smhrd.mapper.BoardsVO">
