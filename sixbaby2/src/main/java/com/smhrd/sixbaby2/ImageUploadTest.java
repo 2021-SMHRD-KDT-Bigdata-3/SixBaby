@@ -120,17 +120,17 @@ public class ImageUploadTest {
 	@ResponseBody
 	public ResponseEntity<String> imgDelete(String fileName){
 		System.out.println("üŷüŷ :" + fileName);
-//		String formatName = fileName.substring(fileName.lastIndexOf(".") + 1);
-//		MediaType mType = MediaUtils.getMediaType(formatName);
-//		
-//		if(mType != null) {
-//			String front = fileName.substring(0, 12);
-//			String end = fileName.substring(14);
-//			
-//			new File(uploadPath + (front + end)).delete();
-//		}
-//		
-//		new File(uploadPath + fileName).delete();
+		String formatName = fileName.substring(fileName.lastIndexOf(".") + 1);
+		MediaType mType = MediaUtils.getMediaType(formatName);
+		
+		if(mType != null) {
+			String front = fileName.substring(0, 12);
+			String end = fileName.substring(14);
+			
+			new File(uploadPath + (front + end)).delete();
+		}
+		
+		new File(uploadPath + fileName).delete();
 		
 		return new ResponseEntity<String>("deleted", HttpStatus.OK);
 	}

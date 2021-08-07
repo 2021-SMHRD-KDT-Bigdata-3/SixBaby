@@ -2,10 +2,13 @@ package com.smhrd.sixbaby2;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,10 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
@@ -26,6 +32,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
 @Controller
+@SessionAttributes("loginMember")
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -45,7 +52,7 @@ public class HomeController {
 
 	// 1. 회원가입, 회원수정, 회원탈퇴
 	@RequestMapping("/memberInsert.do")
-	public String memberInsert(@ModelAttribute MemberVO vo) {
+	public String memberInsert(MemberVO vo) {
 		mapper.memberInsert(vo);
 		return "redirect:/main.do";
 	}
@@ -62,11 +69,26 @@ public class HomeController {
 		return "redirect:/main.do";
 	}
 
-	// 2. 로그인
-	@RequestMapping("/login.do")
-	public String login(MemberVO vo) {
-		mapper.login(vo);
-		return "redirect:/main.do";
+	// 2. 로그인, 로그아웃
+	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	public String login(MemberVO vo, Model model) {
+		MemberVO loginMember =  mapper.login(vo);
+		if(loginMember != null) {
+			model.addAttribute("loginMember", loginMember);
+			System.out.println("성공");
+			return "redirect:/main.do";
+		} else {
+			System.out.println("실패");
+			return "redirect:/main.do";
+		}
+	}
+	
+	@PostMapping("/logout.do")
+	@ResponseBody
+	public String logout(HttpSession session) {
+		session.invalidate();
+		System.out.println("ddd");
+		return "success";
 	}
 
 	// 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
@@ -169,6 +191,11 @@ public class HomeController {
 //------------------------------------------------------------------------------------	
 
 	// 페이지이동
+	@RequestMapping(value = "/main.do")
+	public String main() {
+		return "main";
+	}
+
 	@RequestMapping(value = "/mypage.do")
 	public String mypage() {
 		return "mypage";

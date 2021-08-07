@@ -91,7 +91,14 @@ window.onload = function () {
       <div align="right">
          <div id="root" class="branding">
             <button type="button" id="modal_open_btn_login">
-               <span class="site-title" style="background: white;">Login</span>
+            <c:choose>
+            	<c:when test="${empty loginMember }">
+            		<span id = "login" class="site-title " style="background: white;">Login</span>
+            	</c:when>
+            	<c:otherwise>
+            		<span id = "logout" class="site-title" style="background: white;">Logout</span>
+            	</c:otherwise>
+            </c:choose>
             </button>
             &nbsp; &nbsp;
             <button type="button" id="modal_open_btn_join"
@@ -129,15 +136,9 @@ window.onload = function () {
 
                               <th><span style="position: relative; left: 70px;">비밀번호</span></th>
                               <td style="position: relative; left: 70px;"><input
-                                 type="password" placeholder="PW 를 입력하세요"></td>
-
-                              <th><span>비밀번호</span></th>
-
-                              <td><input type="password" placeholder="PW 를 입력하세요"></td>
-
-                           </tr>
+                                 type="password" name="pw" placeholder="PW 를 입력하세요"></td>
                            <tr>
-                              <td><button type="button" id=""
+                              <td><button type="submit" id="login-btn"
                                     style="border: solid white; background: white; position: relative; left: 200px;">확인</button></td>
                            </tr>
                         </form>

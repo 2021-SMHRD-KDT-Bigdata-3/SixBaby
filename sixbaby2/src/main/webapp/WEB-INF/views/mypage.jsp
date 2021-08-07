@@ -42,7 +42,7 @@
 							<div class="content col-md-13">
 								<div class="row">
 									<div class="family">
-								<h2 class="section-title">꼬꼬</h2>
+								<h2 class="section-title">${loginMember.id}</h2>
 								<a href="correction.do">회원 정보 수정</a><br>
 								<a href="babyCorrection.do">아이 정보 수정</a><br>
 								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>
