@@ -73,8 +73,8 @@ public class HomeController {
 	// 2. 로그인, 로그아웃
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String login(MemberVO vo, Model model) {
-		MemberVO loginMember =  mapper.login(vo);
-		if(loginMember != null) {
+		MemberVO loginMember = mapper.login(vo);
+		if (loginMember != null) {
 			model.addAttribute("loginMember", loginMember);
 			System.out.println("성공");
 			return "redirect:/main.do";
@@ -83,7 +83,7 @@ public class HomeController {
 			return "redirect:/main.do";
 		}
 	}
-	
+
 	@PostMapping("/logout.do")
 	@ResponseBody
 	public String logout(HttpSession session) {
@@ -127,7 +127,6 @@ public class HomeController {
 		model.addAttribute("vo", vo);
 		return "boardDetail";
 	}
-	
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(BoardsVO vo) {
@@ -140,7 +139,7 @@ public class HomeController {
 		} else if (vo.getCategory().equals("help")) {
 			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
@@ -155,14 +154,13 @@ public class HomeController {
 		} else if (vo.getCategory().equals("help")) {
 			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
 
 	@RequestMapping("/boardDelete.do")
 	public String boardDelete(@RequestParam("board_no") int board_no, @RequestParam("cate") String cate) {
-		String result="";
+		String result = "";
 		mapper.boardDelete(board_no);
-//		return "redirect:/boardList.do";
 		if (cate.equals("free")) {
 			result = "boardList";
 		} else if (cate.equals("item")) {
@@ -170,32 +168,32 @@ public class HomeController {
 		} else if (cate.equals("help")) {
 			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
 
 	// 4. 댓글(열람, 작성, 수정, 삭제)
 	@RequestMapping("/commentList.do")
-	public @ResponseBody List<CommentsVO> commentList() {
-		List<CommentsVO> list = mapper.commentList();
+	public @ResponseBody List<CommentsVO> commentList(@RequestParam("board_no") int board_no) {
+		List<CommentsVO> list = mapper.commentList(board_no);
 		return list;
 	}
 
 	@RequestMapping("/commentInsert.do")
-	public String commentInsert(CommentsVO vo) {
+	public String commentInsert(CommentsVO vo, @RequestParam("board_no") int board_no) {
 		mapper.commentInsert(vo);
-		return "redirect:/boardDetail.do";
+		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
 	@RequestMapping("/commentUpdate.do")
-	public String commentUpdate(CommentsVO vo) {
+	public String commentUpdate(CommentsVO vo, @RequestParam("board_no") int board_no) {
 		mapper.commentUpdate(vo);
-		return "redirect:/boardDetail.do";
+		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
 	@RequestMapping("/commentDelete.do")
-	public String commentDelete(@RequestParam("comment_no") int comment_no) {
+	public String commentDelete(@RequestParam("comment_no") int comment_no,  @RequestParam("board_no") int board_no) {
 		mapper.commentDelete(comment_no);
-		return "redirect:/boardDetail.do";
+		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
 	// 5. 육아일기(열람, 작성, 수정)
@@ -230,7 +228,7 @@ public class HomeController {
 	public String mypage() {
 		return "mypage";
 	}
-	
+
 	@RequestMapping("/boardWrite.do")
 	public String boardWrite(@RequestParam("cate") String cate, Model model) {
 		model.addAttribute("cate", cate);
@@ -241,7 +239,7 @@ public class HomeController {
 	public String boardDetail() {
 		return "boardDetail";
 	}
-	
+
 	@RequestMapping("/boardBack.do")
 	public String boardBack(@RequestParam("cate") String cate) {
 		String result = "";
@@ -252,9 +250,9 @@ public class HomeController {
 		} else if (cate.equals("help")) {
 			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
-	
+
 	@RequestMapping(value = "/correction.do")
 	public String correction() {
 		return "correction";
