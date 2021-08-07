@@ -40,15 +40,15 @@
         }
       function resultHtml(data){
            if(cnt%2==0){
-              var result = "<table class='table'>";
-              result+="<tr>";
-              result+="<td>댓글번호</td>";
-              result+="<td>닉네임</td>";
+              var result = "<table class='comment_table'>";
+              result+="<tr class='comment_tr'>";
+              result+="<td class='comment_no'>댓글번호</td>";
+              result+="<td class='comment_nick'>닉네임</td>";
               result+="<td>내용</td>";
-              result+="<td>추천수</td>";
+              result+="<td class='comment_fa'>추천수</td>";
               result+="</tr>";
               $.each(data, (index,obj)=>{
-                 result+="<tr>";
+                 result+="<tr class='value_tr'>";
                    result+="<td>"+obj.comment_no+"</td>";
                    result+="<td>"+obj.nickname+"</td>";
                    result+="<td>"+obj.contents+"</td>";
@@ -82,14 +82,30 @@
          <div class="container">
             <div class="row">
 
+
+					<div class="sidebar col-md-3 col-md-offset-1">
+						<div class="widget">
+							<h3 class="widget-title">Categories</h3>
+							<ul class="arrow">
+								<li><a href="community.do">자유게시판</a></li>
+								<li><a href="recommendation.do">용품추천</a></li>
+								<li><a href="help.do">도움요청</a></li>
+								<li><a href="#">육아꿀팁</a></li>
+							</ul>
+						</div>
+
+
+					</div>
+
+
                <div class="content col-md-8">
                   <form class="form-horizontal" action="${cpath}/boardInsert.do"
                      method="post">
-                     <div class="detail_title">
+                     <div class="detail_category">
                      <div
                            style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">분류</div>
                         </div>
-                     <div class="detail_title">
+                     <div class="detail_nick_date">
                         <div
                            style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">닉네임</div>
                         <div
@@ -105,44 +121,34 @@
                            style="border: 2px solid #E63F39; border-radius: 12px;">
                            <div class="form-group">
                               <img src="${cpath}/resources/images/logotest.png"
-                                 style="max-width: 150px;">
+                                 style="max-width: 150px; border-radius: 12px;">
                               <textArea rows="5" class="form-control" name="contents"
                                  placeholder="Enter contents"></textArea>
                            </div>
                         </div>
                      </table>
                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                           <button type="submit" class="btn btn-primary btn-sm"
-                              style="position: relative; background: white; border: 2px solid #E63F39;">등록</button>
+                        <div class="col-sm-offset-13 col-sm-13">
+                           <button type="submit" class="btn_detail"
+                              style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;">등록</button>
                            &nbsp;
-                           <button type="reset" class="btn btn-warning btn-sm"
-                              style="position: relative; background: white; border: 2px solid #E63F39;">취소</button>
+                           <button type="reset" class="btn_detail"
+                              style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">취소</button>
                         </div>
                      </div>
                   </form>
-
-                  <button class="btn btn-success btn-sm" onclick="getComment()">댓글 보기</button>
-                  <div id="comment">--위에 버튼 누르면 여기에 댓글 리스트 뜰거임--</div>
+				<div class="col-sm-offset-13 col-sm-13">
+                  <button class="btn btn-success btn-sm" onclick="getComment()" style="background:white; border-radius: 12px; border: solid 2px skyblue; font-size:17px;">댓글 보기</button>
+                </div>
+                  <div id="comment"></div>
                   <form class="comment_form" action="${cpath}/commentInsert.do"
                      method="post">
-                     <input class="comment_input" type="textarea"> <input
-                        class="comment_btn" type="submit" value="확인">
+                     <div>
+                     <input class="comment_input" type="textarea" placeholder="댓글을 입력해주세요."> <input
+                        class="comment_btn" type="submit" style="border: solid 2px white; font-size: 30px; box-shadow: none; border-radius: 12px; background: white; color: black;" value="확인">
+                        </div>
                   </form>
                </div>
-               <div class="sidebar col-md-3 col-md-offset-1">
-						<div class="widget">
-							<h3 class="widget-title">Categories</h3>
-							<ul class="arrow">
-								<li><a href="community.do">자유게시판</a></li>
-								<li><a href="recommendation.do">용품추천</a></li>
-								<li><a href="help.do">도움요청</a></li>
-								<li><a href="#">육아꿀팁</a></li>
-							</ul>
-						</div>
-
-
-					</div>
             </div>
          </div>
       </div>
