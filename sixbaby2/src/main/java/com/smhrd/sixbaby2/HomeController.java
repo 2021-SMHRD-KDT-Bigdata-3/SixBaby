@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.smhrd.mapper.BabyVO;
 import com.smhrd.mapper.BoardsVO;
@@ -26,6 +27,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
 @Controller
+@SessionAttributes("")
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -120,7 +122,7 @@ public class HomeController {
 	}
 
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(Model model, BoardsVO vo) {
+	public String boardUpdate(BoardsVO vo) {
 		mapper.boardUpdate(vo);
 		System.out.println(vo);
 		String result = "";

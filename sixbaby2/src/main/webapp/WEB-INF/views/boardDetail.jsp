@@ -77,11 +77,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="content col-md-8">
-						<!-- <form class="form-horizontal" action="${cpath}/boardInsert.do"
-							method="post"> -->
-							<form action="${cpath}/boardUpdate.do" method="post">
+						
+						<form action="${cpath}/boardUpdate.do" method="post">
 							<c:set var="vo" value="${vo}" />
 							<input type="hidden" name="board_no" value="${vo.board_no}"> 
+							<input type="hidden" name="category" value="${vo.category}"> 
 								<div class="form-group">
 									<div
 										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
@@ -97,7 +97,7 @@
 									</div>
 								</div>
 							<br>
-							<table>
+							
 								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
 										<img src="${cpath}/resources/images/logotest.png"
@@ -106,7 +106,7 @@
 											placeholder="Enter contents">${vo.contents}</textArea>
 									</div>
 								</div>
-							</table>
+							
 							<br>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
@@ -117,7 +117,7 @@
 										style="position: relative; background: white; border: 2px solid #E63F39;">취소</button>
 								</div>
 							</div>
-							</form>
+						</form>
 						<!-- </form> -->
 
 						<button class="btn btn-success btn-sm" onclick="getComment()">댓글
