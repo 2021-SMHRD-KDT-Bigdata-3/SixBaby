@@ -98,43 +98,62 @@ public class HomeController {
 		model.addAttribute("list", list);
 		return "community";
 	}
+
 	@RequestMapping("/itemList.do")
 	public String itemList(Model model) {
 		List<BoardsVO> list = mapper.itemList();
 		model.addAttribute("list", list);
 		return "community";
 	}
+
 	@RequestMapping("/helpList.do")
 	public String helpList(Model model) {
 		List<BoardsVO> list = mapper.helpList();
 		model.addAttribute("list", list);
 		return "community";
 	}
+
 	@RequestMapping("/tipList.do")
 	public String tipList(Model model) {
 		List<BoardsVO> list = mapper.tipList();
 		model.addAttribute("list", list);
 		return "community";
 	}
-	
 
 	@RequestMapping("/boardContent.do")
 	public String boardContent(@RequestParam("board_no") int board_no, Model model) {
 		BoardsVO vo = mapper.boardContent(board_no);
 		model.addAttribute("vo", vo);
-		return "redirect:/boardDetail.do";
+		return "boardDetail";
 	}
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(@ModelAttribute BoardsVO vo) {
 		mapper.boardInsert(vo);
-		return "redirect:/community.do";
+		String result = "";
+		if (vo.getCategory().equals("free")) {
+			result = "boardList";
+		} else if (vo.getCategory().equals("item")) {
+			result = "itemList";
+		} else if (vo.getCategory().equals("tip")) {
+			result = "tipList";
+		}
+		return "redirect:/"+result+".do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
+	public String boardUpdate(Model model, BoardsVO vo) {
 		mapper.boardUpdate(vo);
-		return "redirect:/community.do";
+		System.out.println(vo);
+		String result = "";
+		if (vo.getCategory().equals("free")) {
+			result = "boardList";
+		} else if (vo.getCategory().equals("item")) {
+			result = "itemList";
+		} else if (vo.getCategory().equals("tip")) {
+			result = "tipList";
+		}
+		return "redirect:/"+result+".do";
 	}
 
 	@RequestMapping("/boardDelete.do")

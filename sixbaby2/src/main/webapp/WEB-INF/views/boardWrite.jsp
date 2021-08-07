@@ -48,12 +48,14 @@
 						<form class="form-horizontal" action="${cpath}/boardInsert.do"
 							method="post">
 							<div class="form-group">
-								<select name="category"
+								<!-- <select name="category"
 									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 15px; text-align: center;">
 									<option value="free">자유게시판</option>
 									<option value="item">용품 추천</option>
 									<option value="help">도움 요청</option>
-								</select>
+									
+								</select> -->
+								<input value="">
 							</div>
 							<br>
 							<table>
@@ -87,7 +89,7 @@
 									&nbsp;
 									<button type="reset" class="btn btn-warning btn-sm"
 										style="position: relative; background: white; border: 2px solid #E63F39;">
-										<a href="community.do">취소</a>
+										<a href="boardList.do">취소</a>
 									</button>
 								</div>
 							</div>
