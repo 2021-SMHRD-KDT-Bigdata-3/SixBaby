@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>ì•„ê¸° ì •ë³´ ìˆ˜ì •</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
 
 			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
 				<div class="container">
-					<h2 class="page-title">¾ÆÀÌ Á¤º¸ ¼öÁ¤</h2>
+					<h2 class="page-title">ì•„ì´ ì •ë³´ ìˆ˜ì •</h2>
 				</div>
 			</div>
 
@@ -49,34 +49,34 @@
 							              <tbody>
 							              	<tr>
 							              	<td>
-							              		<select name="¾ÆÀÌ¸¦ °ñ¶ó°ñ¶ó~">
-							              			<option value="Ã¹Â°">ÇÏ³ª</option>
-							              			<option value="µÑÂ°">µÎ½ÄÀÌ</option>
+							              		<select name="ì•„ì´ë¥¼ ê³¨ë¼ê³¨ë¼~">
+							              			<option value="ì²«ì§¸">í•˜ë‚˜</option>
+							              			<option value="ë‘˜ì§¸">ë‘ì‹ì´</option>
 							              		</select>
 							              		<td>
 							              	</tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ ÀÌ¸§</span></th>
-							                  <td><input type="text" placeholder="ÅÂ¸í or ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä."></td>
+							                  <th><span>ì•„ì´ ì´ë¦„</span></th>
+							                  <td><input type="text" placeholder="íƒœëª… or ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”."></td>
 							                </tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ ¼ºº°</span></th>
-							                  <td>³²¡Î<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							                  ¿©¡Ï<input type="radio" name="gender" value="woman"></td>
+							                  <th><span>ì•„ì´ ì„±ë³„</span></th>
+							                  <td>ë‚¨â™‚<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							                  ì—¬â™€<input type="radio" name="gender" value="woman"></td>
 							                </tr>
 							                <tr>
-							                  <th><span>¾ÆÀÌ »ý³â¿ùÀÏ</span></th>
-							                  <td><input type="text" placeholder="ex) 2020 5¿ù 18ÀÏ : 200518"></td>
+							                  <th><span>ì•„ì´ ìƒë…„ì›”ì¼</span></th>
+							                  <td><input type="text" placeholder="ex) 2020 5ì›” 18ì¼ : 200518"></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">¿Ï·á</button></td>
+							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">ì™„ë£Œ</button></td>
 							                </tr>
 							                <tr>
-							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">Å»Åð</span></button></td>
+							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">íƒˆí‡´</span></button></td>
 							                </tr>
 							                <tr>
 							                <td colspan=2>
-							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>Á¤º¸¸¦ Á¤È®È÷ ÀÔ·ÂÇÏ¼ÌÀ¸¸é ¿Ï·á´­·¯ÁÖ¼¼¿ä.</span></div>
+							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>ì •ë³´ë¥¼ ì •í™•ížˆ ìž…ë ¥í•˜ì…¨ìœ¼ë©´ ì™„ë£ŒëˆŒëŸ¬ì£¼ì„¸ìš”.</span></div>
 							            </td>
 							            <td>
 							            </td>
@@ -96,8 +96,8 @@
 					   
 									    <div class="modal_content">
 					        <div class="form_txtInput">
-					          <h2 class="sub_tit_txt">È¸¿ø Å»Åð</h2>
-					          <p class="exTxt">½ÅÁßÇØÁÖ¼¼¿ä.</p>
+					          <h2 class="sub_tit_txt">íšŒì› íƒˆí‡´</h2>
+					          <p class="exTxt">ì‹ ì¤‘í•´ì£¼ì„¸ìš”.</p>
 					          <div class="join_form">
 					            <table align="center">
 					              <colgroup>
@@ -106,21 +106,21 @@
 					              </colgroup>
 					              <tbody>
 					                <tr>
-					                  <th><span>¾ÆÀÌµð</span></th>
-					                  <td><input type="text" placeholder="ID ¸¦ ÀÔ·ÂÇÏ¼¼¿ä."></td>
+					                  <th><span>ì•„ì´ë””</span></th>
+					                  <td><input type="text" placeholder="ID ë¥¼ ìž…ë ¥í•˜ì„¸ìš”."></td>
 					                </tr>
 					                <tr>
-					                  <th><span>ºñ¹Ð¹øÈ£</span></th>
-					                  <td><input type="password" placeholder="PW ¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></td>
+					                  <th><span>ë¹„ë°€ë²ˆí˜¸</span></th>
+					                  <td><input type="password" placeholder="PW ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"></td>
 					                </tr>
 					                <tr>
-					                	<td><button type="button" id="" style="border: solid white; background:white;">È®ÀÎ</button></td>
+					                	<td><button type="button" id="" style="border: solid white; background:white;">í™•ì¸</button></td>
 					                </tr>
 					              </tbody>
 					            </table>
 					          </div><!-- join_form E  -->
 					          <div class="btn_wrap">
-					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">Ã¢ ´Ý±â</button>
+					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">ì°½ ë‹«ê¸°</button>
 					          </div>
 					        </div> <!-- form_txtInput E -->
 					    </div> <!-- container E -->

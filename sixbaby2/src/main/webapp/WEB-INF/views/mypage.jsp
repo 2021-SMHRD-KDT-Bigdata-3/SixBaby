@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>True Church</title>
+		<title>마이페이지</title>
 
 		<!-- Loading third party fonts -->
 		<link href="${cpath}/resources/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
 							<div class="content col-md-13">
 								<div class="row">
 									<div class="family">
-								<h2 class="section-title">꼬꼬</h2>
+								<h2 class="section-title">${loginMember.id}</h2>
 								<a href="correction.do">회원 정보 수정</a><br>
 								<a href="babyCorrection.do">아이 정보 수정</a><br>
 								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>

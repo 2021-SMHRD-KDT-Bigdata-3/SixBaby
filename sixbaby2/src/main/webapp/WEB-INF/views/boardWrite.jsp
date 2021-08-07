@@ -11,7 +11,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-<title>BOARD_WRITE</title>
+<title>게시글 작성</title>
 
 <!-- Loading third party fonts -->
 <link href="${cpath}/resources/fonts/novecento-font/novecento-font.css"
@@ -31,7 +31,7 @@
 <body>
 	<div class="site-content">
 
-		 <%@ include file="header.jsp"%>
+		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
 			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
@@ -44,46 +44,41 @@
 			<div class="container">
 				<div class="row">
 
-
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow">
-								<li><a href="community.do">자유게시판</a></li>
-								<li><a href="recommendation.do">용품추천</a></li>
-								<li><a href="help.do">도움요청</a></li>
-								<li><a href="#">육아꿀팁</a></li>
+								<li><a href="boardList.do">자유게시판</a></li>
+								<li><a href="itemList.do">용품추천</a></li>
+								<li><a href="helpList.do">도움요청</a></li>
+								<li><a href="tipList.do">육아꿀팁</a></li>
 							</ul>
 						</div>
-
-
 					</div>
-
-
+					
 					<div class="content col-md-8">
 						<form class="form-horizontal" action="${cpath}/boardInsert.do"
 							method="post">
-							<div class="title_write">
-								<select name="category"
-									style="border: 2px solid #E63F39; width: 25%; border-radius: 12px; font-size: 15px; text-align-last: center;">
-									<option value="free">자유게시판</option>
-									<option value="item">용품 추천</option>
-									<option value="help">도움 요청</option>
-									<option value="tip">육아 꿀팁</option>
-								</select>
+							<div class="form-group">
+								<c:set var="cat" value="${cate}" />
+								<div class="form-group">
+									<label class="control-label col-sm-2">카테고리</label> <input
+										type="text" name="category" value="${cat}" readonly="readonly">
+								</div>
 							</div>
 							<br>
 							<table>
-								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
+								<div class="write_table"
+									style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
 										<label class="control-label col-sm-2">작성자</label> <input
 											type="text" class="form-control" name="nickname"
 											placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">제목</label>
-											<input type="text" class="form-control" name="title"
-												placeholder="Enter title">
+										<label class="control-label col-sm-2">제목</label> <input
+											type="text" class="form-control" name="title"
+											placeholder="Enter title">
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">내용</label>
@@ -99,16 +94,21 @@
 							</table>
 							<div class="form-group">
 								<div class="col-sm-offset-13 col-sm-13">
-									<input type="button" class="btn_write" 
-										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; padding: 0px;" value="등록">
-									&nbsp;
-									<input type="reset" class="btn_write" value="취소"
+									<input type="submit" class="btn_write"
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; padding: 0px;"
+										value="등록"> &nbsp;
+									<button type="reset" class="btn_write" value="취소"
 										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;">
+										<a href="boardList.do">취소</a>
+									</button>
 								</div>
 							</div>
 						</form>
 
 					</div>
+
+
+
 				</div>
 			</div>
 		</div>
