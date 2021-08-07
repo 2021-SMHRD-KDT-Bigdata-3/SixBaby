@@ -69,11 +69,13 @@
 
 						<div align="right">
 							<c:if test="${vo[0].category ne 'tip'}">
-								<button type="button"
-									style="background: white; border: 2px solid white; font-size: 20px; color: black;">
-									<span class="site-title"><a
-										href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
-								</button>
+								<c:if test="${not empty loginMember}">
+									<button type="button"
+										style="background: white; border: 2px solid white; font-size: 20px; color: black;">
+										<span class="site-title"><a
+											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
+									</button>
+								</c:if>
 							</c:if>
 
 						</div>

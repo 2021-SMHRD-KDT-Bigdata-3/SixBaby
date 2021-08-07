@@ -130,15 +130,15 @@ public class HomeController {
 	
 
 	@RequestMapping("/boardInsert.do")
-	public String boardInsert(@ModelAttribute BoardsVO vo) {
+	public String boardInsert(BoardsVO vo) {
 		mapper.boardInsert(vo);
 		String result = "";
 		if (vo.getCategory().equals("free")) {
 			result = "boardList";
 		} else if (vo.getCategory().equals("item")) {
 			result = "itemList";
-		} else if (vo.getCategory().equals("tip")) {
-			result = "tipList";
+		} else if (vo.getCategory().equals("help")) {
+			result = "helpList";
 		}
 		return "redirect:/"+result+".do";
 	}
@@ -152,16 +152,25 @@ public class HomeController {
 			result = "boardList";
 		} else if (vo.getCategory().equals("item")) {
 			result = "itemList";
-		} else if (vo.getCategory().equals("tip")) {
-			result = "tipList";
+		} else if (vo.getCategory().equals("help")) {
+			result = "helpList";
 		}
 		return "redirect:/"+result+".do";
 	}
 
 	@RequestMapping("/boardDelete.do")
 	public String boardDelete(@RequestParam("board_no") int board_no) {
+//		String result="";
 		mapper.boardDelete(board_no);
-		return "redirect:/community.do";
+		return "redirect:/boardList.do";
+//		if (cate.equals("free")) {
+//			result = "boardList";
+//		} else if (cate.equals("item")) {
+//			result = "itemList";
+//		} else if (cate.equals("help")) {
+//			result = "helpList";
+//		}
+//		return "redirect:/"+result+".do";
 	}
 
 	// 4. 댓글(열람, 작성, 수정, 삭제)
@@ -232,7 +241,20 @@ public class HomeController {
 	public String boardDetail() {
 		return "boardDetail";
 	}
-
+	
+	@RequestMapping("/boardBack.do")
+	public String boardBack(@RequestParam("cate") String cate) {
+		String result = "";
+		if (cate.equals("free")) {
+			result = "boardList";
+		} else if (cate.equals("item")) {
+			result = "itemList";
+		} else if (cate.equals("help")) {
+			result = "helpList";
+		}
+		return "redirect:/"+result+".do";
+	}
+	
 	@RequestMapping(value = "/correction.do")
 	public String correction() {
 		return "correction";

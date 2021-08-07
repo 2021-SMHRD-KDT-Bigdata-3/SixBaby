@@ -58,6 +58,10 @@
            }
            $("#comment").html(result);
         }
+      
+      function goDel(board_no){
+      	location.href="${cpath}/boardDelete.do?board_no="+board_no;
+      }
       </script>
 </head>
 <body>
@@ -119,8 +123,14 @@
 									<button type="submit" class="btn_detail"
 										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;">수정</button>
 									&nbsp;
+									<button type="button" class="btn_detail"
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;"
+										onclick="goDel(${vo.board_no})">삭제</button>
+									&nbsp;
 									<button type="reset" class="btn_detail"
-										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black"><a href="boardList.do">취소</a></button>
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">
+										<a href="boardBack.do?cate=${vo.category}">취소</a></button>
+									
 								</div>
 							</div>
 						</form>
@@ -168,7 +178,8 @@
 							<div class="form-group">
 								<div class="col-sm-offset-13 col-sm-13">
 									<button type="reset" class="btn_detail"
-										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black"><a href="boardList.do">뒤로가기</a></button>
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">
+										<a href="boardBack.do?cate=${vo.category}">뒤로가기</a></button>
 								</div>
 							</div>
 						</form>
