@@ -58,7 +58,7 @@
 							<c:if test="${vo[0].category ne 'tip'}">
 							<button type="button"
 								style="background: white; border: 2px solid white; font-size: 20px; color: black;">
-								<span class="site-title"><a href="boardWrite.do">글쓰기</a></span>
+								<span class="site-title"><a href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 							</button>
 							</c:if>
 							
@@ -95,10 +95,10 @@
 						<div class="widget">
 							<h3 class="widget-title">Categories</h3>
 							<ul class="arrow">
-								<li><a href="boardList.do?category=free">자유게시판</a></li>
-								<li><a href="itemList.do?category=item">용품추천</a></li>
-								<li><a href="helpList.do?category=help">도움요청</a></li>
-								<li><a href="tipList.do?category=tip">육아꿀팁</a></li>
+								<li><a href="boardList.do">자유게시판</a></li>
+								<li><a href="itemList.do">용품추천</a></li>
+								<li><a href="helpList.do">도움요청</a></li>
+								<li><a href="tipList.do">육아꿀팁</a></li>
 							</ul>
 						</div>
 

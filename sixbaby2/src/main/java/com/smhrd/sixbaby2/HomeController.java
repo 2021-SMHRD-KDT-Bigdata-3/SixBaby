@@ -127,6 +127,7 @@ public class HomeController {
 		model.addAttribute("vo", vo);
 		return "boardDetail";
 	}
+	
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(@ModelAttribute BoardsVO vo) {
@@ -220,9 +221,10 @@ public class HomeController {
 	public String mypage() {
 		return "mypage";
 	}
-
-	@RequestMapping(value = "/boardWrite.do")
-	public String boardWrite() {
+	
+	@RequestMapping("/boardWrite.do")
+	public String boardWrite(@RequestParam("cate") String cate, Model model) {
+		model.addAttribute("cate", cate);
 		return "boardWrite";
 	}
 

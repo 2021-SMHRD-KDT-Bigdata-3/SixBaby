@@ -31,7 +31,7 @@
 <body>
 	<div class="site-content">
 
-		 <%@ include file="header.jsp"%>
+		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
 			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
@@ -48,27 +48,25 @@
 						<form class="form-horizontal" action="${cpath}/boardInsert.do"
 							method="post">
 							<div class="form-group">
-								<!-- <select name="category"
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 15px; text-align: center;">
-									<option value="free">자유게시판</option>
-									<option value="item">용품 추천</option>
-									<option value="help">도움 요청</option>
-									
-								</select> -->
-								<input value="">
+								<c:set var="cat" value="${cate}" />
+								<div class="form-group">
+									<label class="control-label col-sm-2">카테고리</label> 
+									<input type="text" name="category" value="${cat}" readonly="readonly">
+								</div>
 							</div>
 							<br>
 							<table>
-								<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
+								<div class="write_table"
+									style="border: 2px solid #E63F39; border-radius: 12px;">
 									<div class="form-group">
 										<label class="control-label col-sm-2">작성자</label> <input
 											type="text" class="form-control" name="nickname"
 											placeholder="Enter writer">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2">제목</label>
-											<input type="text" class="form-control" name="title"
-												placeholder="Enter title">
+										<label class="control-label col-sm-2">제목</label> <input
+											type="text" class="form-control" name="title"
+											placeholder="Enter title">
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">내용</label>
@@ -85,8 +83,8 @@
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<input type="submit" class="btn btn-primary btn-sm"
-										style="position: relative; background: white; border: 2px solid #E63F39;" value="등록">
-									&nbsp;
+										style="position: relative; background: white; border: 2px solid #E63F39;"
+										value="등록"> &nbsp;
 									<button type="reset" class="btn btn-warning btn-sm"
 										style="position: relative; background: white; border: 2px solid #E63F39;">
 										<a href="boardList.do">취소</a>
