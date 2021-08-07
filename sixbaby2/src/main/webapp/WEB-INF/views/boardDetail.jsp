@@ -74,7 +74,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="content col-md-8">
-
+						
+						
+						<!-- 여기는 본인 일때 -->
+						<c:if test="${loginMember.nickname eq vo.nickname}">
 						<form class="form-horizontal" action="${cpath}/boardUpdate.do"
 							method="post">
 							<c:set var="vo" value="${vo}" />
@@ -121,6 +124,58 @@
 								</div>
 							</div>
 						</form>
+						</c:if>
+						
+						
+						<!-- 본인 아닐때 -->
+						<c:if test="${loginMember.nickname ne vo.nickname}">
+						<form class="form-horizontal" action="${cpath}/boardUpdate.do"
+							method="post">
+							<c:set var="vo" value="${vo}" />
+							<input type="hidden" name="board_no" value="${vo.board_no}">
+							<input type="hidden" name="category" value="${vo.category}">
+							<div class="form-group">
+							<div class="detail_nick_date">
+								<div
+									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+									<input class="detail_value" type="text" name="nickname" value="${vo.nickname}"
+										readonly="readonly">
+								</div>
+								<div
+									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 31%; display: inline-block;">
+									<input class="detail_value" type="text" name="indate" value="${vo.indate}"
+										readonly="readonly">
+								</div>
+								</div>
+								<div
+									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+									<input class="detail_value" type="text" name="title" value="${vo.title}" readonly="readonly">
+								</div>
+							</div>
+							<br>
+
+							<div class="write_table"
+								style="border: 2px solid #E63F39; border-radius: 12px;">
+								<div class="form-group">
+									<img class="detail_value"  src="${cpath}/resources/images/logotest.png"
+										style="max-width: 150px;">
+									<textArea class="detail_value"  rows="5" name="contents"
+										placeholder="Enter contents" readonly="readonly">${vo.contents}</textArea>
+								</div>
+							</div>
+
+							<br>
+							<div class="form-group">
+								<div class="col-sm-offset-13 col-sm-13">
+									<button type="reset" class="btn_detail"
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black"><a href="boardList.do">뒤로가기</a></button>
+								</div>
+							</div>
+						</form>
+						</c:if>
+						
+						
+						
 						<div class="col-sm-offset-13 col-sm-13">
 							<button class="btn btn-success btn-sm" onclick="getComment()"
 								style="background: white; border-radius: 12px; border: solid 2px skyblue; font-size: 17px;">댓글
