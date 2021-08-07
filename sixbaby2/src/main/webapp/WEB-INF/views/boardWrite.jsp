@@ -44,6 +44,22 @@
 			<div class="container">
 				<div class="row">
 
+
+					<div class="sidebar col-md-3 col-md-offset-1">
+						<div class="widget">
+							<h3 class="widget-title">Categories</h3>
+							<ul class="arrow">
+								<li><a href="community.do">자유게시판</a></li>
+								<li><a href="recommendation.do">용품추천</a></li>
+								<li><a href="help.do">도움요청</a></li>
+								<li><a href="#">육아꿀팁</a></li>
+							</ul>
+						</div>
+
+
+					</div>
+
+
 					<div class="content col-md-8">
 						<form class="form-horizontal" action="${cpath}/boardInsert.do"
 							method="post">
@@ -83,28 +99,14 @@
 							</table>
 							<div class="form-group">
 								<div class="col-sm-offset-13 col-sm-13">
-									<input type="submit" class="btn_Write"
-										style="position: relative; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;" value="등록">
+									<input type="button" class="btn_write" 
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; padding: 0px;" value="등록">
 									&nbsp;
-									<input type="reset" class="btn_Write" value="취소"
-										style="position: relative; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;">
-									</input>
+									<input type="reset" class="btn_write" value="취소"
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39;">
 								</div>
 							</div>
 						</form>
-
-					</div>
-					<div class="sidebar col-md-3 col-md-offset-1">
-						<div class="widget">
-							<h3 class="widget-title">Categories</h3>
-							<ul class="arrow">
-								<li><a href="community.do">자유게시판</a></li>
-								<li><a href="recommendation.do">용품추천</a></li>
-								<li><a href="help.do">도움요청</a></li>
-								<li><a href="#">육아꿀팁</a></li>
-							</ul>
-						</div>
-
 
 					</div>
 				</div>
