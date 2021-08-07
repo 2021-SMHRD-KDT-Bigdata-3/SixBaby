@@ -51,6 +51,8 @@ select * from member;
 
 select * from comments;
 
+select * from diary;
+
 insert into comments
 values('1','1','部部','览局览局','3');
 insert into comments

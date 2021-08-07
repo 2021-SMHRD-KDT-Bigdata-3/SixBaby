@@ -24,6 +24,7 @@
                   <li class="menu-item"><a href="#">Voice Recognition
                         Service
                   </a></li>
+                  <li class="menu-item"><a href="mypage.do">My page </a></li>
                </ul>
             </div>
 

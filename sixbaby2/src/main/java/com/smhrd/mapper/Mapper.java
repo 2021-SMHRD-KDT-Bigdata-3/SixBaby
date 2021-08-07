@@ -2,6 +2,8 @@ package com.smhrd.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 public interface Mapper {
 	
 	//1. 회원가입, 회원수정, 회원탈퇴
@@ -10,7 +12,7 @@ public interface Mapper {
 	public void memberDelete(MemberVO vo);
 	
 	//2. 로그인
-	public void login(MemberVO vo);
+	public MemberVO login(MemberVO vo);
 	
 	//3. 커뮤니티(전체, 열람, 작성, 수정, 삭제)
 	public List<BoardsVO> boardList();// select~ SQL

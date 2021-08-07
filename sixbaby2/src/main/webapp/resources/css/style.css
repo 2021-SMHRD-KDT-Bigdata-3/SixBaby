@@ -1181,11 +1181,6 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-weight: 400;
         font-size: 18px;
         font-size: 1.2857142857em;
-
-
-
-     
-
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
