@@ -184,12 +184,6 @@ public class HomeController {
 		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
-	@RequestMapping("/commentUpdate.do")
-	public String commentUpdate(CommentsVO vo, @RequestParam("board_no") int board_no) {
-		mapper.commentUpdate(vo);
-		return "redirect:/boardContent.do?board_no=" + board_no;
-	}
-
 	@RequestMapping("/commentDelete.do")
 	public String commentDelete(@RequestParam("comment_no") int comment_no,  @RequestParam("board_no") int board_no) {
 		mapper.commentDelete(comment_no);

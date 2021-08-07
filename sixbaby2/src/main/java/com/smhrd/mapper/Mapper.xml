@@ -68,10 +68,6 @@
 	    insert into comments(board_no, nickname, contents)
 	    values(#{board_no},#{nickname},#{contents})
    </insert>
-   <update id="commentUpdate" parameterType="com.smhrd.mapper.CommentsVO">
-     update comments set contents=#{contents}
-     where comment_no=#{comment_no}  
-   </update>
    <delete id="commentDelete" parameterType="int">
      delete from comments where comment_no=#{comment_no}
    </delete>

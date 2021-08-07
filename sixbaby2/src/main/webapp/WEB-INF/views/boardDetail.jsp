@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
 <script>
+	  
       var cnt = 0;
       function getComment(board_no){
            $.ajax({
@@ -36,19 +37,24 @@
       function resultHtml(data){
            if(cnt%2==0){
               var result = "<table class='comment_table'>";
-              result+="<tr class='comment_tr'>";
-              result+="<td class='comment_no'>댓글번호</td>";
-              result+="<td class='comment_nick'>닉네임</td>";
+              result+="<tr>";
+              result+="<td>댓글번호</td>";
+              result+="<td>닉네임</td>";
               result+="<td>내용</td>";
-              result+="<td class='comment_fa'>추천수</td>";
+              result+="<td>추천수</td>";
+              result+="<td>비고</td>";
               result+="</tr>";
               $.each(data, (index,obj)=>{
-                 result+="<tr class='value_tr'>";
-                   result+="<td>"+obj.comment_no+"</td>";
-                   result+="<td>"+obj.nickname+"</td>";
-                   result+="<td>"+obj.contents+"</td>";
-                   result+="<td>"+obj.likes+"</td>";
-                   result+="</tr>";
+                  result+="<tr>";
+                  result+="<td>"+obj.comment_no+"</td>";
+                  result+="<td>"+obj.nickname+"</td>";
+                  result+="<td>"+obj.contents+"</td>";
+                  result+="<td>"+obj.likes+"</td>";
+	              if(obj.nickname==$("#mem").val()){
+	           	      result+="<td><input type='button' value='삭제'></td>";
+	           	      return false;
+	              }
+	              result+="</tr>";
               });
               result+="</table>";
               cnt++;
@@ -65,6 +71,7 @@
       </script>
 </head>
 <body>
+
 	<div class="site-content">
 		<%@ include file="header.jsp"%>
 
@@ -81,6 +88,7 @@
 
 
 						<!-- 여기는 본인 일때 -->
+						<input type="hidden" id="mem" value="${loginMember.nickname}">
 						<c:if test="${loginMember.nickname eq vo.nickname}">
 							<form class="form-horizontal" action="${cpath}/boardUpdate.do"
 								method="post">
@@ -193,11 +201,12 @@
 
 
 						<div class="col-sm-offset-13 col-sm-13">
-							<button class="btn btn-success btn-sm" onclick="getComment('${vo.board_no}')"
+							<button class="btn btn-success btn-sm"
+								onclick="getComment('${vo.board_no}')"
 								style="background: white; border-radius: 12px; border: solid 2px skyblue; font-size: 17px;">댓글
 								보기</button>
 							<div id="comment"></div>
-							
+
 							<c:if test="${not empty loginMember}">
 								<form class="comment_form"
 									action="${cpath}/commentInsert.do?=${vo.board_no}"
@@ -212,7 +221,7 @@
 										value="확인">
 								</form>
 							</c:if>
-							
+
 						</div>
 					</div>
 				</div>

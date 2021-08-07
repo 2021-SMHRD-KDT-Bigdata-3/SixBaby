@@ -62,3 +62,5 @@ values('3','3','Èå¾î¾î¾î¾ô','ÇÏ±â½È´ç','1');
 
 select * from boards order by board_no desc;
 select * from boards where category="tip" order by board_no desc;
+
+delete from member where id='asdf';
