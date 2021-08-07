@@ -159,18 +159,18 @@ public class HomeController {
 	}
 
 	@RequestMapping("/boardDelete.do")
-	public String boardDelete(@RequestParam("board_no") int board_no) {
-//		String result="";
+	public String boardDelete(@RequestParam("board_no") int board_no, @RequestParam("cate") String cate) {
+		String result="";
 		mapper.boardDelete(board_no);
-		return "redirect:/boardList.do";
-//		if (cate.equals("free")) {
-//			result = "boardList";
-//		} else if (cate.equals("item")) {
-//			result = "itemList";
-//		} else if (cate.equals("help")) {
-//			result = "helpList";
-//		}
-//		return "redirect:/"+result+".do";
+//		return "redirect:/boardList.do";
+		if (cate.equals("free")) {
+			result = "boardList";
+		} else if (cate.equals("item")) {
+			result = "itemList";
+		} else if (cate.equals("help")) {
+			result = "helpList";
+		}
+		return "redirect:/"+result+".do";
 	}
 
 	// 4. 댓글(열람, 작성, 수정, 삭제)

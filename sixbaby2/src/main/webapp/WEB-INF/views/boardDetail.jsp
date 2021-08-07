@@ -59,8 +59,8 @@
            $("#comment").html(result);
         }
       
-      function goDel(board_no){
-      	location.href="${cpath}/boardDelete.do?board_no="+board_no;
+      function goDel(board_no, category){
+      	location.href="${cpath}/boardDelete.do?board_no="+board_no+"&cate="+category;
       }
       </script>
 </head>
@@ -125,7 +125,7 @@
 									&nbsp;
 									<button type="button" class="btn_detail"
 										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;"
-										onclick="goDel(${vo.board_no})">삭제</button>
+										onclick="goDel('${vo.board_no}','${vo.category}')">삭제</button>
 									&nbsp;
 									<button type="reset" class="btn_detail"
 										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">
