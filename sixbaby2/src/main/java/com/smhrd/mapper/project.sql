@@ -34,9 +34,9 @@ condition_date datetime default now(),
 primary key(condition_num));
 
 create table diary
-(diary_no int not null auto_increment, baby_no int not null,
+(id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
 title varchar(50) not null, contents varchar(1000) not null,
-diary_data datetime default now(), picture varchar(50),
+diary_data varchar(50), picture varchar(50),
 primary key(diary_no));
 
 insert into member
@@ -52,6 +52,8 @@ select * from member;
 select * from comments;
 
 select * from diary;
+
+drop table diary;
 
 insert into comments
 values('4','4','꼬꼬','가나다라마바사아자차카파타하가갸거겨고교구규구구구구구구구구구구구구구','3');

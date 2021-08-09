@@ -32,8 +32,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
 @Controller
-
-@SessionAttributes("loginMember")
+@SessionAttributes({"loginMember", "selectedDiary", "diaryList"})
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -127,7 +126,6 @@ public class HomeController {
 		model.addAttribute("vo", vo);
 		return "boardDetail";
 	}
-	
 
 	@RequestMapping("/boardInsert.do")
 	public String boardInsert(@ModelAttribute BoardsVO vo) {
@@ -144,7 +142,7 @@ public class HomeController {
 	}
 
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
+	public String boardUpdate(Model model, BoardsVO vo) {
 		mapper.boardUpdate(vo);
 		System.out.println(vo);
 		String result = "";
@@ -191,22 +189,47 @@ public class HomeController {
 
 	// 5. 육아일기(열람, 작성, 수정)
 	@RequestMapping("/diaryContent.do")
-	public String diaryContent(@RequestParam("diary_no") int diary_no, Model model) {
-		DiaryVO vo = mapper.diaryContent(diary_no);
-		model.addAttribute("vo", vo);
-		return "redirect:/babydiary.do";
+	public String diaryContent(DiaryVO diary, Model model) {
+		List<DiaryVO> vo = mapper.diaryContent(diary);
+		model.addAttribute("diaryList", vo);
+		return "redirect:/diaryList.do";
+	}
+	@RequestMapping("/diaryList.do")
+	public String diaryList() {
+		return "showDiaryList";
+	}
+	
+	@RequestMapping("/diaryDetail.do")
+	public String diaryDetail(int diary_no, Model model) {
+		DiaryVO vo = mapper.diaryDetail(diary_no);
+		System.out.println(vo);
+		model.addAttribute("selectedDiary", vo);
+		return "forward:/showDiaryDetail.do";
+	}
+	
+	@RequestMapping("/showDiaryDetail.do")
+	public String showDiaryDetail() {
+		return "showDiaryDetail";
 	}
 
-	@RequestMapping("/diaryInsert.do")
+	@PostMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
 		mapper.diaryInsert(vo);
-		return "redirect:/babydiary.do";
+		return "forward:/babyDiary.do";
 	}
 
 	@RequestMapping("/diaryUpdate.do")
-	public String diaryUpdate(DiaryVO vo) {
+	public String diaryUpdate(DiaryVO vo, Model model) {
 		mapper.diaryUpdate(vo);
-		return "redirect:/babydiary.do";
+		DiaryVO updatedDiaryVO = mapper.diaryDetail(vo.getDiary_no());
+		System.out.println(updatedDiaryVO);
+		model.addAttribute("selectedDiary", updatedDiaryVO);
+		return "forward:/showDiaryDetail.do";
+	}
+	
+	@RequestMapping("/showDiaryUpdate.do")
+	public String showDiaryUpdate() {
+		return "showDiaryUpdate";
 	}
 
 //------------------------------------------------------------------------------------	
@@ -221,10 +244,9 @@ public class HomeController {
 	public String mypage() {
 		return "mypage";
 	}
-	
-	@RequestMapping("/boardWrite.do")
-	public String boardWrite(@RequestParam("cate") String cate, Model model) {
-		model.addAttribute("cate", cate);
+
+	@RequestMapping(value = "/boardWrite.do")
+	public String boardWrite() {
 		return "boardWrite";
 	}
 
@@ -241,6 +263,11 @@ public class HomeController {
 	@RequestMapping(value = "/babyCorrection.do")
 	public String babyCorrection() {
 		return "babyCorrection";
+	}
+	
+	@RequestMapping("/babyDiary.do")
+	public String babyDiary() {
+		return "babyDiary";
 	}
 
 }
