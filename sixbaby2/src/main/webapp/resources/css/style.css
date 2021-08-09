@@ -331,7 +331,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     overflow: hidden;
     height: 0; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-sm-13 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-sm-13, .col-md-14 {
    position: relative;
     min-height: 1px;
     padding-top: 8px;
@@ -700,6 +700,10 @@ form input[type="submit"], form button, form input[type="reset"] {
   
   .col-md-13{
   }  
+  
+  .col-md-14 {
+    width: 66.6666666667%;
+    margin-inline: auto;}
     
   .col-md-pull-0 {
     right: auto; }
@@ -1851,4 +1855,54 @@ ul.bullet {
 
 .correct_tr_term {
 	border-bottom: 16px solid #fff;
+}
+
+.diary-btns {
+	text-align:center;
+	margin-bottom: 30px;
+}
+
+.select {
+	margin-right: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+.write {
+	margin-left: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_diary_select_month {
+	text-align: center;
+}
+
+.slt_month {
+	display: inline-block;
+	border-radius: 12px;
+	width: 70px;
+	
+}
+
+.sub_tit_txt {
+	margin-top: 20px;
+}
+
+.months {
+	    margin-bottom: 6px;
+}
+
+.month {
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.write_table {
+	border: solid 2px #8f7655;
+	border-radius: 12px;
 }
