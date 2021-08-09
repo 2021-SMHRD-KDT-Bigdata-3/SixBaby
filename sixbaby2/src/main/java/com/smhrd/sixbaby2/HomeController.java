@@ -35,7 +35,7 @@ import com.smhrd.mapper.SolutionVO;
 
 @Controller
 
-@SessionAttributes({"loginMember","ddong"})
+@SessionAttributes({"loginMember","conditions"})
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -223,7 +223,7 @@ public class HomeController {
 	public String babyconditionCheck(BabyconditionVO vo, Model model) {
 		mapper.babyconditionCheck(vo);
 		model.addAttribute("vo", vo);
-		return "voiceRecog";
+		return "redirect:/mypage.do";
 	}
 	
 	@RequestMapping("/cryAnalysis.do")
@@ -281,8 +281,9 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/voiceRecog.do")
-	public String voiceRecog(Model model) {
-		model.addAttribute("ddong", "pup");
+	public String voiceRecog(@RequestParam("condi") String condi, Model model) { //Flask에서 데이터 받아옴
+		model.addAttribute("conditions", condi);
+		
 		System.out.println("성공");
 		return "voiceRecog";
 	}
