@@ -60,6 +60,9 @@
 		result += "<tr>";
 		result += "<td class='voice_td'>" + data.solu + "</td>";
 		result += "</tr>";
+		result += "<tr class='voice_tr'>";
+		result += "<td>자세한 방법은 육아꿀팁으로~</td>";
+		result += "</tr>";
 		result += "</table>";
 		$("#reason").html(result);
 	}
