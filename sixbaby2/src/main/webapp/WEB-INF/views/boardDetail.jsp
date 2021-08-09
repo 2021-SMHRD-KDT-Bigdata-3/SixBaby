@@ -51,7 +51,7 @@
                   result+="<td>"+obj.contents+"</td>";
                   result+="<td>"+obj.likes+"</td>";
 	              if(obj.nickname==$("#mem").val()){
-	           	      result+="<td><a href='${cpath}/commentDelete.do?board_no="+board_no+"&comment_no="+obj.comment_no+"'></a></td>";
+	           	      result+="<td><a href='${cpath}/commentDelete.do?board_no="+$("#num").val()+"&comment_no="+obj.comment_no+"'>삭제</a></td>";
 	           	      return true;
 	              }
 	              result+="</tr>";
