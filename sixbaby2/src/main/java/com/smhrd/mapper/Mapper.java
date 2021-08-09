@@ -25,9 +25,8 @@ public interface Mapper {
 	public void boardDelete(int board_no);
 	
 	//4. 댓글(열람, 작성, 수정, 삭제)
-	public List<CommentsVO> commentList();
+	public List<CommentsVO> commentList(int board_no);
 	public void commentInsert(CommentsVO vo);
-	public void commentUpdate(CommentsVO vo);
 	public void commentDelete(int comment_no);
 	
 	//5. 육아일기

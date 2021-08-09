@@ -62,17 +62,12 @@
    
    <!-- 5. 댓글(보기,작성,수정,삭제) -->
    <select id="commentList" resultType="com.smhrd.mapper.CommentsVO">
-    	select * from comments order by comment_no desc
-    	<!--  where board_no=#{board_no}-->
+    	select * from comments where board_no=#{board_no} order by comment_no desc 
    </select>
    <insert id="commentInsert" parameterType="com.smhrd.mapper.CommentsVO">
 	    insert into comments(board_no, nickname, contents)
 	    values(#{board_no},#{nickname},#{contents})
    </insert>
-   <update id="commentUpdate" parameterType="com.smhrd.mapper.CommentsVO">
-     update comments set contents=#{contents}
-     where comment_no=#{comment_no}  
-   </update>
    <delete id="commentDelete" parameterType="int">
      delete from comments where comment_no=#{comment_no}
    </delete>
