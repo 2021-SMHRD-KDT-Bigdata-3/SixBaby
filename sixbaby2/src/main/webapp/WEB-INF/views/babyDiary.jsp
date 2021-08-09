@@ -71,19 +71,18 @@
 					</div>
 
 					<div id="modal_diary_list" class="table-responsive hidden">
-						<table class="table">
-							<thead>
+						<table class="table diary_table">
+							<thead class="diary_table_head">
 								<tr>
-									<th>제목</th>
-									<th>작성일</th>
+									<th style="width: 35%">제목</th>
+									<th style="width: 12%">작성일</th>
 								</tr>
 							</thead>
 							<tbody id="diaryList">
 							</tbody>
 						</table>
 						<div class="btn_wrap">
-							<button type="button" id="modal_back_btn_diary"
-								style="background: white; border-radius: 12px; border: solid white;">뒤로가기</button>
+							<button type="button" id="modal_back_btn_diary">뒤로가기</button>
 						</div>
 					</div>
 
@@ -104,44 +103,37 @@
 												<textArea rows="5" class="form-control" name="contents"
 													placeholder="Enter contents"></textArea>
 											</div>
-											<div class="picture">
-												<input type="hidden" name=picture>
-											</div>
-										</div>
-										<div class="btn_wrap">
-											<button type="submit" id="modal_insert_btn_dairy"
-												style="background: white; border-radius: 12px; border: solid white;">저장</button>
-											<button type="button" id="modal_close_btn_dairy_insert"
-												style="background: white; border-radius: 12px; border: solid white;">취소</button>
+											<div class="form-group">
+										<label class="control-label col-sm-2" for="input-file"
+											style="font-weight: bold; font-size: 16;">사진 첨부</label> <input
+											type="file" id="input-file" name="picture">
+									</div>
 										</div>
 									</form>
 								</div>
+										<div class="col-sm-offset-13 col-sm-13">
+											<button type="submit" id="modal_insert_btn_dairy">저장</button>
+											<button type="button" id="modal_close_btn_dairy_insert">취소</button>
+										</div>
 							</div>
 					</div>
 
 					<div id="modal_diary_detail" class="hidden">
-						<div id="diary_detail" class="modal_content"
-							style="border: 2px solid #E63F39; border-radius: 12px;"></div>
+						<div id="diary_detail" class="modal_content"></div>
 						<div class="btn_wrap">
-							<button type='button' id='modal_detail_btn_diary'
-								style='background: white; border-radius: 12px; border: solid white;'>수정하기</button>
-							<button type="button" id="modal_back_btn_diary_list"
-								style="background: white; border-radius: 12px; border: solid white;">뒤로가기</button>
+							<button type='button' id='modal_detail_btn_diary'>수정하기</button>
+							<button type="button" id="modal_back_btn_diary_list">뒤로가기</button>
 						</div>
 					</div>
 
 					<div id="modal_diary_update" class="hidden">
-						<div id="diary_update" class="modal_content"
-							style="border: 2px solid #E63F39; border-radius: 12px;">
+						<div id="diary_update" class="modal_content">
 					</form>
 				</div>
 				<div class="btn_wrap">
-					<button type="submit" id="modal_update_btn_dairy"
-						style="background: white; border-radius: 12px; border: solid white;">수정</button>
-					<button type="reset" id="modal_reset_btn_dairy"
-						style="background: white; border-radius: 12px; border: solid white;">초기화</button>
-					<button type="button" id="modal_back_btn_dairy_detail"
-						style="background: white; border-radius: 12px; border: solid white;">취소</button>
+					<button type="submit" id="modal_update_btn_dairy">수정</button>
+					<button type="reset" id="modal_reset_btn_dairy">초기화</button>
+					<button type="button" id="modal_back_btn_dairy_detail">취소</button>
 				</div>
 			</div>
 

@@ -496,7 +496,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 .col-sm-13{
+  .col-sm-1, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 .col-sm-13{
     float: left; }
 
   .col-sm-1 {
@@ -659,7 +659,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .col-sm-offset-13 {
     }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-5, .col-md-6, .col-md-7, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
 
   .col-md-1 {
@@ -684,6 +684,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 58.3333333333%; }
 
   .col-md-8 {
+      margin-inline: auto;
     width: 66.6666666667%; }
 
   .col-md-9 {
@@ -1905,4 +1906,94 @@ ul.bullet {
 .write_table {
 	border: solid 2px #8f7655;
 	border-radius: 12px;
+}
+
+.write_table2 {
+	width: 66.6666666667%;
+    margin-inline: auto;
+	border: solid 2px #8f7655;
+	border-radius: 12px;
+}
+
+#modal_insert_btn_dairy {
+	margin-right: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_close_btn_dairy_insert {
+	margin-left: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+.diary_table {
+	margin-inline: auto;
+	text-align: center;
+}
+
+.diary_table_head {
+	border-top: solid 2px #8f7655;
+	border-bottom: solid 2px #8f7655;
+}
+
+#diaryList tr {
+  border-bottom:solid 1px #8f7655;
+}
+
+.btn_wrap {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#modal_back_btn_diary {
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_back_btn_diary_list {
+	margin-left: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_detail_btn_diary {
+	margin-right: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+.diary_detail {
+	width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#modal_update_btn_dairy {
+	margin-right: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_reset_btn_dairy {
+	margin-right: 10px;
+	margin-left: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+#modal_back_btn_dairy_detail {
+	margin-left: 10px;
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
 }
