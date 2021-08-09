@@ -25,11 +25,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.smhrd.mapper.BabyVO;
+import com.smhrd.mapper.BabyconditionVO;
 import com.smhrd.mapper.BoardsVO;
 import com.smhrd.mapper.CommentsVO;
 import com.smhrd.mapper.DiaryVO;
 import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
+import com.smhrd.mapper.SolutionVO;
 
 @Controller
 @SessionAttributes({"loginMember", "selectedDiary", "diaryList"})
@@ -184,7 +186,7 @@ public class HomeController {
 	}
 
 	@RequestMapping("/commentDelete.do")
-	public String commentDelete(@RequestParam("comment_no") int comment_no,  @RequestParam("board_no") int board_no) {
+	public String commentDelete(@RequestParam("comment_no") int comment_no, @RequestParam("board_no") int board_no) {
 		mapper.commentDelete(comment_no);
 		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
@@ -232,6 +234,27 @@ public class HomeController {
 	@RequestMapping("/showDiaryUpdate.do")
 	public String showDiaryUpdate() {
 		return "showDiaryUpdate";
+	}
+
+	// 6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
+	@RequestMapping("/babyconditionInsert.do")
+	public String babyconditionInsert(BabyconditionVO vo) {
+		mapper.babyconditionInsert(vo);
+		return "redirect:/voiceRecog.do";
+	}
+	
+	@RequestMapping("/babyconditionCheck.do")
+	public String babyconditionCheck(BabyconditionVO vo, Model model) {
+		mapper.babyconditionCheck(vo);
+		model.addAttribute("vo", vo);
+		return "voiceRecog";
+	}
+	
+	@RequestMapping("/cryAnalysis.do")
+	public @ResponseBody SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
+		SolutionVO solution = mapper.cryAnalysis(conditions);
+		System.out.println(solution);
+		return solution;
 	}
 
 //------------------------------------------------------------------------------------	
@@ -286,7 +309,9 @@ public class HomeController {
 		return "babyDiary";
 }
 	@RequestMapping(value = "/voiceRecog.do")
-	public String voiceRecog() {
+	public String voiceRecog(Model model) {
+		model.addAttribute("ddong", "pup");
+		System.out.println("성공");
 		return "voiceRecog";
 	}
 

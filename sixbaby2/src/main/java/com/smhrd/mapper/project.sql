@@ -1,3 +1,6 @@
+--#----------------------------------------------------------------------------------------#
+
+--# 회원 테이블
 create table member
 (id varchar(12) not null, pw varchar(20) not null,
 nickname varchar(20) not null, name varchar(50) not null,
@@ -5,15 +8,14 @@ gender varchar(50) not null, birth varchar(50) not null,
 tell varchar(50) not null,
 primary key(id));
 
+--# 아기 테이블
 create table baby
 (baby_num int not null auto_increment, id varchar(12) not null,
 baby_name varchar(50) not null, baby_birth varchar(50) not null,
 baby_gender varchar(50) not null, 
 primary key(baby_num));
 
-create table sound
-(id varchar(12), parents_snd varchar(20));
-
+--# 게시판 테이블
 create table boards
 (board_no int not null auto_increment, category varchar(50) not null,
 title varchar(50) not null, nickname varchar(20) not null,
@@ -21,23 +23,39 @@ picture varchar(50), contents varchar(500) not null,
 indate datetime default now(),
 primary key(board_no));
 
+--# 댓글 테이블
 create table comments
 (comment_no int not null auto_increment, board_no int not null,
 nickname varchar(20) not null, contents varchar(500) not null,
 likes int default 0,
 primary key(comment_no));
 
-create table babycondition
-(condition_num int not null auto_increment, baby_num int not null,
-hungry int, pup int, burping int, cold_hot int,
-condition_date datetime default now(), 
-primary key(condition_num));
-
+--# 육아일기 테이블
 create table diary
 (id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
 title varchar(50) not null, contents varchar(1000) not null,
 diary_data varchar(50), picture varchar(50),
 primary key(diary_no));
+
+--# 아기상태 테이블 (condition - hungry/pup/burping/cold_hod 이렇게 4종류 데이터 들어갈거임!)
+--## condition을 FK로 할것
+create table babycondition
+(condition_num int not null auto_increment,
+baby_num int not null,
+ conditions varchar(20) not null,
+ condition_date datetime default now(), 
+ primary key(condition_num));
+
+--# 해결책 테이블
+create table solution
+(conditions varchar(20) not null,
+exp varchar(100) not null, 
+solu varchar(100) not null,
+primary key(conditions));
+
+--#----------------------------------------------------------------------------------------#
+
+--# 가데이터 삽입 및 확인
 
 insert into member
 values('test', '1234', 'user', '스마트', '남자', '00-01-01', '010-1111-1111');
@@ -52,6 +70,10 @@ select * from diary;
 
 drop table diary;
 
+select * from babycondition;
+
+select * from solution;
+
 insert into comments
 values('4','4','꼬꼬','가나다라마바사아자차카파타하가갸거겨고교구규구구구구구구구구구구구구구','3');
 insert into comments
@@ -61,9 +83,18 @@ values('3','3','흐어어어얽','하기싫당','1');
 
 select * from boards order by board_no desc;
 
+insert into solution
+values('hungry','흐규흐규','맘마줘라');
+insert into solution
+values('pup','호엥호엥','기저귀 내놔라');
+insert into solution
+values('burping','흐엉흐엉','꺼어어억');
+insert into solution
+values('cold_hod','호롤롤로','난방켜');
 
+--#----------------------------------------------------------------------------------------#
 
-# 관리자 계정 하나 만들어서 육아꿀팁에 내용 넣을게요 (관리자 계정 회원탈퇴 하지마여!)
+--# 관리자 계정 하나 만들어서 육아꿀팁에 내용 넣을게요 (관리자 계정 회원탈퇴 하지마여!)
 insert into member
 values('admin', 'admin', '육아꿀팁관리자', 'admin', '여자', '70-03-17', '010-7777-7777');
 
@@ -144,3 +175,5 @@ values('tip', '바로 병원에 가야하는 3가지', '육아꿀팁관리자','', '* 경련(119)
 - 특히 귀 뒤, 목, 겨드랑이, 사타구니, 열이 많은 두상 등의 부위는 집중적으로 닦아줘야 열이 내릴수 있습니다.
 ');
 select * from boards where category="tip" order by board_no desc;
+
+--#----------------------------------------------------------------------------------------#
