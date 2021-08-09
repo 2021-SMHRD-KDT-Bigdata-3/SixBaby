@@ -24,10 +24,9 @@ public interface Mapper {
 	public void boardUpdate(BoardsVO vo); // update~ SQL
 	public void boardDelete(int board_no);
 	
-	//4. 댓글(열람, 작성, 수정, 삭제)
-	public List<CommentsVO> commentList();
+	//4. 댓글(열람, 작성, 삭제)
+	public List<CommentsVO> commentList(int board_no);
 	public void commentInsert(CommentsVO vo);
-	public void commentUpdate(CommentsVO vo);
 	public void commentDelete(int comment_no);
 	
 	//5. 육아일기
@@ -35,4 +34,9 @@ public interface Mapper {
 	public DiaryVO diaryDetail(int diary_no);
 	public void diaryInsert(DiaryVO vo);
 	public void diaryUpdate(DiaryVO vo);
+	
+	//6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
+	public void babyconditionInsert(BabyconditionVO vo);
+	public void babyconditionCheck(BabyconditionVO vo);
+	public SolutionVO cryAnalysis(String conditions);
 }

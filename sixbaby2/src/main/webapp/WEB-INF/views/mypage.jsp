@@ -43,9 +43,19 @@
 								<div class="row">
 									<div class="family">
 								<h2 class="section-title">${loginMember.id}</h2>
+								<div class="correct">
+								<button class="correct_btn">
 								<a href="correction.do">회원 정보 수정</a><br>
+								</button>
+								</div>
+								<div class="correct">
+								<button class="correct_btn">
 								<a href="babyCorrection.do">아이 정보 수정</a><br>
-								<button type="button" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>
+								</button>
+								</div>
+								<div class="correct">
+								<button class="correct_btn" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>
+								</div>
 										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
 										<h3 class="family-name">Smith</h3>
 										<small>John, Anna, Patrick, Susan</small>
@@ -62,36 +72,39 @@
    
 				    <div class="modal_content">
         <div class="form_txtInput">
-          <button type="button" id="modal_close_btn_baby" style="background:white; border-radius: 12px;">창 닫기</button>
-          <h2 class="sub_tit_txt">아이 추가</h2>
-          <p class="exTxt" >정보를 정확히 입력해주세요.</p>
+          <h2 class="sub_tit_txt" align="center">아이 추가</h2>
+          <p class="exTxt" align="center">정보를 정확히 입력해주세요.</p>
           <div class="join_form">
             <table align="center">
               <colgroup>
-                <col width="30%"/>
+                <col width="40%"/>
                 <col width="auto"/>
               </colgroup>
               <tbody>
-                <tr>
+                <tr class="correct_tr_term">
                   <th><span>아이 이름</span></th>
                   <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
                 </tr>
-                <tr>
+                <tr class="correct_tr_term">
                   <th><span>아이 성별</span></th>
                   <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   여♀<input type="radio" name="gender" value="woman"></td>
                 </tr>
-                <tr>
+                <tr class="correct_tr_term">
                   <th><span>아이 생년월일</span></th>
                   <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
                 </tr>
+                <tr class="correct_tr_term">
+                	<td colspan="2" align="center">
+			            <button class="correct_btn">완료</button>
+                	</td>
+                </tr>
               </tbody>
             </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
+            <div class="exform_txt" style="color:darkgray; font-weight:400; text-align:center;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
-            <a href="javascript:;"></a>
-            <button type="button" id="" style="position: relative; right: 150px; background:white;">완료</button>
+            <button type="button" id="modal_close_btn_baby" class="correct_btn">창 닫기</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->

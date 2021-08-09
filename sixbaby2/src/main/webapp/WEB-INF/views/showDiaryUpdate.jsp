@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="vo" value="${selectedDiary}"/>
 <form action = "${cpath }/diaryUpdate.do" method= "post">
-<div class="write_table" style="border: 2px solid #E63F39; border-radius: 12px;">
+<div class="write_table2">
 	<div class="form-group">
 		<label class="diary-name control-label col-sm-2">오늘의 (아기이름)</label>
 	</div>
