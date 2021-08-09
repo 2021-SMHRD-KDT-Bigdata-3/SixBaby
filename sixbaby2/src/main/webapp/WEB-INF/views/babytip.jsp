@@ -38,7 +38,17 @@
 					<div class="container">
 						<div class="row">
 							<div class="content col-md-8">
-								
+								<table style = "margin:auto;">
+						<tr><td>
+						<select name="month" style="width: 160px; height: 50px; text-align-last: center; color:#666666;">
+								<option value="개월수">개월수</option>
+								<option value="1~4개월">1~4개월</option>
+								<option value="돌 이전">돌 이전</option>
+								<option value="돌 이후">돌 이후</option> 
+						</select>
+						
+						</td></tr>
+						</table>
 							</div>
 							<div class="sidebar col-md-3 col-md-offset-1">
 								<div class="widget">

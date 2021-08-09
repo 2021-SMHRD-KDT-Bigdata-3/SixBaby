@@ -21,7 +21,11 @@
 
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+<style>
+.form-group{
 
+}
+</style>
 <script>
       var cnt = 0;
       function getComment(){
@@ -73,7 +77,7 @@
 		<div class="fullwidth-block">
 			<div class="container">
 				<div class="row">
-					<div class="content col-md-8">
+					<div class="content col-md-8" style="text-align:center">
 
 						<form class="form-horizontal" action="${cpath}/boardUpdate.do"
 							method="post">
@@ -82,29 +86,28 @@
 							<input type="hidden" name="category" value="${vo.category}">
 							<div class="form-group">
 							<div class="detail_nick_date">
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
-									<input class="detail_value" type="text" name="nickname" value="${vo.nickname}"
-										readonly="readonly">
+							
 								</div>
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 31%; display: inline-block;">
-									<input class="detail_value" type="text" name="indate" value="${vo.indate}"
-										readonly="readonly">
+							
+								<div style="font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+									<input class="detail_value" type="text" name="nickname" value="${vo.nickname}" readonly="readonly" style="font-size: 18px; color:#666666; font-family:'NanumSquareRound'; font-weight:550;">
 								</div>
+								
+								<div style="font-size: 18px; text-align: center; width: 31%; display: inline-block; position:absolute; right:30;">
+									<input class="detail_value" type="text" name="indate" value="${vo.indate}" readonly="readonly" style="font-size: 18px; color:#666666; font-family:'NanumSquareRound'; font-weight:550;">
 								</div>
-								<div
-									style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
-									<input class="detail_value" type="text" name="title" value="${vo.title}">
+									<div style="border: 1px solid white; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+									<input class="detail_value" type="text" name="title" value="${vo.title}" style="font-size: 18px; color:#323232; font-family:'NanumSquareRound'; font-weight:550;">
+									</div>
 								</div>
-							</div>
+								
 							<br>
 
 							<div class="write_table"
-								style="border: 2px solid #E63F39; border-radius: 12px;">
+								style="border: 1px solid #E63F39; border-radius: 12px;">
 								<div class="form-group">
 									<img class="detail_value"  src="${cpath}/resources/images/logotest.png"
-										style="max-width: 150px;">
+										style="max-width: 150px; font-size: 27px; color:#323232; font-family:'NanumSquareRound'; font-weight:600;">
 									<textArea class="detail_value"  rows="5" name="contents"
 										placeholder="Enter contents">${vo.contents}</textArea>
 								</div>
@@ -114,25 +117,27 @@
 							<div class="form-group">
 								<div class="col-sm-offset-13 col-sm-13">
 									<button type="submit" class="btn_detail"
-										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;">수정</button>
+										style="position: relative; border-radius: 12px; border:2px solid white; background: white; width: 20%; font-size: 20px; color:#323232;
+										 font-family:'NanumSquareRound'; font-weight:600;">목록보기</button>
 									&nbsp;
-									<button type="reset" class="btn_detail"
-										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black"><a href="boardList.do">취소</a></button>
+									<!-- <button type="reset" class="btn_detail"
+										style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px;color:#323232; font-family:'NanumSquareRound'; font-weight:600;">
+										<a href="boardList.do">자유게시판</a></button>-->
 								</div>
 							</div>
+							<br>
 						</form>
 						<div class="col-sm-offset-13 col-sm-13">
 							<button class="btn btn-success btn-sm" onclick="getComment()"
-								style="background: white; border-radius: 12px; border: solid 2px skyblue; font-size: 17px;">댓글
-								보기</button>
-							<div id="comment">--위에 버튼 누르면 여기에 댓글 리스트 뜰거임--</div>
+								style="background: white; border-radius: 12px; border: 1px solid white; font-size: 20px; font-family:'NanumSquareRound'; font-weight:600; color:#323232;">댓글</button>
+							<div id="comment"></div>
 							<form class="comment_form" action="${cpath}/commentInsert.do"
 								method="post">
 								<input class="comment_input" type="textarea"
 									placeholder="댓글을 입력해주세요."> <input class="comment_btn"
 									type="submit"
-									style="border: solid 2px white; font-size: 30px; box-shadow: none; border-radius: 12px; background: white; color: black;"
-									value="확인">
+									style="border: solid 1px white; font-size: 20px;border-radius: 12px; background: white; color:#666666; font-family:'NanumSquareRound'; font-weight:600;"
+									value="입력">
 							</form>
 						</div>
 					</div>

@@ -43,7 +43,7 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif; }
+  font-family: 'NanumSquareRound'; }
 
 body {
   margin: 0; }
@@ -97,7 +97,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: 'NanumSquareRound';
   font-size: 1em; }
 
 pre {
@@ -214,15 +214,14 @@ html {
 
 body {
   color: black;
-  font-family: arial, sans-serif;
-  font-weight: 600;
-  font-size:15px;
-  line-height: 1.5;
+  font-family: 'NanumSquareRound';
+  font-size:18px;
+ 
    }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+  font-family: 'NanumSquareRound';
   font-weight: 500;
   text-transform: uppercase;
   line-height: normal; }
@@ -270,13 +269,11 @@ form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
   background: -webkit-linear-gradient(#e2caae, #c39f70);
   background: linear-gradient(#e2caae, #c39f70);
-  border-bottom: 1px solid #a68861;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   padding:1px;
   color: #666666;
   text-transform: uppercase;
   font-size:10px;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+  font-family: 'NanumSquareRound';
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
@@ -1154,8 +1151,9 @@ form input[type="submit"], form button, form input[type="reset"] {
     margin-bottom: 10px; }
   .branding .site-title {
     color: #666666;
-    font-weight:300;
+    font-weight:800;
     font-size: 20px;
+    font-family:'NanumSquareRound';
     }
 
 .main-navigation {
@@ -1165,7 +1163,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     background: none;
     padding: 20px;
     display: none;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family:'NanumSquareRound';
     text-transform: uppercase;
     outline: none; }
     @media screen and (max-width: 990px) {
@@ -1183,10 +1181,9 @@ form input[type="submit"], form button, form input[type="reset"] {
         display: block;
         padding: 20px 0;
         text-transform: uppercase;
-        font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        font-size: 1.2857142857em;
+        font-family:'NanumSquareRound';
+        font-weight: 600;
+        font-size: 21px;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
@@ -1212,7 +1209,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       .mobile-navigation .menu .menu-item:first-child {
         border-top: 1px solid #e5e5e5; }
     .mobile-navigation .menu a {
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+      font-family:'NanumSquareRound';
       text-transform: uppercase;
       font-weight: 400;
       display: block;
@@ -1241,7 +1238,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       padding: 150px 0; }
     .hero .slides .slide-content {
       text-align: center;
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+      font-family: 'NanumSquareRound';
       text-transform: uppercase;
       color: white; }
     .hero .slides .slide-subtitle {
@@ -1314,9 +1311,11 @@ form input[type="submit"], form button, form input[type="reset"] {
   padding: 50px 0; }
   .fullwidth-block .section-title {
     font-size: 24px;
-    font-size: 1.7142857143em;
+    font-family:'NanumSquareRound';
+    font-weight:800;
     text-transform: uppercase;
-    color: #544531; }
+    color:#E63F39;
+     }
 
 .news {
   text-align: center;
@@ -1334,7 +1333,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     color: #a59e95;
     font-size: 12px;
     font-size: 0.8571428571em;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family: 'NanumSquareRound';
     text-transform: lowercase; }
     .news .date .fa {
       font-size: 16px;
@@ -1365,7 +1364,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 0.8571428571em;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family: 'NanumSquareRound';
     text-transform: lowercase;
     *zoom: 1; }
     .event-list .event-meta:after {
@@ -1424,7 +1423,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 12px;
     font-size: 0.8571428571em;
     color: #a59e95;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family: 'NanumSquareRound';
     text-transform: lowercase; }
     .seremon-list .seremon-meta .pastor {
       margin-bottom: 5px; }
@@ -1588,7 +1587,6 @@ ul.bullet {
           display:inline-block;
           width:100px;
           margin-left:calc(100% - 100px - 10px);
-          
         }
         
 #modal_login .modal_content {
@@ -1716,7 +1714,8 @@ ul.bullet {
 .comment_input {
 	border-radius: 12px;
 	width: 88%;
-	font-size: 30px;
+	font-size: 20px;
+	font-family: 'NanumSquareRound';
 }
 
 .comment_btn {
@@ -1725,8 +1724,9 @@ ul.bullet {
 
 .comment_form {
 	margin-top: 10px;
-	border: 2px solid skyblue;
+	border: 1px solid #E63F39;
 	border-radius: 12px;
+	
 }
 
 .title_write {
@@ -1754,8 +1754,8 @@ ul.bullet {
 }
 
 .comment_tr {
-	border-top: solid 2px skyblue;
-	border-bottom: solid 2px skyblue;
+	border-top: solid 2px  #E63F39;
+	border-bottom: solid 2px  #E63F39;
 }
 
 .comment_no {

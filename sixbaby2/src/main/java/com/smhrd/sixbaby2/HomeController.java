@@ -208,7 +208,7 @@ public class HomeController {
 		mapper.diaryUpdate(vo);
 		return "redirect:/babydiary.do";
 	}
-
+	
 //------------------------------------------------------------------------------------	
 
 	// 페이지이동

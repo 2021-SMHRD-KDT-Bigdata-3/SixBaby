@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
    content="width=device-width, initial-scale=1.0,maximum-scale=1">
-
+<link rel="stylesheet" href="css/font.css"/>
 <title>메인</title>
 <style>
 * {
@@ -28,19 +28,20 @@ ul, li {
 }
 .slide li {
    height: 100%;
+   position:absolute;left:0;right:0;top:0;bottom:0;opacity:0;
 }
+   
 .slide li:nth-child(1) {
-   background: #faa;
+  background: #faa;
+
 }
 .slide li:nth-child(2) {
-   background: #afa;
+   background: #FDDBDB;
 }
 .slide li:nth-child(3) {
    background: #aaf;
 }
-.slide li:nth-child(4) {
-   background: #faf;
-}
+
 </style>
 <script>
 const all = ele => document.querySelectorAll(ele)
@@ -114,10 +115,21 @@ window.onload = function () {
  <!-- 페이드 슬라이드 배너 -->
       <div class="slide" style="height: 400px; width: 100%;">
          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li style="font-family:'NanumSquareRound'; font-size:20px; text-align: center;">  
+           	 <div class="container">
+				<h2 class="page-title" style="text-align:center">Community</h2>
+			 </div>
+			</li>
+			 <li style="font-family:'NanumSquareRound'; font-size:20px;">  
+           	 <div class="container">
+				<h2 class="page-title" style="text-align:center">메롱</h2>
+			 </div>
+			</li>
+			 <li style="font-family:'NanumSquareRound'; font-size:20px;">  
+           	 <div class="container">
+				<h2 class="page-title" style="text-align:center">뿅</h2>
+			 </div>
+			</li>
          </ul>
       </div>
 
@@ -139,27 +151,26 @@ window.onload = function () {
                            <tr>
                               <th><span style="position: relative; left: 70px;">아이디</span></th>
                               <td style="position: relative; left: 70px;"><input
-                                 type="text" name="id" placeholder="ID 를 입력하세요."></td>
+                                 type="text" name="id" placeholder="ID 를 입력하세요."><br></td>
+                                 <br>
                            </tr>
-                           <br>
                            <tr>
-
                               <th><span style="position: relative; left: 70px;">비밀번호</span></th>
                               <td style="position: relative; left: 70px;"><input
-                                 type="password" name="pw" placeholder="PW 를 입력하세요"></td>
+                                 type="password" name="pw" placeholder="PW 를 입력하세요"><br></td>
+                           </tr>
                            <tr>
                               <td><button type="submit" id="login-btn"
-                                    style="border: solid white; background: white; position: relative; left: 200px;">확인</button></td>
+                                    style="border: solid white; background: white; position: relative; left: 200px; font-size:20px; color:#666666; font-family:'NanumSquareRound';">확인</button><br></td>
                            </tr>
                         </form>
-
                      </tbody>
                   </table>
                </div>
                <!-- join_form E  -->
                <div class="btn_wrap">
                   <button type="button" id="modal_close_btn_login"
-                     style="background: white; border-radius: 12px; border: solid white;">창
+                     style="background: white; border-radius: 12px; border: solid white; font-size:20px; color:#666666; font-family:'NanumSquareRound'; font-weight:400;">창
                      닫기</button>
                </div>
             </div>

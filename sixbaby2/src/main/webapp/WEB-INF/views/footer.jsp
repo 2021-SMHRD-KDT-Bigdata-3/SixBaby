@@ -8,13 +8,13 @@
          <div class="row">
             <div class="col-md-4">
                <div class="col-md-4">
-                  <div class="widget">
+                  <div class="widget" style="text-align:center">
                      <small class="slide-subtitle"
-                        style="color: black; position: relative; font-size: 15px">Sixbaby</small>
+                        style="color: black; position: relative; font-size: 15px; font-Family:'NanumSquareRound'; font-size:20px;">Sixbaby</small>
                      <br> <br>
 
                      <h2 class="widget-title"
-                        style="color: #666666; position: relative;">멘트멘트멘트멘트멘트멘트멘트멘트트멘트멘트멘트트멘트멘트멘트</h2>
+                        style="color: #666666; position: relative; font-Family:'NanumSquareRound'; font-size:18px;">'아기'뿐만아니라 '육아가 처음인 부모'를 위한</h2>
                   </div>
                </div>
             </div>
