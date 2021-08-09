@@ -51,8 +51,8 @@
                   result+="<td>"+obj.contents+"</td>";
                   result+="<td>"+obj.likes+"</td>";
 	              if(obj.nickname==$("#mem").val()){
-	           	      result+="<td><input type='button' value='삭제'></td>";
-	           	      return false;
+	           	      result+="<td><a href='${cpath}/commentDelete.do?board_no="+board_no+"&comment_no="+obj.comment_no+"'></a></td>";
+	           	      return true;
 	              }
 	              result+="</tr>";
               });
@@ -89,6 +89,7 @@
 
 						<!-- 여기는 본인 일때 -->
 						<input type="hidden" id="mem" value="${loginMember.nickname}">
+						<input type="hidden" id="num" value="${vo.board_no}">
 						<c:if test="${loginMember.nickname eq vo.nickname}">
 							<form class="form-horizontal" action="${cpath}/boardUpdate.do"
 								method="post">
