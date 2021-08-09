@@ -21,7 +21,7 @@
                   </a></li>
                   <li class="menu-item"><a href="boardList.do">Community</a></li>
                   <li class="menu-item"><a href="#">Baby Diary </a></li>
-                  <li class="menu-item"><a href="#">Voice Recognition
+                  <li class="menu-item"><a href="voiceRecog.do">Voice Recognition
                         Service
                   </a></li>
                   <li class="menu-item"><a href="mypage.do">My page </a></li>
