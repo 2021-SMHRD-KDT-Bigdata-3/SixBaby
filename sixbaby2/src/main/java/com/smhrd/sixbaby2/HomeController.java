@@ -32,8 +32,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 
 @Controller
-
-@SessionAttributes("loginMember")
+@SessionAttributes({"loginMember", "selectedDiary", "diaryList"})
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -73,8 +72,8 @@ public class HomeController {
 	// 2. 로그인, 로그아웃
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String login(MemberVO vo, Model model) {
-		MemberVO loginMember =  mapper.login(vo);
-		if(loginMember != null) {
+		MemberVO loginMember = mapper.login(vo);
+		if (loginMember != null) {
 			model.addAttribute("loginMember", loginMember);
 			System.out.println("성공");
 			return "redirect:/main.do";
@@ -83,7 +82,7 @@ public class HomeController {
 			return "redirect:/main.do";
 		}
 	}
-	
+
 	@PostMapping("/logout.do")
 	@ResponseBody
 	public String logout(HttpSession session) {
@@ -127,24 +126,23 @@ public class HomeController {
 		model.addAttribute("vo", vo);
 		return "boardDetail";
 	}
-	
 
 	@RequestMapping("/boardInsert.do")
-	public String boardInsert(@ModelAttribute BoardsVO vo) {
+	public String boardInsert(BoardsVO vo) {
 		mapper.boardInsert(vo);
 		String result = "";
 		if (vo.getCategory().equals("free")) {
 			result = "boardList";
 		} else if (vo.getCategory().equals("item")) {
 			result = "itemList";
-		} else if (vo.getCategory().equals("tip")) {
-			result = "tipList";
+		} else if (vo.getCategory().equals("help")) {
+			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
 
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
+	public String boardUpdate(Model model, BoardsVO vo) {
 		mapper.boardUpdate(vo);
 		System.out.println(vo);
 		String result = "";
@@ -152,61 +150,88 @@ public class HomeController {
 			result = "boardList";
 		} else if (vo.getCategory().equals("item")) {
 			result = "itemList";
-		} else if (vo.getCategory().equals("tip")) {
-			result = "tipList";
+		} else if (vo.getCategory().equals("help")) {
+			result = "helpList";
 		}
-		return "redirect:/"+result+".do";
+		return "redirect:/" + result + ".do";
 	}
 
 	@RequestMapping("/boardDelete.do")
-	public String boardDelete(@RequestParam("board_no") int board_no) {
+	public String boardDelete(@RequestParam("board_no") int board_no, @RequestParam("cate") String cate) {
+		String result = "";
 		mapper.boardDelete(board_no);
-		return "redirect:/community.do";
+		if (cate.equals("free")) {
+			result = "boardList";
+		} else if (cate.equals("item")) {
+			result = "itemList";
+		} else if (cate.equals("help")) {
+			result = "helpList";
+		}
+		return "redirect:/" + result + ".do";
 	}
 
 	// 4. 댓글(열람, 작성, 수정, 삭제)
 	@RequestMapping("/commentList.do")
-	public @ResponseBody List<CommentsVO> commentList() {
-		List<CommentsVO> list = mapper.commentList();
+	public @ResponseBody List<CommentsVO> commentList(@RequestParam("board_no") int board_no) {
+		List<CommentsVO> list = mapper.commentList(board_no);
 		return list;
 	}
 
 	@RequestMapping("/commentInsert.do")
-	public String commentInsert(CommentsVO vo) {
+	public String commentInsert(CommentsVO vo, @RequestParam("board_no") int board_no) {
 		mapper.commentInsert(vo);
-		return "redirect:/boardDetail.do";
-	}
-
-	@RequestMapping("/commentUpdate.do")
-	public String commentUpdate(CommentsVO vo) {
-		mapper.commentUpdate(vo);
-		return "redirect:/boardDetail.do";
+		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
 	@RequestMapping("/commentDelete.do")
-	public String commentDelete(@RequestParam("comment_no") int comment_no) {
+	public String commentDelete(@RequestParam("comment_no") int comment_no,  @RequestParam("board_no") int board_no) {
 		mapper.commentDelete(comment_no);
-		return "redirect:/boardDetail.do";
+		return "redirect:/boardContent.do?board_no=" + board_no;
 	}
 
 	// 5. 육아일기(열람, 작성, 수정)
 	@RequestMapping("/diaryContent.do")
-	public String diaryContent(@RequestParam("diary_no") int diary_no, Model model) {
-		DiaryVO vo = mapper.diaryContent(diary_no);
-		model.addAttribute("vo", vo);
-		return "redirect:/babydiary.do";
+	public String diaryContent(DiaryVO diary, Model model) {
+		List<DiaryVO> vo = mapper.diaryContent(diary);
+		model.addAttribute("diaryList", vo);
+		return "redirect:/diaryList.do";
+	}
+	@RequestMapping("/diaryList.do")
+	public String diaryList() {
+		return "showDiaryList";
+	}
+	
+	@RequestMapping("/diaryDetail.do")
+	public String diaryDetail(int diary_no, Model model) {
+		DiaryVO vo = mapper.diaryDetail(diary_no);
+		System.out.println(vo);
+		model.addAttribute("selectedDiary", vo);
+		return "forward:/showDiaryDetail.do";
+	}
+	
+	@RequestMapping("/showDiaryDetail.do")
+	public String showDiaryDetail() {
+		return "showDiaryDetail";
 	}
 
-	@RequestMapping("/diaryInsert.do")
+	@PostMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
 		mapper.diaryInsert(vo);
-		return "redirect:/babydiary.do";
+		return "forward:/babyDiary.do";
 	}
 
 	@RequestMapping("/diaryUpdate.do")
-	public String diaryUpdate(DiaryVO vo) {
+	public String diaryUpdate(DiaryVO vo, Model model) {
 		mapper.diaryUpdate(vo);
-		return "redirect:/babydiary.do";
+		DiaryVO updatedDiaryVO = mapper.diaryDetail(vo.getDiary_no());
+		System.out.println(updatedDiaryVO);
+		model.addAttribute("selectedDiary", updatedDiaryVO);
+		return "forward:/showDiaryDetail.do";
+	}
+	
+	@RequestMapping("/showDiaryUpdate.do")
+	public String showDiaryUpdate() {
+		return "showDiaryUpdate";
 	}
 	
 //------------------------------------------------------------------------------------	
@@ -221,8 +246,8 @@ public class HomeController {
 	public String mypage() {
 		return "mypage";
 	}
-	
-	@RequestMapping("/boardWrite.do")
+
+	@RequestMapping(value = "/boardWrite.do")
 	public String boardWrite(@RequestParam("cate") String cate, Model model) {
 		model.addAttribute("cate", cate);
 		return "boardWrite";
@@ -233,6 +258,19 @@ public class HomeController {
 		return "boardDetail";
 	}
 
+	@RequestMapping("/boardBack.do")
+	public String boardBack(@RequestParam("cate") String cate) {
+		String result = "";
+		if (cate.equals("free")) {
+			result = "boardList";
+		} else if (cate.equals("item")) {
+			result = "itemList";
+		} else if (cate.equals("help")) {
+			result = "helpList";
+		}
+		return "redirect:/" + result + ".do";
+	}
+
 	@RequestMapping(value = "/correction.do")
 	public String correction() {
 		return "correction";
@@ -241,6 +279,15 @@ public class HomeController {
 	@RequestMapping(value = "/babyCorrection.do")
 	public String babyCorrection() {
 		return "babyCorrection";
+	}
+	
+	@RequestMapping("/babyDiary.do")
+	public String babyDiary() {
+		return "babyDiary";
+}
+	@RequestMapping(value = "/voiceRecog.do")
+	public String voiceRecog() {
+		return "voiceRecog";
 	}
 
 }

@@ -25,13 +25,13 @@ public interface Mapper {
 	public void boardDelete(int board_no);
 	
 	//4. 댓글(열람, 작성, 수정, 삭제)
-	public List<CommentsVO> commentList();
+	public List<CommentsVO> commentList(int board_no);
 	public void commentInsert(CommentsVO vo);
-	public void commentUpdate(CommentsVO vo);
 	public void commentDelete(int comment_no);
 	
 	//5. 육아일기
-	public DiaryVO diaryContent(int diary_no);
+	public List<DiaryVO> diaryContent(DiaryVO vo);
+	public DiaryVO diaryDetail(int diary_no);
 	public void diaryInsert(DiaryVO vo);
 	public void diaryUpdate(DiaryVO vo);
 }

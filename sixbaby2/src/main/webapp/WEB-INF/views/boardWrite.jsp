@@ -61,8 +61,8 @@
 							method="post">
 							<div class="form-group">
 								<c:set var="cat" value="${cate}" />
-								<div class="form-group">
-									<label class="control-label col-sm-2">카테고리</label> <input
+								<div class="title_write">
+									<input class="write_category"
 										type="text" name="category" value="${cat}" readonly="readonly">
 								</div>
 							</div>
@@ -73,7 +73,7 @@
 									<div class="form-group">
 										<label class="control-label col-sm-2">작성자</label> <input
 											type="text" class="form-control" name="nickname"
-											placeholder="Enter writer">
+											 value="${loginMember.nickname}" placeholder="Enter writer" readonly="readonly">
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2">제목</label> <input

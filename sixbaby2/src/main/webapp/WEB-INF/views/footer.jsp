@@ -6,7 +6,6 @@
    <footer class="site-footer" style="background: white;">
       <div class="container">
          <div class="row">
-            <div class="col-md-4">
                <div class="col-md-4">
                   <div class="widget" style="text-align:center">
                      <small class="slide-subtitle"
@@ -17,7 +16,6 @@
                         style="color: #666666; position: relative; font-Family:'NanumSquareRound'; font-size:18px;">'아기'뿐만아니라 '육아가 처음인 부모'를 위한</h2>
                   </div>
                </div>
-            </div>
             </div>
             <!-- .row -->
             <p class="colophon"></p>
