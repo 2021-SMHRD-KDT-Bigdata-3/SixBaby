@@ -41,18 +41,18 @@
               result+="<td>트림</td>";
               result+="<td>온도</td>";
               result+="</tr>";
-              $.each(data, (index,obj)=>{
+              //$.each(data, (index,obj)=>{
             	  result+="<tr>";
-                  result+="<td rowspan=4>우는 이유 : "+obj.conditions+"</td>";
+                  result+="<td rowspan=4>우는 이유 : "+data.conditions+"</td>";
                   result+="</tr>";
             	  result+="<tr>";
-                  result+="<td rowspan=4>"+obj.exp+"</td>";
+                  result+="<td rowspan=4>"+data.exp+"</td>";
                   result+="</tr>";
                   result+="<tr>";
-                  result+="<td rowspan=4>"+obj.solu+"</td>";
+                  result+="<td rowspan=4>"+data.solu+"</td>";
 	              result+="</tr>";
               	  result+="</table>";
-       	     });
+       	     //});
              $("#reason").html(result);
         }
       

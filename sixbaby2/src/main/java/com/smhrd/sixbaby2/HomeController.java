@@ -230,6 +230,7 @@ public class HomeController {
 	public SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
 		System.out.println(conditions);
 		SolutionVO solution = mapper.cryAnalysis(conditions);
+		System.out.println(solution);
 		return solution;
 	}
 
