@@ -98,6 +98,7 @@
 								<input type="hidden" name=picture>
 						</div>
 					</div>
+					<br>
 				<div class="btn_wrap">
 		             <button type="submit" id="modal_insert_btn_dairy" style="background: white; border-radius: 12px; border: solid white;">저장</button>
 		             <button type="button" id="modal_close_btn_dairy_insert" style="background: white; border-radius: 12px; border: solid white;">취소</button>
