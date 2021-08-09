@@ -227,8 +227,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/cryAnalysis.do")
-	public SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
-		System.out.println(conditions);
+	public @ResponseBody SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
 		SolutionVO solution = mapper.cryAnalysis(conditions);
 		System.out.println(solution);
 		return solution;

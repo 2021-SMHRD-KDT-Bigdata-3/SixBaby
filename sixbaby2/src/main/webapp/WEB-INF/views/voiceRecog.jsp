@@ -23,40 +23,38 @@
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
 <script>
-	  
-      function analysis(conditions){
-           $.ajax({
-              url : "${cpath}/cryAnalysis.do?conditions="+conditions,
-              type : "get",
-              dataType : "json",
-              success : resultHtml,
-              error : function(){ alert("error");}
-           });
-        }
-      function resultHtml(data){
-              var result = "<table>";
-              result+="<tr>";
-              result+="<td>배고픔</td>";
-              result+="<td>배변</td>";
-              result+="<td>트림</td>";
-              result+="<td>온도</td>";
-              result+="</tr>";
-              //$.each(data, (index,obj)=>{
-            	  result+="<tr>";
-                  result+="<td rowspan=4>우는 이유 : "+data.conditions+"</td>";
-                  result+="</tr>";
-            	  result+="<tr>";
-                  result+="<td rowspan=4>"+data.exp+"</td>";
-                  result+="</tr>";
-                  result+="<tr>";
-                  result+="<td rowspan=4>"+data.solu+"</td>";
-	              result+="</tr>";
-              	  result+="</table>";
-       	     //});
-             $("#reason").html(result);
-        }
-      
-      </script>
+	function analysis(conditions) {
+		$.ajax({
+			url : "${cpath}/cryAnalysis.do?conditions=" + conditions,
+			type : "get",
+			dataType : "json",
+			success : resultHtml,
+			error : function() {
+				alert("error");
+			}
+		});
+	}
+	function resultHtml(data) {
+		var result = "<table>";
+		result += "<tr>";
+		//result+="<td>배고픔</td>";
+		//result+="<td>배변</td>";
+		//result+="<td>트림</td>";
+		//result+="<td>온도</td>";
+		//result+="</tr>";
+		result += "<tr>";
+		result += "<td>우는 이유 : " + data.conditions + "</td>";
+		result += "</tr>";
+		result += "<tr>";
+		result += "<td>설명 : " + data.exp + "</td>";
+		result += "</tr>";
+		result += "<tr>";
+		result += "<td>해결책 : " + data.solu + "</td>";
+		result += "</tr>";
+		result += "</table>";
+		$("#reason").html(result);
+	}
+</script>
 </head>
 <body>
 
