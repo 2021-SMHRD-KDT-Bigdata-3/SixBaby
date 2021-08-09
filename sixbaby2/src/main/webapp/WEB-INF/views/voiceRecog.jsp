@@ -23,40 +23,38 @@
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
 <script>
-	  
-      function analysis(conditions){
-           $.ajax({
-              url : "${cpath}/cryAnalysis.do?conditions="+conditions,
-              type : "get",
-              dataType : "json",
-              success : resultHtml,
-              error : function(){ alert("error");}
-           });
-        }
-      function resultHtml(data){
-              var result = "<table>";
-              result+="<tr>";
-              result+="<td>배고픔</td>";
-              result+="<td>배변</td>";
-              result+="<td>트림</td>";
-              result+="<td>온도</td>";
-              result+="</tr>";
-              //$.each(data, (index,obj)=>{
-            	  result+="<tr>";
-                  result+="<td rowspan=4>우는 이유 : "+data.conditions+"</td>";
-                  result+="</tr>";
-            	  result+="<tr>";
-                  result+="<td rowspan=4>"+data.exp+"</td>";
-                  result+="</tr>";
-                  result+="<tr>";
-                  result+="<td rowspan=4>"+data.solu+"</td>";
-	              result+="</tr>";
-              	  result+="</table>";
-       	     //});
-             $("#reason").html(result);
-        }
-      
-      </script>
+	function analysis(conditions) {
+		$.ajax({
+			url : "${cpath}/cryAnalysis.do?conditions=" + conditions,
+			type : "get",
+			dataType : "json",
+			success : resultHtml,
+			error : function() {
+				alert("error");
+			}
+		});
+	}
+	function resultHtml(data) {
+		var result = "<table>";
+		result += "<tr>";
+		//result+="<td>배고픔</td>";
+		//result+="<td>배변</td>";
+		//result+="<td>트림</td>";
+		//result+="<td>온도</td>";
+		//result+="</tr>";
+		result += "<tr>";
+		result += "<td>우는 이유 : " + data.conditions + "</td>";
+		result += "</tr>";
+		result += "<tr>";
+		result += "<td>설명 : " + data.exp + "</td>";
+		result += "</tr>";
+		result += "<tr>";
+		result += "<td>해결책 : " + data.solu + "</td>";
+		result += "</tr>";
+		result += "</table>";
+		$("#reason").html(result);
+	}
+</script>
 </head>
 <body>
 
@@ -77,9 +75,9 @@
 						<h3>아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
 
 						<c:set var="vo" value="${vo}" />
-						<c:set var="hung" value="hungry" />
+						<c:set var="cond" value="${ddong}" />
 						<h1>
-							<button type="button" onclick="analysis('${hung}')">울음분석하기(클릭!)</button>
+							<button type="button" onclick="analysis('${cond}')">울음분석하기(클릭!)</button>
 						</h1>
 						<div id="reason">--여기에 우는이유/설명/해결책 뜰거임---</div>
 
