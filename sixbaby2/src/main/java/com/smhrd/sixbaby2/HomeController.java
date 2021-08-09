@@ -35,7 +35,7 @@ import com.smhrd.mapper.SolutionVO;
 
 @Controller
 
-@SessionAttributes("loginMember")
+@SessionAttributes({"loginMember","ddong"})
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -281,7 +281,9 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/voiceRecog.do")
-	public String voiceRecog() {
+	public String voiceRecog(Model model) {
+		model.addAttribute("ddong", "pup");
+		System.out.println("성공");
 		return "voiceRecog";
 	}
 
