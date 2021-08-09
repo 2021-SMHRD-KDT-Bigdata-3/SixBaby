@@ -128,6 +128,11 @@ window.onload = function () {
 
 		<div id="modal_login">
 			<div class="modal_content">
+					<div class="btn_wrap2">
+						<button type="button" id="modal_close_btn_login"
+							style="background: white; border-radius: 12px; border: solid 1px #E63F39; border-radius: 12px;">창
+							닫기</button>
+					</div>
 				<div class="form_txtInput">
 					<h2 class="sub_tit_txt" align="center">로그인</h2>
 					<p class="exTxt" align="center">정보를 정확히 입력해주세요.</p>
@@ -156,11 +161,6 @@ window.onload = function () {
 						</form>
 					</div>
 					<!-- join_form E  -->
-					<div class="btn_wrap">
-						<button type="button" id="modal_close_btn_login"
-							style="background: white; border-radius: 12px; border: solid 2px #8f7655; border-radius: 12px;">창
-							닫기</button>
-					</div>
 				</div>
 				<!-- form_txtInput E -->
 			</div>
@@ -181,7 +181,7 @@ window.onload = function () {
 							정확히 입력해주세요.</p>
 						<br>
 						<div class="join_form">
-							<table align="center">
+							<table>
 								<colgroup>
 									<col width="30%" />
 									<col width="auto" />

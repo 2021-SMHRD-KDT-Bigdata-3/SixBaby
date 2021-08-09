@@ -1997,3 +1997,8 @@ ul.bullet {
     border: solid 2px #8f7655;
     border-radius: 12px;
 }
+
+.btn_wrap2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
