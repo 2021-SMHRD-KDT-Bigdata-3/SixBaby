@@ -256,5 +256,10 @@ public class HomeController {
 	public String babyCorrection() {
 		return "babyCorrection";
 	}
+	
+	@RequestMapping(value = "/voiceRecog.do")
+	public String voiceRecog() {
+		return "voiceRecog";
+	}
 
 }
