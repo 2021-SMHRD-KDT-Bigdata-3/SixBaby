@@ -43,11 +43,11 @@
 									<div class="correction_form">
 							            <table align="center">
 							              <colgroup>
-							                <col width="30%"/>
+							                <col width="40%"/>
 							                <col width="auto"/>
 							              </colgroup>
 							              <tbody>
-							              	<tr>
+							              	<tr class="correct_tr_term">
 							              	<td>
 							              		<select name="아이를 골라골라~">
 							              			<option value="첫째">하나</option>
@@ -55,26 +55,23 @@
 							              		</select>
 							              		<td>
 							              	</tr>
-							                <tr>
+							                <tr class="correct_tr_term">
 							                  <th><span>아이 이름</span></th>
 							                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
 							                </tr>
-							                <tr>
+							                <tr class="correct_tr_term">
 							                  <th><span>아이 성별</span></th>
 							                  <td>남♂<input type="radio" name="gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							                  여♀<input type="radio" name="gender" value="woman"></td>
 							                </tr>
-							                <tr>
+							                <tr class="correct_tr_term">
 							                  <th><span>아이 생년월일</span></th>
 							                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
 							                </tr>
-							                <tr>
-							                	<td><button type="button" id=""  style="position: relative; left: 120px; background:white;">완료</button></td>
+							                <tr class="correct_tr_term">
+							                	<td colspan="2" style="text-align:center;"><button class="correct_btn">완료</button></td>
 							                </tr>
-							                <tr>
-							                	<td><button type="button" id="modal_open_btn_secession"><span class="site-title">탈퇴</span></button></td>
-							                </tr>
-							                <tr>
+							                <tr class="correct_tr_term">
 							                <td colspan=2>
 							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
 							            </td>
@@ -85,49 +82,10 @@
 							            </table>
 							          </div><!-- correction_form E  -->
 								</div>
-								
 							</div>
 						</div>
 					</div>
 				</div>
-
-
-					<div id="modal_secession">
-					   
-									    <div class="modal_content">
-					        <div class="form_txtInput">
-					          <h2 class="sub_tit_txt">회원 탈퇴</h2>
-					          <p class="exTxt">신중해주세요.</p>
-					          <div class="join_form">
-					            <table align="center">
-					              <colgroup>
-					                <col width="30%"/>
-					                <col width="auto"/>
-					              </colgroup>
-					              <tbody>
-					                <tr>
-					                  <th><span>아이디</span></th>
-					                  <td><input type="text" placeholder="ID 를 입력하세요."></td>
-					                </tr>
-					                <tr>
-					                  <th><span>비밀번호</span></th>
-					                  <td><input type="password" placeholder="PW 를 입력하세요"></td>
-					                </tr>
-					                <tr>
-					                	<td><button type="button" id="" style="border: solid white; background:white;">확인</button></td>
-					                </tr>
-					              </tbody>
-					            </table>
-					          </div><!-- join_form E  -->
-					          <div class="btn_wrap">
-					            <button type="button" id="modal_close_btn_secession" style="background:white; border-radius: 12px; border:solid white;">창 닫기</button>
-					          </div>
-					        </div> <!-- form_txtInput E -->
-					    </div> <!-- container E -->
-									    	<div class="modal_layer"></div>
-					</div>
-
-
 			<%@ include file="footer.jsp"%>
 </div>
 		

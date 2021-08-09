@@ -55,7 +55,9 @@
 					<div class="content col-md-8">
 						<c:set var="vo" value="${list}" />
 						<c:if test="${vo[0].category eq 'free'}">
+							<div class="board_align">
 							<h2 class="section-title">자유게시판</h2>
+							</div>
 						</c:if>
 						<c:if test="${vo[0].category eq 'item'}">
 							<h2 class="section-title">용품추천</h2>
@@ -67,7 +69,7 @@
 							<h2 class="section-title">육아꿀팁</h2>
 						</c:if>
 
-						<div align="right">
+						<div class="board_write" align="right">
 							<c:if test="${vo[0].category ne 'tip'}">
 								<button type="button"
 									style="background: white; border: 2px solid white; font-size: 20px; color: black;">
@@ -77,21 +79,21 @@
 							</c:if>
 
 						</div>
-
+					<div class="table_align">
 						<div class="table-responsive">
-							<table class="table">
+							<table class="table_board">
 								<thead>
-									<tr>
-										<th>번호</th>
-										<th>제목</th>
-										<th>닉네임</th>
-										<th>작성일</th>
+									<tr class="board_tr">
+										<th class="board_no">번호</th>
+										<th class="board_title">제목</th>
+										<th class="board_nick">닉네임</th>
+										<th class="board_date">작성일</th>
 									</tr>
 								</thead>
 								<tbody>
 									<c:set var="cnt" value="${fn:length(vo)}" />
 									<c:forEach var="vo" items="${list}">
-										<tr>
+										<tr class="board_value">
 											<td>${cnt}</td>
 											<td><a
 												href="${cpath}/boardContent.do?board_no=${vo.board_no}">${vo.title}</a></td>
@@ -103,7 +105,7 @@
 								</tbody>
 							</table>
 						</div>
-
+					</div>
 					</div>
 
 				</div>

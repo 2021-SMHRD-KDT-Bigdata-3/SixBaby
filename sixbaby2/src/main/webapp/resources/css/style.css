@@ -659,7 +659,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .col-sm-offset-13 {
     }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
 
   .col-md-1 {
@@ -672,7 +672,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 13%; }
 
   .col-md-4 {
-    position: relative; left:200px;}
+    margin-inline: auto;}
 
   .col-md-5 {
     width: 41.6666666667%; }
@@ -697,6 +697,9 @@ form input[type="submit"], form button, form input[type="reset"] {
 
   .col-md-12 {
     width: 100%; }
+  
+  .col-md-13{
+  }  
     
   .col-md-pull-0 {
     right: auto; }
@@ -1438,12 +1441,10 @@ form input[type="submit"], form button, form input[type="reset"] {
     margin-right: 20px; }
 
 .family {
-  margin-left: 110px;
+  margin-inline: auto;
   width: 33.333%;
-  float: left;
   padding: 0 15px;
-  text-align: center;
-  margin-bottom: 30px; }
+  text-align: center;}
   @media screen and (max-width: 640px) {
     .family {
       width: 50%; } }
@@ -1626,7 +1627,7 @@ ul.bullet {
 #modal_secession h2{
           margin:0;
         }
-#modal_secession button {
+#modal_secession #modal_close_btn_secession {
           display:inline-block;
           width:100px;
           margin-left:calc(100% - 100px - 10px);
@@ -1669,7 +1670,7 @@ ul.bullet {
 #modal_baby h2{
           margin:0;
         }
-#modal_baby button {
+#modal_baby #modal_close_btn_baby {
           display:inline-block;
           width:100px;
           margin-left:calc(100% - 100px - 10px);
@@ -1776,4 +1777,78 @@ ul.bullet {
 
 .detail_value {
 	border-radius:12px;
+}
+
+.write_category {
+	border: solid 2px #E63F39;
+	border-radius: 12px;
+	width: 20%;
+    text-align-last: center;
+}
+
+.board_align {
+	text-align: center;
+}
+
+.board_write {
+	margin-bottom: 20px;
+}
+
+.table_align {
+	text-align: center;
+}
+
+.table_board {
+	margin-inline: auto;
+}
+
+.board_tr {
+	border-top: solid 2px #8f7655;
+    border-bottom: solid 2px #8f7655;
+}
+
+.board_value {
+    border-bottom: solid 1px #8f7655;
+}
+
+.board_no {
+	width:5%;
+}
+
+.board_title {
+	width:40%;
+}
+
+.board_nick {
+	width:22%;
+}
+
+.board_date {
+	width:12%;
+}
+
+.correct {
+	margin-bottom: 20px;
+}
+
+.correct_btn {
+	background: white;
+    border: solid 2px #8f7655 !important;
+    border-radius: 12px;
+}
+
+.correct_tr {
+	height:60px;
+}
+
+.correct_th {
+	width: 50%;
+}
+
+.correct_btn2 {
+	text-align:center;
+}
+
+.correct_tr_term {
+	border-bottom: 16px solid #fff;
 }
