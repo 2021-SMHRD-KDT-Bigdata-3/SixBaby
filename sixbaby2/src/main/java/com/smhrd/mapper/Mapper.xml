@@ -104,7 +104,7 @@
 		condition_date)
 		values(#{condition_num},#{baby_num},#{conditions},#{condition_date})
 	</insert>
-	<select id="babyconditionCheck"
+	<select id="babyconditionCheck" 
 		resultType="com.smhrd.mapper.BabyconditionVO">
 		<!-- select * from babycondition where baby_num=#{baby_num} -->
 	</select>
