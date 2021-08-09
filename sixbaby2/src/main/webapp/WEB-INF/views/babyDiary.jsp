@@ -27,14 +27,19 @@
       <![endif]-->
       
 <style type="text/css">
-	.picture{
+	.fileDrop{
 		width : 200px;
 		height : 100px;
-		border : 1px dotted pink;
+		border : 1px solid pink;
 		position : relative;
 	}
 	.hidden{
 		display : none;
+	}
+	.img_detail {
+		width : 250px;
+		height : 250px;
+		object-fit : cover;
 	}
 </style>
 </head>
@@ -89,7 +94,7 @@
 							<label class="control-label col-sm-2">내용</label>
 							<textArea rows="5" class="form-control" name="contents" placeholder="Enter contents"></textArea>
 						</div>
-						<div class="picture">
+						<div class="fileDrop">
 								<input type="hidden" name=picture>
 						</div>
 					</div>

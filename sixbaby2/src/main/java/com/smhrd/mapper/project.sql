@@ -36,7 +36,7 @@ primary key(condition_num));
 create table diary
 (id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
 title varchar(50) not null, contents varchar(1000) not null,
-diary_data varchar(50), picture varchar(50),
+diary_data varchar(50), picture varchar(2000),
 primary key(diary_no));
 
 insert into member
