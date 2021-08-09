@@ -6,9 +6,6 @@ import lombok.Data;
 public class BabyconditionVO {
 	private int condition_num;
 	private int baby_num;
-	private int hungry;
-	private int pup;
-	private int burping;
-	private int cold_hot;
+	private String conditions;
 	private String condition_date;
 }

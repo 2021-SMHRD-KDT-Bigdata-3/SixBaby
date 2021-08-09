@@ -22,12 +22,11 @@
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
-<!-- <script>
+<script>
 	  
-      var cnt = 0;
-      function getComment(board_no){
+      function analysis(conditions){
            $.ajax({
-              url : "${cpath}/commentList.do?board_no="+board_no,
+              url : "${cpath}/cryAnalysis.do?conditions="+conditions,
               type : "get",
               dataType : "json",
               success : resultHtml,
@@ -35,40 +34,29 @@
            });
         }
       function resultHtml(data){
-           if(cnt%2==0){
-              var result = "<table class='comment_table'>";
+              var result = "<table>";
               result+="<tr>";
-              result+="<td>댓글번호</td>";
-              result+="<td>닉네임</td>";
-              result+="<td>내용</td>";
-              result+="<td>추천수</td>";
-              result+="<td>비고</td>";
+              result+="<td>배고픔</td>";
+              result+="<td>배변</td>";
+              result+="<td>트림</td>";
+              result+="<td>온도</td>";
               result+="</tr>";
               $.each(data, (index,obj)=>{
+            	  result+="<tr>";
+                  result+="<td rowspan=4>우는 이유 : "+obj.conditions+"</td>";
+                  result+="</tr>";
+            	  result+="<tr>";
+                  result+="<td rowspan=4>"+obj.exp+"</td>";
+                  result+="</tr>";
                   result+="<tr>";
-                  result+="<td>"+obj.comment_no+"</td>";
-                  result+="<td>"+obj.nickname+"</td>";
-                  result+="<td>"+obj.contents+"</td>";
-                  result+="<td>"+obj.likes+"</td>";
-	              if(obj.nickname==$("#mem").val()){
-	           	      result+="<td><a href='${cpath}/commentDelete.do?board_no="+$("#num").val()+"&comment_no="+obj.comment_no+"'>삭제</a></td>";
-	           	      return true;
-	              }
+                  result+="<td rowspan=4>"+obj.solu+"</td>";
 	              result+="</tr>";
-              });
-              result+="</table>";
-              cnt++;
-           }else{
-              var result = "";
-              cnt++;
-           }
-           $("#comment").html(result);
+              	  result+="</table>";
+       	     });
+             $("#reason").html(result);
         }
       
-      function goDel(board_no, category){
-      	location.href="${cpath}/boardDelete.do?board_no="+board_no+"&cate="+category;
-      }
-      </script> -->
+      </script>
 </head>
 <body>
 
@@ -85,12 +73,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="content col-md-8">
-						<h1>울지마라쫌</h1>
 
+						<h3>아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
 
-
-
-
+						<c:set var="vo" value="${vo}" />
+						<c:set var="hung" value="hungry" />
+						<h1>
+							<button type="button" onclick="analysis('${hung}')">울음분석하기(클릭!)</button>
+						</h1>
+						<div id="reason">--여기에 우는이유/설명/해결책 뜰거임---</div>
 
 					</div>
 				</div>
