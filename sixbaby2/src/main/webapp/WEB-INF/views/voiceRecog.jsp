@@ -35,21 +35,30 @@
 		});
 	}
 	function resultHtml(data) {
-		var result = "<table>";
-		result += "<tr>";
+		var result = "<table class='voice_table'>";
+		//result+="<tr>";
 		//result+="<td>배고픔</td>";
 		//result+="<td>배변</td>";
 		//result+="<td>트림</td>";
 		//result+="<td>온도</td>";
 		//result+="</tr>";
-		result += "<tr>";
-		result += "<td>우는 이유 : " + data.conditions + "</td>";
+		result += "<tr class='voice_tr'>";
+		result += "<td>우는 이유</td>";
 		result += "</tr>";
 		result += "<tr>";
-		result += "<td>설명 : " + data.exp + "</td>";
+		result += "<td class='voice_td'>"+ data.conditions + "</td>";
+		result += "</tr>";
+		result += "<tr class='voice_tr'>";
+		result += "<td>설명</td>";
 		result += "</tr>";
 		result += "<tr>";
-		result += "<td>해결책 : " + data.solu + "</td>";
+		result += "<td class='voice_td'>" + data.exp + "</td>";
+		result += "</tr>";
+		result += "<tr class='voice_tr'>";
+		result += "<td>해결책</td>";
+		result += "</tr>";
+		result += "<tr>";
+		result += "<td class='voice_td'>" + data.solu + "</td>";
 		result += "</tr>";
 		result += "</table>";
 		$("#reason").html(result);
@@ -70,16 +79,16 @@
 		<div class="fullwidth-block">
 			<div class="container">
 				<div class="row">
-					<div class="content col-md-8">
+					<div class="content col-md-8 voice_align">
 
 						<h3>아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
 
 						<c:set var="vo" value="${vo}" />
 						<c:set var="cond" value="${ddong}" />
 						<h1>
-							<button type="button" onclick="analysis('${cond}')">울음분석하기(클릭!)</button>
+							<button class="voice_btn" type="button" onclick="analysis('${cond}')">울음분석하기(클릭!)</button>
 						</h1>
-						<div id="reason">--여기에 우는이유/설명/해결책 뜰거임---</div>
+						<div id="reason"></div>
 
 					</div>
 				</div>

@@ -2002,3 +2002,26 @@ ul.bullet {
 	margin-bottom: 20px;
 	text-align: center;
 }
+
+.voice_align {
+	text-align: center;
+}
+
+.voice_btn {
+	background: white;
+    border: solid 2px #8f7655;
+    border-radius: 12px;
+}
+
+.voice_table {
+    display: inline;
+    margin-inline: auto;
+}
+
+.voice_td {
+	font-size: 30px;
+}
+
+.voice_tr {
+	height: 40px;
+}
