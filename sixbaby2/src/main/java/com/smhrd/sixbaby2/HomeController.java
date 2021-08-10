@@ -33,6 +33,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 import com.smhrd.mapper.SolutionVO;
 
+@Controller
 @SessionAttributes({ "loginMember", "conditions", "selectedDiary", "diaryList" })
 public class HomeController {
 
