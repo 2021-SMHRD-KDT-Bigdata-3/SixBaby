@@ -195,6 +195,7 @@ public class HomeController {
 	@RequestMapping("/diaryContent.do")
 	public String diaryContent(DiaryVO diary, Model model) {
 		List<DiaryVO> vo = mapper.diaryContent(diary);
+		System.out.println(vo);
 		model.addAttribute("diaryList", vo);
 		return "redirect:/diaryList.do";
 	}
@@ -219,6 +220,7 @@ public class HomeController {
 
 	@PostMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
+		System.out.println(vo);
 		mapper.diaryInsert(vo);
 		return "forward:/babyDiary.do";
 	}

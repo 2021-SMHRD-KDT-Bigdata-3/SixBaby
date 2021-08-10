@@ -12,9 +12,9 @@
 	</div>
 	<div class="form-group">
 		<label class="control-label col-sm-2">내용</label>
+		<div class="picture">
+			<img class="diary_detail" src="imgDisplay.do?fileName=${selectedDiary.picture}">
+		</div>
 		<textArea class="diary_detail" rows="5" class="form-control" name="contents" placeholder="Enter contents" readonly>${selectedDiary.contents }</textArea>
-	</div>
-	<div class="picture">
-		<img class="diary_detail" src="${selectedDiary.picture}">
 	</div>
 </div>

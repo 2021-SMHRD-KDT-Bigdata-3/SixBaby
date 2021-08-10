@@ -81,15 +81,20 @@
 	</delete>
 
 	<!-- 6. 육아일기(열람, 작성, 수정) -->
-	<select id="diaryContent" parameterType="int"
+	<select id="diaryContent" parameterType="com.smhrd.mapper.DiaryVO"
 		resultType="com.smhrd.mapper.DiaryVO"> <!-- 다시 작성 -->
 		select * from diary
-		where diary_no=#{diary_no}
+		where id like #{id}
+		and diary_data like #{diary_data}
+	</select>
+	<select id="diaryDetail" parameterType="com.smhrd.mapper.DiaryVO" resultType="com.smhrd.mapper.DiaryVO">
+		select * from diary
+		where diary_no = #{diary_no}
 	</select>
 	<insert id="diaryInsert"
 		parameterType="com.smhrd.mapper.DiaryVO">
-		insert into comments(baby_no, title, contents, picture)
-		values(#{baby_no},#{title},#{contents},#{picture})
+		insert into diary(id, baby_no, title, contents, diary_data, picture)
+		values(#{id},#{baby_no},#{title},#{contents},#{diary_data},#{picture})
 	</insert>
 	<update id="diaryUpdate"
 		parameterType="com.smhrd.mapper.DiaryVO">

@@ -68,7 +68,6 @@ select * from comments;
 
 select * from diary;
 
-drop table diary;
 
 select * from babycondition;
 
