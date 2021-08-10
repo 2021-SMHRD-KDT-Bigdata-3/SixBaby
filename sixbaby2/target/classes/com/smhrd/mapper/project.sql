@@ -32,9 +32,9 @@ primary key(comment_no));
 
 --# 육아일기 테이블
 create table diary
-(diary_no int not null auto_increment, baby_no int not null,
+(id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
 title varchar(50) not null, contents varchar(1000) not null,
-diary_data datetime default now(), picture varchar(50),
+diary_data varchar(50), picture varchar(2000),
 primary key(diary_no));
 
 --# 아기상태 테이블 (condition - hungry/pup/burping/cold_hot 이렇게 4종류 데이터 들어갈거임!)
@@ -68,12 +68,14 @@ select * from comments;
 
 select * from diary;
 
+drop table diary;
+
 select * from babycondition;
 
 select * from solution;
 
 insert into comments
-values('1','1','꼬꼬','응애응애','3');
+values('4','4','꼬꼬','가나다라마바사아자차카파타하가갸거겨고교구규구구구구구구구구구구구구구','3');
 insert into comments
 values('2','2','꼬꼬오오오오','응애응애애애애애애애애','2');
 insert into comments

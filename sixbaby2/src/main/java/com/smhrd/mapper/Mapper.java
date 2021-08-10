@@ -30,7 +30,8 @@ public interface Mapper {
 	public void commentDelete(int comment_no);
 	
 	//5. ¿∞æ∆¿œ±‚
-	public DiaryVO diaryContent(int diary_no);
+	public List<DiaryVO> diaryContent(DiaryVO vo);
+	public DiaryVO diaryDetail(int diary_no);
 	public void diaryInsert(DiaryVO vo);
 	public void diaryUpdate(DiaryVO vo);
 	

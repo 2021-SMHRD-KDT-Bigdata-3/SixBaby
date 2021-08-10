@@ -33,9 +33,7 @@ import com.smhrd.mapper.Mapper;
 import com.smhrd.mapper.MemberVO;
 import com.smhrd.mapper.SolutionVO;
 
-@Controller
-
-@SessionAttributes({ "loginMember", "conditions" })
+@SessionAttributes({ "loginMember", "conditions", "selectedDiary", "diaryList" })
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -145,7 +143,7 @@ public class HomeController {
 	}
 
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardsVO vo) {
+	public String boardUpdate(Model model, BoardsVO vo) {
 		mapper.boardUpdate(vo);
 		System.out.println(vo);
 		String result = "";
@@ -194,22 +192,48 @@ public class HomeController {
 
 	// 5. 육아일기(열람, 작성, 수정)
 	@RequestMapping("/diaryContent.do")
-	public String diaryContent(@RequestParam("diary_no") int diary_no, Model model) {
-		DiaryVO vo = mapper.diaryContent(diary_no);
-		model.addAttribute("vo", vo);
-		return "redirect:/babydiary.do";
+	public String diaryContent(DiaryVO diary, Model model) {
+		List<DiaryVO> vo = mapper.diaryContent(diary);
+		model.addAttribute("diaryList", vo);
+		return "redirect:/diaryList.do";
 	}
 
-	@RequestMapping("/diaryInsert.do")
+	@RequestMapping("/diaryList.do")
+	public String diaryList() {
+		return "showDiaryList";
+	}
+
+	@RequestMapping("/diaryDetail.do")
+	public String diaryDetail(int diary_no, Model model) {
+		DiaryVO vo = mapper.diaryDetail(diary_no);
+		System.out.println(vo);
+		model.addAttribute("selectedDiary", vo);
+		return "forward:/showDiaryDetail.do";
+	}
+
+	@RequestMapping("/showDiaryDetail.do")
+	public String showDiaryDetail() {
+		return "showDiaryDetail";
+	}
+
+	@PostMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
 		mapper.diaryInsert(vo);
-		return "redirect:/babydiary.do";
+		return "forward:/babyDiary.do";
 	}
 
 	@RequestMapping("/diaryUpdate.do")
-	public String diaryUpdate(DiaryVO vo) {
+	public String diaryUpdate(DiaryVO vo, Model model) {
 		mapper.diaryUpdate(vo);
-		return "redirect:/babydiary.do";
+		DiaryVO updatedDiaryVO = mapper.diaryDetail(vo.getDiary_no());
+		System.out.println(updatedDiaryVO);
+		model.addAttribute("selectedDiary", updatedDiaryVO);
+		return "forward:/showDiaryDetail.do";
+	}
+
+	@RequestMapping("/showDiaryUpdate.do")
+	public String showDiaryUpdate() {
+		return "showDiaryUpdate";
 	}
 
 	// 6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
@@ -246,7 +270,7 @@ public class HomeController {
 		return "mypage";
 	}
 
-	@RequestMapping("/boardWrite.do")
+	@RequestMapping(value = "/boardWrite.do")
 	public String boardWrite(@RequestParam("cate") String cate, Model model) {
 		model.addAttribute("cate", cate);
 		return "boardWrite";
@@ -288,6 +312,11 @@ public class HomeController {
 		String id = mem.getId();
 		model.addAttribute("conditions", conditions);
 		mapper.babyconditionInsert(conditions, id);
+	}
+
+	@RequestMapping("/babyDiary.do")
+	public String babyDiary() {
+		return "babyDiary";
 	}
 
 	@RequestMapping(value = "/voiceRecog.do")
