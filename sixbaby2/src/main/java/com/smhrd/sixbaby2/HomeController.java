@@ -35,7 +35,7 @@ import com.smhrd.mapper.SolutionVO;
 
 @Controller
 
-@SessionAttributes({"loginMember","conditions"})
+@SessionAttributes({ "loginMember", "conditions" })
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -213,19 +213,19 @@ public class HomeController {
 	}
 
 	// 6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
-	@RequestMapping("/babyconditionInsert.do")
-	public String babyconditionInsert(BabyconditionVO vo) {
-		mapper.babyconditionInsert(vo);
-		return "redirect:/voiceRecog.do";
-	}
-	
+//	@RequestMapping("/babyconditionInsert.do")
+//	public String babyconditionInsert(BabyconditionVO vo) {
+//		mapper.babyconditionInsert(vo);
+//		return "redirect:/voiceRecog.do";
+//	}
+
 	@RequestMapping("/babyconditionCheck.do")
 	public String babyconditionCheck(BabyconditionVO vo, Model model) {
 		mapper.babyconditionCheck(vo);
 		model.addAttribute("vo", vo);
 		return "redirect:/mypage.do";
 	}
-	
+
 	@RequestMapping("/cryAnalysis.do")
 	public @ResponseBody SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
 		SolutionVO solution = mapper.cryAnalysis(conditions);
@@ -280,10 +280,19 @@ public class HomeController {
 		return "babyCorrection";
 	}
 
+	@RequestMapping("/babyconditionInsert.do")
+	public void babyconditionInsert(HttpServletRequest request, @RequestParam("conditions") String conditions,
+			Model model) {
+		HttpSession session = request.getSession();
+		MemberVO mem = (MemberVO) session.getAttribute("loginMember");
+		String id = mem.getId();
+		model.addAttribute("conditions", conditions);
+		mapper.babyconditionInsert(conditions, id);
+	}
+
 	@RequestMapping(value = "/voiceRecog.do")
-	public String voiceRecog(@RequestParam("condi") String condi, Model model) { //Flask에서 데이터 받아옴
-		model.addAttribute("conditions", condi);
-		
+	public String voiceRecog(/* @RequestParam("condi") String condi, Model model */) { // Flask에서 데이터 받아옴
+		// model.addAttribute("conditions", condi);
 		System.out.println("성공");
 		return "voiceRecog";
 	}

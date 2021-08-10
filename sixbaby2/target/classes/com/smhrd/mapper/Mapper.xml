@@ -100,9 +100,8 @@
 	<!-- 7. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인) -->
 	<insert id="babyconditionInsert"
 		parameterType="com.smhrd.mapper.BabyconditionVO">
-		insert into babycondition(condition_num, baby_num, conditions,
-		condition_date)
-		values(#{condition_num},#{baby_num},#{conditions},#{condition_date})
+		insert into babycondition(id, conditions)
+		values(#{id},#{conditions})
 	</insert>
 	<select id="babyconditionCheck" 
 		resultType="com.smhrd.mapper.BabyconditionVO">
