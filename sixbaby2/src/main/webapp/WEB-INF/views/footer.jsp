@@ -3,13 +3,14 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <body>
+<br>
    <footer class="site-footer" style="background: white;">
       <div class="container">
          <div class="row">
                <div class="col-md-4">
                   <div class="widget" style="text-align:center">
                      <small class="slide-subtitle"
-                        style="color: black; position: relative; font-size: 15px; font-Family:'NanumSquareRound'; font-size:20px;">Sixbaby</small>
+                        style="color: black; position: relative;font-Family:'NanumSquareRound'; font-size:20px; font-weight:700;">Sixbaby</small>
                      <br> <br>
 
                      <h2 class="widget-title"

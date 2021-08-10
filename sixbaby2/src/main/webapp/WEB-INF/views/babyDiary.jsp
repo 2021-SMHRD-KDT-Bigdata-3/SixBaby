@@ -44,12 +44,12 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
 				<h2 class="page-title">Diary</h2>
 			</div>
 		</div>
-
+		<br><br>
 		<div class="fullwidth-block">
 			<div class="container">
 				<div class="row">
@@ -61,16 +61,18 @@
 
 					<div id="modal_diary_select_month" class="hidden">
 						<div class="modal_content slt_month">
-							<h2 class="sub_tit_txt">작성월</h2>
+							<h2 class="sub_tit_txt">Month</h2>
+							<br>
 							<input class="id" type="hidden" value="${loginMember.id }">
 							<c:forTokens var="month"
-								items="01,02,03,04,05,06,07,08,09,10,11,12" delims=",">
-								<button class="month" value="2021-${month}%">${month}월</button>
+								items="JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,,SEP,OCT,NOV,DEC" delims=",">
+								<button class="month" value="2021-${month}%">${month}</button>
 							</c:forTokens>
 						</div>
 					</div>
-
-					<div id="modal_diary_list" class="table-responsive hidden">
+					<br>
+					<!-- 확인필요 -->
+					 <div id="modal_diary_list" class="table-responsive hidden">
 						<table class="table diary_table">
 							<thead class="diary_table_head">
 								<tr>
@@ -81,6 +83,7 @@
 							<tbody id="diaryList">
 							</tbody>
 						</table>
+						<br>
 						<div class="btn_wrap">
 							<button type="button" id="modal_back_btn_diary">뒤로가기</button>
 						</div>
@@ -94,6 +97,7 @@
 										<input type="hidden" name="id" value="${loginMember.id }">
 										<div class="">
 											<div class="form-group">
+											<br>
 												<label class="control-label col-sm-2">제목</label> <input
 													type="text" class="form-control" name="title"
 													placeholder="Enter title">
@@ -105,7 +109,7 @@
 											</div>
 											<div class="form-group">
 										<label class="control-label col-sm-2" for="input-file"
-											style="font-weight: bold; font-size: 16;">사진 첨부</label> <input
+											style="font-weight: bold; font-size: 16; color: #666666">사진 첨부</label> <input
 											type="file" id="input-file" name="picture">
 									</div>
 										</div>

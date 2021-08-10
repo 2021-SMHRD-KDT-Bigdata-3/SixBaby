@@ -30,32 +30,13 @@ ul, li {
 
    height: 100%;
    position:absolute;left:0;right:0;top:0;bottom:0;opacity:0;
-
-	height: 100%;
-
-
+}
 
 .slide li:nth-child(1) {
-
-  background: #faa;
-
-
+   background: #FEEBF2;
 }
-
 .slide li:nth-child(2) {
-
-   background: #FDDBDB;
-
-}
-
-.slide li:nth-child(3) {
-	background: #aaf;
-}
-
-
-
-.slide li:nth-child(4) {
-	background: #faf;
+	background: #FEEBF2;
 }
 
 </style>
@@ -132,32 +113,15 @@ window.onload = function () {
  <!-- 페이드 슬라이드 배너 -->
       <div class="slide" style="height: 400px; width: 100%;">
          <ul>
-            <li style="font-family:'NanumSquareRound'; font-size:20px; text-align: center;">  
-           	 <div class="container">
-				<h2 class="page-title" style="text-align:center">Community</h2>
-			 </div>
+            <li>
+            <img src="${cpath}/resources/images/test.png" alt="" class="logo"style="height: 350px; width: 65%; position:absolute; left:200px; bottom:50px;">
 			</li>
-			 <li style="font-family:'NanumSquareRound'; font-size:20px;">  
-           	 <div class="container">
-				<h2 class="page-title" style="text-align:center">메롱</h2>
-			 </div>
-			</li>
-			 <li style="font-family:'NanumSquareRound'; font-size:20px;">  
-           	 <div class="container">
-				<h2 class="page-title" style="text-align:center">뿅</h2>
-			 </div>
+			<li>
+			<img src="${cpath}/resources/images/test0.png" alt="" class="logo"style="height: 350px; width: 65%; position:absolute; left:200px; bottom:50px;">
 			</li>
          </ul>
 
-		<!-- 페이드 슬라이드 배너 -->
-		<div class="slide" style="height: 400px; width: 100%;">
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
+
 
       <div id="modal_login">
          <div class="modal_content"
@@ -175,19 +139,19 @@ window.onload = function () {
                      <tbody>
                         <form action="${cpath}/login.do" method="post">
                            <tr>
-                              <th><span style="position: relative; left: 70px;">아이디</span></th>
-                              <td style="position: relative; left: 70px;"><input
-                                 type="text" name="id" placeholder="ID 를 입력하세요."><br></td>
+                              <th><span style="position: relative;">아이디</span></th>
+                              <td ><input
+                                 type="text" name="id" placeholder="ID 를 입력하세요." style="border:1px solid #FDDBDB; width:250px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"><br></td>
                                  <br>
                            </tr>
                            <tr>
-                              <th><span style="position: relative; left: 70px;">비밀번호</span></th>
-                              <td style="position: relative; left: 70px;"><input
-                                 type="password" name="pw" placeholder="PW 를 입력하세요"><br></td>
+                              <th><span style="position: relative;">비밀번호</span></th>
+                              <td><input
+                                 type="password" name="pw" placeholder="PW 를 입력하세요"style="border:1px solid #FDDBDB; width:250px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"><br></td>
                            </tr>
                            <tr>
                               <td><button type="submit" id="login-btn"
-                                    style="border: solid white; background: white; position: relative; left: 200px; font-size:20px; color:#666666; font-family:'NanumSquareRound';">확인</button><br></td>
+                                    style="border: solid white; background: white; position: relative; left: 200px; font-size:20px; color:#666666; font-family:'NanumSquareRound'; position:relative; right:80px;">확인</button><br></td>
                            </tr>
                         </form>
                      </tbody>
@@ -251,11 +215,11 @@ window.onload = function () {
 		<div id="modal_join">
 
 			<div class="modal_content"
-				style="background: white; border-radius: 12px; border: 1px solid #E63F39;">
+				style="background: white; border-radius: 12px; border: 1px solid #FDDBDB;">
 				<form action="${cpath}/memberInsert.do" method="post">
 					<div class="form_txtInput">
 						<button type="button" id="modal_close_btn_join"
-							style="background: white; border-radius: 12px; border: 1px solid #E63F39;">닫기</button>
+							style="background: white; border-radius: 12px; border: 1px solid #FDDBDB;">닫기</button>
 						<h2 class="sub_tit_txt" style="position: relative; left: 170px;">회원가입</h2>
 						<p class="exTxt"
 							style="position: relative; left: 120px; color: #666666;">정보를

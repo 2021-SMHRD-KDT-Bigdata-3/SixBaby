@@ -23,22 +23,7 @@
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
-<style>
-table, th, td{
-border:1px solid;
-margin:0 auto; /*가운데 배치하는 속성*/
-font-family:'NanumSquareRound';
-}
 
- tr,td{
- font-family:'NanumSquareRound';
- padding:10px; 
-
- }
- th{
-  text-align:center;
- }
-</style>
 </head>
 <body>
 	<div class="site-content">
@@ -46,7 +31,7 @@ font-family:'NanumSquareRound';
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
 				<h2 class="page-title">Community</h2>
 			</div>
@@ -72,10 +57,10 @@ font-family:'NanumSquareRound';
 						<c:set var="vo" value="${list}" />
 						<c:if test="${vo[0].category eq 'free'}">
 
-							<h2 class="section-title" style="text-align:center">자유게시판</h2>
+							
 
 							<div class="board_align">
-							<h2 class="section-title">자유게시판</h2>
+							<h2 class="section-title" style="text-align:center">자유게시판</h2>
 							</div>
 
 						</c:if>
@@ -94,19 +79,16 @@ font-family:'NanumSquareRound';
 
 
 						<div class="board_write" align="right">
-
+							&nbsp;&nbsp;&nbsp;<br>	
 							<c:if test="${vo[0].category ne 'tip'}">
-
 								<button type="button"
 									style="background: white; border:1px solid white; border-radius: 12px; font-size: 20px; color: black; position:absolute;">
 									<span class="site-title"><a href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 								</button>
-
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border: 2px solid white; font-size: 20px; color: black;">
-										<span class="site-title"><a
-											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
+										style="background: white; border-radius: 12px; border: 2px solid  #FDDBDB; font-size: 18px; box-shadow: 1px 1px 3px 1px #dadce0; color: #666666;">
+										<span class="site-title"><a href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>
 								</c:if>
 

@@ -215,7 +215,7 @@ html {
 body {
   color: black;
   font-family: 'NanumSquareRound';
-  font-size:18px;
+  font-size:20px;
  
    }
 
@@ -243,8 +243,9 @@ address {
 
 p {
   margin-top: 0;
-  color:darkgray;
-  font-weight:400; }
+  color:#666666;
+  font-weight:100;
+  font-size:18px; }
 
 form input, form textarea, form select {
 	width: 100%;
@@ -270,11 +271,12 @@ form input[type="submit"], form button, form input[type="reset"] {
   background: -webkit-linear-gradient(#e2caae, #c39f70);
   background: linear-gradient(#e2caae, #c39f70);
   padding:1px;
-  color: #666666;
+  color: black;
   text-transform: uppercase;
   font-size:10px;
   font-family: 'NanumSquareRound';
-  line-height: normal; }
+  line-height: normal; 
+  }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
     background: -webkit-linear-gradient(#e3dfda, #d0cbc4);
@@ -1304,11 +1306,10 @@ form input[type="submit"], form button, form input[type="reset"] {
   padding: 50px;
   text-align: center; }
   .page-head .page-title {
-    font-weight: 100;
-    font-size: 72px;
-    font-size: 5.1428571429em;
+    font-weight: 400px;
+    font-size: 60px;
     margin-bottom: 0;
-    color: white;
+    color: #666666;
     word-break: break-word; }
     @media screen and (max-width: 640px) {
       .page-head .page-title {
@@ -1322,7 +1323,6 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-family:'NanumSquareRound';
     font-weight:800;
     text-transform: uppercase;
-    color:#E63F39;
      }
 
 .news {
@@ -1485,7 +1485,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     }
     .arrow li a {
       display: block;
-      color: #89837c;
+      color: #666666;
       -webkit-transition: .3s ease;
               transition: .3s ease; }
       .arrow li a:hover {
@@ -1545,7 +1545,9 @@ ul.bullet {
         }
         
 #modal_join h2 {
-          margin:0;
+            margin:5px;
+          font-size:23px;
+          font-weight:700;
         }
 #modal_join button {
           display:inline-block;
@@ -1558,8 +1560,8 @@ ul.bullet {
           width:450px;
           margin:100px auto;
           padding:20px 10px;
-          background:#fff;
-          border:2px solid #666;
+          background:white;
+          border:2px solid #FDDBDB;
           position:relative;
           bottom:500px;
         }
@@ -1587,7 +1589,9 @@ ul.bullet {
         }
         
 #modal_login h2{
-          margin:0;
+             margin:5px;
+          font-size:23px;
+          font-weight:700;
         }
 #modal_login button {
           display:inline-block;
@@ -1599,8 +1603,8 @@ ul.bullet {
           width:450px;
           margin:100px auto;
           padding:20px 10px;
-          background:#fff;
-          border:2px solid #666;
+          background:white;
+          border:2px solid #FDDBDB;
           position:relative;
           bottom:500px;
         }
@@ -1628,7 +1632,10 @@ ul.bullet {
         }
         
 #modal_secession h2{
-          margin:0;
+          margin:5px;
+          font-size:23px;
+          font-weight:700;
+          
         }
 #modal_secession #modal_close_btn_secession {
           display:inline-block;
@@ -1641,8 +1648,9 @@ ul.bullet {
           width:450px;
           margin:100px auto;
           padding:20px 10px;
-          background:#fff;
-          border:2px solid #666;
+          background:white;
+          border:2px solid #FDDBDB;
+          border-radius: 12px;
           position:relative;
           bottom:500px;
           left:0px;
@@ -1671,7 +1679,10 @@ ul.bullet {
         }
         
 #modal_baby h2{
-          margin:0;
+            margin:5px;
+          font-size:23px;
+          font-weight:700;
+          
         }
 #modal_baby #modal_close_btn_baby {
           display:inline-block;
@@ -1684,11 +1695,12 @@ ul.bullet {
           width:450px;
           margin:100px auto;
           padding:20px 10px;
-          background:#fff;
-          border:2px solid #666;
+          background:white;
+          border:2px solid #FDDBDB;
           position:relative;
           bottom:500px;
           left:0px;
+          border-radius: 12px;
         }
         
 #modal_baby .modal_layer {
@@ -1715,6 +1727,10 @@ ul.bullet {
 #modal_open_btn_secession {
 	border: 0;
 	background-color:white;
+	 border: solid 1px white;
+    position: relative; left:300px;
+    font-size:18px;
+    
 }
 
 .comment_input {
@@ -1730,7 +1746,7 @@ ul.bullet {
 
 .comment_form {
 	margin-top: 10px;
-	border: 1px solid #E63F39;
+	border: 1px solid #FDDBDB;
 	border-radius: 12px;
 	
 }
@@ -1782,13 +1798,16 @@ ul.bullet {
 
 .detail_value {
 	border-radius:12px;
+
 }
 
 .write_category {
-	border: solid 2px #E63F39;
+	border: solid 1px white;
 	border-radius: 12px;
 	width: 20%;
     text-align-last: center;
+    font-size:20px;
+   
 }
 
 .board_align {
@@ -1808,12 +1827,12 @@ ul.bullet {
 }
 
 .board_tr {
-	border-top: solid 2px #8f7655;
-    border-bottom: solid 2px #8f7655;
+	border-top: solid 2px #666666;
+    border-bottom: solid 2px #666666;
 }
 
 .board_value {
-    border-bottom: solid 1px #8f7655;
+    border-bottom: solid 1px #FDDBDB;
 }
 
 .board_no {
@@ -1838,8 +1857,11 @@ ul.bullet {
 
 .correct_btn {
 	background: white;
-    border: solid 2px #8f7655 !important;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    padding:5px;
+    width:150px;
+    font-size:18px;
 }
 
 .correct_tr {
@@ -1866,15 +1888,23 @@ ul.bullet {
 .select {
 	margin-right: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 1px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:15px;
+    width: 150px;
 }
 
 .write {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:15px;
+    width: 150px;
 }
 
 #modal_diary_select_month {
@@ -1884,7 +1914,8 @@ ul.bullet {
 .slt_month {
 	display: inline-block;
 	border-radius: 12px;
-	width: 70px;
+	/*width: 70px;*/
+	padding:10px;
 	
 }
 
@@ -1898,35 +1929,50 @@ ul.bullet {
 
 .month {
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
     margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:25px;
+    width: 180px;
+    font-weight:800;
 }
 
-.write_table {
-	border: solid 2px #8f7655;
+/*.write_table {
+	border: 1px solid #FDDBDB;
 	border-radius: 12px;
-}
+}*/
 
 .write_table2 {
 	width: 66.6666666667%;
     margin-inline: auto;
-	border: solid 2px #8f7655;
+	border: solid 1px #FDDBDB;
 	border-radius: 12px;
 }
 
 #modal_insert_btn_dairy {
 	margin-right: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:15px;
+    width: 150px;
 }
 
 #modal_close_btn_dairy_insert {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:15px;
+    width: 150px;
+    
+    
 }
 
 .diary_table {
@@ -1935,36 +1981,42 @@ ul.bullet {
 }
 
 .diary_table_head {
-	border-top: solid 2px #8f7655;
-	border-bottom: solid 2px #8f7655;
+	border-top: solid 2px #FDDBDB;
+	border-bottom: solid 2px #FDDBDB;
 }
 
 #diaryList tr {
-  border-bottom:solid 1px #8f7655;
+  border-bottom:solid 1px #666666;
 }
 
 .btn_wrap {
 	margin-top: 20px;
 	text-align: center;
+	
 }
 
 #modal_back_btn_diary {
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size:18px;
+    padding:5px;
+    width: 100px;
+    font-weight:500;
 }
 
 #modal_back_btn_diary_list {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #666666;
     border-radius: 12px;
 }
 
 #modal_detail_btn_diary {
 	margin-right: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #666666;
     border-radius: 12px;
 }
 
@@ -1979,7 +2031,7 @@ ul.bullet {
 #modal_update_btn_dairy {
 	margin-right: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #666666;
     border-radius: 12px;
 }
 
@@ -1987,13 +2039,13 @@ ul.bullet {
 	margin-right: 10px;
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #666666;
     border-radius: 12px;
 }
 
 #modal_back_btn_dairy_detail {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #666666;
     border-radius: 12px;
 }

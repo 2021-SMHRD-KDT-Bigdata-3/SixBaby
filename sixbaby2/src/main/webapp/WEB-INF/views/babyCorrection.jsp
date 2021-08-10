@@ -28,7 +28,7 @@
 
 				<%@ include file="header.jsp"%>
 
-			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			<div class="page-head" data-bg-image="${cpath}/resources/images/bg.png">
 				<div class="container">
 					<h2 class="page-title">아이 정보 수정</h2>
 				</div>
@@ -49,15 +49,16 @@
 							              <tbody>
 							              	<tr class="correct_tr_term">
 							              	<td>
-							              		<select name="아이를 골라골라~">
-							              			<option value="첫째">하나</option>
-							              			<option value="둘째">두식이</option>
+							              		<select name="아이 추가" style="border:2px solid #FDDBDB; border-radius:12px; padding:5px; color:#666666; font-size:18px; font-weight:500px;">
+							              			<option value="첫째">첫째</option>
+							              			<option value="둘째">둘째</option>
+							              			<option value="셋쨰">셋째</option>
 							              		</select>
 							              		<td>
 							              	</tr>
 							                <tr class="correct_tr_term">
 							                  <th><span>아이 이름</span></th>
-							                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
+							                  <td><input type="text" placeholder="태명 or 이름을 입력하세요." style="border:1px solid #FDDBDB; width:270px;box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"></td>
 							                </tr>
 							                <tr class="correct_tr_term">
 							                  <th><span>아이 성별</span></th>
@@ -66,14 +67,14 @@
 							                </tr>
 							                <tr class="correct_tr_term">
 							                  <th><span>아이 생년월일</span></th>
-							                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
+							                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518" style="border:1px solid #FDDBDB; width:270px;box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"></td>
 							                </tr>
 							                <tr class="correct_tr_term">
 							                	<td colspan="2" style="text-align:center;"><button class="correct_btn">완료</button></td>
 							                </tr>
 							                <tr class="correct_tr_term">
 							                <td colspan=2>
-							            <div class="exform_txt" style="color:darkgray; font-weight:400" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
+							            <div class="exform_txt" style="color:darkgray; font-weight:400; text-align:center;" ><span>아이 정보를 정확히 입력해주세요.</span></div>
 							            </td>
 							            <td>
 							            </td>

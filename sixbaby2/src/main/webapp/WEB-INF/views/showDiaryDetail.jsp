@@ -6,6 +6,7 @@
 	<div class="form-group">
 		<label class="diary-name control-label col-sm-2">오늘의 (아기이름)</label>
 	</div>
+	
 	<div class="form-group">
 		<label class="control-label col-sm-2">제목</label>
 		<input class="diary_detail" type="text" class="form-control" name="title" placeholder="Enter title" value="${selectedDiary.title}" readonly>

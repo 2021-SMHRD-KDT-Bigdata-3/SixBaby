@@ -28,7 +28,7 @@
 
 				 <%@ include file="header.jsp"%>
 			
-			<div class="page-head" data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			<div class="page-head" data-bg-image="${cpath}/resources/images/bg.png">
 				<div class="container">
 					<h2 class="page-title">MyPage</h2>
 				</div>
@@ -51,14 +51,12 @@
 								<div class="correct">
 								<button class="correct_btn">
 								<a href="babyCorrection.do">아이 정보 수정</a><br>
-								</button>
-								</div>
-								<div class="correct">
+								</button> &nbsp;&nbsp;
 								<button class="correct_btn" id="modal_open_btn_baby"><span class="site-title">아이 추가</span></button>
 								</div>
 										<img src="${cpath}/resources/images/family-1.jpg" alt="" class="family-image">
 										<h3 class="family-name">Smith</h3>
-										<small>John, Anna, Patrick, Susan</small>
+										<small style="color:#666666;">John, Anna, Patrick, Susan</small>
 									</div>
 								</div>
 								
@@ -83,7 +81,7 @@
               <tbody>
                 <tr class="correct_tr_term">
                   <th><span>아이 이름</span></th>
-                  <td><input type="text" placeholder="태명 or 이름을 입력하세요."></td>
+                  <td><input type="text" placeholder="태명 or 이름을 입력하세요." style="border:1px solid #FDDBDB; width:270px;box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"></td>
                 </tr>
                 <tr class="correct_tr_term">
                   <th><span>아이 성별</span></th>
@@ -92,7 +90,7 @@
                 </tr>
                 <tr class="correct_tr_term">
                   <th><span>아이 생년월일</span></th>
-                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518"></td>
+                  <td><input type="text" placeholder="ex) 2020 5월 18일 : 200518" style="border:1px solid #FDDBDB; width:270px;box-shadow: 1px 1px 3px 1px #dadce0 inset; height:30px;"></td>
                 </tr>
                 <tr class="correct_tr_term">
                 	<td colspan="2" align="center">
@@ -101,10 +99,10 @@
                 </tr>
               </tbody>
             </table>
-            <div class="exform_txt" style="color:darkgray; font-weight:400; text-align:center;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
+            <div class="exform_txt" style="color:darkgray; font-weight:400; text-align:center; color:#6666666; fomt-size:18px;" ><span>정보를 정확히 입력하셨으면 완료눌러주세요.</span></div>
           </div><!-- join_form E  -->
           <div class="btn_wrap">
-            <button type="button" id="modal_close_btn_baby" class="correct_btn">창 닫기</button>
+            <button type="button" id="modal_close_btn_baby" class="correct_btn">닫기</button>
           </div>
         </div> <!-- form_txtInput E -->
     </div> <!-- container E -->

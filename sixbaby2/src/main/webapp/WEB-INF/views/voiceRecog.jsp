@@ -76,7 +76,7 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
 				<h2 class="page-title">VOICE RECOGNITION SERVICE</h2>
 			</div>
