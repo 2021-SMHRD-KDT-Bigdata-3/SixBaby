@@ -18,6 +18,10 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/nanum.css"
+	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/hyemin.css"
+	rel="stylesheet" type="text/css">
 
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
@@ -60,8 +64,12 @@
 		result += "<tr>";
 		result += "<td class='voice_td'>" + data.solu + "</td>";
 		result += "</tr>";
+		result += "<tr>";
+		result += "<td>";
+		result += "</td>";
+		result += "</tr>";
 		result += "<tr class='voice_tr'>";
-		result += "<td>자세한 방법은 육아꿀팁으로~</td>";
+		result += "<td class='end_td'>자세한 방법은 육아꿀팁으로~</td>";
 		result += "</tr>";
 		result += "</table>";
 		$("#reason").html(result);
@@ -74,9 +82,9 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
-				<h2 class="page-title">VOICE RECOGNITION SERVICE</h2>
+				<h2 class="page-title">울음분석</h2>
 			</div>
 		</div>
 		<div class="fullwidth-block">
@@ -84,7 +92,7 @@
 				<div class="row">
 					<div class="content col-md-8 voice_align">
 
-						<h3>아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
+						<h3 style="color:#666666;">아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
 
 						<c:set var="vo" value="${vo}" />
 						<c:set var="cond" value="${ddong}" />

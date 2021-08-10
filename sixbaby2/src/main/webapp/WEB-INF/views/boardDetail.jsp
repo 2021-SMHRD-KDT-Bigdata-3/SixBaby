@@ -18,7 +18,10 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
-
+<link href="${cpath}/resources/fonts/nanum.css"
+	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/hyemin.css"
+	rel="stylesheet" type="text/css">
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -37,7 +40,7 @@
       function resultHtml(data){
            if(cnt%2==0){
               var result = "<table class='comment_table'>";
-              result+="<tr>";
+              result+="<tr class='up'>";
               result+="<td>댓글번호</td>";
               result+="<td>닉네임</td>";
               result+="<td>내용</td>";
@@ -45,7 +48,7 @@
               result+="<td>비고</td>";
               result+="</tr>";
               $.each(data, (index,obj)=>{
-                  result+="<tr>";
+                  result+="<tr class='down'>";
                   result+="<td>"+obj.comment_no+"</td>";
                   result+="<td>"+obj.nickname+"</td>";
                   result+="<td>"+obj.contents+"</td>";
@@ -76,9 +79,9 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
-				<h2 class="page-title">Community</h2>
+				<h2 class="page-title">커뮤니티</h2>
 			</div>
 		</div>
 		<div class="fullwidth-block">
@@ -99,18 +102,18 @@
 								<div class="form-group">
 									<div class="detail_nick_date">
 										<div
-											style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
 											<input class="detail_value" type="text" name="nickname"
 												value="${vo.nickname}" readonly="readonly">
 										</div>
 										<div
-											style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 31%; display: inline-block;">
+											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 227px; display: inline-block;">
 											<input class="detail_value" type="text" name="indate"
 												value="${vo.indate}" readonly="readonly">
 										</div>
 									</div>
 									<div
-										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+										style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
 										<input class="detail_value" type="text" name="title"
 											value="${vo.title}">
 									</div>
@@ -118,7 +121,7 @@
 								<br>
 
 								<div class="write_table"
-									style="border: 2px solid #E63F39; border-radius: 12px;">
+									style="border: 1px solid #FDDBDB; border-radius: 12px;">
 									<div class="form-group">
 										<img class="detail_value"
 											src="${cpath}/resources/images/logotest.png"
@@ -132,15 +135,16 @@
 								<div class="form-group">
 									<div class="col-sm-offset-13 col-sm-13">
 										<button type="submit" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;">수정</button>
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;">수정</button>
 										&nbsp;
 										<button type="button" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black;"
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;"
 											onclick="goDel('${vo.board_no}','${vo.category}')">삭제</button>
-										&nbsp;
+									</div>
+									<div class="col-sm-offset-13 col-sm-13">
 										<button type="reset" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">
-											<a href="boardBack.do?cate=${vo.category}">뒤로가기</a>
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;">
+											<a href="boardBack.do?cate=${vo.category}">목록</a>
 										</button>
 
 									</div>
@@ -159,18 +163,18 @@
 								<div class="form-group">
 									<div class="detail_nick_date">
 										<div
-											style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
 											<input class="detail_value" type="text" name="nickname"
 												value="${vo.nickname}" readonly="readonly">
 										</div>
 										<div
-											style="border: 2px solid #E63F39; border-radius: 12px; font-size: 20px; text-align: center; width: 31%; display: inline-block;">
+											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 227px; display: inline-block;">
 											<input class="detail_value" type="text" name="indate"
 												value="${vo.indate}" readonly="readonly">
 										</div>
 									</div>
 									<div
-										style="border: 2px solid #E63F39; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+										style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
 										<input class="detail_value" type="text" name="title"
 											value="${vo.title}" readonly="readonly">
 									</div>
@@ -178,7 +182,7 @@
 								<br>
 
 								<div class="write_table"
-									style="border: 2px solid #E63F39; border-radius: 12px;">
+									style="border: 1px solid #FDDBDB; border-radius: 12px;">
 									<div class="form-group">
 										<img class="detail_value"
 											src="${cpath}/resources/images/logotest.png"
@@ -192,22 +196,21 @@
 								<div class="form-group">
 									<div class="col-sm-offset-13 col-sm-13">
 										<button type="reset" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E63F39; color: black">
-											<a href="boardBack.do?cate=${vo.category}">뒤로가기</a>
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto; margin-bottom: 56px;">
+											<a href="boardBack.do?cate=${vo.category}">목록</a>
 										</button>
 									</div>
 								</div>
 							</form>
 						</c:if>
 
-
+					<br>
 						<div class="col-sm-offset-13 col-sm-13">
 							<button class="btn btn-success btn-sm"
 								onclick="getComment('${vo.board_no}')"
-								style="background: white; border-radius: 12px; border: solid 2px skyblue; font-size: 17px;">댓글
-								보기</button>
+								style="background: white; border-radius: 12px; border: solid 2px white; font-size: 17px; box-shadow: 1px 1px 3px 1px #dadce0; display: block; margin-bottom: 7px;">댓글</button>
 							<div id="comment"></div>
-
+					<br>
 							<c:if test="${not empty loginMember}">
 								<form class="comment_form"
 									action="${cpath}/commentInsert.do?=${vo.board_no}"
@@ -218,7 +221,7 @@
 										class="comment_input" type="text" name="contents"
 										placeholder="댓글을 입력해주세요."> <input class="comment_btn"
 										type="submit"
-										style="border: solid 2px white; font-size: 30px; box-shadow: none; border-radius: 12px; background: white; color: black;"
+										style="border: solid 2px white; font-size: 18px; font-weight:600; box-shadow: none; border-radius: 12px; background: white; color: black;"
 										value="확인">
 								</form>
 							</c:if>

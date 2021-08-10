@@ -43,7 +43,7 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif; }
+  font-family:  'NanumSquareRound'; }
 
 body {
   margin: 0; }
@@ -97,7 +97,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family:  'NanumSquareRound';
   font-size: 1em; }
 
 pre {
@@ -214,7 +214,7 @@ html {
 
 body {
   color: black;
-  font-family: arial, sans-serif;
+  font-family: NanumSquareRound;
   font-weight: 600;
   font-size:15px;
   line-height: 1.5;
@@ -222,7 +222,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+  font-family:  'NanumSquareRound';
   font-weight: 500;
   text-transform: uppercase;
   line-height: normal; }
@@ -276,7 +276,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   color: #666666;
   text-transform: uppercase;
   font-size:10px;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+  font-family:  'NanumSquareRound';
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
     background: #e3dfda;
@@ -1173,7 +1173,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     background: none;
     padding: 20px;
     display: none;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family:  'NanumSquareRound';
     text-transform: uppercase;
     outline: none; }
     @media screen and (max-width: 990px) {
@@ -1191,10 +1191,8 @@ form input[type="submit"], form button, form input[type="reset"] {
         display: block;
         padding: 20px 0;
         text-transform: uppercase;
-        font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-        font-weight: 400;
+        font-weight: 800;
         font-size: 18px;
-        font-size: 1.2857142857em;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
@@ -1204,7 +1202,7 @@ form input[type="submit"], form button, form input[type="reset"] {
           font-size: 10px;
           font-size: 0.7142857143rem; }
       .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
-        border-bottom-color: #E63F39;
+        border-bottom-color: #FDDBDB;
         border-width: 2px; }
 
 .mobile-navigation {
@@ -1220,7 +1218,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       .mobile-navigation .menu .menu-item:first-child {
         border-top: 1px solid #e5e5e5; }
     .mobile-navigation .menu a {
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+      font-family:  'NanumSquareRound';
       text-transform: uppercase;
       font-weight: 400;
       display: block;
@@ -1249,7 +1247,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       padding: 150px 0; }
     .hero .slides .slide-content {
       text-align: center;
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+      font-family:  'NanumSquareRound';
       text-transform: uppercase;
       color: white; }
     .hero .slides .slide-subtitle {
@@ -1304,14 +1302,14 @@ form input[type="submit"], form button, form input[type="reset"] {
 
 .page-head {
   background-size: cover;
-  padding: 50px;
+  padding: 30px;
   text-align: center; }
   .page-head .page-title {
     font-weight: 100;
     font-size: 72px;
-    font-size: 5.1428571429em;
+    font-size: 4.142857em;
     margin-bottom: 0;
-    color: white;
+    color: #666666;
     word-break: break-word; }
     @media screen and (max-width: 640px) {
       .page-head .page-title {
@@ -1342,7 +1340,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     color: #a59e95;
     font-size: 12px;
     font-size: 0.8571428571em;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family:  'NanumSquareRound';
     text-transform: lowercase; }
     .news .date .fa {
       font-size: 16px;
@@ -1373,7 +1371,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 0.8571428571em;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family:  'NanumSquareRound';
     text-transform: lowercase;
     *zoom: 1; }
     .event-list .event-meta:after {
@@ -1432,7 +1430,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 12px;
     font-size: 0.8571428571em;
     color: #a59e95;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+    font-family:  'NanumSquareRound';
     text-transform: lowercase; }
     .seremon-list .seremon-meta .pastor {
       margin-bottom: 5px; }
@@ -1501,7 +1499,8 @@ form input[type="submit"], form button, form input[type="reset"] {
   color: #acacb1; }
   .site-footer .widget {
   text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-top: 20px; }
     .site-footer .widget .widget-title {
       color: #666666;
       font-size: 15px;
@@ -1591,20 +1590,26 @@ ul.bullet {
           margin:0;
         }
 #modal_login button {
-          display:inline-block;
-          width:100px;
-          margin-left:calc(100% - 100px - 10px);
-          
+		  background: white;
+		  border: solid 2px #FDDBDB;
+		  border-radius: 12px;
+		  box-shadow: 1px 1px 3px 1px #dadce0;
+		  font-size: 18px;
+		  padding: 5px;
+		  width: 100px;
+	      margin-inline: auto;
+		  display: block;          
         }
         
 #modal_login .modal_content {
           width:450px;
           margin:100px auto;
           padding:20px 10px;
-          background:#fff;
-          border:2px solid #666;
+          background: white;
           position:relative;
           bottom:500px;
+          border-radius: 12px;
+    	  border: solid 2px #FFFFE3;
         }
         
 #modal_login .modal_layer {
@@ -1722,7 +1727,7 @@ ul.bullet {
 .comment_input {
 	border-radius: 12px;
 	width: 88%;
-	font-size: 30px;
+	font-size: 22px;
 }
 
 .comment_btn {
@@ -1731,8 +1736,9 @@ ul.bullet {
 
 .comment_form {
 	margin-top: 10px;
-	border: 2px solid skyblue;
+	border: 2px solid white;
 	border-radius: 12px;
+	box-shadow: 1px 1px 3px 1px #dadce0;
 }
 
 .title_write {
@@ -1782,10 +1788,11 @@ ul.bullet {
 
 .detail_value {
 	border-radius:12px;
+	text-align: center;
 }
 
 .write_category {
-	border: solid 2px #E63F39;
+	border: solid 2px #FDDBDB;
 	border-radius: 12px;
 	width: 20%;
     text-align-last: center;
@@ -1808,12 +1815,12 @@ ul.bullet {
 }
 
 .board_tr {
-	border-top: solid 2px #8f7655;
-    border-bottom: solid 2px #8f7655;
+	border-top: solid 2px #666666;
+    border-bottom: solid 2px #666666;
 }
 
 .board_value {
-    border-bottom: solid 1px #8f7655;
+    border-bottom: solid 1px #666666;
 }
 
 .board_no {
@@ -1838,8 +1845,12 @@ ul.bullet {
 
 .correct_btn {
 	background: white;
-    border: solid 2px #8f7655 !important;
+    border: solid 2px white;
     border-radius: 12px;
+    padding: 5px;
+    width: 150px;
+    font-size: 18px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
 }
 
 .correct_tr {
@@ -1864,17 +1875,25 @@ ul.bullet {
 }
 
 .select {
-	margin-right: 10px;
-	background: white;
-    border: solid 2px #8f7655;
+    margin-right: 10px;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 15px;
+    width: 150px;
 }
 
 .write {
-	margin-left: 10px;
-	background: white;
-    border: solid 2px #8f7655;
+	 margin-left: 10px;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 15px;
+    width: 150px;
 }
 
 #modal_diary_select_month {
@@ -1884,7 +1903,6 @@ ul.bullet {
 .slt_month {
 	display: inline-block;
 	border-radius: 12px;
-	width: 70px;
 	
 }
 
@@ -1897,14 +1915,19 @@ ul.bullet {
 }
 
 .month {
-	background: white;
-    border: solid 2px #8f7655;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
     margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 25px;
+    width: 180px;
+    font-weight: 800;
 }
 
 .write_table {
-	border: solid 2px #8f7655;
+	border: solid 0.5px #FDDBDB;
 	border-radius: 12px;
 }
 
@@ -1917,16 +1940,28 @@ ul.bullet {
 
 #modal_insert_btn_dairy {
 	margin-right: 10px;
-	background: white;
-    border: solid 2px #8f7655;
+	 background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 10px;
+    width: 100px;
+    font-weight: 800;
 }
 
 #modal_close_btn_dairy_insert {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #8f7655;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 10px;
+    width: 100px;
+    font-weight: 800;
 }
 
 .diary_table {
@@ -1935,8 +1970,8 @@ ul.bullet {
 }
 
 .diary_table_head {
-	border-top: solid 2px #8f7655;
-	border-bottom: solid 2px #8f7655;
+	border-top: solid 2px #666666;
+	border-bottom: solid 2px #666666;
 }
 
 #diaryList tr {
@@ -1949,9 +1984,14 @@ ul.bullet {
 }
 
 #modal_back_btn_diary {
-	background: white;
-    border: solid 2px #8f7655;
+	margin-right: 10px;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 10px;
+    width: 100px;
 }
 
 #modal_back_btn_diary_list {
@@ -2008,9 +2048,15 @@ ul.bullet {
 }
 
 .voice_btn {
-	background: white;
-    border: solid 2px #8f7655;
+	margin-right: 10px;
+    background: white;
+    border: solid 2px white;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 15px;
+    width: 150px;
+    font-weight: 800;
 }
 
 .voice_table {
@@ -2025,3 +2071,38 @@ ul.bullet {
 .voice_tr {
 	height: 40px;
 }
+
+.correct_input {
+	background: white;
+	border: 1px solid #FDDBDB;
+    width: 108%;
+    box-shadow: 1px 1px 3px 1px #dadce0 inset;
+    height: 30px;
+}
+
+.babyselect_btn {
+	border: 2px solid white;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    border-radius: 12px;
+    padding: 5px;
+    width: 71px;
+}
+
+.community_title {
+	text-align:center;
+}
+
+.up {
+	border-top: solid 1px #666666;
+	border-bottom: solid 1px #666666;
+}
+
+.down {
+	border-bottom: solid 0.5px #FDDBDB;
+}
+
+.end_td {
+	color: darkgray;
+	height: 100px;
+}
+

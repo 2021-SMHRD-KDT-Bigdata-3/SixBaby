@@ -290,6 +290,8 @@ public class HomeController {
 			result = "itemList";
 		} else if (cate.equals("help")) {
 			result = "helpList";
+		} else if (cate.equals("tip")) {
+			result = "tipList";
 		}
 		return "redirect:/" + result + ".do";
 	}
