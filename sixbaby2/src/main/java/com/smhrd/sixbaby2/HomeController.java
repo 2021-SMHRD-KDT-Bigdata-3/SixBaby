@@ -64,7 +64,7 @@ public class HomeController {
 		mapper.memberUpdate(vo);
 		MemberVO updatedVO = mapper.login(vo);
 		model.addAttribute("loginMember", updatedVO);
-		System.out.println(updatedVO);
+		//System.out.println(updatedVO);
 		return "redirect:/main.do";
 	}
 
@@ -247,7 +247,7 @@ public class HomeController {
 		System.out.println(vo);
 		mapper.diaryUpdate(vo);
 		DiaryVO updatedDiaryVO = mapper.diaryDetail(vo.getDiary_no());
-		System.out.println(updatedDiaryVO);
+		//System.out.println(updatedDiaryVO);
 		model.addAttribute("selectedDiary", updatedDiaryVO);
 		return "forward:/babyDiary.do";
 	}
@@ -332,9 +332,9 @@ public class HomeController {
 		return "voiceRecog";
 	}
 
-	@RequestMapping(value = "/gettest.do")
-	public String gettest() { // Flask에서 데이터 받아옴
-		return "gettest";
+	@RequestMapping(value = "/ala.do")
+	public String ala() {
+		return "ala";
 	}
 
 }

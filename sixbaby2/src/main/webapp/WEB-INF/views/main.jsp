@@ -90,21 +90,23 @@ window.onload = function () {
 
 		<div align="right">
 			<div id="root" class="branding">
-				<button type="button" id="modal_open_btn_login">
 					<c:choose>
 						<c:when test="${empty loginMember }">
-							<span id="login" class="site-title " style="background: white;">로그인</span>
+							<button type="button" id="modal_open_btn_login">
+								<span id="login" class="site-title " style="background: white;">로그인</span>
+							</button>
+							&nbsp; &nbsp;
+							<button type="button" id="modal_open_btn_join"
+								style="background: white; border: white;">
+								<span class="site-title">회원가입</span>
+							</button>
 						</c:when>
 						<c:otherwise>
-							<span id="logout" class="site-title" style="background: white;">로그아웃</span>
+							<button type="button" id="modal_open_btn_login">
+								<span id="logout" class="site-title" style="background: white;">로그아웃</span>
+							</button>
 						</c:otherwise>
 					</c:choose>
-				</button>
-				&nbsp; &nbsp;
-				<button type="button" id="modal_open_btn_join"
-					style="background: white; border: white;">
-					<span class="site-title">회원가입</span>
-				</button>
 				&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br> <br>
 				<br>
 			</div>
