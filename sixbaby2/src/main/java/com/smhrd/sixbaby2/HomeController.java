@@ -59,9 +59,12 @@ public class HomeController {
 		return "redirect:/main.do";
 	}
 
-	@RequestMapping("/memberUpdate.do")
-	public String memberUpdate(MemberVO vo) {
+	@RequestMapping(value = "/memberUpdate.do", method = RequestMethod.POST)
+	public String memberUpdate(MemberVO vo, Model model) {
 		mapper.memberUpdate(vo);
+		MemberVO updatedVO = mapper.login(vo);
+		model.addAttribute("loginMember", updatedVO);
+		System.out.println(updatedVO);
 		return "redirect:/main.do";
 	}
 
@@ -69,6 +72,20 @@ public class HomeController {
 	public String memberDelete(MemberVO vo) {
 		mapper.memberDelete(vo);
 		return "redirect:/main.do";
+	}
+
+	// 1-1. 아기입력, 아기정보 조회
+	@RequestMapping("/babyInsert.do")
+	public String babyInsert(BabyVO vo) {
+		mapper.babyInsert(vo);
+		return "redirect:/mypage.do";
+	}
+
+	@RequestMapping("/babyView.do")
+	public @ResponseBody List<BabyVO> babyView(@RequestParam("id") String id, Model model) {
+		List<BabyVO> vo = mapper.babyView(id);
+		model.addAttribute("vo", vo);
+		return vo;
 	}
 
 	// 2. 로그인, 로그아웃
@@ -195,6 +212,7 @@ public class HomeController {
 	@RequestMapping("/diaryContent.do")
 	public String diaryContent(DiaryVO diary, Model model) {
 		List<DiaryVO> vo = mapper.diaryContent(diary);
+		System.out.println(vo);
 		model.addAttribute("diaryList", vo);
 		return "redirect:/diaryList.do";
 	}
@@ -219,6 +237,7 @@ public class HomeController {
 
 	@PostMapping("/diaryInsert.do")
 	public String diaryInsert(DiaryVO vo) {
+		System.out.println(vo);
 		mapper.diaryInsert(vo);
 		return "forward:/babyDiary.do";
 	}
@@ -237,12 +256,7 @@ public class HomeController {
 		return "showDiaryUpdate";
 	}
 
-	// 6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
-//	@RequestMapping("/babyconditionInsert.do")
-//	public String babyconditionInsert(BabyconditionVO vo) {
-//		mapper.babyconditionInsert(vo);
-//		return "redirect:/voiceRecog.do";
-//	}
+	// 6. 울음소리 분석(아기상태 확인, 해결책 확인)
 
 	@RequestMapping("/babyconditionCheck.do")
 	public String babyconditionCheck(BabyconditionVO vo, Model model) {
@@ -291,6 +305,8 @@ public class HomeController {
 			result = "itemList";
 		} else if (cate.equals("help")) {
 			result = "helpList";
+		} else if (cate.equals("tip")) {
+			result = "tipList";
 		}
 		return "redirect:/" + result + ".do";
 	}
@@ -305,7 +321,6 @@ public class HomeController {
 		return "babyCorrection";
 	}
 
-
 	@RequestMapping("/babyDiary.do")
 	public String babyDiary() {
 		return "babyDiary";
@@ -315,7 +330,7 @@ public class HomeController {
 	public String voiceRecog() { // Flask에서 데이터 받아옴
 		return "voiceRecog";
 	}
-	
+
 	@RequestMapping(value = "/gettest.do")
 	public String gettest() { // Flask에서 데이터 받아옴
 		return "gettest";

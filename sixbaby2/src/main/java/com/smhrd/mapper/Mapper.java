@@ -11,6 +11,10 @@ public interface Mapper {
 	public void memberUpdate(MemberVO vo);
 	public void memberDelete(MemberVO vo);
 	
+	// 1-1. 아기 추가, 확인
+	public void babyInsert(BabyVO vo);
+	public List<BabyVO> babyView(String id);
+		
 	//2. 로그인
 	public MemberVO login(MemberVO vo);
 	
@@ -36,7 +40,6 @@ public interface Mapper {
 	public void diaryUpdate(DiaryVO vo);
 	
 	//6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
-//	public void babyconditionInsert(BabyconditionVO vo);
 	public void babyconditionCheck(BabyconditionVO vo);
 	public SolutionVO cryAnalysis();
 }

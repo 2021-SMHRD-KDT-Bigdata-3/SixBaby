@@ -60,11 +60,16 @@
 		delete from boards where board_no=#{board_no}
 	</delete>
 
-	<!-- 4. 아기정보(삽입, ) -->
+	<!-- 4. 아기정보(삽입, 확인) -->
 	<insert id="babyInsert" parameterType="com.smhrd.mapper.BabyVO">
-		insert into baby(id, baby_name, baby_birth, baby_gender)
+		insert into baby(id,
+		baby_name, baby_birth, baby_gender)
 		values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
 	</insert>
+	<select id="babyView"
+		resultType="com.smhrd.mapper.BabyVO" parameterType="com.smhrd.mapper.BabyVO">
+		select * from baby where id=#{id}
+	</select>
 
 	<!-- 5. 댓글(보기,작성,수정,삭제) -->
 	<select id="commentList"
@@ -81,15 +86,20 @@
 	</delete>
 
 	<!-- 6. 육아일기(열람, 작성, 수정) -->
-	<select id="diaryContent" parameterType="int"
+	<select id="diaryContent" parameterType="com.smhrd.mapper.DiaryVO"
 		resultType="com.smhrd.mapper.DiaryVO"> <!-- 다시 작성 -->
 		select * from diary
-		where diary_no=#{diary_no}
+		where id like #{id}
+		and diary_data like #{diary_data}
+	</select>
+	<select id="diaryDetail" parameterType="com.smhrd.mapper.DiaryVO" resultType="com.smhrd.mapper.DiaryVO">
+		select * from diary
+		where diary_no = #{diary_no}
 	</select>
 	<insert id="diaryInsert"
 		parameterType="com.smhrd.mapper.DiaryVO">
-		insert into comments(baby_no, title, contents, picture)
-		values(#{baby_no},#{title},#{contents},#{picture})
+		insert into diary(id, baby_no, title, contents, diary_data, picture)
+		values(#{id},#{baby_no},#{title},#{contents},#{diary_data},#{picture})
 	</insert>
 	<update id="diaryUpdate"
 		parameterType="com.smhrd.mapper.DiaryVO">
@@ -97,15 +107,10 @@
 		where diary_no=#{diary_no}
 	</update>
 
-	<!-- 7. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인) -->
-	<insert id="babyconditionInsert"
-		parameterType="com.smhrd.mapper.BabyconditionVO">
-		insert into babycondition(id, conditions)
-		values(#{id},#{conditions})
-	</insert>
+	<!-- 7. 울음소리 분석(아기상태 확인, 해결책 확인) -->
 	<select id="babyconditionCheck" 
 		resultType="com.smhrd.mapper.BabyconditionVO">
-		<!-- select * from babycondition where baby_num=#{baby_num} -->
+		select * from babycondition where id=#{id}
 	</select>
 	<select id="cryAnalysis"
 		resultType="com.smhrd.mapper.SolutionVO">

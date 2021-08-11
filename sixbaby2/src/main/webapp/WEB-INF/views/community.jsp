@@ -19,7 +19,10 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
-
+<link href="${cpath}/resources/fonts/nanum.css"
+	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/hyemin.css"
+	rel="stylesheet" type="text/css">
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -30,9 +33,9 @@
 		<%@ include file="header.jsp"%>
 
 		<div class="page-head"
-			data-bg-image="${cpath}/resources/images/page-head-1.jpg">
+			data-bg-image="${cpath}/resources/images/bg.png">
 			<div class="container">
-				<h2 class="page-title">Community</h2>
+				<h2 class="page-title">커뮤니티</h2>
 			</div>
 		</div>
 
@@ -42,7 +45,7 @@
 
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
-							<h3 class="widget-title">Categories</h3>
+							<h3 class="widget-title">카테고리</h3>
 							<ul class="arrow">
 								<li><a href="boardList.do">자유게시판</a></li>
 								<li><a href="itemList.do">용품추천</a></li>
@@ -56,24 +59,24 @@
 						<c:set var="vo" value="${list}" />
 						<c:if test="${vo[0].category eq 'free'}">
 							<div class="board_align">
-							<h2 class="section-title">자유게시판</h2>
+							<h2 class="section-title community_title">자유게시판</h2>
 							</div>
 						</c:if>
 						<c:if test="${vo[0].category eq 'item'}">
-							<h2 class="section-title">용품추천</h2>
+							<h2 class="section-title community_title">용품추천</h2>
 						</c:if>
 						<c:if test="${vo[0].category eq 'help'}">
-							<h2 class="section-title">도움요청</h2>
+							<h2 class="section-title community_title">도움요청</h2>
 						</c:if>
 						<c:if test="${vo[0].category eq 'tip'}">
-							<h2 class="section-title">육아꿀팁</h2>
+							<h2 class="section-title community_title">육아꿀팁</h2>
 						</c:if>
 
 						<div class="board_write" align="right">
 							<c:if test="${vo[0].category ne 'tip'}">
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border: 2px solid white; font-size: 20px; color: black;">
+										style="background: white; border:1px solid white; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
 										<span class="site-title"><a
 											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>
