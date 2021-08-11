@@ -252,8 +252,8 @@ public class HomeController {
 	}
 
 	@RequestMapping("/cryAnalysis.do")
-	public @ResponseBody SolutionVO cryAnalysis(@RequestParam("conditions") String conditions) {
-		SolutionVO solution = mapper.cryAnalysis(conditions);
+	public @ResponseBody SolutionVO cryAnalysis() {
+		SolutionVO solution = mapper.cryAnalysis();
 		System.out.println(solution);
 		return solution;
 	}
@@ -305,15 +305,6 @@ public class HomeController {
 		return "babyCorrection";
 	}
 
-	@RequestMapping("/babyconditionInsert.do")
-	public void babyconditionInsert(HttpServletRequest request, @RequestParam("conditions") String conditions,
-			Model model) {
-		HttpSession session = request.getSession();
-		MemberVO mem = (MemberVO) session.getAttribute("loginMember");
-		String id = mem.getId();
-		model.addAttribute("conditions", conditions);
-		mapper.babyconditionInsert(conditions, id);
-	}
 
 	@RequestMapping("/babyDiary.do")
 	public String babyDiary() {
@@ -321,10 +312,13 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/voiceRecog.do")
-	public String voiceRecog(/* @RequestParam("condi") String condi, Model model */) { // Flask에서 데이터 받아옴
-		// model.addAttribute("conditions", condi);
-		System.out.println("성공");
+	public String voiceRecog() { // Flask에서 데이터 받아옴
 		return "voiceRecog";
+	}
+	
+	@RequestMapping(value = "/gettest.do")
+	public String gettest() { // Flask에서 데이터 받아옴
+		return "gettest";
 	}
 
 }

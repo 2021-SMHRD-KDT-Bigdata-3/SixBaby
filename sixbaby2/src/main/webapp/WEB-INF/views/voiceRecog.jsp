@@ -23,9 +23,9 @@
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
 <script>
-	function analysis(conditions) {
+	function analysis() {
 		$.ajax({
-			url : "${cpath}/cryAnalysis.do?conditions=" + conditions,
+			url : "${cpath}/cryAnalysis.do",
 			type : "get",
 			dataType : "json",
 			success : resultHtml,
@@ -87,9 +87,8 @@
 						<h3>아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
 
 						<c:set var="vo" value="${vo}" />
-						<c:set var="cond" value="${ddong}" />
 						<h1>
-							<button class="voice_btn" type="button" onclick="analysis('${cond}')">울음분석하기(클릭!)</button>
+							<button class="voice_btn" type="button" onclick="analysis()">울음분석하기(클릭!)</button>
 						</h1>
 						<div id="reason"></div>
 

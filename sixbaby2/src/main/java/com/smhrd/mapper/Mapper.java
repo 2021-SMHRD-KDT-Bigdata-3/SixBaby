@@ -38,6 +38,5 @@ public interface Mapper {
 	//6. 울음소리 분석(아기상태 삽입, 확인, 해결책 확인)
 //	public void babyconditionInsert(BabyconditionVO vo);
 	public void babyconditionCheck(BabyconditionVO vo);
-	public SolutionVO cryAnalysis(String conditions);
-	public void babyconditionInsert(String conditions, String id);
+	public SolutionVO cryAnalysis();
 }

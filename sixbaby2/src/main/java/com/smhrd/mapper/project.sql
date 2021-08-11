@@ -41,7 +41,7 @@ primary key(diary_no));
 --## conditionÀ» FK·Î ÇÒ°Í
 create table babycondition
 (condition_num int not null auto_increment,
-id int not null,
+id varchar(20) not null,
  conditions varchar(20) not null,
  condition_date datetime default now(), 
  primary key(condition_num));
@@ -68,7 +68,7 @@ select * from comments;
 
 select * from diary;
 
-drop table diary;
+delete from babycondition where conditions="not_crying";
 
 select * from babycondition;
 
@@ -83,6 +83,7 @@ values('3','3','Èå¾î¾î¾î¾ô','ÇÏ±â½È´ç','1');
 
 select * from boards order by board_no desc;
 
+INSERT INTO babycondition (id, conditions) VALUES('mod101', 'dc');
 
 insert into solution
 values('hungry','Èå±ÔÈå±Ô','¸¾¸¶Áà¶ó');

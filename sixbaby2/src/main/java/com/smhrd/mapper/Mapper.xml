@@ -109,7 +109,8 @@
 	</select>
 	<select id="cryAnalysis"
 		resultType="com.smhrd.mapper.SolutionVO">
-		select * from solution where conditions=#{conditions}
+		select * from solution where conditions = (
+		select conditions from babycondition order by condition_date desc limit 1);
 	</select>
 
 
