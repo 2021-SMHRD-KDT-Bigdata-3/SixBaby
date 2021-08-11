@@ -96,30 +96,6 @@ window.onload = function () {
 
 		<%@ include file="header.jsp"%>
 
-		<div align="right">
-			<div id="root" class="branding">
-				<c:choose>
-					<c:when test="${empty loginMember }">
-						<button type="button" id="modal_open_btn_login">
-							<span id="login" class="site-title " style="background: white;">로그인</span>
-						</button>
-							&nbsp; &nbsp;
-							<button type="button" id="modal_open_btn_join"
-							style="background: white; border: white;">
-							<span class="site-title">회원가입</span>
-						</button>
-					</c:when>
-					<c:otherwise>
-						<button type="button" id="modal_open_btn_login">
-							<span id="logout" class="site-title" style="background: white;">로그아웃</span>
-						</button>
-					</c:otherwise>
-				</c:choose>
-				&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br> <br>
-				<br>
-			</div>
-
-		</div>
 
 		<!-- 페이드 슬라이드 배너 -->
 		<div class="slide"
