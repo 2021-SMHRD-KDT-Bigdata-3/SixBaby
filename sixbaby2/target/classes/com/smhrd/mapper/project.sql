@@ -85,7 +85,7 @@ values('tt', 'tt', '´Ğ³Ûtt', 'ÀÌ¸§tt', '³²ÀÚ', '92-05-20', '010-1111-1111');
 
 
 insert into solution
-values('hungry','Èå±ÔÈå±Ô','¸¾¸¶Áà¶ó');
+values('hu','Èå±ÔÈå±Ô','¸¾¸¶Áà¶ó');
 insert into solution
 values('pup','È£¿¨È£¿¨','±âÀú±Í ³»³ö¶ó');
 insert into solution

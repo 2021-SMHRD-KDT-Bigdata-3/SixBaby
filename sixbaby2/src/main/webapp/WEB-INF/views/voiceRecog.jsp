@@ -32,7 +32,17 @@
 			url : "${cpath}/cryAnalysis.do",
 			type : "get",
 			dataType : "json",
-			success : resultHtml,
+			success : (res) =>{
+				console.log(res);
+				if(res.conditions !== "not_crying"){
+					var audio = document.getElementById("audio");
+					var source = document.getElementById("audioSource");
+					source.src = "resources/sound/test.wav";
+					audio.load();
+					audio.play();
+				}
+				//resultHtml,
+			},
 			error : function() {
 				alert("error");
 			}
@@ -90,6 +100,9 @@
 		<div class="fullwidth-block">
 			<div class="container">
 				<div class="row">
+				<audio id="audio">
+					<source id="audioSource" src="">
+				</audio>
 					<div class="content col-md-8 voice_align">
 
 						<h3 style="color:#666666;">아기가 왜 울까요? 어떻게 하면 좋을지 알려드릴게요</h3>
