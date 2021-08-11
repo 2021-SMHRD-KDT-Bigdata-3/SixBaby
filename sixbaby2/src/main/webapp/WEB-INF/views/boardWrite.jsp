@@ -22,6 +22,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/hyemin.css"
 	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+	
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -58,12 +64,12 @@
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
 							<h3 class="widget-title">카테고리</h3>
-							<ul class="arrow">
-								<li><a href="boardList.do">자유게시판</a></li>
-								<li><a href="itemList.do">용품추천</a></li>
-								<li><a href="helpList.do">도움요청</a></li>
-								<li><a href="tipList.do">육아꿀팁</a></li>
-							</ul>
+							<div class="arrow_category">
+								<a href="boardList.do">자유게시판&nbsp;&nbsp; &nbsp;</a>
+								<a href="itemList.do">용품추천&nbsp;&nbsp; &nbsp;</a>
+								<a href="helpList.do">도움요청&nbsp;&nbsp; &nbsp;</a>
+								<a href="tipList.do">육아꿀팁&nbsp;&nbsp; &nbsp;</a>
+							</div>
 						</div>
 					</div>
 
@@ -81,7 +87,7 @@
 							<div class="content col-md-14">
 								<table>
 									<div class="write_table"
-										style="border: 2px solid #FDDBDB; border-radius: 12px;">
+										style="border: 2px solid #E7FFFF; border-radius: 12px;">
 										<br>
 										<div class="form-group">
 											<label class="control-label col-sm-2">작성자</label> <input
@@ -110,10 +116,10 @@
 							<div class="form-group">
 								<div class="col-sm-offset-13 col-sm-13">
 									<input type="submit" class="btn_write"
-										style="position: relative; border-radius: 12px; background: white; width: 14%; font-size: 18px; border: 2px solid #FDDBDB; padding: 3px; font-weight: 600; color: black;"
+										style="position: relative; border-radius: 12px; background: white; width: 14%; font-size: 18px; border: 2px solid #E7FFFF; padding: 3px; font-weight: 600; color: black;"
 										value="등록"> &nbsp;
 									<button type="reset" class="btn_write" value="취소"
-										style="position: relative; border-radius: 12px; background: white; width: 14%; font-size: 18px; border: 2px solid #FDDBDB; padding: 3px; font-weight: 600; color: black;">
+										style="position: relative; border-radius: 12px; background: white; width: 14%; font-size: 18px; border: 2px solid #E7FFFF; padding: 3px; font-weight: 600; color: black;">
 										<a href="boardList.do">취소</a>
 									</button>
 								</div>

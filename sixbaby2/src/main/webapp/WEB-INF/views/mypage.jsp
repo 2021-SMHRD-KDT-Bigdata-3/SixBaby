@@ -19,6 +19,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/nanum.css" rel="stylesheet"
 	type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 <link href="${cpath}/resources/fonts/hyemin.css" rel="stylesheet"
@@ -87,7 +93,7 @@
 						<div class="content col-md-13">
 							<div class="row">
 								<div class="family">
-									<h2 class="section-title">${loginMember.name}님 환영합니다</h2>
+									<h2 class="section-title">${loginMember.name}님환영합니다</h2>
 									<div class="correct">
 										<button class="correct_btn">
 											<a href="correction.do">회원 정보 수정</a><br>
@@ -105,6 +111,10 @@
 										</button>
 										<div id="baby"></div>
 									</div>
+									<img src="${cpath}/resources/images/header_logo.png" alt=""
+										class="family-image" style="width: 150px;">
+									<h3 class="family-name"></h3>
+									<small></small>
 								</div>
 							</div>
 
@@ -178,5 +188,7 @@
 	<script src="${cpath}/resources/js/js/plugins.js"></script>
 	<script src="${cpath}/resources/js/js/app.js"></script>
 	<script src="${cpath}/resources/js/js/babyJS.js"></script>
+	<script src="${cpath}/resources/js/js/loginJS.js"></script>
+	<script src="${cpath}/resources/js/js/joinJS.js"></script>
 </body>
 </html>

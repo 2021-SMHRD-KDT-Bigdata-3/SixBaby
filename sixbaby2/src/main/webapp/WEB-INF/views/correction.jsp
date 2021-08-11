@@ -19,8 +19,15 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/nanum.css" rel="stylesheet"
 	type="text/css">
+
 <link href="${cpath}/resources/fonts/hyemin.css" rel="stylesheet"
 	type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -32,7 +39,7 @@
 	function membupdate() {
 		alert("회원정보가 수정되었습니다.");
 	}
-	function memDel(){
+	function memDel() {
 		alert("회원탈퇴되었습니다.");
 	}
 </script>
@@ -92,7 +99,8 @@
 											<tr class="correct_tr">
 												<th class="correct_th"><span>생년월일</span></th>
 												<td><input class="correct_input" type="text"
-													name="birth" value="${loginMember.birth }" readonly="readonly"></td>
+													name="birth" value="${loginMember.birth }"
+													readonly="readonly"></td>
 											</tr>
 
 											<tr class="correct_tr">
