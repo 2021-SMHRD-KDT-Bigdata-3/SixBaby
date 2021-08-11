@@ -22,6 +22,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/hyemin.css"
 	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+	
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -50,12 +56,12 @@
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
 							<h3 class="widget-title">카테고리</h3>
-							<ul class="arrow">
-								<li><a href="boardList.do">자유게시판</a></li>
-								<li><a href="itemList.do">용품추천</a></li>
-								<li><a href="helpList.do">도움요청</a></li>
-								<li><a href="tipList.do">육아꿀팁</a></li>
-							</ul>
+							<div class="arrow_category">
+								<a href="boardList.do">자유게시판&nbsp;&nbsp; &nbsp;</a>
+								<a href="itemList.do">용품추천&nbsp;&nbsp; &nbsp;</a>
+								<a href="helpList.do">도움요청&nbsp;&nbsp; &nbsp;</a>
+								<a href="tipList.do">육아꿀팁&nbsp;&nbsp; &nbsp;</a>
+							</div>
 						</div>
 					</div>
 

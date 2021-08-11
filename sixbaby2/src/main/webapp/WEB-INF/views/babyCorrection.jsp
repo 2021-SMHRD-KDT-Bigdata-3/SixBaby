@@ -19,6 +19,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/hyemin.css"
 	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+	
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 <link href="${cpath}/resources/fonts/nanum.css"

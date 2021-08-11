@@ -20,6 +20,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/hyemin.css"
 	rel="stylesheet" type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+
+	
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 
@@ -160,5 +166,7 @@
 	<script src="${cpath}/resources/js/js/app.js"></script>
 	<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
 	<script src="${cpath}/resources/js/js/babyDiary.js"></script>
+	<script src="${cpath}/resources/js/js/loginJS.js"></script>
+	<script src="${cpath}/resources/js/js/joinJS.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
                <div class="col-md-4">
                   <div class="widget">
                      <small class="slide-subtitle"
-                        style="color: black; position: relative; font-size: 15px">SIXBABY</small>
+                        style="color: black; position: relative; font-size: 23px">SIXBABY</small>
                      <br> <br>
 
                      <h2 class="widget-title"

@@ -19,6 +19,12 @@
 	rel="stylesheet" type="text/css">
 <link href="${cpath}/resources/fonts/nanum.css" rel="stylesheet"
 	type="text/css">
+<link href="${cpath}/resources/fonts/onglip.css" rel="stylesheet"
+	type="text/css">
+<link href="${cpath}/resources/fonts/kyobo.css" rel="stylesheet"
+	type="text/css">
+	
+
 <!-- Loading main css file -->
 <link rel="stylesheet" href="${cpath}/resources/css/style.css">
 <link href="${cpath}/resources/fonts/hyemin.css"
@@ -64,10 +70,10 @@
 											<span class="site-title">아이 추가</span>
 										</button>
 									</div>
-									<img src="${cpath}/resources/images/family-1.jpg" alt=""
-										class="family-image">
-									<h3 class="family-name">Smith</h3>
-									<small>John, Anna, Patrick, Susan</small>
+									<img src="${cpath}/resources/images/header_logo.png" alt=""
+										class="family-image" style="width:150px;">
+									<h3 class="family-name"></h3>
+									<small></small>
 								</div>
 							</div>
 
@@ -138,5 +144,7 @@
 	<script src="${cpath}/resources/js/js/plugins.js"></script>
 	<script src="${cpath}/resources/js/js/app.js"></script>
 	<script src="${cpath}/resources/js/js/babyJS.js"></script>
+	<script src="${cpath}/resources/js/js/loginJS.js"></script>
+	<script src="${cpath}/resources/js/js/joinJS.js"></script>
 </body>
 </html>
