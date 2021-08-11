@@ -41,7 +41,7 @@
 					audio.load();
 					audio.play();
 				}
-				//resultHtml,
+				resultHtml(res)
 			},
 			error : function() {
 				alert("error");
@@ -56,29 +56,29 @@
 		//result+="<td>트림</td>";
 		//result+="<td>온도</td>";
 		//result+="</tr>";
-		result += "<tr class='voice_tr'>";
+		result += "<tr class='voice_td'>";
 		result += "<td>우는 이유</td>";
 		result += "</tr>";
 		result += "<tr>";
-		result += "<td class='voice_td'>"+ data.conditions + "</td>";
+		result += "<td class='voice_tr'>"+ data.conditions + "</td>";
 		result += "</tr>";
-		result += "<tr class='voice_tr'>";
+		result += "<tr class='voice_td'>";
 		result += "<td>설명</td>";
 		result += "</tr>";
 		result += "<tr>";
-		result += "<td class='voice_td'>" + data.exp + "</td>";
+		result += "<td class='voice_tr'>" + data.exp + "</td>";
 		result += "</tr>";
-		result += "<tr class='voice_tr'>";
+		result += "<tr class='voice_td'>";
 		result += "<td>해결책</td>";
 		result += "</tr>";
 		result += "<tr>";
-		result += "<td class='voice_td'>" + data.solu + "</td>";
+		result += "<td class='voice_tr'>" + data.solu + "</td>";
 		result += "</tr>";
 		result += "<tr>";
 		result += "<td>";
 		result += "</td>";
 		result += "</tr>";
-		result += "<tr class='voice_tr'>";
+		result += "<tr class='voice_td'>";
 		result += "<td class='end_td'>자세한 방법은 육아꿀팁으로~</td>";
 		result += "</tr>";
 		result += "</table>";

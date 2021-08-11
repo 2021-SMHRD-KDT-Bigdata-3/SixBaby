@@ -269,7 +269,7 @@ public class HomeController {
 	@RequestMapping("/cryAnalysis.do")
 	public @ResponseBody SolutionVO cryAnalysis() {
 		SolutionVO solution = mapper.cryAnalysis();
-		System.out.println(solution);
+		//System.out.println(solution);
 		return solution;
 	}
 
