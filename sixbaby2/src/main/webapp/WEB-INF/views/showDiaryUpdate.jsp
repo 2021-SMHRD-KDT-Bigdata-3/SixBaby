@@ -15,7 +15,11 @@
 		<label class="control-label col-sm-2">³»¿ë</label>
 		<textArea rows="5" class="form-control" name="contents" placeholder="Enter contents">${vo.contents }</textArea>
 	</div>
-	<div class="picture">
-		<input type="file" name="picture">
+	<div class="fileDrop" ondrop="imgDrop(e)">
+		<input type="hidden" name="picture">
+		<div>
+			<a class="delThumbnail" onClick="delImg()" data-src="${selectedDiary.picture }"><img style="height : 100px; width : 100px; object-fit : cover;" src="imgDisplay.do?fileName=${selectedDiary.picture}">[delete]</a>
+		</div>
 	</div>
+	
 </div>

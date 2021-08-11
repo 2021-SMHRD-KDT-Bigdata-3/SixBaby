@@ -161,15 +161,19 @@
 								<input type="hidden" name="board_no" value="${vo.board_no}">
 								<input type="hidden" name="category" value="${vo.category}">
 								<div class="form-group">
-									<div class="detail_nick_date">
+									<div class="detail_nick_date2">
 										<div
-											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
-											<input class="detail_value" type="text" name="nickname"
+											style="border: 0px solid white; border-radius: 12px; font-size: 20px; width: 25%; display: inline-block;">
+											<input class="detail_value2" type="text" name="nickname"
 												value="${vo.nickname}" readonly="readonly">
 										</div>
+										<div class="blank">
+										</div>
+									</div>
+									<div class="detail_nick_date">
 										<div
-											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 227px; display: inline-block;">
-											<input class="detail_value" type="text" name="indate"
+											style="border: 0px solid white; border-radius: 12px; font-size: 10px; text-align: center; width: 227px; display: inline-block;">
+											<input class="detail_value3" type="text" name="indate"
 												value="${vo.indate}" readonly="readonly">
 										</div>
 									</div>

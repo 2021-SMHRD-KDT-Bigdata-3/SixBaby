@@ -34,14 +34,14 @@ primary key(comment_no));
 create table diary
 (id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
 title varchar(50) not null, contents varchar(1000) not null,
-diary_data varchar(50), picture varchar(50),
+diary_data varchar(50), picture varchar(2000),
 primary key(diary_no));
 
---# 아기상태 테이블 (condition - hungry/pup/burping/cold_hod 이렇게 4종류 데이터 들어갈거임!)
+--# 아기상태 테이블 (condition - hungry/pup/burping/cold_hot 이렇게 4종류 데이터 들어갈거임!)
 --## condition을 FK로 할것
 create table babycondition
 (condition_num int not null auto_increment,
-baby_num int not null,
+id int not null,
  conditions varchar(20) not null,
  condition_date datetime default now(), 
  primary key(condition_num));
@@ -49,8 +49,8 @@ baby_num int not null,
 --# 해결책 테이블
 create table solution
 (conditions varchar(20) not null,
-exp varchar(100) not null, 
-solu varchar(100) not null,
+exp varchar(3000) not null, 
+solu varchar(3000) not null,
 primary key(conditions));
 
 --#----------------------------------------------------------------------------------------#
@@ -68,7 +68,6 @@ select * from comments;
 
 select * from diary;
 
-drop table diary;
 
 select * from babycondition;
 
@@ -83,6 +82,7 @@ values('3','3','흐어어어얽','하기싫당','1');
 
 select * from boards order by board_no desc;
 
+
 insert into solution
 values('hungry','흐규흐규','맘마줘라');
 insert into solution
@@ -90,7 +90,8 @@ values('pup','호엥호엥','기저귀 내놔라');
 insert into solution
 values('burping','흐엉흐엉','꺼어어억');
 insert into solution
-values('cold_hod','호롤롤로','난방켜');
+values('cold_hot','호롤롤로','난방켜');
+
 
 --#----------------------------------------------------------------------------------------#
 

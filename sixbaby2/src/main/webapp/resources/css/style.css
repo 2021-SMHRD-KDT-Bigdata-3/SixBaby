@@ -1755,9 +1755,11 @@ ul.bullet {
 .detail_category {
 }
 
+.detail_nick_date2 {
+}
+
 .detail_nick_date {
-	padding:15px;
-	text-align:right;
+	text-align: right;
 }
 
 .comment_table {
@@ -1789,6 +1791,16 @@ ul.bullet {
 .detail_value {
 	border-radius:12px;
 	text-align: center;
+}
+
+.detail_value2 {
+	padding: 0px;
+	border-radius:12px;
+}
+
+.detail_value3 {
+	text-align: right;
+	border-radius:12px;
 }
 
 .write_category {
@@ -1932,9 +1944,8 @@ ul.bullet {
 }
 
 .write_table2 {
-	width: 66.6666666667%;
     margin-inline: auto;
-	border: solid 2px #8f7655;
+	border: solid 1px #FDDBDB;
 	border-radius: 12px;
 }
 
@@ -1975,7 +1986,7 @@ ul.bullet {
 }
 
 #diaryList tr {
-  border-bottom:solid 1px #8f7655;
+  border-bottom:solid 1px #666666;
 }
 
 .btn_wrap {
@@ -1996,16 +2007,24 @@ ul.bullet {
 
 #modal_back_btn_diary_list {
 	margin-left: 10px;
-	background: white;
-    border: solid 2px #8f7655;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
 }
 
 #modal_detail_btn_diary {
 	margin-right: 10px;
-	background: white;
-    border: solid 2px #8f7655;
+    background: white;
+    border: solid 2px #FDDBDB;
     border-radius: 12px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
 }
 
 .diary_detail {
