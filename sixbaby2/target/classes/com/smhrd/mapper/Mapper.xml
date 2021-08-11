@@ -30,16 +30,20 @@
 
 	<!-- 3. 커뮤니티(전체, 열람, 작성, 수정, 삭제) -->
 	<select id="boardList" resultType="com.smhrd.mapper.BoardsVO">
-		select * from boards where category="free" order by board_no desc
+		select * from boards where
+		category="free" order by board_no desc
 	</select>
 	<select id="itemList" resultType="com.smhrd.mapper.BoardsVO">
-		select * from boards where category="item" order by board_no desc
+		select * from boards where
+		category="item" order by board_no desc
 	</select>
 	<select id="helpList" resultType="com.smhrd.mapper.BoardsVO">
-		select * from boards where category="help" order by board_no desc
+		select * from boards where
+		category="help" order by board_no desc
 	</select>
 	<select id="tipList" resultType="com.smhrd.mapper.BoardsVO">
-		select * from boards where category="tip" order by board_no desc
+		select * from boards where
+		category="tip" order by board_no desc
 	</select>
 
 	<select id="boardContent" parameterType="int"
@@ -48,16 +52,19 @@
 	</select>
 	<insert id="boardInsert"
 		parameterType="com.smhrd.mapper.BoardsVO">
-		insert into boards(category, title, nickname, picture, contents)
+		insert into boards(category, title, nickname, picture,
+		contents)
 		values(#{category},#{title},#{nickname},#{picture},#{contents})
 	</insert>
 	<update id="boardUpdate"
 		parameterType="com.smhrd.mapper.BoardsVO">
-		update boards set title=#{title}, picture=#{picture}, contents=#{contents}
+		update boards set title=#{title}, picture=#{picture},
+		contents=#{contents}
 		where board_no=#{board_no}
 	</update>
 	<delete id="boardDelete" parameterType="int">
-		delete from boards where board_no=#{board_no}
+		delete from boards where
+		board_no=#{board_no}
 	</delete>
 
 	<!-- 4. 아기정보(삽입, 확인) -->
@@ -66,15 +73,16 @@
 		baby_name, baby_birth, baby_gender)
 		values(#{id},#{baby_name},#{baby_birth},#{baby_gender})
 	</insert>
-	<select id="babyView"
-		resultType="com.smhrd.mapper.BabyVO" parameterType="com.smhrd.mapper.BabyVO">
+	<select id="babyView" resultType="com.smhrd.mapper.BabyVO"
+		parameterType="com.smhrd.mapper.BabyVO">
 		select * from baby where id=#{id}
 	</select>
 
 	<!-- 5. 댓글(보기,작성,수정,삭제) -->
 	<select id="commentList"
 		resultType="com.smhrd.mapper.CommentsVO">
-		select * from comments where board_no=#{board_no} order by comment_no desc
+		select * from comments where board_no=#{board_no} order by
+		comment_no desc
 	</select>
 	<insert id="commentInsert"
 		parameterType="com.smhrd.mapper.CommentsVO">
@@ -82,40 +90,48 @@
 		values(#{board_no},#{nickname},#{contents})
 	</insert>
 	<delete id="commentDelete" parameterType="int">
-		delete from comments where comment_no=#{comment_no}
+		delete from comments
+		where comment_no=#{comment_no}
 	</delete>
 
 	<!-- 6. 육아일기(열람, 작성, 수정) -->
-	<select id="diaryContent" parameterType="com.smhrd.mapper.DiaryVO"
+	<select id="diaryContent"
+		parameterType="com.smhrd.mapper.DiaryVO"
 		resultType="com.smhrd.mapper.DiaryVO"> <!-- 다시 작성 -->
 		select * from diary
 		where id like #{id}
-		and diary_data like #{diary_data}
+		and diary_data like
+		#{diary_data}
 	</select>
-	<select id="diaryDetail" parameterType="com.smhrd.mapper.DiaryVO" resultType="com.smhrd.mapper.DiaryVO">
+	<select id="diaryDetail"
+		parameterType="com.smhrd.mapper.DiaryVO"
+		resultType="com.smhrd.mapper.DiaryVO">
 		select * from diary
 		where diary_no = #{diary_no}
 	</select>
 	<insert id="diaryInsert"
 		parameterType="com.smhrd.mapper.DiaryVO">
-		insert into diary(id, baby_no, title, contents, diary_data, picture)
+		insert into diary(id, baby_no, title, contents,
+		diary_data, picture)
 		values(#{id},#{baby_no},#{title},#{contents},#{diary_data},#{picture})
 	</insert>
 	<update id="diaryUpdate"
 		parameterType="com.smhrd.mapper.DiaryVO">
 		update diary set contents=#{contents}
-		where diary_no=#{diary_no}
+		where
+		diary_no=#{diary_no}
 	</update>
 
 	<!-- 7. 울음소리 분석(아기상태 확인, 해결책 확인) -->
-	<select id="babyconditionCheck" 
+	<select id="babyconditionCheck"
 		resultType="com.smhrd.mapper.BabyconditionVO">
 		select * from babycondition where id=#{id}
 	</select>
 	<select id="cryAnalysis"
 		resultType="com.smhrd.mapper.SolutionVO">
 		select * from solution where conditions = (
-		select conditions from babycondition order by condition_date desc limit 1);
+		select
+		conditions from babycondition order by condition_date desc limit 1);
 	</select>
 
 
