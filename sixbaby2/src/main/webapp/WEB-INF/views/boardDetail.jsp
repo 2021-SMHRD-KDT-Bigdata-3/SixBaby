@@ -72,6 +72,19 @@
       	location.href="${cpath}/boardDelete.do?board_no="+board_no+"&cate="+category;
       }
       </script>
+<style>
+#fileDrop {
+	width: 200px;
+	height: 100px;
+	border: 1px dotted pink;
+	position: relative;
+}
+.diary_detail_pic{
+	width : 200px;
+	height : 200px;
+	object-fit : cover;
+}     	
+</style>
 </head>
 <body>
 
@@ -99,6 +112,7 @@
 								<c:set var="vo" value="${vo}" />
 								<input type="hidden" name="board_no" value="${vo.board_no}">
 								<input type="hidden" name="category" value="${vo.category}">
+								<input type="hidden" name="picture" value="${vo.picture }">
 								<div class="form-group">
 									<div class="detail_nick_date">
 										<div
@@ -123,11 +137,18 @@
 								<div class="write_table"
 									style="border: 1px solid #FDDBDB; border-radius: 12px;">
 									<div class="form-group">
-										<img class="detail_value"
-											src="${cpath}/resources/images/logotest.png"
-											style="max-width: 150px;">
 										<textArea class="detail_value" rows="5" name="contents"
 											placeholder="Enter contents">${vo.contents}</textArea>
+										<div id="fileDrop">
+										<c:if test ="${not empty vo.picture}">
+										<div>
+										<a class="delThumbnail" onClick="delImg()" data-src="${selectedDiary.picture }">
+											<img style="height : 100px; width : 100px; object-fit : cover;" src="imgDisplay.do?fileName=${vo.picture}">
+											[delete]
+										</a>
+										</div>
+										</c:if>
+									</div>
 									</div>
 								</div>
 
@@ -243,5 +264,6 @@
 	<script src="${cpath}/resources/js/js/app.js"></script>
 	<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
 	<script src="${cpath}/resources/js/js/popup.js"></script>
+	<script src="${cpath}/resources/js/js/boardJS.js"></script>
 </body>
 </html>

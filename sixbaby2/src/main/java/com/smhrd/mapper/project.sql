@@ -18,22 +18,23 @@ primary key(baby_num));
 --# 게시판 테이블
 create table boards
 (board_no int not null auto_increment, category varchar(50) not null,
-title varchar(50) not null, nickname varchar(20) not null,
-picture varchar(50), contents varchar(500) not null,
+title varchar(100) not null, nickname varchar(20) not null,
+picture varchar(2000), contents varchar(3000) not null,
 indate datetime default now(),
 primary key(board_no));
+
 
 --# 댓글 테이블
 create table comments
 (comment_no int not null auto_increment, board_no int not null,
-nickname varchar(20) not null, contents varchar(500) not null,
+nickname varchar(20) not null, contents varchar(1000) not null,
 likes int default 0,
 primary key(comment_no));
 
 --# 육아일기 테이블
 create table diary
 (id varchar(12) not null, diary_no int not null auto_increment, baby_no int not null,
-title varchar(50) not null, contents varchar(1000) not null,
+title varchar(100) not null, contents varchar(3000) not null,
 diary_data varchar(50), picture varchar(2000),
 primary key(diary_no));
 
@@ -49,41 +50,39 @@ id varchar(20) not null,
 --# 해결책 테이블
 create table solution
 (conditions varchar(20) not null,
-exp varchar(3000) not null, 
-solu varchar(3000) not null,
+exp varchar(4000) not null, 
+solu varchar(4000) not null,
 primary key(conditions));
 
 --#----------------------------------------------------------------------------------------#
 
 --# 가데이터 삽입 및 확인
 
-insert into member
-values('test', '1234', 'user', '스마트', '남자', '00-01-01', '010-1111-1111');
+select * from member;
 
 select * from boards;
-
-select * from member;
 
 select * from comments;
 
 select * from diary;
 
-delete from babycondition where conditions="not_crying";
-
 select * from babycondition;
 
 select * from solution;
 
-insert into comments
-values('4','4','꼬꼬','가나다라마바사아자차카파타하가갸거겨고교구규구구구구구구구구구구구구구','3');
-insert into comments
-values('2','2','꼬꼬오오오오','응애응애애애애애애애애','2');
-insert into comments
-values('3','3','흐어어어얽','하기싫당','1');
-
 select * from boards order by board_no desc;
 
-INSERT INTO babycondition (id, conditions) VALUES('mod101', 'dc');
+select * from boards where category="tip" order by board_no desc;
+
+
+
+insert into babycondition (id, conditions) VALUES('mod101', 'dc');
+
+insert into member
+values('test', '1234', '초보맘', '송채연', '여자', '98-09-27', '010-1234-5678');
+insert into member
+values('tt', 'tt', '닉넴tt', '이름tt', '남자', '92-05-20', '010-1111-1111');
+
 
 insert into solution
 values('hungry','흐규흐규','맘마줘라');
@@ -95,11 +94,15 @@ insert into solution
 values('cold_hot','호롤롤로','난방켜');
 
 
+
 --#----------------------------------------------------------------------------------------#
 
 --# 관리자 계정 하나 만들어서 육아꿀팁에 내용 넣을게요 (관리자 계정 회원탈퇴 하지마여!)
 insert into member
 values('admin', 'admin', '육아꿀팁관리자', 'admin', '여자', '70-03-17', '010-7777-7777');
+
+insert into member
+values('admin2', 'admin2', '관리자', 'admin2', '남자', '70-03-17', '010-8888-8888');
 
 insert into boards(category, title, nickname, picture, contents)
 values('tip', '아기울음이유1 - 생후1개월에서 3~4개월까지', '육아꿀팁관리자','', '- 울음으로 자신의 요구와 의사를 표현하는 단계입니다.
@@ -177,6 +180,22 @@ values('tip', '바로 병원에 가야하는 3가지', '육아꿀팁관리자','', '* 경련(119)
 - 차가운 물은 체내 온도를 더 높여주기 때문에 반드시 미지근한 물을 사용해야 하며 조금씩 닦아주기보다는 크게크게 닦아주세요.
 - 특히 귀 뒤, 목, 겨드랑이, 사타구니, 열이 많은 두상 등의 부위는 집중적으로 닦아줘야 열이 내릴수 있습니다.
 ');
-select * from boards where category="tip" order by board_no desc;
+
+--#----------------------------------------------------------------------------------------#
+
+--# 각 게시판 공지글
+insert into boards(category, title, nickname, picture, contents)
+values('free', '자유게시판 글작성 주의사항!!!', '관리자','', '- 게시글 하루 20개까지 작성 가능
+- 같은 날짜에 중복 게시글(제목 또는 본문 내용 포함)은 3개까지 작성 가능');
+
+insert into boards(category, title, nickname, picture, contents)
+values('help', '도움요청 게시판 글작성 주의사항!!!', '관리자','', '- 게시글 하루 20개까지 작성 가능
+- 같은 날짜에 중복 게시글(제목 또는 본문 내용 포함)은 3개까지 작성 가능');
+
+insert into boards(category, title, nickname, picture, contents)
+values('item', '용품추천 게시판 글작성 주의사항!!!', '관리자','', '- 게시글 하루 20개까지 작성 가능
+- 같은 날짜에 중복 게시글(제목 또는 본문 내용 포함)은 3개까지 작성 가능
+- 육아용품과 관계없는 제품등록은 불가
+- 상품명 및 정보 작성 필수');
 
 --#----------------------------------------------------------------------------------------#

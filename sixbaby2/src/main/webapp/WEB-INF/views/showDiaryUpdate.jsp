@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <c:set var="vo" value="${selectedDiary}"/>
-<form action = "${cpath }/diaryUpdate.do" method= "post">
+<form name="update" action = "${cpath }/diaryUpdate.do" method= "post">
+<input type="hidden" name="id" value="${selectedDiary.id }">
+<input type="hidden" name="diary_no" value="${vo.diary_no }">
+<input type="hidden" name="diary_data" value="${vo.diary_data }">
 <div class="write_table2">
 	<div class="form-group">
 		<label class="diary-name control-label col-sm-2">오늘의 (아기이름)</label>

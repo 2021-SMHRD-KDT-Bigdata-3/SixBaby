@@ -27,7 +27,9 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-<script type="text/javascript">
+<script>
+
+	var cnt = 0;
 	function view(id) {
 		$.ajax({
 			url : "${cpath}/babyView.do?id=" + id,
@@ -40,21 +42,27 @@
 		});
 	}
 	function resultHtml(data) {
-		var result = "<table>";
-		result += "<tr class='voice_tr'>";
-		result+="<tr>";
-        result+="<td>아기 이름</td>";
-        result+="<td>아기 성별</td>";
-        result+="<td>아기 생일</td>";
-        result+="</tr>";
-		$.each(data, (index,obj)=>{
+		if(cnt%2==0){
+			var result = "<table>";
+			result += "<tr class='voice_tr'>";
 			result+="<tr>";
-			result += "<td class='voice_td'>" + obj.baby_name + "</td>";
-			result += "<td class='voice_td'>" + obj.baby_gender + "</td>";
-			result += "<td class='voice_td'>" + obj.baby_birth + "</td>";
-			result += "</tr>";
-		});
-		result += "</table>";
+	        result+="<td>아기 이름</td>";
+	        result+="<td>아기 성별</td>";
+	        result+="<td>아기 생일</td>";
+	        result+="</tr>";
+			$.each(data, (index,obj)=>{
+				result+="<tr>";
+				result += "<td class='voice_td'>" + obj.baby_name + "</td>";
+				result += "<td class='voice_td'>" + obj.baby_gender + "</td>";
+				result += "<td class='voice_td'>" + obj.baby_birth + "</td>";
+				result += "</tr>";
+			});
+			result += "</table>";
+			cnt++;
+		}else{
+            var result = "";
+            cnt++;
+         }
 		$("#baby").html(result);
 	}
 </script>
@@ -79,7 +87,7 @@
 						<div class="content col-md-13">
 							<div class="row">
 								<div class="family">
-									<h2 class="section-title">${loginMember.id}</h2>
+									<h2 class="section-title">${loginMember.name}님 환영합니다</h2>
 									<div class="correct">
 										<button class="correct_btn">
 											<a href="correction.do">회원 정보 수정</a><br>

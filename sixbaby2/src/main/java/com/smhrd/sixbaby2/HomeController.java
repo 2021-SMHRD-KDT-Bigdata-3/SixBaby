@@ -244,11 +244,12 @@ public class HomeController {
 
 	@RequestMapping("/diaryUpdate.do")
 	public String diaryUpdate(DiaryVO vo, Model model) {
+		System.out.println(vo);
 		mapper.diaryUpdate(vo);
 		DiaryVO updatedDiaryVO = mapper.diaryDetail(vo.getDiary_no());
 		System.out.println(updatedDiaryVO);
 		model.addAttribute("selectedDiary", updatedDiaryVO);
-		return "forward:/showDiaryDetail.do";
+		return "forward:/babyDiary.do";
 	}
 
 	@RequestMapping("/showDiaryUpdate.do")

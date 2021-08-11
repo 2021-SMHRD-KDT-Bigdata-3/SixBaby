@@ -104,7 +104,7 @@
 		#{diary_data}
 	</select>
 	<select id="diaryDetail"
-		parameterType="com.smhrd.mapper.DiaryVO"
+		parameterType="int"
 		resultType="com.smhrd.mapper.DiaryVO">
 		select * from diary
 		where diary_no = #{diary_no}

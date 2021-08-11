@@ -29,6 +29,14 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+<style type="text/css">
+#fileDrop {
+	width: 200px;
+	height: 100px;
+	border: 1px dotted pink;
+	position: relative;
+}
+</style>
 
 </head>
 <body>
@@ -92,10 +100,8 @@
 												placeholder="Enter contents"></textArea>
 										</div>
 										<!-- 파일첨부 -->
-										<div id="inputFile">
-											<label class="control-label col-sm-2 filebox" for="input-file"
-												style="font-weight: bold; font-size: 16;">사진 첨부</label> <input
-												type="file" id="input-file" name="picture">
+										<div id="fileDrop">
+											<input type="hidden" name="picture">
 										</div>
 
 									</div>
@@ -130,6 +136,6 @@
 	<script src="${cpath}/resources/js/js/plugins.js"></script>
 	<script src="${cpath}/resources/js/js/app.js"></script>
 	<script src="${cpath}/resources/js/js/jquery-ui.js"></script>
-	<script src="${cpath}/resources/js/js/popup.js"></script>
+	<script src="${cpath}/resources/js/js/boardJS.js"></script>
 </body>
 </html>
