@@ -46,12 +46,12 @@
 					<div class="sidebar col-md-3 col-md-offset-1">
 						<div class="widget">
 							<h3 class="widget-title">카테고리</h3>
-							<ul class="arrow">
-								<li><a href="boardList.do">자유게시판</a></li>
-								<li><a href="itemList.do">용품추천</a></li>
-								<li><a href="helpList.do">도움요청</a></li>
-								<li><a href="tipList.do">육아꿀팁</a></li>
-							</ul>
+							<div class="arrow_category">
+								<a href="boardList.do">자유게시판</a>
+								<a href="itemList.do">용품추천</a>
+								<a href="helpList.do">도움요청</a>
+								><a href="tipList.do">육아꿀팁</a>
+							</div>
 						</div>
 					</div>
 
@@ -76,7 +76,7 @@
 							<c:if test="${vo[0].category ne 'tip'}">
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border:1px solid white; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
+										style="background: white; border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
 										<span class="site-title"><a
 											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>

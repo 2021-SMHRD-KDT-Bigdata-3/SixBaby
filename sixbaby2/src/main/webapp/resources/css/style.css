@@ -670,7 +670,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 16.6666666667%; }
 
   .col-md-3 {
-    width: 13%; }
+    width: 100%; }
 
   .col-md-4 {
     margin-inline: auto;}
@@ -1203,7 +1203,7 @@ form input[type="submit"], form button, form input[type="reset"] {
           font-size: 10px;
           font-size: 0.7142857143rem; }
       .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
-        border-bottom-color: #FDDBDB;
+        border-bottom-color: #E7FFFF;
         border-width: 2px; }
 
 .mobile-navigation {
@@ -1592,7 +1592,7 @@ ul.bullet {
         }
 #modal_login button {
 		  background: white;
-		  border: solid 2px #FDDBDB;
+		  border: solid 2px #E7FFFF;
 		  border-radius: 12px;
 		  box-shadow: 1px 1px 3px 1px #dadce0;
 		  font-size: 18px;
@@ -1723,6 +1723,7 @@ ul.bullet {
 #modal_open_btn_secession {
 	border: 0;
 	background-color:white;
+	border: solid 2px #E7FFFF;
 }
 
 .comment_input {
@@ -1805,7 +1806,7 @@ ul.bullet {
 }
 
 .write_category {
-	border: solid 2px #FDDBDB;
+	border: solid 2px #E7FFFF;
 	border-radius: 12px;
 	width: 20%;
     text-align-last: center;
@@ -1833,7 +1834,7 @@ ul.bullet {
 }
 
 .board_value {
-    border-bottom: solid 1px #666666;
+    border-bottom: solid 1px #dee2e6;
 }
 
 .board_no {
@@ -1858,7 +1859,7 @@ ul.bullet {
 
 .correct_btn {
 	background: white;
-    border: solid 2px white;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     padding: 5px;
     width: 150px;
@@ -1890,7 +1891,7 @@ ul.bullet {
 .select {
     margin-right: 10px;
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -1901,7 +1902,7 @@ ul.bullet {
 .write {
 	 margin-left: 10px;
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -1929,7 +1930,7 @@ ul.bullet {
 
 .month {
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -1940,20 +1941,20 @@ ul.bullet {
 }
 
 .write_table {
-	border: solid 0.5px #FDDBDB;
+	border: solid 2px #E7FFFF;
 	border-radius: 12px;
 }
 
 .write_table2 {
     margin-inline: auto;
-	border: solid 1px #FDDBDB;
+	border: solid 2px #E7FFFF;
 	border-radius: 12px;
 }
 
 #modal_insert_btn_dairy {
 	margin-right: 10px;
 	 background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -1966,7 +1967,7 @@ ul.bullet {
 #modal_close_btn_dairy_insert {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -1998,7 +1999,7 @@ ul.bullet {
 #modal_back_btn_diary {
 	margin-right: 10px;
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2009,7 +2010,7 @@ ul.bullet {
 #modal_back_btn_diary_list {
 	margin-left: 10px;
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2020,7 +2021,7 @@ ul.bullet {
 #modal_detail_btn_diary {
 	margin-right: 10px;
     background: white;
-    border: solid 2px #FDDBDB;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2070,7 +2071,7 @@ ul.bullet {
 .voice_btn {
 	margin-right: 10px;
     background: white;
-    border: solid 2px white;
+    border: solid 2px #E7FFFF;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2094,14 +2095,14 @@ ul.bullet {
 
 .correct_input {
 	background: white;
-	border: 1px solid #FDDBDB;
+	border: 1px solid #E7FFFF;
     width: 108%;
     box-shadow: 1px 1px 3px 1px #dadce0 inset;
     height: 30px;
 }
 
 .babyselect_btn {
-	border: 2px solid white;
+	border: 2px solid #E7FFFF;
     box-shadow: 1px 1px 3px 1px #dadce0;
     border-radius: 12px;
     padding: 5px;
@@ -2118,7 +2119,7 @@ ul.bullet {
 }
 
 .down {
-	border-bottom: solid 0.5px #FDDBDB;
+	border-bottom: solid 0.5px #dee2e6;
 }
 
 .end_td {

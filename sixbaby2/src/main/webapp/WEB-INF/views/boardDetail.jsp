@@ -102,18 +102,18 @@
 								<div class="form-group">
 									<div class="detail_nick_date">
 										<div
-											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
+											style="border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; text-align: center; width: 25%; display: inline-block;">
 											<input class="detail_value" type="text" name="nickname"
 												value="${vo.nickname}" readonly="readonly">
 										</div>
 										<div
-											style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 20px; text-align: center; width: 227px; display: inline-block;">
+											style="border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; text-align: center; width: 227px; display: inline-block;">
 											<input class="detail_value" type="text" name="indate"
 												value="${vo.indate}" readonly="readonly">
 										</div>
 									</div>
 									<div
-										style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+										style="border: 2px solid #E7FFFF; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
 										<input class="detail_value" type="text" name="title"
 											value="${vo.title}">
 									</div>
@@ -121,7 +121,7 @@
 								<br>
 
 								<div class="write_table"
-									style="border: 1px solid #FDDBDB; border-radius: 12px;">
+									style="border: 2px solid #E7FFFF; border-radius: 12px;">
 									<div class="form-group">
 										<img class="detail_value"
 											src="${cpath}/resources/images/logotest.png"
@@ -135,15 +135,15 @@
 								<div class="form-group">
 									<div class="col-sm-offset-13 col-sm-13">
 										<button type="submit" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;">수정</button>
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E7FFFF; color: black; display:block; margin-inline:auto;">수정</button>
 										&nbsp;
 										<button type="button" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;"
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E7FFFF; color: black; display:block; margin-inline:auto;"
 											onclick="goDel('${vo.board_no}','${vo.category}')">삭제</button>
 									</div>
 									<div class="col-sm-offset-13 col-sm-13">
 										<button type="reset" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto;">
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E7FFFF; color: black; display:block; margin-inline:auto;">
 											<a href="boardBack.do?cate=${vo.category}">목록</a>
 										</button>
 
@@ -178,7 +178,7 @@
 										</div>
 									</div>
 									<div
-										style="border: 2px solid #FDDBDB; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
+										style="border: 2px solid #E7FFFF; border-radius: 12px; font-size: 25px; text-align: center; width: 100%; display: inline-block;">
 										<input class="detail_value" type="text" name="title"
 											value="${vo.title}" readonly="readonly">
 									</div>
@@ -186,7 +186,7 @@
 								<br>
 
 								<div class="write_table"
-									style="border: 1px solid #FDDBDB; border-radius: 12px;">
+									style="border: 2px solid #E7FFFF; border-radius: 12px;">
 									<div class="form-group">
 										<img class="detail_value"
 											src="${cpath}/resources/images/logotest.png"
@@ -200,7 +200,7 @@
 								<div class="form-group">
 									<div class="col-sm-offset-13 col-sm-13">
 										<button type="reset" class="btn_detail"
-											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #FDDBDB; color: black; display:block; margin-inline:auto; margin-bottom: 56px;">
+											style="position: relative; border-radius: 12px; background: white; width: 20%; font-size: 22px; border: 2px solid #E7FFFF; color: black; display:block; margin-inline:auto; margin-bottom: 56px;">
 											<a href="boardBack.do?cate=${vo.category}">목록</a>
 										</button>
 									</div>
