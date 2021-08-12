@@ -62,6 +62,7 @@ select * from member;
 
 select * from boards;
 
+
 select * from comments;
 
 select * from diary;
