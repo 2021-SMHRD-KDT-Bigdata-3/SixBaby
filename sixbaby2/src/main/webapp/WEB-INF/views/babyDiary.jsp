@@ -118,7 +118,7 @@
 											</div>
 											<div class="form-group">
 										<label class="control-label col-sm-2" for="input-file"
-											style="font-weight: bold; font-size: 16;">사진 첨부</label>
+											style="font-weight: bold; font-size: 16;">사진을 드래그 해주세요</label>
 											<input type="hidden" name="picture">
 											<div class="fileDrop">
 											</div>

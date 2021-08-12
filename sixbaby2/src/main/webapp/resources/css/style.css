@@ -201,10 +201,18 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+*{
+	box-sizing: border-box;
+}
+*:after{
+	margin:auto;
+	box-sizing: border-box;
+}
 
-*, *:before, *:after {
-  box-sizing: border-box; }
-
+*:before{
+  box-sizing: border-box; 
+  margin:auto;
+}
 /*
  * Global Styles
  */
@@ -243,7 +251,7 @@ address {
 
 p {
   margin-top: 0;
-  color:darkgray;
+  color:#666666;
   font-weight:400; }
 
 form input, form textarea, form select {
@@ -720,7 +728,7 @@ form input[type="submit"], form button, form input[type="reset"] {
 
   .col-md-8 {
       margin-inline: auto;
-    width: 66.6666666667%; }
+    width: 83.666667%; }
 
 	.col-md-15 {
       margin-inline: auto;
@@ -1244,7 +1252,7 @@ form input[type="submit"], form button, form input[type="reset"] {
           font-size: 10px;
           font-size: 0.7142857143rem; }
       .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
-        border-bottom-color: #E7FFFF;
+        border-bottom-color: #FEB7D1;
         border-width: 2px; }
 
 .mobile-navigation {
@@ -1639,7 +1647,7 @@ ul.bullet {
         }
 #modal_login button {
 		  background: white;
-		  border: solid 2px #E7FFFF;
+		  border: solid 2px #FEB7D1;
 		  border-radius: 12px;
 		  box-shadow: 1px 1px 3px 1px #dadce0;
 		  font-size: 18px;
@@ -1769,7 +1777,7 @@ ul.bullet {
 #modal_open_btn_secession {
 	border: 0;
 	background-color:white;
-	border: solid 2px #E7FFFF;
+	border: solid 2px #FEB7D1;
 }
 
 .comment_input {
@@ -1852,7 +1860,7 @@ ul.bullet {
 }
 
 .write_category {
-	border: solid 2px #E7FFFF;
+	border: solid 2px #FEB7D1;
 	border-radius: 12px;
 	width: 20%;
     text-align-last: center;
@@ -1905,7 +1913,7 @@ ul.bullet {
 
 .correct_btn {
 	background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     padding: 5px;
     width: 150px;
@@ -1937,7 +1945,7 @@ ul.bullet {
 .select {
     margin-right: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -1948,7 +1956,7 @@ ul.bullet {
 .write {
 	 margin-left: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -1976,7 +1984,7 @@ ul.bullet {
 
 .month {
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -1987,20 +1995,20 @@ ul.bullet {
 }
 
 .write_table {
-	border: solid 2px #E7FFFF;
+	border: solid 2px #FEB7D1;
 	border-radius: 12px;
 }
 
 .write_table2 {
     margin-inline: auto;
-	border: solid 2px #E7FFFF;
+	border: solid 2px #FEB7D1;
 	border-radius: 12px;
 }
 
 #modal_insert_btn_dairy {
 	margin-right: 10px;
 	 background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -2013,7 +2021,7 @@ ul.bullet {
 #modal_close_btn_dairy_insert {
 	margin-left: 10px;
 	background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px 1px #dadce0;
@@ -2045,7 +2053,7 @@ ul.bullet {
 #modal_back_btn_diary {
 	margin-right: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2056,7 +2064,7 @@ ul.bullet {
 #modal_back_btn_diary_list {
 	margin-left: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2067,7 +2075,7 @@ ul.bullet {
 #modal_detail_btn_diary {
 	margin-right: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
     font-size: 18px;
@@ -2117,10 +2125,10 @@ ul.bullet {
 .voice_btn {
 	margin-right: 10px;
     background: white;
-    border: solid 2px #E7FFFF;
+    border: solid 2px #FEB7D1;
     border-radius: 12px;
     box-shadow: 1px 1px 3px 1px #dadce0;
-    font-size: 18px;
+    font-size: 17px;
     padding: 15px;
     width: 150px;
     font-weight: 800;
@@ -2141,14 +2149,14 @@ ul.bullet {
 
 .correct_input {
 	background: white;
-	border: 1px solid #E7FFFF;
+	border: 1px solid #FEB7D1;
     width: 108%;
     box-shadow: 1px 1px 3px 1px #dadce0 inset;
     height: 30px;
 }
 
 .babyselect_btn {
-	border: 2px solid #E7FFFF;
+	border: 2px solid #FEB7D1;
     box-shadow: 1px 1px 3px 1px #dadce0;
     border-radius: 12px;
     padding: 5px;
@@ -2228,4 +2236,28 @@ ul.bullet {
 	margin-bottom : 0px;
 	font-size : 27px;
 	line-height : 26px;
+}
+
+.detail_left {
+	padding: 36px;
+	font-size: 25px;
+	text-align: left;
+    line-height: 31px;
+}
+
+.voice_border {
+	border: solid 2px #FEB7D1;
+    padding: 18px;
+}
+
+.detail_tit {
+	font-size:32px;
+}
+
+.oh_baby {
+	margin-inline: auto;
+}
+
+.baby_gender_add {
+	width: 20px;
 }

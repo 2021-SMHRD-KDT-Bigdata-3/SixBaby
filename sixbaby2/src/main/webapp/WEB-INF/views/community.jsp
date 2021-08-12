@@ -107,7 +107,7 @@
 							<c:if test="${vo[0].category ne 'tip'}">
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
+										style="background: white; border: 2px solid #FEB7D1; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
 										<span class="site-title"><a
 											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>
@@ -239,7 +239,7 @@
 							<c:if test="${vo[0].category ne 'tip'}">
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
+										style="background: white; border: 2px solid #FEB7D1; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
 										<span class="site-title"><a
 											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>
@@ -317,7 +317,7 @@
 							<c:if test="${vo[0].category ne 'tip'}">
 								<c:if test="${not empty loginMember}">
 									<button type="button"
-										style="background: white; border: 2px solid #E7FFFF; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
+										style="background: white; border: 2px solid #FEB7D1; border-radius: 12px; font-size: 20px; color: black;box-shadow: 1px 1px 3px 1px #dadce0;">
 										<span class="site-title"><a
 											href="boardWrite.do?cate=${vo[0].category}">글쓰기</a></span>
 									</button>

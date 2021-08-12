@@ -49,7 +49,7 @@
 	}
 	function resultHtml(data) {
 		if(cnt%2==0){
-			var result = "<table>";
+			var result = "<table class='oh_baby'>";
 			result += "<tr class='voice_tr'>";
 			result+="<tr>";
 	        result+="<td>아기 이름</td>";
@@ -147,8 +147,8 @@
 									</tr>
 									<tr class="correct_tr_term">
 										<th><span>아이 성별</span></th>
-										<td>남♂<input type="radio" name="baby_gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											여♀<input type="radio" name="baby_gender" value="woman"></td>
+										<td>남♂<input class="baby_gender_add" type="radio" name="baby_gender" value="man">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											여♀<input class="baby_gender_add" type="radio" name="baby_gender" value="woman"></td>
 									</tr>
 									<tr class="correct_tr_term">
 										<th><span>아이 생년월일</span></th>

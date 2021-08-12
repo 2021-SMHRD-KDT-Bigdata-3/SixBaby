@@ -60,7 +60,7 @@
 				<div class="modal_content">
 					<div class="btn_wrap2">
 						<button type="button" id="modal_close_btn_login"
-							style="margin-right: 10px; background: white; border: solid 2px #E7FFFF; border-radius: 12px;
+							style="margin-right: 10px; background: white; border: solid 2px #FEB7D1; border-radius: 12px;
 							margin-bottom: 20px; box-shadow: 1px 1px 3px 1px #dadce0; font-size: 12px; padding: 0px; width: 70px;">닫기</button>
 					</div>
 					<div class="form_txtInput">
@@ -77,13 +77,13 @@
 										<tr>
 											<th>아이디</th>
 											<td><input type="text" name="id"
-												style="border: 1px solid #E7FFFF; width: 270px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"
+												style="border: 1px solid #FEB7D1; width: 270px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"
 												placeholder="ID 를 입력하세요."></td>
 										</tr>
 										<tr>
 											<th>비밀번호</th>
 											<td><input type="password" name="pw"
-												style="border: 1px solid #E7FFFF; width: 270px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"
+												style="border: 1px solid #FEB7D1; width: 270px; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"
 												placeholder="PW 를 입력하세요"></td>
 										<tr>
 											<td colspan="2"><br>
@@ -108,7 +108,7 @@
 					<form action="${cpath}/memberInsert.do" method="post">
 						<div class="form_txtInput">
 							<button type="button" id="modal_close_btn_join"
-								style="margin-right: 10px; background: white; border: solid 2px #E7FFFF; border-radius: 12px; box-shadow: 1px 1px 3px 1px #dadce0; font-size: 12px; padding: 0px; width: 70px; margin-bottom: 20px;">닫기</button>
+								style="margin-right: 10px; background: white; border: solid 2px #FEB7D1; border-radius: 12px; box-shadow: 1px 1px 3px 1px #dadce0; font-size: 12px; padding: 0px; width: 70px; margin-bottom: 20px;">닫기</button>
 							<h2 class="sub_tit_txt" style="position: relative; margin-bottom: 20px;">회원가입</h2>
 							<p class="exTxt"
 								style="position: relative; color: #666666;">정보를
@@ -172,7 +172,7 @@
 							<div class="btn_wrap">
 								<a href="javascript:;"></a> <br>
 								<button type="submit"
-									style="background: white; border: solid 2px #E7FFFF; border-radius: 12px; box-shadow: 1px 1px 3px 1px #dadce0; font-size: 18px; padding: 5px; width: 100px; margin-inline: auto; display: block;">완료</button>
+									style="background: white; border: solid 2px #FEB7D1; border-radius: 12px; box-shadow: 1px 1px 3px 1px #dadce0; font-size: 18px; padding: 5px; width: 100px; margin-inline: auto; display: block;">완료</button>
 							</div>
 						</div>
 						<!-- form_txtInput E -->

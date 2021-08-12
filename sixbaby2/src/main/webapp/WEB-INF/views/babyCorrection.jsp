@@ -80,7 +80,7 @@
 										<tr class="correct_tr_term">
 											<th><span>아이 생년월일</span></th>
 											<td><input type="date" name="birth"
-												style="background: white; border: 1px solid #E7FFFF; width: 108%; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"></td>
+												style="background: white; border: 1px solid #FEB7D1; width: 108%; box-shadow: 1px 1px 3px 1px #dadce0 inset; height: 30px;"></td>
 										</tr>
 										<tr class="correct_tr_term">
 											<td colspan="2" style="text-align: center;"><button

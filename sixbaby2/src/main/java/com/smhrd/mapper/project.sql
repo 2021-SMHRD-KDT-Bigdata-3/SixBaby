@@ -74,8 +74,6 @@ select * from boards order by board_no desc;
 
 select * from boards where category="tip" order by board_no desc;
 
-
-
 insert into babycondition (id, conditions) VALUES('mod101', 'dc');
 
 insert into member
